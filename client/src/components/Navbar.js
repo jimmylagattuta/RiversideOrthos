@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav style={{ backgroundColor: '#f0f0f0', padding: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
       <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
         {/* Move the logo above and float it to the left */}
-        <img src="LAOrthosLogo.jpg" alt="Logo" style={{ height: '40px', marginBottom: '10px' }} />
+        <img src="LAOrthos.jpg" alt="Logo" style={{ height: '40px', marginBottom: '10px' }} />
         <span style={{ fontSize: '14px', fontWeight: 'bold' }}>LA Orthos</span>
       </div>
       <div>
