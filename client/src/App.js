@@ -1,21 +1,17 @@
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+        <h1>
+          LA Orthos
+        </h1>
+        <div id="under-construction">
+          <h3>(...Under Construction...)</h3><i className="fas fa-wrench fa-2x"></i><i className="fas fa-hard-hat fa-2x"></i>
+        </div>
     </div>
   );
 }
