@@ -1,0 +1,17 @@
+{
+  "name": "heroku-deploy",
+  "description": "Build scripts for Heroku",
+  "engines": {
+    "node": "18.12.1"
+  },
+  "scripts": {
+    "clean": "rmdir /s /q public",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.15.3",
+    "react-router-dom": "^6.14.1"
+  }
+}
