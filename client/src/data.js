@@ -729,10 +729,10 @@ export const navMenu = [
         menu: 'Services',
         link: '/services',
         subMenuItems: [
-            'Occupational and Physical Therapy',
-            'Arthroscopy',
-            'Cartilage Restoration',
-            'Orthopedic Trauma',
+            'Service 1',
+            'Service 2',
+            'Service 3',
+            'Sercice 4',
         ],
     },
     {
