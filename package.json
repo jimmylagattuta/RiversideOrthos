@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@loadable/component": "^5.15.3",
+    "heroku": "^8.1.9",
     "react-router-dom": "^6.14.1"
   }
 }
