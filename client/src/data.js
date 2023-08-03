@@ -1009,7 +1009,11 @@ export const navMenu = [
             return item.name;
         }),
     },
-    { menu: 'Location & Contact Us', link: '/locations' },
+    { menu: 'Location', link: '/locations' },
+    { menu: 'Testimonials', link: '/testimonials' },
+    { menu: 'Careers', link: '/careers' },
+    { menu: 'Faq', link: '/faq' },
+    { menu: 'Blog', link: '/blog' },
 ];
 
 export const officesData = [
