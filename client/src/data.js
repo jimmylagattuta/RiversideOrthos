@@ -31,127 +31,25 @@ export const products = [
 
 export const physicians = [
     {
-        name: 'Michael G. Maday, MD',
-        bio: [
-            'Dr. Maday is a board certified orthopedic surgeon specializing in orthopedic sports medicine including arthroscopic knee and shoulder surgery. He utilizes state of the art techniques such as cartilage restoration procedures to treat sports related and traumatic conditions.',
-            'A Chicago area native, Dr. Maday graduated summa cum laude and Phi Beta Kappa from Knox College with Bachelor of Arts degrees in chemistry and physics. A medical graduate of the College of Physicians and Surgeons of Columbia University in the City of New York, Dr. Maday completed his residency at The New York Orthopaedic Hospital at the Columbia University Medical Center. In addition, he completed an Orthopaedic Sports Medicine fellowship under Dr. Freddie Fu at The Center for Sports Medicine at the University of Pittsburgh Medical Center, where he cared for the University of Pittsburgh football team, University of Pittsburgh student athletes and the Pittsburgh Ballet.',
-            'Dr. Maday is board certified by the American Board of Orthopaedic Surgery and was one of the first orthopaedic surgeons in the country to obtain a subspecialty certification in Orthopaedic Sports Medicine through the American Board of Orthopaedic Surgeons. He has served as an instructor for the Arthroscopy Association of North America’s Learning Center training other physicians in arthroscopic techniques and has lectured on various sports medicine topics at local, national, and international medical conferences. He has authored articles and book chapters on sports medicine topics. Dr. Maday’s practice includes the care of athletes at all levels: recreational, high school, college and professional. He has served as team physician for various high school athletic programs in Chicago and the suburbs.',
-        ],
-        practiceEmphasis: ['Orthopedic, Sports Medicine'],
-        specialProcedures: [
-            'ACL reconstruction',
-            'PCL reconstruction',
-            'Meniscal repair',
-            'Cartilage restoration',
-            'Arthroscopic shoulder surgery',
-        ],
-        image: 'https://i.imgur.com/YxJlAms.webp',
+        name: 'Doctor 1, MD'
     },
     {
-        name: 'William Heller, MD',
-        bio: [
-            'Dr. Heller is a board certified orthopedic surgeon specializing in care of the upper extremity. He specializes in conditions of the hand, wrist, elbow, and shoulder. He treats all upper extremity conditions; including fractures, arthritis, work-related injuries, carpal tunnel syndrome, and other traumatic or chronic injuries. Dr. Heller performs a variety of upper extremity surgeries for disorders involving bones, tendons, nerves, ligaments, and blood vessels. He performs shoulder arthroscopy, including arthroscopic rotator cuff repair and ligament repairs. He also performs wrist and elbow arthroscopy.',
-            'Dr. Heller attended medical school at the University of Chicago Pritzker School of Medicine. He completed a five-year orthopedic surgery residency at the University of Chicago Hospitals and a one-year fellowship at the Curtis Clinic National Center for Hand and Upper Extremity Surgery in Baltimore, Maryland.',
-            'Dr. Heller has been in practice in Chicago since 1998. He is certified by the American Board of Orthopaedic Surgery with a Certificate of Added Qualification in Hand Surgery. In his spare time, Dr. Heller enjoys cycling, fly fishing, and spending time with his wife and three daughters.',
-        ],
-        practiceEmphasis: ['Hand, wrist, elbow, and shoulder'],
-        specialProcedures: ['Wrist, elbow, and shoulder arthroscopy'],
-        image: 'https://i.imgur.com/LcOYUXO.webp',
+        name: 'Doctor 2, MD'
     },
     {
-        name: 'Telly Psaradellis, MD',
-        bio: [
-            'Dr. Psaradellis is a board certified orthopedic surgeon specializing in the operative and non-operative treatment of fractures and other traumatic injuries to the musculoskeletal system. He treats fractures of the pelvis, acetabulum (hip socket), and intra-articular fractures (those involving joints such as the shoulder, elbow, knee, or ankle). He also treats complications arising from traumatic injuries, such as non-unions (fractures that have failed to heal) and mal-unions (fractures that have healed incorrectly). In addition, he also specializes in joint replacement procedures of the hip and knee.',
-            'A native of the Chicago area, Dr. Psaradellis obtained his bachelor’s degree from Northwestern University and his medical degree from the University of Illinois, graduating with honors from both institutions. He completed an orthopedic surgery residency at Henry Ford Hospital in Detroit and an orthopedic trauma fellowship with OrthoIndy in Indianapolis. He is board certified by the American Board of Orthopaedic Surgery.',
-            'Dr. Psaradellis is on staff a Christ Hospital and Medical Center, Trinity Hospital, Mercy Medical Center, and South Suburban Hospital. He sees patients at our Beverly, Hometown, and Wabash locations.',
-        ],
-        practiceEmphasis: [
-            'Complex Trauma',
-            'Adult Reconstruction',
-            'Total joint Replacement',
-        ],
-        specialProcedures: ['Trauma surgery', 'Joint Replacement Surgury'],
-        image: 'https://i.imgur.com/wDc8OFM.webp',
+        name: 'Doctor 3, MD'
     },
     {
-        name: 'Jay M. Brooker, MD',
-        bio: [
-            'Dr. Brooker is a board certified orthopedic surgeon who treats all types of orthopedic disorders. His practice special interests include joint replacement, arthroscopy, and fracture care as well as shoulder and hand conditions.',
-            'After graduating from McGill University in Montreal, Canada with Great Distinction, Dr. Brooker received his medical degree from the University of Massachusetts. He completed his orthopedic residency at the University of Illinois Medical Center in Chicago and joined Midland Orthopedic Associates in 2001.',
-            'Dr. Brooker is board certified by the American Board of Orthopaedic Surgery. He enjoys spending time with his wife and five children and is passionate about baseball and swimming.',
-        ],
-        practiceEmphasis: [
-            'Adult Reconstruction',
-            'Trauma',
-            'General Orthopedics',
-        ],
-        specialProcedures: ['Hip and Knee Replacement Surgery'],
-        image: 'https://i.imgur.com/MdLywCj.webp',
+        name: 'Doctor 4, MD'
     },
     {
-        name: 'Robert J. Strugala, MD',
-        bio: [
-            'Dr. Strugala is board certified in sports medicine and specializes in sports medicine and musculoskeletal injuries. He treats injuries in elite athletes as well as weekend warriors and applies sports medicine principles to help injured workers return to their jobs safely. Dr. Strugala has a special interest in golf and running injuries and sports-related concussions.',
-            'A Chicago native, Dr. Strugala attended Nazareth Academy High School in LaGrange Park and the University of Illinois at Urbana-Champaign. He then received his medical degree from Northwestern University Medical School in Chicago. Dr. Strugala completed an internal medicine residency at Northwestern Memorial Hospital and a sports medicine fellowship at Hennepin County Medical Center in Minneapolis.',
-            'Dr. Strugala is board certified in Sports Medicine and is a member of the American Medical Society for Sports Medicine, the American College of Sports Medicine, the American Road Race Medical Society, and the Wilderness Medical Society. He has served as team physician for USA Triathlon and has traveled with Team USA to World Championship events in France and Italy. He has provided medical coverage for international rugby matches and has worked with the Chicago Marathon since 2001. Dr. Strugala is currently a team physician for the Chicago Lions Rugby Club and a sports medicine consultant for Brother Rice High School.',
-        ],
-        practiceEmphasis: ['Sports Medicine', 'Musculoskeletal injury'],
-        specialProcedures: [
-            'Concussion assessment',
-            'Joint aspiration/injection',
-            'Musculoskeletal ultrasound',
-            'Platelet-rich plasma injection for tendinopathy',
-        ],
-        image: 'https://i.imgur.com/HTsPWUh.webp',
+        name: 'Doctor 5, MD'
     },
     {
-        name: 'Conor Salvino, DPM',
-        bio: [
-            'Dr. Conor Salvino is a board qualified surgeon that specializes in foot and ankle surgery. As a fellow with Midland Orthopedics, he received comprehensive training in operative and non-operative management of the foot and ankle. Dr. Salvino completed a three-year surgical residency at Illinois Advocate Masonic in Chicago, IL. He received his Doctorate degree in Podiatric Medicine from Rosalind Franklin University.',
-            'Dr. Salvino’s treatment stresses conservative management and evidence-based approach to surgical intervention when indicated. Dr. Salvino is trained in all aspects of foot and ankle care and has a special interest in sports related injuries, trauma and fractures, achilles tendon disorders, acute and chronic ankle sprains, bunion correction, heel pain, flat foot correction, and orthotic therapy.',
-            'Dr. Salvino has a strong passion for philanthropy as he has been a part of multiple medical mission trips to South America. In addition to his clinical practice, Dr. Salvino is actively involved with resident education.  He is an active member of the American College of Foot and Ankle Surgeons and American Podiatric Medical Association. In his free time, Dr. Salvino enjoys spending time with his family, golfing, traveling, and fly fishing.',
-        ],
-        practiceEmphasis: [
-            'Sports related injuries',
-            'Trauma and fractures',
-            'Achilles tendon disorders',
-            'Acute and chronic ankle sprains',
-            'Bunion correction',
-            'Heel pain',
-            'Flat foot correction',
-            'Orthotic therapy',
-        ],
-        specialProcedures: [
-            'Foot and Ankle Trauma',
-            'Ankle Arthroscopy',
-            'Foot and Ankle Reconstruction',
-            'Charcot Reconstruction',
-            'Total Ankle Replacement',
-            'Achilles Tendon Disorders',
-            'Bunion and Hammertoe Correction',
-        ],
-        image: 'https://i.imgur.com/hWFusnc.webp',
+        name: 'Doctor 6, DPM'
     },
     {
-        name: 'Sumit Jain, MD',
-        bio: [
-            'Dr. Sumit Jain was born and raised in the suburbs of Chicago, IL where he completed his Bachelor of Biology degree with summa cum laude distinction at Benedictine University. He then completed medical school at Rush Medical College and anesthesiology residency at the University of Chicago. Dr. Jain then continued training in his Interventional Pain Management fellowship at Northwestern Memorial Hospital in Chicago, IL. During fellowship, he learned to treat a wide variety of pain disorders using a multidisciplinary approach. Dr. Jain is looking forward to the opportunity to serve the Chicagoland area.',
-            'Outside of work I like to enjoy gardening, playing tennis/golf, riding my bike around Lake Michigan, and spending time with my family and friends.',
-            '"My favorite part of being an interventional pain physician is improving the quality of life for my patients through up-to-date medical procedures and multimodal pain regimen limiting the use of controlled substances."',
-        ],
-        practiceEmphasis: [],
-        specialProcedures: [
-            'Epidural steroid injection ',
-            'Radiofrequency ablation',
-            'Joint injections/hyaluronic acid injection',
-            'Spinal Cord stimulation',
-            'Peripheral joint injection',
-            'Cervical/Thoracic/Lumbar back pain interventions',
-            'MILD Procedure',
-            'Iovera treatment',
-            'Lifestyle modifications'
-        ],
-        image: 'https://i.imgur.com/zfcVyuw.webp',
+        name: 'Doctor 7, MD'
     }
 ];
 
