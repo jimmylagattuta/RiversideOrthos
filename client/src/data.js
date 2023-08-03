@@ -55,215 +55,50 @@ export const physicians = [
 
 export const services = [
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Occupational and Physical Therapy',
-        firstTitle: 'Physical Therapy',
-        description: [
-            'Midland Orthopedic Associates offers physical therapy services at our Wabash and Hometown offices. Our therapists work closely with their patients to restore mobility, improve function, and relieve pain. Our therapists customize a program to fit your individual needs and help you to achieve your goals. We recognize the demands that therapy can place on a busy patient, so whenever possible we will actively promote a home exercise program.',
-        ],
-        secondTitle: 'Occupational Therapy',
-        descriptionTwo: [
-            'Midland Orthopedic Associates offers occupational therapy services at our Wabash and Hometown offices. Our certified hand therapists provide comprehensive therapy to surgical and non-surgical patients recovering from hand and elbow injuries, pain, loss of mobility, and weakness. Their goal is to help patients return to full function as required for daily activities, including job functions. Our therapists customize a treatment plan based on the individual needs of the patient and the specific injury. Treatments offered include range of motion exercises, joint mobilization, thermal and electrical modalities, strengthening, as well as the fabrication of static and dynamic splints.',
-            'Our therapists provide constant feedback to our Chicago orthopedic doctors, allowing for ongoing modification of the therapy program as the patient progresses. To schedule an appointment with one of our therapists, please phone our Wabash (312-842-4600) or Hometown (708-425-1150) office.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/services',
+        name: 'Service 1',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/AHavI6m.webp',
-        name: 'Arthroscopy',
-        firstTitle: 'Arthroscopy',
-        description: [
-            'Arthroscopy is a minimally invasive procedure that involves placing a small, fiber-optic camera into a joint through small incisions in order to examine the joint and treat a variety of conditions. Arthroscopy is a relatively common surgery – some examples would include treating torn or damaged cartilage, ACL tears, and rotator cuff tears.',
-            'One example of when arthroscopy would be used is if the doctor suspects an ACL tear. These occur when there is a severe injury to the anterior cruciate ligament (ACL) – which connects the upper and lower leg bones. People can tear their ACL if they pivot their leg too fast and strongly or if they land on their leg with too much force after jumping.',
-        ],
-        secondTitle: 'Advantages of Arthroscopy',
-        descriptionTwo: [
-            'One advantage of arthroscopy over open surgery is that there is less trauma to the tissues, less scarring, and smaller incisions, all significantly speeding recovery time.',
-            'Another advantage is that arthroscopic surgery is commonly performed on an out-patient basis on the knee, shoulder, elbow, wrist, and ankle.',
-            'The physicians at Midland Orthopedic Associates have many years of experience and advanced training in this technique and have served as instructors teaching other surgeons arthroscopic techniques. Our physicians routinely use arthroscopic techniques to provide treatment that would otherwise require open surgery and longer recovery times.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/arthroscopy',
+        name: 'Service 2',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/GW7GxIh.webp',
-        name: 'Foot and Ankle',
-        firstTitle: 'Foot and Ankle Specialists',
-        description: [
-            'The physicians at Midland Orthopedic Associates treat a variety of foot and ankle injuries and conditions, including those related to trauma, fractures, arthritis, plantar fasciitis, sports injuries, infections, and bunions. Some of the services provided include diabetic footcare, fracture care, ligament tendon repair, bunion correction, as well as forefoot, midfoot, and hindfoot reconstructions and ankle replacements.',
-        ],
-        secondTitle: 'Treatment of Foot and Ankle Injuries',
-        descriptionTwo: [
-            'We use our feet and ankles any time we walk, stand up or participate in nearly any sport. That’s why having a foot or ankle injury can be very debilitating to your everyday life. You even need properly functioning feet and ankles to drive safely, and giving up the keys is not a pleasant prospect!',
-            'Midland’s Orthopedic Doctors can help you identify problems in your feet and ankles, and work with you on preventing new or further injuries. We may suggest you get ergonomically correct shoes or socks to help you walk more naturally. We may also give you advice on what types of physical activities may be aggravating an existing condition.',
-            'A common cause of foot and ankle injuries is running on overly flat or overly uneven terrain without the proper foot support. If the idea of not being able to run any more is not a comforting prospect for you, then you should definitely come see us to correct any pain or inflammation in a your feet or ankles before they lead to more serious damage. Midland Orthopedic Associates may also suggest you switch to exercises or machines at the gym that put less pressure on your lower joints, such as swimming or using the elliptical instead of the treadmill.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/services',
+        name: 'Service 3',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/H5SJHUM.webp',
-        name: 'Sports Medicine',
-        firstTitle: 'Sports Medicine',
-        description: [
-            'Midland Orthopedic Associates offers Certified Athletic Training services at our Hometown office. Our trainer works with our physicians and physical therapists to monitor and provide athletic training and rehabilitation programs for our patients. Our athletic trainer in the clinic works both with athletes and non-athletes, designing programs for the prevention, treatment, and also conditioning following an injury. Our trainer provides services to Brother Rice High School to help prevent, diagnose, and provide immediate treatment for athletic injuries.',
-            'Our athletic trainer is in constant contact with and works under the supervision of one of our sports medicine physicians in order to maintain a team approach to the care and treatment of the injured athlete. He coordinates care with the athlete, parents, coaches, and physicians to assure a safe return to sports.',
-            'The physicians of Midland Orthopedic Associates offer non-surgical and surgical orthopedic care to active people regardless of their age or athletic skill level. Our goal is to return our patients to an active, healthy lifestyle. We apply the same care and techniques to our recreational athletes as we do to our high school, college, and professional athletes.',
-            'Our team approach includes fellowship-trained Primary Care and fellowship-trained Orthopedic Sports Medicine physicians as well as physical therapists and certified athletic trainers. We have served or are currently serving as team physicians for a number of local high schools including St. Ignatius, De La Salle, Hinsdale South, Bolingbrook, Brother Rice, Riverside-Brookfield, and Mother McAuley.',
-            'Athletics is an important part of the school experience for any education level, and we want to make sure that sports injuries do not get in the way of that. Our goal is to ensure that students can get back to the field or court as quickly as possible. We want to make sure they are really ready, too, as rushing back can lead to further injury and missed opportunities at school.',
-            'For more information on our athletic training and sports medicine programs, please contact Midland Orthopedic today.',
-        ],
-        secondTitle: null,
-        descriptionTwo: null,
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/sportsMedicine',
+        name: 'Service 4',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/2aSQ0mV.webp',
-        name: 'Hand, Wrist and Elbow',
-        firstTitle: 'Hand, Wrist and Elbow Injuries',
-        description: [
-            'The physicians at Midland Orthopedic Associates have specialized training in the care and treatment of hand, wrist, and elbow injuries and conditions. These include carpal tunnel syndrome, arthritis, sports injury, fractures, overuse injuries, as well as tendon, ligament, and nerve injuries and work related disorders. Our surgeons perform repairs of tendons, fractures, and nerve injuries; tendon transfers; contracture and tendon releases; nerve decompression; tumor removal; as well as arthroscopy of the wrist and elbow. Our physicians work as a team with occupational therapists to aid in a successful recovery.',
-        ],
-        secondTitle: 'Preventing Common Musculoskeletal Disorders',
-        descriptionTwo: [
-            'Hand, wrist and elbow injuries are common types of musculoskeletal disorders (MSDs) among U.S. workers. They are common among those in office settings, laboratories and other places that require a lot of typing and working on computers. This is in part because many workstations are not set up optimally to promote ergonomically correct work postures.',
-            'For instance, if your hand and wrist are not at or near the same height as your elbow as you use your mouse, you may develop an MSD in one of those joints over time. That’s why if you feel pain in your lower arms you should ask your work about getting an ergonomic mouse or wrist supports for your keyboard and mouse. We can provide you information as well on how to position your body so that you work more ergonomically.',
-            'To schedule an appointment, please use our Appointment Request Form.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/handWristAndElbow',
+        name: 'Service 5',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/FMTbpGh.webp',
-        name: 'Cartilage Restoration',
-        firstTitle: 'Cartilage Restoration',
-        description: [
-            'The orthopedic doctors of Midland Orthopedic Associates offer a variety of cartilage restoration options to our patients. These options treat the pain from damaged or injured cartilage, such as a torn meniscus in the knee. These restoration procedures include microfracture autogenous chondrocyte implantation (ACI), osteochondral autograft transfer (OATs) and De Novo cartilage surgery.',
-            'The top reasons for cartilage restoration include severe injuries and repeated traumas. If you suffer a sudden and traumatic injury to any joint, you may experience a complete tear to your cartilage. If it doesn’t tear your cartilage, the injury can still lead to cartilage loss as normal activities can end up making the minor injury into a major one.',
-            'Repeated, less-serious traumas to the same spot can also have the same effect. If you are a runner and you experience any type of joint injury, you increase the strain on some of the cartilage in your body if you were to run again. Continuing to run – and without the proper support and shoes – can repeatedly damage your cartilage, eventually resulting in serious damage and cartilage loss.',
-        ],
-        secondTitle: null,
-        descriptionTwo: null,
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/cartilageRestoration',
+        name: 'Service 6',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/kNfSdcm.webp',
-        name: 'Knee',
-        firstTitle: 'Knee Injuries',
-        description: [
-            'The physicians at Midland Orthopedic Associates have sub-specialty training and extensive experience in the treatment of knee injuries and common knee injury treatments. Whether the condition is from a recent sports injury, a work injury, or the gradual wear and tear of arthritis, Midland Orthopedic Surgeons will apply the latest knee injury treatments and techniques, including physical therapy and minimally invasive surgery, to return our patients to an active lifestyle.',
-        ],
-        secondTitle: 'Knee Doctors – Specialists in Arthroscopic Knee Surgery',
-        descriptionTwo: [
-            'Midland Orthopedic Surgeons treat an extensive array of knee conditions and are specialists in arthroscopic knee surgery techniques. We would be pleased to advise you of your care options and discuss the latest advancements and breakthroughs for the treatment of knee injuries as well as the latest techniques and innovations in knee surgeries. Our knee doctors are specialists in the following:',
-            'Cartilage Repair',
-            'Meniscal Repair',
-            'Anterior Cruciate Ligament (ACL) Reconstruction',
-            'Posterior Cruciate Ligament (PCL) Reconstruction',
-            'Partial Knee Replacements Surgeries',
-            'Total Knee Replacement Surgeries',
-        ],
-        thirdTitle: 'Avoiding Common Knee Injuries',
-        descriptionThree: [
-            'Healthy knees are essential for nearly every type of athletic activity and are crucial in our ability to walk. Knee injuries can also be very painful; even if you don’t have a full ligament or cartilage tear, the inflammation and pain that accompanies knee injuries can be debilitating.',
-            'That is what even if you haven’t suffered a direct blow to a knee, you should still come see us. The cartilage and other structures that keep our knees working properly can wear down over time, and you may be making your condition worse if you continue to do all the same activities as normal. To prevent severe injury, you should have us check out your knee to see if there is anything wrong beneath the surface.',
-        ],
-        link: '/knee',
+        name: 'Service 7',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/HtJ38yI.webp',
-        name: 'Joint Repacement and Joint Restoration',
-        firstTitle: 'Joint Replacement and Joint Restoration',
-        description: [
-            'The physicians of Midland Orthopedic Associates have extensive experience and expertise in joint replacement and reconstruction for painful joint problems due to arthritic or inflammatory conditions. Our Chicago orthopedic surgeons apply state of the art techniques in the replacement and reconstruction of the knee, hip, elbow, shoulder, and ankle, as well as the small joints of the hands and feet. Our physicians work with a team of nurses, physician assistants, and therapists in order to eliminate pain and restore full function.',
-        ],
-        secondTitle: 'The value of healthy joints',
-        descriptionTwo: [
-            'You would be surprised how often you use your joints in everyday life – and you tend to use all of them, even if you don’t realize it. We want you to be able to do all the things you could do before, and even more. You should be able to walk without assistance; plant in the garden; cook your favorite meals; and hike in the woods if that’s what you desire.',
-            'All these activities also employ the joints in the hands, which are some of the smallest yet most important joints in the body. You need to them hold cooking utensils, garden shears, and even to write or type.',
-            'We help make sure that after your procedure you have as little pain as possible. We want you to be able to get back to your favorite activities sooner than you can make a list of them.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/jointReplacementAndJointRestoration',
+        name: 'Service 8',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/gUeoE0r.webp',
-        name: 'Orthopedic Trauma',
-        firstTitle: 'Orthopedic Trauma',
-        description: [
-            'The physicians at Midland Orthopedic Associates treat a variety of traumatic conditions including fractures of the arms, legs, and pelvis. One of our physicians, Dr. Telly Psaradellis, is one of only ten orthopedic surgeons in the entire Chicagoland area with advanced training in orthopedic trauma. Dr. Psaradellis is an expert in the care and treatment of complex traumatic conditions and difficult to treat fractures such as multiple broken bones, open fractures and fractures of the pelvis. All of our physicians employ the latest techniques, including non-invasive or minimally invasive procedures such as arthroscopy, to aid healing and restore function as quickly as possible.',
-        ],
-        secondTitle: 'Getting you back on your feet',
-        descriptionTwo: [
-            'Broken bones, joints, or torn ligaments and cartilage can severely slow down your life if they are not treated correctly and promptly. If you want to return to an active lifestyle or maintain your ability to do all your favorite activities, you should want to obtain the highest quality care – which is what we provide.',
-            'We can also help you prevent further injuries by identifying parts of your body that may also have been affected by the event that caused your initial trauma. We want to make sure you are back on your feet as quickly as possible, and finding out you had multiple fractures or injury points after you received treatment is an unnecessary delay that we will help you avoid.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/orthopedicTrauma',
+        name: 'Service 9',
+        link: '/services'
     },
     {
-        image: 'https://i.imgur.com/X8MXoTl.webp',
-        name: 'Hip',
-        firstTitle: 'Hip Injury Specialists',
-        description: [
-            'The physicians at Midland Orthopedic Associates specialize in the diagnosis and treatment of a variety of hip injuries and conditions. Whether the condition is the result of wear and tear of the hip, a sports injury or traumatic condition, our Orthopedic Doctors apply the latest techniques to return our patients to their active lifestyles. Our surgeons perform an extensive variety of techniques including hip fracture care and hip replacement surgery.',
-        ],
-        secondTitle: 'Hip Fracture',
-        descriptionTwo: [
-            'A hip fracture is one of the most serious types of bone fractures, and it can happen in people both young and old. Teenagers are especially prone to pelvis fractures because their bodies are still growing. Hip injuries from playing sports or severe traumas, such as from car crashes, can cause fractures in the pelvis in teens. This can limit their ability to remain active and live a normal life, and will require advanced treatment.',
-            'The elderly are also prone to hip fractures. Those with osteoporosis – an age-related loss of bone integrity – are especially prone to this type of fracture, which can occur by simply falling and landing awkwardly on their side.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/services',
-    },
-    {
-        image: 'https://i.imgur.com/eJYpk8G.webp',
-        name: 'Shoulder',
-        firstTitle: 'Shoulder Injuries',
-        description: [
-            'The physicians at Midland Orthopedic Associates specialize in the diagnosis and treatment of a variety of shoulder injuries and conditions. There have been many recent advancements in the care of shoulder injuries and Midland Orthopedic Surgeons use state of the art surgery techniques and technologies to treat shoulder injuries and conditions including impingement, arthritis, fractures, rotator cuff tears and instability. Most procedures are performed arthroscopically or with minimally invasive techniques to speed recovery.',
-        ],
-        secondTitle: 'Common Shoulder Injuries and Musculoskeletal Disorders',
-        descriptionTwo: [
-            'Shoulder injuries are increasingly common among U.S. workers, especially since shoulder injuries are a common type of musculoskeletal disorder (MSD) in office settings. MSDs occur when someone uses the same body part in an unnatural position too frequently and for too long. MSDs can result in severe pain and lack of mobility if they are not addressed early enough.',
-            'Even if you feel only slight pain or inflammation, you should still get your shoulder checked out. If we can determine that there is something wrong, you can seek help at work by obtaining ergonomically safe equipment. We can also provide you guidance on working with a more natural posture.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/shoulder',
-    },
+        name: 'Service 10',
+        link: '/services'
+    }
 ];
 export const aboutObj = [
     {
-        imageOne: 'https://i.imgur.com/LPskgPR.webp',
-        imageTwo: 'https://i.imgur.com/pliYCGe.webp',
-        nameOne: "Midland's Mission",
-        descriptionOne:
-            'Since its founding in 1964, the Chicago orthopedic doctors of Midland Orthopedic Associates have been dedicated to providing our patients with the highest standard of care. We strive to provide high quality, cost-effective, compassionate care with our goal being to exceed our patients’ expectations. We treat every patient with dignity and respect the disruption that pain and injury can cause to their lifestyle. At Midland Orthopedic Associates we are large enough to provide comprehensive sub-specialty orthopedic care to address the most complex of problems, yet we are small enough to provide personal attention to our patients. We emphasize a team approach to treatment, coordinating care between our physicians to ensure that our patients benefit from the variety of advanced sub-specialty training and experience of our physicians.',
-        nameTwo: 'Our History',
-        descriptionTwo: [
-            'Established in 1964 by Dr. Gerald F. Loftus, Midland Orthopedic Associates is one of the oldest dedicated orthopedic practices in Chicago. Dr. Loftus began his practice on Chicago’s Near South Side, quickly establishing a reputation for outstanding orthopedic care. As his practice grew he accepted more responsibilities, including that of team physician for the Chicago White Sox. In 1981 Dr. Loftus recruited Dr. John D. Sonnenberg to join him. Dr. Sonnenberg had just completed advanced training in hand surgery within the University of California system following his residency at the University of Pittsburgh. With continued growth of the practice, in 1984 Drs. Loftus and Sonnenberg recruited Dr. D. Dirk Nelson to join them upon completing his residency at the University of Pittsburgh.',
-            'Midland Orthopedic Associates soon outgrew its facilities at 2600 South Michigan Avenue and in 1988 opened a larger office at 2850 South Michigan, as well as expanding to a second office near Midway Airport, at 57th and Pulaski Road. In 1992 Dr. Michael G. Maday completed an Orthopedic Sports Medicine fellowship under Dr. Freddie Fu at the University of Pittsburgh. He joined Midland Orthopedic Associates, contributing additional levels of sports medicine expertise. The practice soon expanded to an office in La Grange to provide orthopedic services in the western suburbs, ultimately moving into their current office in 1997.',
-            'In 1998 Dr. William A. Heller completed a Hand and Upper Extremity fellowship at the Curtis Clinic in Baltimore and joined Midland Orthopedic Associates, specializing in caring for patients with hand and upper extremity disorders.',
-            'In order to accommodate a growing patient population, in 2001 Midland Orthopedic Associates moved its main office to a larger, customized facility at 2850 South Wabash Avenue while the Pulaski office moved to a larger, free-standing facility at 87th and Southwest Highway in Hometown. In that same year Dr. Jay M. Brooker was recruited to help establish and run a new office in the Beverly neighborhood.',
-            'In 2005 Dr. Robert J. Strugala was recruited to join Midland Orthopedic Associates following completion of a Primary Care Sports Medicine fellowship at Hennepin County Medical Center in Minneapolis. In 2008 Midland Orthopedic Associates recruited Dr. Telly Psaradellis to join the practice, bringing his expertise in orthopedic trauma surgery after completing an Orthopedic Trauma fellowship with Ortho Indy in Indianapolis.',
-            'In 2017, Dr. Jonathan L Hook joined Midland Orthopedic Associates, brining his expertise in foot and ankle surgery after completing Podiatric Medicine and Surgery Residency with the added credential in Reconstructive Rearfoot/Ankle Surgery at Mercy Hospital and Medical Center in Chicago. ',
-            'Currently, Midland Orthopedic Associates offers patients access to sub-specialty trained physicians at four convenient office locations with our goal of providing the best orthopedic care for our patients.',
-            'Contact Midland Orthopedic Surgeons today to set up a consultation.',
-        ],
-        link: '/about',
+        nameOne: "About",
+        link: '/about'
     },
 ];
 
