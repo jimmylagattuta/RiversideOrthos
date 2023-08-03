@@ -33,7 +33,7 @@ const Navbar = () => {
                 <div className='header-image-container'>
                     <Link to='/' className='logo-link'>
                         <img
-                            src='LaOrthos.jpg'
+                            src='LAOrthos.jpg'
                             alt='LA Ortho Associates'
                             className='header-image'
                             style={{ width: 'auto', height: '120px' }}
