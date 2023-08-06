@@ -38,12 +38,12 @@ const Navbar = () => {
                             className='header-image'
                             style={{ width: 'auto', height: '120px' }}
                         />
-                        <div className="header-title-div">
-                            <h1 className="header-title">Los Angeles Orthopedic Surgury Specialists</h1>
-                            <h1 className="header-title">& Advanced Orthopedics</h1>
-                        </div>
 
                     </Link>
+                    <div className="header-title-div">
+                        <h1 className="header-title">Los Angeles Orthopedic Surgury Specialists</h1>
+                        <h1 className="header-title">& Advanced Orthopedics</h1>
+                    </div>
                 </div>
                 <div className='header-buttons-container'>
                     <NavLink className='btn header-button-dark' to='/locations'>
