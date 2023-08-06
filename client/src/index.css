@@ -891,13 +891,10 @@ img {
     }
 }
 
-@media (max-width: 1074px) {
+@media (max-width: 1160px) {
     .header-title {
         display: none;
     }
-}
-
-@media (max-width: 1160px) {
     span#h-four-temp-fix {
         margin: 45px 0 15px 0;
     }
