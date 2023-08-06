@@ -302,6 +302,13 @@ img {
 .header-title-div {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: 1.2em;
+    padding: 0px;
+    text-transform: none;
 }
 
 .logo-link {
@@ -323,14 +330,8 @@ img {
 }
 
 .header-title {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: Poppins;
     font-size: 1.6rem;
-    font-style: normal;
-    line-height: 1.2em;
-    padding: 0px;
-    text-transform: none;
+    
 }
 
 .header-button-yellow {
