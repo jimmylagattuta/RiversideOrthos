@@ -299,6 +299,16 @@ img {
     padding: 35px 0 0 0;
 }
 
+.header-title-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-link {
+    display: flex;
+    flex-direction: row;
+}
+
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -316,6 +326,7 @@ img {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: Poppins;
+    font-size: 1.6rem;
     font-style: normal;
     line-height: 1.2em;
     padding: 0px;
