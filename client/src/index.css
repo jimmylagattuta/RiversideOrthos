@@ -304,10 +304,9 @@ img {
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: Poppins;
     font-style: normal;
-    line-height: 1.2em;
-    padding: 0px;
+    line-height: 1em;
+    padding: 25px;
     text-transform: none;
 }
 
@@ -325,6 +324,7 @@ img {
 .header-image-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .header-image {
@@ -335,8 +335,9 @@ img {
 }
 
 .header-title {
-    font-size: 1.6rem;
-    max-width: 200px;
+    font-size: 1.4rem;
+    max-width: 500px;
+    margin: 0px;
 }
 
 .header-button-yellow {
