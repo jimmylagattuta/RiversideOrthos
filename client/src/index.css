@@ -314,6 +314,9 @@ img {
 
 .header-button-yellow {
     background-color: transparent;
+    border-style: solid;
+    border-color: var(--grey-dark);
+    border-width: 2px;
 }
 
 .header-button-yellow:active {
