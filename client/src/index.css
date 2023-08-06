@@ -336,7 +336,7 @@ img {
 
 .header-title {
     font-size: 1.6rem;
-    
+    max-width: 200px;
 }
 
 .header-button-yellow {
