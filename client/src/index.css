@@ -86,7 +86,6 @@ img {
     color: var(--black);
     background: var(--white);
     border: transparent;
-    border-radius: 7px;
     padding: 0.375rem 0.75rem;
     transition: 0.3s all ease-in-out;
     text-transform: capitalize;
@@ -314,7 +313,7 @@ img {
 }
 
 .header-button-yellow {
-    background-color: var(--yellow);
+    background-color: transparent;
 }
 
 .header-button-yellow:active {
