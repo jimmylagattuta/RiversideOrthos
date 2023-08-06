@@ -393,7 +393,7 @@ img {
 .nav-link {
     display: block;
     color: var(--black);
-    padding: 20px 30px;
+    padding: 18px;
     text-decoration: none;
     border-bottom: 2px solid transparent;
 }
