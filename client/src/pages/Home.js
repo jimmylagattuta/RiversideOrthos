@@ -52,7 +52,7 @@ const Home = () => {
                     <div className='banner-buttons'>
                         <div className='button-wrapper'>
                             <a
-                                href='#'
+                                href='#https://patientportal.oa-pa.com/phxportal/'
                                 className='btn header-button-yellow'>
                                 Book Online
                             </a>
