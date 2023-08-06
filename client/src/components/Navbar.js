@@ -38,6 +38,9 @@ const Navbar = () => {
                             className='header-image'
                             style={{ width: 'auto', height: '120px' }}
                         />
+                        <h1 className="header-title">Los Angeles Orthopedic Surgury Specialists</h1>
+                        <h1 className="header-title">& Advanced Orthopedics</h1>
+
                     </Link>
                 </div>
                 <div className='header-buttons-container'>

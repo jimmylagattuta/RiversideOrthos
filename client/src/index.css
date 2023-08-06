@@ -312,6 +312,16 @@ img {
     background-repeat: no-repeat;
 }
 
+.header-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: 1.2em;
+    padding: 0px;
+    text-transform: none;
+}
+
 .header-button-yellow {
     background-color: transparent;
     border-style: solid;
@@ -867,6 +877,12 @@ img {
     .nav-link-container:hover > .submenu {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1074px) {
+    .header-title {
+        display: none;
     }
 }
 
