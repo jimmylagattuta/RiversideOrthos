@@ -52,17 +52,10 @@ const Home = () => {
                     <div className='banner-buttons'>
                         <div className='button-wrapper'>
                             <a
-                                href='#https://patientportal.oa-pa.com/phxportal/'
-                                className='btn header-button-yellow'>
-                                Book Online
+                                className='btn header-button-yellow'
+                                href='#https://patientportal.oa-pa.com/phxportal/'>
+                                Request Appointment
                             </a>
-                        </div>
-                        <div className='button-wrapper'>
-                            <Link
-                                className='btn header-button-blue'
-                                to='/about'>
-                                About LA Orthos
-                            </Link>
                         </div>
                     </div>
                 </div>
