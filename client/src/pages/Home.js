@@ -71,7 +71,7 @@ const Home = () => {
                         src='LaOrtho1.png'
                         alt='img1'
                         className={'carousel-img'}
-                        style={{ width: '1485px', height: 'auto' }}
+                        style={{ width: '1485px' }}
                     />
                 </ReactBackgroundCarousel>                   
             </div>
