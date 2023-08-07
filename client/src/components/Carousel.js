@@ -7,7 +7,6 @@ const ReactBackgroundCarousel = ({ children }) => {
             <img
                 src={children.props.src}
                 alt={children.props.alt}
-                style={{ width: '1485px', height: '696px' }}
                 className='carousel-img'
                 loading='eager'
             />
