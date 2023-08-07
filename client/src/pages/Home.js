@@ -12,7 +12,7 @@ const Home = () => {
     const [showMap, setShowMap] = useState(false);
     useEffect(() => {
         const firstImage = new Image();
-        firstImage.src = 'https://i.imgur.com/ncDUiW4.webp';
+        firstImage.src = 'https://i.imgur.com/h0IBfBs.webp';
         firstImage.onload = () => {
             setFirstImageLoaded(true);
         };
@@ -68,11 +68,37 @@ const Home = () => {
                 </div>
                 <ReactBackgroundCarousel>
                     <img
-                        src='LaOrtho1.png'
+                        src='https://i.imgur.com/h0IBfBs.webp'
                         alt='img1'
-                        className={'carousel-img'}
+                        className={`carousel-img ${
+                            firstImageLoaded ? 'loaded' : ''
+                        }`}
                     />
-                </ReactBackgroundCarousel>                   
+                    {/* <img
+                        src='https://i.imgur.com/Uurig2v.webp'
+                        alt='img2'
+                        className='carousel-img'
+                        loading='lazy'
+                    />
+                    <img
+                        src='https://i.imgur.com/g45zeSd.webp'
+                        alt='img3'
+                        className='carousel-img'
+                        loading='lazy'
+                    />
+                    <img
+                        src='https://i.imgur.com/6NmjwHX.webp'
+                        alt='img4'
+                        className='carousel-img'
+                        loading='lazy'
+                    />
+                    <img
+                        src='https://i.imgur.com/aISSBI0.webp'
+                        alt='img5'
+                        className='carousel-img'
+                        loading='lazy'
+                    /> */}
+                </ReactBackgroundCarousel>
             </div>
             <div className='home-expertise'>
                 <h2 className='section-title'>Areas of Expertise</h2>
