@@ -7,7 +7,6 @@ const ReactBackgroundCarousel = ({ children }) => {
     const [isFirstSlide, setIsFirstSlide] = useState('first-slide');
     const [carouselInterval, setCarouselInterval] = useState(2500);
     const content = children;
-    console.log('children', children);
     // Function to preload an image
     const preloadImage = (url) => {
         const image = new Image();
