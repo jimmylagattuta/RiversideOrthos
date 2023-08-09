@@ -68,7 +68,7 @@ const Home = () => {
                 </div>
                 <ReactBackgroundCarousel>
                     <img
-                        src='https://i.imgur.com/rF1lEg4.webp'
+                        src='https://i.imgur.com/7eluDts.webp'
                         alt='img1'
                         className={`carousel-img ${
                             firstImageLoaded ? 'loaded' : ''
@@ -87,13 +87,13 @@ const Home = () => {
                         loading='lazy'
                     />
                     <img
-                        src='https://i.imgur.com/9ro5eys.webp'
+                        src='https://i.imgur.com/7eluDts.webp'
                         alt='img3'
                         className='carousel-img'
                         loading='lazy'
                     />
                     <img
-                        src='https://i.imgur.com/rF1lEg4.webp'
+                        src='https://i.imgur.com/9ro5eys.webp'
                         alt='img2'
                         className='carousel-img'
                         loading='lazy'
