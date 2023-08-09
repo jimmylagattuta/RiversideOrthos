@@ -1,10 +1,35 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const LocationComponent = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate a delay of 2 seconds (adjust as needed)
+        const delay = 2000;
+        const timeoutId = setTimeout(() => {
+            setIsLoading(false);
+        }, delay);
+
+        // Cleanup the timeout on component unmount
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    if (isLoading) {
+        // Show a loading state while waiting for the delay to complete
+        return <div>Loading...</div>;
+    }
 
     return (
-        <div style={{ color: 'black' }} className='home-locations'>
-            LocationComponent.js
+        <div className='home-locations'>
+            <div className='section-content'>
+                <div className='location-icon-container'>
+                    <i className='fas fa-map-marked-alt fa-3x'></i>
+                </div>
+                <h2 className='section-title'>
+                    Offices Located Across
+                    The Greater Los Angeles Area
+                </h2>
+            </div>
         </div>
     );
 };
