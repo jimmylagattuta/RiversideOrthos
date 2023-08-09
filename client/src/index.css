@@ -135,7 +135,27 @@ img {
     top: 0;
     left: 0;
 }
-
+.pagination-arrows {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.pagination-arrow .fas {
+    font-size: 1.5rem;
+    color: rgb(243,74, 2);
+}
+.pagination-arrow:disabled .fas {
+    opacity: 0.7;
+}
+.pagination-arrow:hover {
+    cursor: pointer;
+}
+.pagination-arrow:active {
+    transform: translateY(2px) scale(0.95);
+}
+.pagination-arrow:disabled {
+    opacity: 1; /* Opacity for disabled state */
+}
 .map-float-title {
     font-size: 16px;
     margin: 0 0 3px 0;
@@ -1139,6 +1159,27 @@ img {
         position: relative;
         z-index: 1;
     }
+    .pagination-arrows {
+        display: flex;
+        margin: 0px;
+    }
+    .pagination-arrow {
+        background-color: rgb(80, 80, 80);
+        margin: 3px;   
+        border-radius: 10px;
+        border: 1px solid;
+    }
+    .pagination-arrow:disabled {
+        opacity: 0.7; /* Opacity for disabled state */
+        cursor: default;
+    }
+    .pagination-arrow:disabled .fas {
+        opacity: 0.7;
+    }
+    .pagination-arrow .fas:disabled {
+        opacity: 0.7;
+    }
+
 }
 
 @media (max-width: 768px) {

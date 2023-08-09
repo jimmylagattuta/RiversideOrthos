@@ -8,12 +8,31 @@ const FloatingOfficeInfo = ({
     markerSelected,
     resetSelection,
 }) => {
+    const officesPerPage = 4;
+    const [currentPage, setCurrentPage] = useState(0);
+    const totalPages = Math.ceil(offices.length / officesPerPage);
+
+    const handleNextClick = () => {
+        if (currentPage < totalPages - 1) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
+    const handlePrevClick = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+    const startIdx = currentPage * officesPerPage;
+    const visibleOffices = offices.slice(startIdx, startIdx + officesPerPage);
+
     return (
         <div className='map-float-menu'>
-            {offices.map((place, index) => {
+            {visibleOffices.map((place, index) => {
                 return (
                     <div
-                        key={index}
+                        key={index + startIdx}
                         className={
                             place.show
                                 ? `map-float-info-container show-extra`
@@ -67,6 +86,22 @@ const FloatingOfficeInfo = ({
                     </div>
                 );
             })}
+            <div className='pagination-arrows'>
+                <button
+                    className='pagination-arrow'
+                    onClick={handlePrevClick}
+                    disabled={currentPage === 0}
+                >
+                    <i class="fas fa-share fa-flip-both"></i>
+                </button>
+                <button
+                    className='pagination-arrow'
+                    onClick={handleNextClick}
+                    disabled={currentPage === totalPages - 1}
+                >
+                    <i class="fas fa-share"></i>
+                </button>
+            </div>
         </div>
     );
 };
