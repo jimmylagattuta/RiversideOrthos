@@ -260,7 +260,7 @@ const MapContainer = () => {
     };
 
     const resetSelection = () => {
-        setZoomed(6);
+        setZoomed(10);
         setCentered({ lat: 34.09223, lng: -118.29368 });
         setMarkerSelected(null);
         handleInfoWindowClose();
