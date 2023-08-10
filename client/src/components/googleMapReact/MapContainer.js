@@ -323,7 +323,7 @@ const MapContainer = () => {
                     defaultZoom={zoomLevel}
                     defaultCenter={{ lat: 34.09223, lng: -118.29368 }}
                     center={centered}
-                    zoom={zoomed}
+                    zoom={zoomLevel}
                     bootstrapURLKeys={{
                         key: process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY,
                         v: 'weekly',
