@@ -118,14 +118,14 @@ img {
     height: 600px;
 }
 
-.map-marker {
-    font-size: 40px;
-    color: var(--blue);
+.fa-map-marker-alt {
+    font-size: 30px;
+    color: rgb(243,74, 2);
     cursor: pointer;
     z-index: 10;
 }
 
-.map-marker:hover {
+.fa-map-marker-alt:hover {
     transform: translate(0px, -3px);
 }
 
@@ -159,6 +159,7 @@ img {
 .map-float-title {
     font-size: 16px;
     margin: 0 0 3px 0;
+    color:rgb(243, 74, 2);
 }
 
 .map-float-info {

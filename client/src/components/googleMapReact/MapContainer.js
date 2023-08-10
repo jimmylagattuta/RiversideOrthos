@@ -185,8 +185,8 @@ const Marker = ({
             <i
                 className={
                     show
-                        ? 'fa fa-map-pin map-marker active-marker'
-                        : 'fa fa-map-pin map-marker'
+                        ? 'fas fa-map-marker-alt fa-2x active-marker'
+                        : 'fas fa-map-marker-alt fa-2x'
                 }
                 aria-hidden='true'
                 onMouseLeave={() => {
@@ -255,13 +255,13 @@ const MapContainer = () => {
     const handleMarkerClick = (key) => {
         const coordinates = showInfo(key);
         setCentered(coordinates);
-        setZoomed(14);
+        setZoomed(16);
         setMarkerSelected(+key);
     };
 
     const resetSelection = () => {
         setZoomed(10);
-        setCentered({ lat: 41.769, lng: -87.76074 });
+        setCentered({ lat: 34.05223, lng: -118.24368 });
         setMarkerSelected(null);
         handleInfoWindowClose();
     };
@@ -278,7 +278,7 @@ const MapContainer = () => {
             {offices.length > 0 && (
                 <GoogleMapReact
                     defaultZoom={10}
-                    defaultCenter={{ lat: 41.769, lng: -87.76074 }}
+                    defaultCenter={{ lat: 34.05223, lng: -118.24368 }}
                     center={centered}
                     zoom={zoomed}
                     bootstrapURLKeys={{
