@@ -138,7 +138,9 @@ const InfoWindow = ({ place, handleInfoWindowClose, markerSelected }) => {
                 <h2 style={{ fontSize: 14, marginBottom: 3, marginTop: 3 }}>
                     Hours of Operation
                 </h2>
-                <div className='info-window-text'>Monday-Friday</div>
+                <div className='info-window-text'>
+                    {place.city === 'Montebello' ? 'Mon, Tue, Thu, Fri' : (place.city === 'Glendale' ? 'Mon, Tue, Wed, Fri' : 'Monday - Friday')}
+                </div>
                 <div className='info-window-text'>8AM-5PM</div>
             </div>
             <div className='info-window-icons'>
