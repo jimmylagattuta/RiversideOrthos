@@ -238,6 +238,8 @@ const MapContainer = () => {
     const [zoomed, setZoomed] = useState(null);
     const [offices, setOffices] = useState(officesData);
     const [markerSelected, setMarkerSelected] = useState(null);
+    const [zoomLevel, setZoomLevel] = useState(10);
+
     // const head = document.getElementsByTagName('head')[0];
     // const insertBefore = head.insertBefore;
     // head.insertBefore = function (newElement, referenceElement) {
@@ -284,15 +286,31 @@ const MapContainer = () => {
         setMarkerSelected(+key);
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 1160) {
+                setZoomLevel(9); // Adjust zoom level to 9
+            } else {
+                setZoomLevel(10); // Set back to default zoom level
+            }
+        };
+        
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const resetSelection = () => {
-        setZoomed(10);
+        setZoomed(zoomLevel);
         setCentered({ lat: 34.09223, lng: -118.29368 });
         setMarkerSelected(null);
         handleInfoWindowClose();
     };
-    console.log('process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY', process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY);
     return (
-
+        
         <div className='map-container'>
             <FloatingOfficeInfo
                 handleMarkerClick={handleMarkerClick}
@@ -302,7 +320,7 @@ const MapContainer = () => {
             />
             {offices.length > 0 && (
                 <GoogleMapReact
-                    defaultZoom={10}
+                    defaultZoom={zoomLevel}
                     defaultCenter={{ lat: 34.09223, lng: -118.29368 }}
                     center={centered}
                     zoom={zoomed}
