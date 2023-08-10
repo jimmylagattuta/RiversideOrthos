@@ -12,7 +12,7 @@ const Home = () => {
     const [showMap, setShowMap] = useState(false);
     useEffect(() => {
         const firstImage = new Image();
-        firstImage.src = 'https://i.imgur.com/h0IBfBs.webp';
+        firstImage.src = 'https://i.imgur.com/2seXrrT.webp';
         firstImage.onload = () => {
             setFirstImageLoaded(true);
         };
@@ -68,33 +68,33 @@ const Home = () => {
                 </div>
                 <ReactBackgroundCarousel>
                     <img
-                        src='https://i.imgur.com/7eluDts.webp'
+                        src='https://i.imgur.com/2seXrrT.webp'
+                        alt='img3'
+                        className='carousel-img'
+                        loading='lazy'
+                    />
+                    <img
+                        src='https://i.imgur.com/8dBCcKS.webp'
+                        alt='img2'
+                        className='carousel-img'
+                        loading='lazy'
+                    />
+                    <img
+                        src='https://i.imgur.com/46JeJHq.webp'
                         alt='img1'
                         className={`carousel-img ${
                             firstImageLoaded ? 'loaded' : ''
                         }`}
                     />
                     <img
-                        src='https://i.imgur.com/9ro5eys.webp'
-                        alt='img3'
-                        className='carousel-img'
-                        loading='lazy'
-                    />
-                    <img
-                        src='https://i.imgur.com/rF1lEg4.webp'
+                        src='https://i.imgur.com/u6WbgWF.webp'
                         alt='img2'
                         className='carousel-img'
                         loading='lazy'
                     />
                     <img
-                        src='https://i.imgur.com/7eluDts.webp'
+                        src='https://i.imgur.com/yVpGfMF.webp'
                         alt='img3'
-                        className='carousel-img'
-                        loading='lazy'
-                    />
-                    <img
-                        src='https://i.imgur.com/9ro5eys.webp'
-                        alt='img2'
                         className='carousel-img'
                         loading='lazy'
                     />

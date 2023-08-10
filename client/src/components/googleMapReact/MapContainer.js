@@ -74,10 +74,10 @@ const FloatingOfficeInfo = ({
                                 Tuesday: 8 AM- 5PM
                             </div>
                             <div className='map-float-info'>
-                                Wednesday: 8 AM- 5PM
+                                {place.city === 'Montebello' ? 'Wednesday: Closed' : 'Wednesday: 8 AM- 5PM'}
                             </div>
                             <div className='map-float-info'>
-                                Thursday: 8 AM- 5PM
+                                {place.city === 'Glendale' ? 'Thursday: Closed' : 'Thursday: 8 AM- 5PM'}
                             </div>
                             <div className='map-float-info'>
                                 Friday: 8 AM- 5PM
