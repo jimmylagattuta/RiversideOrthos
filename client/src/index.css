@@ -1257,6 +1257,7 @@ img {
         -webkit-transform: skew(0deg);
         transform: skew(0deg);
         width: 100%;
+        min-width: none;
     }
 
     .banner-title-container {
