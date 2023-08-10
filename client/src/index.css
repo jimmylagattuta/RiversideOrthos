@@ -138,10 +138,14 @@ img {
 .pagination-arrows {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
+    margin-bottom: 7px;
+    padding: 3px 1px 0px 5px;
+}
+.pagination-arrow {
+    width: 100%;
 }
 .pagination-arrow .fas {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgb(243,74, 2);
 }
 .pagination-arrow:disabled .fas {
@@ -1167,7 +1171,7 @@ img {
         margin: 0px;
     }
     .pagination-arrow {
-        background-color: rgb(80, 80, 80);
+        background-color: rgba(80, 80, 80, 0.9);
         margin: 3px;   
         border-radius: 10px;
         border: 1px solid;
@@ -1257,7 +1261,7 @@ img {
         -webkit-transform: skew(0deg);
         transform: skew(0deg);
         width: 100%;
-        min-width: none;
+        min-width: 0px;
     }
 
     .banner-title-container {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { officesData } from '../../data';
 
@@ -23,12 +23,42 @@ const FloatingOfficeInfo = ({
             setCurrentPage(currentPage - 1);
         }
     };
+    const [useChevronLeft, setUseChevronLeft] = useState(false);
+    const [useChevronRight, setUseChevronRight] = useState(false); // Define state variable
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 1160) {
+                setUseChevronLeft(true);
+                setUseChevronRight(true);
+            } else {
+                setUseChevronLeft(false);
+                setUseChevronRight(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const startIdx = currentPage * officesPerPage;
     const visibleOffices = offices.slice(startIdx, startIdx + officesPerPage);
 
     return (
         <div className='map-float-menu'>
+            <div className='pagination-arrows'>
+                <button
+                    className='pagination-arrow'
+                    onClick={handlePrevClick}
+                    disabled={currentPage === 0}
+                >
+                    {useChevronLeft ? <i className="fas fa-chevron-left"></i> : <i className="fas fa-chevron-up"></i>}
+                </button>
+            </div>
             {visibleOffices.map((place, index) => {
                 return (
                     <div
@@ -89,17 +119,10 @@ const FloatingOfficeInfo = ({
             <div className='pagination-arrows'>
                 <button
                     className='pagination-arrow'
-                    onClick={handlePrevClick}
-                    disabled={currentPage === 0}
-                >
-                    <i class="fas fa-share fa-flip-both"></i>
-                </button>
-                <button
-                    className='pagination-arrow'
                     onClick={handleNextClick}
                     disabled={currentPage === totalPages - 1}
                 >
-                    <i class="fas fa-share"></i>
+                    {useChevronRight ? <i className="fas fa-chevron-right"></i> : <i className="fas fa-chevron-down"></i>}
                 </button>
             </div>
         </div>
