@@ -137,12 +137,11 @@ img {
 }
 .pagination-arrows {
     display: flex;
-    justify-content: space-evenly;
     margin-bottom: 7px;
     padding: 3px 1px 0px 5px;
 }
 .pagination-arrow {
-    width: 100%;
+    width: 180px;
 }
 .pagination-arrow .fas {
     font-size: 1rem;
@@ -1169,12 +1168,14 @@ img {
     .pagination-arrows {
         display: flex;
         margin: 0px;
+        padding: 3px;
     }
     .pagination-arrow {
         background-color: rgba(80, 80, 80, 0.9);
-        margin: 3px;   
+        margin: 0px;   
         border-radius: 10px;
         border: 1px solid;
+        width: 100%;
     }
     .pagination-arrow:disabled {
         opacity: 0.7; /* Opacity for disabled state */
