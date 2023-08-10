@@ -964,6 +964,7 @@ img {
 
 .banner-title-container {
     /* width: 40%; */
+    
 }
 
 .banner-title {
@@ -1248,6 +1249,7 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
+        min-width: 0px;
     }
 
     .home-banner:after {
@@ -1259,7 +1261,7 @@ img {
 
     .banner-title-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin-top: -100px;
     }
 
@@ -1270,6 +1272,7 @@ img {
     
     .banner-description {
         padding: 20px 10px 20px 10px;
+        width: 90%;
     }
 
     .header-buttons-container {
