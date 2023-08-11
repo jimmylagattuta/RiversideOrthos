@@ -280,6 +280,7 @@ const MapContainer = () => {
     };
 
     const handleMarkerClick = (key) => {
+        console.log('handleMarkerClicked');
         const coordinates = showInfo(key);
         setCentered(coordinates);
         setZoomed(16);
@@ -289,8 +290,10 @@ const MapContainer = () => {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 1160) {
+                console.log('setting zoom 9(Mobile)');
                 setZoomLevel(9); // Adjust zoom level to 9
             } else {
+                console.log('setting zoom 10(Desktop)');
                 setZoomLevel(10); // Set back to default zoom level
             }
         };
@@ -304,6 +307,7 @@ const MapContainer = () => {
     }, []);
 
     const resetSelection = () => {
+        console.log('resetSelection setZoomed(zoomLevel)');
         setZoomed(zoomLevel);
         setCentered({ lat: 34.09223, lng: -118.29368 });
         setMarkerSelected(null);
@@ -320,10 +324,10 @@ const MapContainer = () => {
             />
             {offices.length > 0 && (
                 <GoogleMapReact
-                    defaultZoom={zoomLevel}
+                    defaultZoom={10}
                     defaultCenter={{ lat: 34.09223, lng: -118.29368 }}
                     center={centered}
-                    zoom={zoomLevel}
+                    zoom={zoomed}
                     bootstrapURLKeys={{
                         key: process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY,
                         v: 'weekly',
