@@ -174,112 +174,474 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/nRQYdRV.jpg',
+        image: 'https://i.imgur.com/Rq43ZzX.webp',
         name: 'Hand and Wrist Surgery',
         firstTitle: 'About Hand and Wrist Surgery',
         description: [
-            ''
+            "Hand and wrist surgery requires true expertise and skill, and that’s why Los Angeles Orthopedic Surgery Specialists is your best destination when you have hand and wrist problems. At Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, you’ll find the highest standard of customized orthopedic care, so why settle for anything less? Call the office nearest you or book your surgery consultation online now."
         ],
-        link: '/services'
+        secondTitle: 'What is hand and wrist surgery?',
+        descriptionTwo: [
+            "Hand and wrist surgery refers to surgery involving the bones, joints, ligaments, tendons, muscles, and other tissues in your upper extremities.",
+            "The hand and wrist surgeons at Los Angeles Orthopedic Surgery Specialists have specialized training and skills with this type of surgery, including advanced minimally invasive techniques like arthroscopy surgery."
+        ],
+        thirdTitle: 'What conditions might require hand and wrist surgery?',
+        descriptionThree: [
+            "You might need hand or wrist surgery if you have an issue such as:"
+        ],
+        thirdTitleBulletedList: [
+            'Carpal tunnel syndrome',
+            "Dupuytren's contracture",
+            'Fractures',
+            'Nerve damage',
+            'Trigger finger',
+            'Tendonitis',
+            'Ganglion cyst'
+        ],
+        descriptionAfterThirdBulletedList: [
+            "In many cases, nonsurgical treatment helps with these conditions. For example, physical therapy, splinting, and platelet-rich plasma (PRP) or corticosteroid injections can often help your body heal on its own.",
+            "However, if you have chronic hand or wrist pain, or if a structural problem keeps you from using your hand and wrist normally, surgery could be the best alternative."
+        ],
+        fourthTitle: 'What does hand and wrist surgery involve?',
+        descriptionFour: [
+            "There are many different types of hand and wrist surgery, and the skilled surgeons at Los Angeles Orthopedic Surgery Specialists can recommend the approach that suits your issue the best.",
+            "Most hand and wrist surgeries use a minimally invasive surgical technique, such as arthroscopy. With this type of surgery, you have tiny puncture-like skin openings called ports rather than long incisions.",
+            "Your surgeon views the inside of an injured joint using an arthroscope, a slender tube with a miniature camera attached. They use additional ports for access to your joint.",
+            "Arthroscopy and other minimally invasive techniques are particularly well-suited for the delicate hand and wrist areas because they allow for highly precise surgical movements without disrupting a lot of surrounding tissue. Also, minimally invasive surgery allows for a much faster recovery with less need of pain medication.",
+            "Some types of hand and wrist surgery may require open surgery, in which your surgeon makes one long incision. This gives your surgeon more room to operate, so it might be necessary if you have extensive hand or wrist damage.",
+            "Regardless of the kind of hand or wrist surgery you need, the Los Angeles Orthopedic Surgery Specialists team supports you throughout your recovery, including physical therapy and pain management.",
+            "If you have hand or wrist pain that’s making it hard to function, call Los Angeles Orthopedic Surgery Specialists or click on the online booking link now."
+        ],
+        link: '/services',
     },
     {
-        image: '',
+        image: 'https://i.imgur.com/Mc8Slpi.webp',
         name: 'Shoulder Surgery',
-        firstTitle: '',
+        firstTitle: 'About Shoulder Surgery',
         description: [
-            ''
+            "It’s hard to believe just how much you really use your shoulders — that is, until you suffer a debilitating shoulder problem. The premier team of surgeons at Los Angeles Orthopedic Surgery Specialists understands how frustrating shoulder pain can be, and they offer the most advanced shoulder surgery techniques to help you get back to your life quickly. There are offices throughout the Los Angeles area — in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — so schedule your appointment through online booking or call the nearest office now."
         ],
-        link: '/services'
+        secondTitle: 'What is shoulder surgery?',
+        descriptionTwo: [
+            "Shoulder surgery is a group of surgical procedures that treat the shoulder joint. The leading surgeons at Los Angeles Orthopedic Surgery Specialists understand the complexities of the shoulder joint, allowing them to offer the best in shoulder surgery for people with chronic pain and disability."
+        ],
+        thirdTitle: 'What conditions does shoulder surgery treat?',
+        descriptionThree: [
+            "Your shoulder joint has bones, tendons, ligaments, and other tissues that work together in a complex manner. A problem like a tendon tear can reverberate through your whole shoulder and arm, leading to severe pain and dysfunction. Some of the most common reasons to have shoulder surgery are:"
+        ],
+        thirdTitleBulletedList: [
+            'Rotator cuff tears (tendon tears)',
+            'Cartilage tears, like labral tears',
+            'Arthritis',
+            'Frozen shoulder',
+            'Shoulder impingement (rotator cuff tendonitis)',
+            'Shoulder instability'
+        ],
+        descriptionAfterThirdBulletedList: [
+            "A nonsurgical approach is usually the first step in treating shoulder issues. Physical therapy, pain management, activity modifications, and injections — platelet-rich plasma (PRP) or corticosteroids — can all help people with shoulder issues to function better.",
+            "However, should you not feel better after trying nonsurgical treatments for a while, the Los Angeles Orthopedic Surgery Specialists team may recommend surgery."
+        ],
+        fourthTitle: 'What happens during shoulder surgery?',
+        descriptionFour: [
+            "Shoulder surgery techniques can vary based on what type of injury or condition you have. Most shoulder surgeries involve minimally invasive techniques like arthroscopic surgery (arthroscopy).",
+            "With arthroscopy, your surgeon uses quarter-inch incisions to insert tools that help them view your joint from within as they perform your procedure. This approach minimizes bleeding, tissue damage, pain, and risk of infections after surgery. Arthroscopy can treat shoulder problems on a same-day basis.",
+            "Some shoulder problems, particularly complicated damage like severe osteoarthritis, require a different approach. For example, in shoulder replacement surgery, you typically have one six-inch incision.",
+            "After shoulder surgery, you’ll most likely wear an immobilization device that keeps your shoulder in the proper position. You’ll have some discomfort in the days right after your surgery, but the team makes sure you have good pain management options during that time.",
+            "Normally, physical therapy starts a week or so after your surgery. This helps you build strength so you can return to your normal activities.",
+            "To schedule your shoulder surgery, call Los Angeles Orthopedic Surgery Specialists or click on the online booking feature today."
+        ],
+        link: '/services',
     },
     {
-        image: '',
+        image: 'https://i.imgur.com/AsILU53.webp',
         name: 'Sports Medicine',
-        firstTitle: '',
+        firstTitle: 'About Sports Medicine',
         description: [
-            ''
+            "You may need to see a sports medicine physician if you’re an athlete seeking to conquer that next level of competition, or also if you’re interested in improving your overall fitness and endurance. The Los Angeles Orthopedic Surgery Specialists sports medicine team provides exams, training evaluations, and top-level care for the aches and pains that often accompany an active lifestyle. Call one of their eight Los Angeles locations in East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, Montebello, or on Wilshire Boulevard today to schedule an evaluation. Or try their secure online service to request an appointment."
         ],
-        link: '/services'
+        secondTitle: 'What is sports medicine?',
+        descriptionTwo: [
+            "Sports medicine focuses on the effects of physical activity and sports on your muscles, joints, tendons, and bones. Professional athletes have long enjoyed the benefits of a physician who specializes in treating and preventing team and individual sports injuries.",
+            "These days, young athletes and active adults can also experience the advantages of seeing a sports medicine physician equipped to evaluate physical fitness, offer guidance regarding training routines, and develop treatment strategies for chronic and acute sports injuries."
+        ],
+        thirdTitle: "What happens during a sports medicine evaluation?",
+        descriptionThree: [
+            "Sports medicine evaluations at Los Angeles Orthopedic Surgery Specialists are tailored to meet your needs. For instance, teen athletes benefit from an exam that evaluates their fitness level, musculoskeletal health, and current training routine.",
+            "Adults who are active but experiencing some nagging aches and pains may find an evaluation beneficial in developing a joint-friendly exercise routine that maintains your health but prevents worsening discomfort.",
+            "You may, for example, benefit from a workout routine that switches off running and other high-impact activities with swimming or cycling.",
+            "If you’re not yet active in a sport, a sports medicine physician can provide guidance regarding activities that suit your current health status and goals to aim for as you advance. A sports medicine evaluation can cover everything from the shoes you should wear to appropriate body mechanics to which size tennis racquet to use."
+        ],
+        fourthTitle: 'What conditions does a sports medicine physician treat?',
+        descriptionFour: [
+            "The sports medicine physicians at Los Angeles Orthopedic Surgery Specialists offer expert care for a variety of orthopedic health issues, including:"
+        ],
+        fourthTitleBulletedList: [
+            "ACL tears",
+            "Rotator cuff injuries",
+            "Chronic conditions such as tennis elbow or jumper’s knee",
+            "Acute elbow, wrist, or ankle fractures, strains, and sprains",
+            "Overuse injuries",
+            "Back and neck strains and sprains",
+            "Shoulder, hip, and knee pain or injury"
+        ],
+        descriptionAfterFourthBulletedList: [
+            "Treatment strategies are designed to resolve your pain, improve mobility, and preserve your ability to engage in your chosen sport.",
+            "Your plan may include physical therapy or rehab to improve conditioning, strength, and flexibility. Your provider may also recommend changing your training routine, having joint injections, or using advanced treatment with minimally invasive arthroscopic surgery to treat joint, tendon, or ligament injuries.",
+            "Schedule a sports medicine evaluation at Los Angeles Orthopedic Surgery Specialists today for expert orthopedic care. Call the office or request an appointment online."
+        ],
+        link: '/services',
     },
     {
-        image: '',
-        name: 'Athroscopy',
-        firstTitle: '',
+        image: 'https://i.imgur.com/cRAxygj.webp',
+        name: 'Arthroscopy',
+        firstTitle: 'About Arthroscopy',
         description: [
-            ''
+            "Arthroscopic surgery, or arthroscopy, features small incisions and a fast recovery — and you can have most arthroscopic procedures on an outpatient basis. At Los Angeles Orthopedic Surgery Specialists, the experienced surgical team performs arthroscopy to treat problems such as ACL tears, meniscus tears, and ligament reconstructions. There are Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, so call the one nearest to you or book your appointment online today."
         ],
-        link: '/services'
+        secondTitle: 'What is arthroscopy?',
+        descriptionTwo: [
+            "Arthroscopic surgery (arthroscopy) is a procedure that examines and treats problems in the joints. With arthroscopy, you have a few small incisions instead of a long one.",
+            "Arthroscopes (the surgical tool used in arthroscopy) have miniature cameras and built-in lights.",
+            "The camera transmits images to a video screen, which gives your surgeon a close-up view of the joint.",
+            "Your surgeon uses special surgical tools — thinner and smaller than open surgery instruments — to repair damage inside your joint while viewing it on the screen.",
+            "Arthroscopy is less invasive than open surgery, so it’s the procedure of choice for many orthopedic conditions and injuries."
+        ],
+        thirdTitle: "What conditions does arthroscopy treat?",
+        descriptionThree: [
+            "Arthroscopy allows your surgeon to closely examine the joint, make a diagnosis, and make repairs as needed. Some of the most common reasons to have this kind of surgery include:"
+        ],
+        thirdTitleBulletedList: [
+            "Tendon tears, such as rotator cuff tears",
+            "Cartilage damage, like meniscus tears and labral tears",
+            "Ligament tears, like anterior cruciate ligament (ACL) tears",
+            "Inflammation and swelling, like synovitis",
+            "Recurrent joint dislocations"
+        ],
+        descriptionAfterThirdBulletedList: [
+          "With arthroscopy, your surgeon can perform many different types of repairs, including removing loose bodies (stray pieces of cartilage or bone), reattaching tendons, repairing ligaments, and even reconstructing damaged tissues using grafts.",
+          "Arthroscopy can treat problems affecting the knee, shoulder, wrist, ankle, and hip, as well as other areas where you have joint problems."
+        ],
+        fourthTitle: 'What advantages does arthroscopy offer?',
+        descriptionFour: [
+            "Arthroscopic surgery has some significant advantages when you compare it with traditional open surgery, including:"
+        ],
+        fourthTitleBulletedList: [
+            "Less bleeding",
+            "Less damage to the nearby tissues",
+            "Reduced risk of scarring",
+            "Reduced risk of infection during healing",
+            "Less pain during healing",
+            "Faster return to work and regular activities"
+        ],
+        descriptionAfterFourthBulletedList: [
+            "Most arthroscopy happens on a same-day basis, generally allowing you to go home within hours of your procedure."
+        ],
+        fifthTitle: 'What is recovery like after arthroscopy?',
+        descriptionFive: [
+            "After your procedure, your surgeon closes the incisions using a surgical adhesive or a few small sutures. You may have a compression bandage over your incisions in the initial stage of healing.",
+            "Los Angeles Orthopedic Surgery Specialists provides a personalized post-surgery recovery plan, including pain management and physical therapy details. Following your recovery plan closely is the key to a full return to the activities you love.",
+            "Are you ready to learn more about arthroscopy? Click the online booking link or call the Los Angeles Orthopedic Surgery Specialists office near you now."
+        ],
+        link: '/services',
     },
     {
-        image: '',
+        image: 'https://i.imgur.com/R3QISDB.jpg',
         name: 'Knee Replacement Surgery',
-        firstTitle: '',
+        firstTitle: 'About Knee Replacement Surgery',
         description: [
-            ''
+            'Knee replacement surgery is one of the most effective pain management options for people with stubborn knee pain — up to 95% of patients undergoing knee replacement experience dramatic pain relief. At Los Angeles Orthopedic Surgery Specialists, a team of renowned orthopedic surgeons offers a range of knee pain treatment options, from injections to knee replacement. There are Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, so call the one nearest to you or click on the online scheduler for help today.'
         ],
-        link: '/services'
+        secondTitle: 'What is knee replacement surgery?',
+        descriptionTwo: [
+            "Knee replacement surgery removes damaged bone and cartilage — the material that protects and pads the bones — from your knee joint. Artificial parts made of metal and plastic replace those parts of your knee.",
+            "Knee replacement surgery is perhaps the most effective pain management solution for people who have chronic knee pain. This surgery is widely acknowledged as having one of the highest success rates of all surgical procedures performed today."
+        ],
+        thirdTitle: 'When might I need a knee replacement?',
+        descriptionThree: [
+            "The main reason for knee replacement is chronic knee pain, often accompanied by mobility issues. The chronic pain commonly develops from osteoarthritis, a degenerative form of the disease that breaks down your knee cartilage.",
+            "Rheumatoid arthritis and post-inflammatory arthritis (arthritis that develops at the site of a previous injury) may lead to knee replacement too. In some cases, a severe knee injury may require a knee replacement.",
+            "In these situations, knee pain often recedes with nonsurgical treatments like physical therapy, exercise, and injections of platelet-rich plasma (PRP), hyaluronic acid, or corticosteroids.",
+            "However, if you’ve already tried nonsurgical approaches without any luck, a knee replacement could be the best option. You can have a knee replacement at any age, but most people are 50-80 years old."
+        ],
+        fourthTitle: 'What is the process for knee replacement?',
+        descriptionFour: [
+            "A total knee replacement restores your whole knee joint, including the medial compartment (inner knee), lateral compartment (outer knee), and patellofemoral compartment (behind the kneecap).",
+            "After removing damaged cartilage and a minimal amount of bone from your joint surfaces, your surgeon positions two titanium implants: a femoral implant at the top of your knee and a tibial base plate at the bottom. A polyethylene liner goes between the two metal components, allowing for smooth gliding.",
+            "If you have damage in just one knee compartment, a partial knee replacement restores only that area.",
+            "The Los Angeles Orthopedic Surgery Specialists team uses state-of-the-art Stryker® joint implants. Stryker implants work with your body, giving you the most natural knee movement possible.",
+            "After your knee replacement, the team sets up your physical therapy right away; it’s the best way to start your recovery. The team gives you specific instructions to guide your path back to active life, including returning to walking without support and resuming driving.",
+            "Are you ready for knee pain relief? Call the Los Angeles Orthopedic Surgery Specialists office nearest to you or book your appointment using online scheduling now."
+        ],
+        link: '/services',
     },
     {
-        image: '',
+        image: 'https://i.imgur.com/TOuhcQa.webp',
         name: 'Pain Management',
-        firstTitle: '',
+        firstTitle: 'About Pain Management',
         description: [
-            ''
+            'You might need pain management several times in your life, from living with chronic conditions to recovering from surgery. At Los Angeles Orthopedic Surgery Specialists, the expert team of orthopedic specialists offers personalized pain management in Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. Book your appointment online or call the nearest office for help today.'
         ],
-        link: '/services'
+        secondTitle: 'What is pain management?',
+        descriptionTwo: [
+            "Pain management is medical care attuned to the needs of people with either acute (short-term) or chronic (long-term) pain.",
+            "At Los Angeles Orthopedic Surgery Specialists, the team of experts includes multispecialty providers with wide-ranging experience in all types of pain management. They’re here to give you meaningful pain relief so you can live life to the fullest."
+        ],
+        thirdTitle: 'What conditions might need pain management?',
+        descriptionThree: [
+            "You might need pain management if you have difficult-to-manage back, shoulder, neck, knee, ankle, wrist, or other kinds of pain. Some specific conditions that might benefit from pain management include:"
+        ],
+        thirdTitleBulletedList: [
+            "Rotator cuff tears",
+            "Tendonitis",
+            "Osteoarthritis",
+            "Post-traumatic arthritis",
+            "Rheumatoid arthritis",
+            "Carpal tunnel syndrome",
+            "Sciatica",
+            "Complex regional pain syndrome",
+            "Neuropathy"
+        ],
+        descriptionAfterThirdBulletedList: [
+            "Pain management is an important part of initial treatment for all of these conditions. It works alongside physical therapy, activity modifications, and other conservative strategies to help you return to a more active life with less pain.",
+            "If more conservative strategies don’t relieve your pain, you could need joint replacement or arthroscopic surgery (arthroscopy).",
+            "While the surgeons use the most advanced small-incision approaches, minimally invasive procedures are still surgeries. So, you can expect some discomfort for several days or a week after the procedure.",
+            "Pain management strategies can minimize your post-operative pain and help you move through the healing period comfortably."
+        ],
+        fourthTitle: 'What can I expect from pain management?',
+        descriptionFour: [
+            "Pain management can include options like oral pain relievers and injections (corticosteroids and anesthetics). In some cases, the team may recommend more advanced pain management options like radiofrequency ablation, intrathecal pain pumps, or spinal cord stimulation.",
+            "It’s important to keep up with physical therapy appointments to get the best benefits from pain management. Physical therapy improves strength and flexibility, ultimately improving your ability to function day to day.",
+            "Pain management focuses on helping you reach a better place by targeting the source of your pain. The ultimate goal is to help you be more comfortable and more active.",
+            "The pain management program at Los Angeles Orthopedic Surgery Specialists always keeps your whole-person wellness in mind, and they’re here to support you the whole way.",
+            "If you have pain that’s interfering with your life, it’s time to talk about a stronger solution. Call the Los Angeles Orthopedic Surgery Specialists office nearest to you or click on the online booking tool to make your appointment now."
+        ],
+        link: '/services',
     },
     {
-        image: '',
+        image: 'https://i.imgur.com/OT3wbCt.webp',
         name: 'ACL Reconstruction',
-        firstTitle: '',
+        firstTitle: 'About ACL Reconstruction',
         description: [
-            ''
+            'ACL reconstruction offers a return to pain-free mobility whether you’re a top-performing athlete or someone interested in remaining as active as possible throughout your life. The team at Los Angeles Orthopedic Surgery Specialists enjoys a well-deserved reputation for providing outstanding minimally invasive surgeries and rehabilitative services for ACL injuries. Choose from eight convenient locations in the Los Angeles area — Wilshire Boulevard in Los Angeles, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — and schedule your evaluation today. Call the office or request an appointment online.'
         ],
-        link: '/services'
+        secondTitle: 'What is the ACL?',
+        descriptionTwo: [
+            "The anterior cruciate ligament (ACL) is one of the ligaments in your knee joint that connects the thigh bone (femur) to the shinbone (tibia). It helps to maintain knee stability by preventing the tibia from slipping in front of the femur when you walk, run, jump, plant your foot to kick a ball, or pivot and change direction."
+        ],
+        thirdTitle: 'Why would I need ACL reconstruction?',
+        descriptionThree: [
+            "Injuries to the ACL are common and frequently result in tears or ruptures that separate the ligament.",
+            "Because an ACL will not heal independently, patients often need surgical reconstruction of the ligament to restore knee stability. This is particularly true for individuals who wish to remain active in sports such as tennis, soccer, basketball, and other similar activities.",
+            "Generally, activities such as cycling and swimming are less demanding on your ACL, and bracing without surgery may provide adequate knee stability following a tear.",
+            "However, an ACL injury strains other ligaments and joint structures if left untreated, increasing your risk of meniscal damage, osteoarthritis, and other painful knee problems.",
+            "Thus, based on your activity level and the nature of the tear (whether full or partial), your provider at Los Angeles Orthopedic Surgery Specialists may recommend minimally invasive ACL reconstruction to restore knee stability."
+        ],
+        fourthTitle: 'What happens during and after ACL reconstruction?',
+        descriptionFour: [
+            "ACL tears do not respond well to suturing the torn ligament back together. Instead, during ACL reconstruction, your surgeon replaces the damaged ligament with a substitute graft made from a tendon. The graft may come from your body (autograft) or donor material (allograft).",
+            "During this minimally invasive procedure (arthroscopy), your surgeon inserts a high-definition camera and surgical instruments through small incisions or “portals” that allow access to the knee joint.",
+            "Compared with open or traditional surgery, arthroscopic ACL reconstruction decreases trauma to surrounding tissue structures and speeds healing.",
+            "Your provider also develops a comprehensive rehabilitation program following ACL reconstruction that restores mobility and helps prevent future injury by strengthening the muscles that support your knee joint.",
+            "It does take several months to recover from any ACL injury, but with a customized rehab program, you can generally return to full activity following ACL reconstruction.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today by calling the nearest office or requesting an appointment online."
+        ],
+        link: '/services',
     },
     {
         image: '',
         name: 'Meniscus Repairs',
-        firstTitle: '',
+        firstTitle: 'About Meniscus Repairs',
         description: [
-            ''
+            'Surgical meniscus repairs can offer faster and often more reliable fixes than conservative therapies for the stiffness, swelling, and pain of a torn meniscus. Los Angeles Orthopedic Surgery Specialists is a top-level orthopedic practice with eight convenient locations in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. Their team consists of board-certified surgeons, physical therapists, and other medical professionals who focus on your long-term health and well-being. Schedule an evaluation today by calling the office or requesting an appointment online.'
         ],
-        link: '/services'
+        secondTitle: 'What is a meniscus injury?',
+        descriptionTwo: [
+            "Your knee has two C-shaped pads of cartilage (menisci) that act as cushions between where your femur (thigh bone) and tibia (shinbone) meet in the joint. Meniscus injuries, commonly called tears, occur when the cartilage is torn during trauma or due to degenerative changes over time.",
+            "Athletes participating in football, soccer, tennis, or other sports requiring frequent twisting and turning or high contact are at increased risk of meniscal tears. Excess weight, age-related changes, or overuse injuries are also common triggers for meniscus injuries."
+        ],
+        thirdTitle: 'What symptoms indeicate the need for meniscus repair?',
+        descriptionThree: [
+            "Symptoms of a torn meniscus can vary and may include:"
+        ],
+        thirdTitleBulletedList: [
+            "Swelling or stiffness in the knee",
+            "Pain with twisting or rotating the knee",
+            "The sensation that your knee is locked in place",
+            "Difficulty straightening the knee",
+            "Feeling as though your knee is giving way"
+        ],
+        descriptionAfterThirdBulletedList: [
+            "You may feel a pop in the knee when the meniscus tears, but the resulting pain and other symptoms often don’t develop for 2-3 days. A fall or aggressive pivot during a game or, in the case of an age-related injury, even an awkward twist when rising from a chair can result in a torn meniscus."
+        ],
+        fourthTitle: 'What happens during meniscus repairs?',
+        descriptionFour: [
+            "Treatment for a torn meniscus depends on the size and location of the tear. A small tear may respond to conservative therapies such as rest, anti-inflammatory medication, and elevating the knee.",
+            "Other nonsurgical treatments include steroid injections to reduce inflammation and pain or regenerative medicine therapies such as platelet-rich plasma (PRP) injections to enhance healing. These therapies are often beneficial for age-related or degenerative tears.",
+            "However, if your knee pain, locking, and instability symptoms interfere with your mobility and don’t respond well to conservative therapies, your Los Angeles Orthopedic Surgery Specialists provider may recommend minimally invasive arthroscopic surgery for meniscus repair.",
+            "For instance, tears along the meniscus’s outer edge, which has a healthy blood supply that promotes healing, may respond well to suturing. In other cases, your surgeon may suggest removing the torn cartilage via a partial meniscectomy.",
+            "Interestingly, recovery after a meniscectomy is often faster than suturing, 3-6 weeks for partial meniscectomy versus 3-6 months for suturing. Either way, your Los Angeles Orthopedic Surgery Specialists team works with you to ensure appropriate healing with a customized rehab program following surgery.",
+            "Schedule your evaluation today. Call the office or request an appointment online."
+        ],
+        link: '/services',
     },
     {
-        image: '',
+        image: 'https://i.imgur.com/3BMvTfL.webp',
         name: 'Arthritis Care',
-        firstTitle: '',
+        firstTitle: 'About Arthritis Care',
         description: [
-            ''
+            "Almost 25% of adults in the United States (that’s about 60 million people) have arthritis. Appropriate arthritis care can help prevent the disability associated with this painfully common joint condition. The expert team at Los Angeles Orthopedic Surgery Specialists has eight locations in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. They provide personalized arthritis care that meets your needs and circumstances, from innovative nonsurgical therapy to state-of-the-art joint replacement. Schedule an evaluation today. Call the office or request an appointment online."
         ],
-        link: '/services'
+        secondTitle: 'What is arthritis?',
+        descriptionTwo: [
+            "Arthritis is a general term for more than 100 diseases affecting your joint health and mobility, typically categorized as:"
+        ],
+        secondTitleBulletedList: [
+            "Osteoarthritis related to joint wear-and-tear over time",
+            "Inflammatory arthritis such as rheumatoid arthritis or lupus",
+            "Post-traumatic arthritis following an injury",
+            "Septic arthritis caused by a bacterial, fungal, or viral infection"
+        ],
+        descriptionAfterSecondBulletedList: [
+            "Osteoarthritis is by far the most common type of arthritis and is sometimes considered a “natural” part of aging. However, regardless of what’s causing the joint inflammation, pain, and disability associated with arthritis, you shouldn’t consider it normal or unavoidable."
+        ],
+        thirdTitle: 'What are the symptoms of arthritis?',
+        descriptionThree: [
+            "Arthritis symptoms differ slightly depending on the underlying cause, but they usually include varying degrees of joint inflammation, swelling, stiffness, and pain that can eventually affect your daily routine.",
+            "For instance, osteoarthritis symptoms tend to start slowly and build over time. You may notice morning stiffness that improves as you become active. Eventually, however, pain can become constant as cartilage in the joint wears away, and bone rubs against bone. This can affect your ability to move the joint.",
+            "On the other hand, joint pain and swelling related to septic arthritis usually occur very quickly. They may be accompanied by worsening fever and other signs of systemic illness or infection.",
+            "Joint pain and inflammation related to rheumatoid arthritis and other inflammatory types are often accompanied by fatigue, low-grade fevers, and loss of appetite.",
+            "Any joint is vulnerable to arthritis, but those most often affected include the hands, shoulders, hips, knees, ankles, and spine."
+        ],
+        fourthTitle: 'What is arthritis care?',
+        descriptionFour: [
+            "Arthritis care at Los Angeles Orthopedic Surgery Specialists begins with a thorough exam and diagnostic evaluation to determine the type and level of arthritis you’re experiencing. Their treatment goals include reducing pain and inflammation while preventing further joint damage.",
+            "Based on evaluation results, your arthritis care strategy may include:"            
+        ],
+        fourthTitleBulletedList: [
+            "Oral medications to reduce inflammation and pain",
+            "Physical therapy to maintain flexibility and strength in muscles supporting your joints",
+            "Joint-friendly exercise routines",
+            "Biologics such as plasma-rich protein (PRP) injection therapy"
+        ],
+        descriptionAfterFourthBulletedList: [
+            "Should conservative measures fail to control your symptoms, the surgical team at Los Angeles Orthopedic Surgery Specialists may recommend minimally invasive arthroscopic surgery to address bone spurs, remove damaged joint lining (synovectomy), or replace severely worn joints.",
+            "For more information about arthritis care, schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today. Call the office or request an appointment online."
+        ],
+        link: '/services',
     },
     {
         image: '',
         name: 'Ligament Reconstruction',
-        firstTitle: '',
+        firstTitle: 'About Ligament Reconstruction',
         description: [
-            ''
+            'Ligament reconstruction may be your best treatment option if you’re experiencing joint instability, pain, and limited mobility. The board-certified surgeons at Los Angeles Orthopedic Surgery Specialists provide optimal care for numerous common orthopedic issues, including minimally invasive ligament reconstruction for sprains and tears not responding to conservative treatments. Call one of their offices in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — to schedule your evaluation today or request an appointment online.'
         ],
-        link: '/services'
+        secondTitle: 'What is a ligament?',
+        descriptionTwo: [
+            "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
+            "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
+            "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
+        ],
+        thirdTitle: 'Why would I need ligament reconstruction?',
+        descriptionThree: [
+            "Ligaments that connect bones and stabilize joints are vulnerable to arthritic changes, sprains, and other damage that can affect their ability to function normally.",
+            "A mild ligament injury typically responds well to rest, ice, and anti-inflammatory medications that reduce pain and promote healing within a few weeks. However, severely stretched or torn ligaments often require surgical reconstruction to restore joint stability and appropriate range of motion.",
+            "Ligaments most often treated with reconstruction include the following:"
+        ],
+        thirdTitleBulletedList: [
+            "Anterior cruciate ligament (ACL) in the knee",
+            "Posterior cruciate ligament (PCL) in the knee",
+            "Lateral (outer) ankle ligament",
+            "Carpometacarpal (CMC) ligament where the thumb meets the wrist"
+        ],
+        descriptionAfterThirdBulletedList: [
+            "A stretched or weakened ligament may respond to suturing. However, replacement with tendon tissue from your own body (autograft) or donor tissue (allograft) is often necessary for partial or complete tendon tears."
+        ],
+        fourthTitle: 'What happens during ligament reconstruction surgery?',
+        descriptionFour: [
+            "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
+            "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
+            "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
+            "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
+        ],
+        link: '/services',
     },
     {
         image: '',
         name: 'Joint Injections',
-        firstTitle: '',
+        firstTitle: 'About Joint Injections',
         description: [
-            ''
+            "When oral medications or physical therapy aren’t enough, joint injections may be your best nonsurgical option for relieving pain, stiffness, and decreased mobility caused by arthritis and other painful joint problems. The Los Angeles Orthopedic Surgery Specialists team is committed to offering long-term solutions for joint pain that may include injection-based therapy. Call one of their eight Los Angeles-area locations in East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, Montebello, or on Wilshire Boulevard today to schedule an evaluation. Or try their secure online service to request an appointment."
         ],
-        link: '/services'
+        secondTitle: 'What are joint injections?',
+        descriptionTwo: [
+            "Joint injections can help relieve inflammation and pain within a joint. They’re typically recommended as part of a comprehensive strategy that includes physical therapy, joint-friendly exercise programs, bracing, and other conservative treatments.",
+            "While injection-based therapy isn’t a permanent fix for arthritis or other painful joint conditions, it can temporarily relieve your symptoms for several weeks to months, making it possible to delay surgeries such as joint replacement."
+        ],
+        thirdTitle: 'What kind of joint injections are available?',
+        descriptionThree: [
+            "Joint injections may include:"
+        ],
+        fourthTitle: 'Corticosteroid injections',
+        descriptionFour: [
+            "Corticosteroid injections reduce inflammation and decrease pain caused by rheumatoid arthritis, lupus, osteoarthritis, and other painful joint conditions in the knees, ankles, shoulders, and small joints of the hands, feet, or spine (facet joints). Relief typically lasts 3-6 months."
+        ],
+        fifthTitle: 'Hyaluronic acid injections',
+        descriptionFive: [
+            "The joint fluid that normally helps lubricate cartilage and acts as a shock absorber within a joint can become thin and watery as you age or because of changes related to arthritis. Hyaluronic acid (HA) mimics the consistency of natural joint fluid.",
+            "HA injections, approved for use in the knee, can relieve pain and inflammation for several months. You may require a series of injections for full benefits."
+        ],
+        sixthTitle: 'Platelet-rich plasma (PRP) injections',
+        descriptionSix: [
+            "PRP injections are a newer therapy that uses cells from a sample of your blood, which is processed in a centrifuge to concentrate the platelets. Growth factors contained in the platelets relieve inflammation, sometimes more effectively than steroids.",
+            "Stem cells taken from your blood may also be injected into a joint to promote new tissue growth and repair damaged joint surfaces."
+        ],
+        seventhTitle: 'What can I expect during and after a joint injection?',
+        descriptionSeven: [
+            "The team at Los Angeles Orthopedic Surgery Specialists performs joint injections in-office for your convenience, and they generally take just a few moments.",
+            "A topical numbing agent prevents discomfort during the injection, and your provider may also combine an anesthetic with the steroid to offer temporary pain relief.",
+            "Depending on the type of injection and materials administered, it may take several weeks before you experience the full benefits of joint injections.",
+            "Schedule your evaluation at Los Angeles Orthopedic Surgery Specialists today by calling the office or requesting an appointment using their online service."
+        ],
+        link: '/services',
     },
     {
         image: '',
         name: 'PRP Injections',
-        firstTitle: '',
+        firstTitle: 'About PRP Injections',
         description: [
-            ''
+            "PRP injections help speed your body’s natural healing response to tendon injuries, joint inflammation, and other painful conditions that impact your orthopedic health. They are one of the many advanced solutions the experts at Los Angeles Orthopedic Surgery Specialists use to improve your overall mobility and quality of life. Call one of their eight Los Angeles locations in East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, Montebello, or on Wilshire Boulevard today to schedule an evaluation. Or try their secure online service to request an appointment."
         ],
-        link: '/services'
+        secondTitle: 'What are PRP injections?',
+        descriptionTwo: [
+            "PRP (platelet-rich plasma) injections contain a concentration of growth factors and plasma that enhance your body’s ability to repair damaged or diseased tissue through new cell growth.",
+            "The platelet-rich formula, which is obtained from a sample of your blood and processed in a centrifuge, is injected into targeted treatment sites during an office visit. PRP may also be introduced during surgeries such as rotator cuff repair to help accelerate healing."
+        ],
+        thirdTitle: 'What conditions can you treat with PRP injections?',
+        descriptionThree: [
+            "Your provider at Los Angeles Orthopedic Surgery Specialists may recommend PRP injections for a variety of musculoskeletal complaints, including:"
+        ],
+        fourthTitle: 'Muscle, tendon, and ligament injuries',
+        descriptionFour: [
+            "Acute sports injuries and chronic conditions such as tennis elbow, Achilles tendonitis, ligament tears, and muscular strains can take weeks to months to heal. PRP injections can speed the healing process, reducing pain and returning you to routine activity faster."
+        ],
+        fifthTitle: 'Postsurgical care',
+        descriptionFive: [
+            "Plastic surgeons first used PRP injections to speed recovery following jaw surgeries and other cosmetic procedures. Orthopedic surgeons now utilize the therapy to accelerate healing following joint, muscle, and tendon repairs."
+        ],
+        sixthTitle: 'Osteoarthritis',
+        descriptionSix: [
+            "Osteoarthritis is a chronic condition that affects the cartilage in your joints. When injected into the affected joint, PRP injections provide a natural anti-inflammatory effect that is often superior to cortisone injections and other joint treatments."
+        ],
+        seventhTitle: 'What can I expect during PRP injections?',
+        descriptionSeven: [
+            "PRP injections are an in-office procedure that starts with a blood draw. The mixture is taken from your blood, eliminating the risks of an allergic response or other potential side effects that some treatments may introduce.",
+            "The blood sample is then placed in a centrifuge, which quickly spins the blood to separate the plasma and platelets from other cells. The providers at Los Angeles Orthopedic Surgery Specialists use the highly trusted Stryker® PRP delivery system to prepare the mixture for injection.",
+            "Your specialist then injects the material into the targeted treatment site. A topical numbing agent may be used first to prevent discomfort during the injection. Because PRP therapy relies on your body’s natural healing response, it can take several weeks to experience the full benefits of the injection.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today to learn more about PRP injections. Call the office or request an appointment online."
+        ],
+        link: '/services',
     }
 ];
 export const aboutObj = [
@@ -531,7 +893,7 @@ export const expertiseBlocks = [
         descriptionFour: [
             "Diabetic foot care at Los Angeles Orthopedic Surgery Specialists includes regular checkups (recommended at least once a year) along with a wide range of customized care for various diabetic foot problems. Some treatments that people with diabetes may need include:"
         ],
-        descriptionAfterBulletedList: [
+        descriptionAfterFourthBulletedList: [
             "Alongside your diabetic foot care in the office, the team provides diabetes education to help you take good care of your feet and whole body at home. You’ll learn preventive care steps to maintain healthy feet, like daily foot inspections, trimming your nails straight across, and never going shoeless.",
             "Monitoring your blood sugar, taking your diabetes medications as directed, and responding to issues quickly are all critical parts of diabetic foot care as well. Good diabetic foot care can keep you out of the hospital, so it’s worth taking the time to do it.",
             "If you have new foot issues or are due for a diabetic foot checkup, call Los Angeles Orthopedic Surgery Specialists or use the online booking tool now."
@@ -543,106 +905,317 @@ export const expertiseBlocks = [
         spanString: 'Diabetic Foot Care'
     },
     {   
-        image: 'https://i.imgur.com/nRQYdRV.webp',
+        image: 'https://i.imgur.com/Rq43ZzX.webp',
         width: '267px',
         height: '200px',
         name: 'Hand and Wrist Surgery',
         firstTitle: 'About Hand and Wrist Surgery',
         description: [
-            ''
+            "Hand and wrist surgery requires true expertise and skill, and that’s why Los Angeles Orthopedic Surgery Specialists is your best destination when you have hand and wrist problems. At Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, you’ll find the highest standard of customized orthopedic care, so why settle for anything less? Call the office nearest you or book your surgery consultation online now."
+        ],
+        secondTitle: 'What is hand and wrist surgery?',
+        descriptionTwo: [
+            "Hand and wrist surgery refers to surgery involving the bones, joints, ligaments, tendons, muscles, and other tissues in your upper extremities.",
+            "The hand and wrist surgeons at Los Angeles Orthopedic Surgery Specialists have specialized training and skills with this type of surgery, including advanced minimally invasive techniques like arthroscopy surgery."
+        ],
+        thirdTitle: 'What conditions might require hand and wrist surgery?',
+        descriptionThree: [
+            "You might need hand or wrist surgery if you have an issue such as:"
+        ],
+        thirdTitleBulletedList: [
+            'Carpal tunnel syndrome',
+            "Dupuytren's contracture",
+            'Fractures',
+            'Nerve damage',
+            'Trigger finger',
+            'Tendonitis',
+            'Ganglion cyst'
+        ],
+        descriptionAfterThirdBulletedList: [
+            "In many cases, nonsurgical treatment helps with these conditions. For example, physical therapy, splinting, and platelet-rich plasma (PRP) or corticosteroid injections can often help your body heal on its own.",
+            "However, if you have chronic hand or wrist pain, or if a structural problem keeps you from using your hand and wrist normally, surgery could be the best alternative."
+        ],
+        fourthTitle: 'What does hand and wrist surgery involve?',
+        descriptionFour: [
+            "There are many different types of hand and wrist surgery, and the skilled surgeons at Los Angeles Orthopedic Surgery Specialists can recommend the approach that suits your issue the best.",
+            "Most hand and wrist surgeries use a minimally invasive surgical technique, such as arthroscopy. With this type of surgery, you have tiny puncture-like skin openings called ports rather than long incisions.",
+            "Your surgeon views the inside of an injured joint using an arthroscope, a slender tube with a miniature camera attached. They use additional ports for access to your joint.",
+            "Arthroscopy and other minimally invasive techniques are particularly well-suited for the delicate hand and wrist areas because they allow for highly precise surgical movements without disrupting a lot of surrounding tissue. Also, minimally invasive surgery allows for a much faster recovery with less need of pain medication.",
+            "Some types of hand and wrist surgery may require open surgery, in which your surgeon makes one long incision. This gives your surgeon more room to operate, so it might be necessary if you have extensive hand or wrist damage.",
+            "Regardless of the kind of hand or wrist surgery you need, the Los Angeles Orthopedic Surgery Specialists team supports you throughout your recovery, including physical therapy and pain management.",
+            "If you have hand or wrist pain that’s making it hard to function, call Los Angeles Orthopedic Surgery Specialists or click on the online booking link now."
         ],
         link: '/handAndWristSurgery',
-        imageTwo: 'https://i.imgur.com/nRQYdRV.webp',
+        imageTwo: 'https://i.imgur.com/Rq43ZzX.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Hand and Wrist Surgery'
     },
     {   
-        image: '',
+        image: 'https://i.imgur.com/Mc8Slpi.webp',
         width: '267px',
         height: '200px',
         name: 'Shoulder Surgery',
-        firstTitle: '',
+        firstTitle: 'About Shoulder Surgery',
         description: [
-            ''
+            "It’s hard to believe just how much you really use your shoulders — that is, until you suffer a debilitating shoulder problem. The premier team of surgeons at Los Angeles Orthopedic Surgery Specialists understands how frustrating shoulder pain can be, and they offer the most advanced shoulder surgery techniques to help you get back to your life quickly. There are offices throughout the Los Angeles area — in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — so schedule your appointment through online booking or call the nearest office now."
+        ],
+        secondTitle: 'What is shoulder surgery?',
+        descriptionTwo: [
+            "Shoulder surgery is a group of surgical procedures that treat the shoulder joint. The leading surgeons at Los Angeles Orthopedic Surgery Specialists understand the complexities of the shoulder joint, allowing them to offer the best in shoulder surgery for people with chronic pain and disability."
+        ],
+        thirdTitle: 'What conditions does shoulder surgery treat?',
+        descriptionThree: [
+            "Your shoulder joint has bones, tendons, ligaments, and other tissues that work together in a complex manner. A problem like a tendon tear can reverberate through your whole shoulder and arm, leading to severe pain and dysfunction. Some of the most common reasons to have shoulder surgery are:"
+        ],
+        thirdTitleBulletedList: [
+            'Rotator cuff tears (tendon tears)',
+            'Cartilage tears, like labral tears',
+            'Arthritis',
+            'Frozen shoulder',
+            'Shoulder impingement (rotator cuff tendonitis)',
+            'Shoulder instability'
+        ],
+        descriptionAfterThirdBulletedList: [
+            "A nonsurgical approach is usually the first step in treating shoulder issues. Physical therapy, pain management, activity modifications, and injections — platelet-rich plasma (PRP) or corticosteroids — can all help people with shoulder issues to function better.",
+            "However, should you not feel better after trying nonsurgical treatments for a while, the Los Angeles Orthopedic Surgery Specialists team may recommend surgery."
+        ],
+        fourthTitle: 'What happens during shoulder surgery?',
+        descriptionFour: [
+            "Shoulder surgery techniques can vary based on what type of injury or condition you have. Most shoulder surgeries involve minimally invasive techniques like arthroscopic surgery (arthroscopy).",
+            "With arthroscopy, your surgeon uses quarter-inch incisions to insert tools that help them view your joint from within as they perform your procedure. This approach minimizes bleeding, tissue damage, pain, and risk of infections after surgery. Arthroscopy can treat shoulder problems on a same-day basis.",
+            "Some shoulder problems, particularly complicated damage like severe osteoarthritis, require a different approach. For example, in shoulder replacement surgery, you typically have one six-inch incision.",
+            "After shoulder surgery, you’ll most likely wear an immobilization device that keeps your shoulder in the proper position. You’ll have some discomfort in the days right after your surgery, but the team makes sure you have good pain management options during that time.",
+            "Normally, physical therapy starts a week or so after your surgery. This helps you build strength so you can return to your normal activities.",
+            "To schedule your shoulder surgery, call Los Angeles Orthopedic Surgery Specialists or click on the online booking feature today."
         ],
         link: '/shoulderSurgery',
-        imageTwo: '',
+        imageTwo: 'https://i.imgur.com/Mc8Slpi.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Shoulder Surgery'
     },
     {   
-        image: '',
+        image: 'https://i.imgur.com/AsILU53.webp',
         width: '267px',
         height: '200px',
         name: 'Sports Medicine',
-        firstTitle: '',
+        firstTitle: 'About Sports Medicine',
         description: [
-            ''
+            "You may need to see a sports medicine physician if you’re an athlete seeking to conquer that next level of competition, or also if you’re interested in improving your overall fitness and endurance. The Los Angeles Orthopedic Surgery Specialists sports medicine team provides exams, training evaluations, and top-level care for the aches and pains that often accompany an active lifestyle. Call one of their eight Los Angeles locations in East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, Montebello, or on Wilshire Boulevard today to schedule an evaluation. Or try their secure online service to request an appointment."
+        ],
+        secondTitle: 'What is sports medicine?',
+        descriptionTwo: [
+            "Sports medicine focuses on the effects of physical activity and sports on your muscles, joints, tendons, and bones. Professional athletes have long enjoyed the benefits of a physician who specializes in treating and preventing team and individual sports injuries.",
+            "These days, young athletes and active adults can also experience the advantages of seeing a sports medicine physician equipped to evaluate physical fitness, offer guidance regarding training routines, and develop treatment strategies for chronic and acute sports injuries."
+        ],
+        thirdTitle: "What happens during a sports medicine evaluation?",
+        descriptionThree: [
+            "Sports medicine evaluations at Los Angeles Orthopedic Surgery Specialists are tailored to meet your needs. For instance, teen athletes benefit from an exam that evaluates their fitness level, musculoskeletal health, and current training routine.",
+            "Adults who are active but experiencing some nagging aches and pains may find an evaluation beneficial in developing a joint-friendly exercise routine that maintains your health but prevents worsening discomfort.",
+            "You may, for example, benefit from a workout routine that switches off running and other high-impact activities with swimming or cycling.",
+            "If you’re not yet active in a sport, a sports medicine physician can provide guidance regarding activities that suit your current health status and goals to aim for as you advance. A sports medicine evaluation can cover everything from the shoes you should wear to appropriate body mechanics to which size tennis racquet to use."
+        ],
+        fourthTitle: 'What conditions does a sports medicine physician treat?',
+        descriptionFour: [
+            "The sports medicine physicians at Los Angeles Orthopedic Surgery Specialists offer expert care for a variety of orthopedic health issues, including:"
+        ],
+        fourthTitleBulletedList: [
+            "ACL tears",
+            "Rotator cuff injuries",
+            "Chronic conditions such as tennis elbow or jumper’s knee",
+            "Acute elbow, wrist, or ankle fractures, strains, and sprains",
+            "Overuse injuries",
+            "Back and neck strains and sprains",
+            "Shoulder, hip, and knee pain or injury"
+        ],
+        descriptionAfterFourthBulletedList: [
+            "Treatment strategies are designed to resolve your pain, improve mobility, and preserve your ability to engage in your chosen sport.",
+            "Your plan may include physical therapy or rehab to improve conditioning, strength, and flexibility. Your provider may also recommend changing your training routine, having joint injections, or using advanced treatment with minimally invasive arthroscopic surgery to treat joint, tendon, or ligament injuries.",
+            "Schedule a sports medicine evaluation at Los Angeles Orthopedic Surgery Specialists today for expert orthopedic care. Call the office or request an appointment online."
         ],
         link: '/sportsMedicine',
-        imageTwo: '',
+        imageTwo: 'https://i.imgur.com/AsILU53.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Sports Medicine'
     },
     {   
-        image: '',
+        image: 'https://i.imgur.com/cRAxygj.webp',
         width: '267px',
         height: '200px',
         name: 'Arthroscopy',
-        firstTitle: '',
+        firstTitle: 'About Arthroscopy',
         description: [
-            ''
+            "Arthroscopic surgery, or arthroscopy, features small incisions and a fast recovery — and you can have most arthroscopic procedures on an outpatient basis. At Los Angeles Orthopedic Surgery Specialists, the experienced surgical team performs arthroscopy to treat problems such as ACL tears, meniscus tears, and ligament reconstructions. There are Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, so call the one nearest to you or book your appointment online today."
+        ],
+        secondTitle: 'What is arthroscopy?',
+        descriptionTwo: [
+            "Arthroscopic surgery (arthroscopy) is a procedure that examines and treats problems in the joints. With arthroscopy, you have a few small incisions instead of a long one.",
+            "Arthroscopes (the surgical tool used in arthroscopy) have miniature cameras and built-in lights.",
+            "The camera transmits images to a video screen, which gives your surgeon a close-up view of the joint.",
+            "Your surgeon uses special surgical tools — thinner and smaller than open surgery instruments — to repair damage inside your joint while viewing it on the screen.",
+            "Arthroscopy is less invasive than open surgery, so it’s the procedure of choice for many orthopedic conditions and injuries."
+        ],
+        thirdTitle: "What conditions does arthroscopy treat?",
+        descriptionThree: [
+            "Arthroscopy allows your surgeon to closely examine the joint, make a diagnosis, and make repairs as needed. Some of the most common reasons to have this kind of surgery include:"
+        ],
+        thirdTitleBulletedList: [
+            "Tendon tears, such as rotator cuff tears",
+            "Cartilage damage, like meniscus tears and labral tears",
+            "Ligament tears, like anterior cruciate ligament (ACL) tears",
+            "Inflammation and swelling, like synovitis",
+            "Recurrent joint dislocations"
+        ],
+        descriptionAfterThirdBulletedList: [
+          "With arthroscopy, your surgeon can perform many different types of repairs, including removing loose bodies (stray pieces of cartilage or bone), reattaching tendons, repairing ligaments, and even reconstructing damaged tissues using grafts.",
+          "Arthroscopy can treat problems affecting the knee, shoulder, wrist, ankle, and hip, as well as other areas where you have joint problems."
+        ],
+        fourthTitle: 'What advantages does arthroscopy offer?',
+        descriptionFour: [
+            "Arthroscopic surgery has some significant advantages when you compare it with traditional open surgery, including:"
+        ],
+        fourthTitleBulletedList: [
+            "Less bleeding",
+            "Less damage to the nearby tissues",
+            "Reduced risk of scarring",
+            "Reduced risk of infection during healing",
+            "Less pain during healing",
+            "Faster return to work and regular activities"
+        ],
+        descriptionAfterFourthBulletedList: [
+            "Most arthroscopy happens on a same-day basis, generally allowing you to go home within hours of your procedure."
+        ],
+        fifthTitle: 'What is recovery like after arthroscopy?',
+        descriptionFive: [
+            "After your procedure, your surgeon closes the incisions using a surgical adhesive or a few small sutures. You may have a compression bandage over your incisions in the initial stage of healing.",
+            "Los Angeles Orthopedic Surgery Specialists provides a personalized post-surgery recovery plan, including pain management and physical therapy details. Following your recovery plan closely is the key to a full return to the activities you love.",
+            "Are you ready to learn more about arthroscopy? Click the online booking link or call the Los Angeles Orthopedic Surgery Specialists office near you now."
         ],
         link: '/arthroscopy',
-        imageTwo: '',
+        imageTwo: 'https://i.imgur.com/cRAxygj.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Arthroscopy'
     },
     {   
-        image: '',
+        image: 'https://i.imgur.com/R3QISDB.jpg',
         width: '267px',
         height: '200px',
         name: 'Knee Replacement Surgery',
-        firstTitle: '',
+        firstTitle: 'About Knee Replacement Surgery',
         description: [
-            ''
+            'Knee replacement surgery is one of the most effective pain management options for people with stubborn knee pain — up to 95% of patients undergoing knee replacement experience dramatic pain relief. At Los Angeles Orthopedic Surgery Specialists, a team of renowned orthopedic surgeons offers a range of knee pain treatment options, from injections to knee replacement. There are Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, so call the one nearest to you or click on the online scheduler for help today.'
+        ],
+        secondTitle: 'What is knee replacement surgery?',
+        descriptionTwo: [
+            "Knee replacement surgery removes damaged bone and cartilage — the material that protects and pads the bones — from your knee joint. Artificial parts made of metal and plastic replace those parts of your knee.",
+            "Knee replacement surgery is perhaps the most effective pain management solution for people who have chronic knee pain. This surgery is widely acknowledged as having one of the highest success rates of all surgical procedures performed today."
+        ],
+        thirdTitle: 'When might I need a knee replacement?',
+        descriptionThree: [
+            "The main reason for knee replacement is chronic knee pain, often accompanied by mobility issues. The chronic pain commonly develops from osteoarthritis, a degenerative form of the disease that breaks down your knee cartilage.",
+            "Rheumatoid arthritis and post-inflammatory arthritis (arthritis that develops at the site of a previous injury) may lead to knee replacement too. In some cases, a severe knee injury may require a knee replacement.",
+            "In these situations, knee pain often recedes with nonsurgical treatments like physical therapy, exercise, and injections of platelet-rich plasma (PRP), hyaluronic acid, or corticosteroids.",
+            "However, if you’ve already tried nonsurgical approaches without any luck, a knee replacement could be the best option. You can have a knee replacement at any age, but most people are 50-80 years old."
+        ],
+        fourthTitle: 'What is the process for knee replacement?',
+        descriptionFour: [
+            "A total knee replacement restores your whole knee joint, including the medial compartment (inner knee), lateral compartment (outer knee), and patellofemoral compartment (behind the kneecap).",
+            "After removing damaged cartilage and a minimal amount of bone from your joint surfaces, your surgeon positions two titanium implants: a femoral implant at the top of your knee and a tibial base plate at the bottom. A polyethylene liner goes between the two metal components, allowing for smooth gliding.",
+            "If you have damage in just one knee compartment, a partial knee replacement restores only that area.",
+            "The Los Angeles Orthopedic Surgery Specialists team uses state-of-the-art Stryker® joint implants. Stryker implants work with your body, giving you the most natural knee movement possible.",
+            "After your knee replacement, the team sets up your physical therapy right away; it’s the best way to start your recovery. The team gives you specific instructions to guide your path back to active life, including returning to walking without support and resuming driving.",
+            "Are you ready for knee pain relief? Call the Los Angeles Orthopedic Surgery Specialists office nearest to you or book your appointment using online scheduling now."
         ],
         link: '/kneeReplacementSurgery',
-        imageTwo: '',
+        imageTwo: 'https://i.imgur.com/R3QISDB.jpg',
         component: 'Services',
         link: '/services',
         spanString: 'Knee Replacement Surgery'
     },
     {   
-        image: '',
+        image: 'https://i.imgur.com/TOuhcQa.webp',
         width: '267px',
         height: '200px',
         name: 'Pain Management',
-        firstTitle: '',
+        firstTitle: 'About Pain Management',
         description: [
-            ''
+            'You might need pain management several times in your life, from living with chronic conditions to recovering from surgery. At Los Angeles Orthopedic Surgery Specialists, the expert team of orthopedic specialists offers personalized pain management in Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. Book your appointment online or call the nearest office for help today.'
+        ],
+        secondTitle: 'What is pain management?',
+        descriptionTwo: [
+            "Pain management is medical care attuned to the needs of people with either acute (short-term) or chronic (long-term) pain.",
+            "At Los Angeles Orthopedic Surgery Specialists, the team of experts includes multispecialty providers with wide-ranging experience in all types of pain management. They’re here to give you meaningful pain relief so you can live life to the fullest."
+        ],
+        thirdTitle: 'What conditions might need pain management?',
+        descriptionThree: [
+            "You might need pain management if you have difficult-to-manage back, shoulder, neck, knee, ankle, wrist, or other kinds of pain. Some specific conditions that might benefit from pain management include:"
+        ],
+        thirdTitleBulletedList: [
+            "Rotator cuff tears",
+            "Tendonitis",
+            "Osteoarthritis",
+            "Post-traumatic arthritis",
+            "Rheumatoid arthritis",
+            "Carpal tunnel syndrome",
+            "Sciatica",
+            "Complex regional pain syndrome",
+            "Neuropathy"
+        ],
+        descriptionAfterThirdBulletedList: [
+            "Pain management is an important part of initial treatment for all of these conditions. It works alongside physical therapy, activity modifications, and other conservative strategies to help you return to a more active life with less pain.",
+            "If more conservative strategies don’t relieve your pain, you could need joint replacement or arthroscopic surgery (arthroscopy).",
+            "While the surgeons use the most advanced small-incision approaches, minimally invasive procedures are still surgeries. So, you can expect some discomfort for several days or a week after the procedure.",
+            "Pain management strategies can minimize your post-operative pain and help you move through the healing period comfortably."
+        ],
+        fourthTitle: 'What can I expect from pain management?',
+        descriptionFour: [
+            "Pain management can include options like oral pain relievers and injections (corticosteroids and anesthetics). In some cases, the team may recommend more advanced pain management options like radiofrequency ablation, intrathecal pain pumps, or spinal cord stimulation.",
+            "It’s important to keep up with physical therapy appointments to get the best benefits from pain management. Physical therapy improves strength and flexibility, ultimately improving your ability to function day to day.",
+            "Pain management focuses on helping you reach a better place by targeting the source of your pain. The ultimate goal is to help you be more comfortable and more active.",
+            "The pain management program at Los Angeles Orthopedic Surgery Specialists always keeps your whole-person wellness in mind, and they’re here to support you the whole way.",
+            "If you have pain that’s interfering with your life, it’s time to talk about a stronger solution. Call the Los Angeles Orthopedic Surgery Specialists office nearest to you or click on the online booking tool to make your appointment now."
         ],
         link: '/painManagement',
-        imageTwo: '',
+        imageTwo: 'https://i.imgur.com/TOuhcQa.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Pain Management'
     },
     {   
-        image: '',
+        image: 'https://i.imgur.com/OT3wbCt.webp',
         width: '267px',
         height: '200px',
         name: 'ACL Reconstruction',
-        firstTitle: '',
+        firstTitle: 'About ACL Reconstruction',
         description: [
-            ''
+            'ACL reconstruction offers a return to pain-free mobility whether you’re a top-performing athlete or someone interested in remaining as active as possible throughout your life. The team at Los Angeles Orthopedic Surgery Specialists enjoys a well-deserved reputation for providing outstanding minimally invasive surgeries and rehabilitative services for ACL injuries. Choose from eight convenient locations in the Los Angeles area — Wilshire Boulevard in Los Angeles, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — and schedule your evaluation today. Call the office or request an appointment online.'
+        ],
+        secondTitle: 'What is the ACL?',
+        descriptionTwo: [
+            "The anterior cruciate ligament (ACL) is one of the ligaments in your knee joint that connects the thigh bone (femur) to the shinbone (tibia). It helps to maintain knee stability by preventing the tibia from slipping in front of the femur when you walk, run, jump, plant your foot to kick a ball, or pivot and change direction."
+        ],
+        thirdTitle: 'Why would I need ACL reconstruction?',
+        descriptionThree: [
+            "Injuries to the ACL are common and frequently result in tears or ruptures that separate the ligament.",
+            "Because an ACL will not heal independently, patients often need surgical reconstruction of the ligament to restore knee stability. This is particularly true for individuals who wish to remain active in sports such as tennis, soccer, basketball, and other similar activities.",
+            "Generally, activities such as cycling and swimming are less demanding on your ACL, and bracing without surgery may provide adequate knee stability following a tear.",
+            "However, an ACL injury strains other ligaments and joint structures if left untreated, increasing your risk of meniscal damage, osteoarthritis, and other painful knee problems.",
+            "Thus, based on your activity level and the nature of the tear (whether full or partial), your provider at Los Angeles Orthopedic Surgery Specialists may recommend minimally invasive ACL reconstruction to restore knee stability."
+        ],
+        fourthTitle: 'What happens during and after ACL reconstruction?',
+        descriptionFour: [
+            "ACL tears do not respond well to suturing the torn ligament back together. Instead, during ACL reconstruction, your surgeon replaces the damaged ligament with a substitute graft made from a tendon. The graft may come from your body (autograft) or donor material (allograft).",
+            "During this minimally invasive procedure (arthroscopy), your surgeon inserts a high-definition camera and surgical instruments through small incisions or “portals” that allow access to the knee joint.",
+            "Compared with open or traditional surgery, arthroscopic ACL reconstruction decreases trauma to surrounding tissue structures and speeds healing.",
+            "Your provider also develops a comprehensive rehabilitation program following ACL reconstruction that restores mobility and helps prevent future injury by strengthening the muscles that support your knee joint.",
+            "It does take several months to recover from any ACL injury, but with a customized rehab program, you can generally return to full activity following ACL reconstruction.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today by calling the nearest office or requesting an appointment online."
         ],
         link: '/aclReconstruction',
-        imageTwo: '',
+        imageTwo: 'https://i.imgur.com/OT3wbCt.webp',
         component: 'Services',
         link: '/services',
         spanString: 'ACL Reconstruction'
@@ -652,9 +1225,37 @@ export const expertiseBlocks = [
         width: '267px',
         height: '200px',
         name: 'Meniscus Repairs',
-        firstTitle: '',
+        firstTitle: 'About Meniscus Repairs',
         description: [
-            ''
+            'Surgical meniscus repairs can offer faster and often more reliable fixes than conservative therapies for the stiffness, swelling, and pain of a torn meniscus. Los Angeles Orthopedic Surgery Specialists is a top-level orthopedic practice with eight convenient locations in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. Their team consists of board-certified surgeons, physical therapists, and other medical professionals who focus on your long-term health and well-being. Schedule an evaluation today by calling the office or requesting an appointment online.'
+        ],
+        secondTitle: 'What is a meniscus injury?',
+        descriptionTwo: [
+            "Your knee has two C-shaped pads of cartilage (menisci) that act as cushions between where your femur (thigh bone) and tibia (shinbone) meet in the joint. Meniscus injuries, commonly called tears, occur when the cartilage is torn during trauma or due to degenerative changes over time.",
+            "Athletes participating in football, soccer, tennis, or other sports requiring frequent twisting and turning or high contact are at increased risk of meniscal tears. Excess weight, age-related changes, or overuse injuries are also common triggers for meniscus injuries."
+        ],
+        thirdTitle: 'What symptoms indeicate the need for meniscus repair?',
+        descriptionThree: [
+            "Symptoms of a torn meniscus can vary and may include:"
+        ],
+        thirdTitleBulletedList: [
+            "Swelling or stiffness in the knee",
+            "Pain with twisting or rotating the knee",
+            "The sensation that your knee is locked in place",
+            "Difficulty straightening the knee",
+            "Feeling as though your knee is giving way"
+        ],
+        descriptionAfterThirdBulletedList: [
+            "You may feel a pop in the knee when the meniscus tears, but the resulting pain and other symptoms often don’t develop for 2-3 days. A fall or aggressive pivot during a game or, in the case of an age-related injury, even an awkward twist when rising from a chair can result in a torn meniscus."
+        ],
+        fourthTitle: 'What happens during meniscus repairs?',
+        descriptionFour: [
+            "Treatment for a torn meniscus depends on the size and location of the tear. A small tear may respond to conservative therapies such as rest, anti-inflammatory medication, and elevating the knee.",
+            "Other nonsurgical treatments include steroid injections to reduce inflammation and pain or regenerative medicine therapies such as platelet-rich plasma (PRP) injections to enhance healing. These therapies are often beneficial for age-related or degenerative tears.",
+            "However, if your knee pain, locking, and instability symptoms interfere with your mobility and don’t respond well to conservative therapies, your Los Angeles Orthopedic Surgery Specialists provider may recommend minimally invasive arthroscopic surgery for meniscus repair.",
+            "For instance, tears along the meniscus’s outer edge, which has a healthy blood supply that promotes healing, may respond well to suturing. In other cases, your surgeon may suggest removing the torn cartilage via a partial meniscectomy.",
+            "Interestingly, recovery after a meniscectomy is often faster than suturing, 3-6 weeks for partial meniscectomy versus 3-6 months for suturing. Either way, your Los Angeles Orthopedic Surgery Specialists team works with you to ensure appropriate healing with a customized rehab program following surgery.",
+            "Schedule your evaluation today. Call the office or request an appointment online."
         ],
         link: '/meniscusRepairs',
         imageTwo: '',
@@ -663,16 +1264,52 @@ export const expertiseBlocks = [
         spanString: 'Meniscus Repairs'
     },
     {   
-        image: '',
+        image: 'https://i.imgur.com/3BMvTfL.webp',
         width: '267px',
         height: '200px',
         name: 'Arthritis Care',
-        firstTitle: '',
+        firstTitle: 'About Arthritis Care',
         description: [
-            ''
+            "Almost 25% of adults in the United States (that’s about 60 million people) have arthritis. Appropriate arthritis care can help prevent the disability associated with this painfully common joint condition. The expert team at Los Angeles Orthopedic Surgery Specialists has eight locations in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. They provide personalized arthritis care that meets your needs and circumstances, from innovative nonsurgical therapy to state-of-the-art joint replacement. Schedule an evaluation today. Call the office or request an appointment online."
+        ],
+        secondTitle: 'What is arthritis?',
+        descriptionTwo: [
+            "Arthritis is a general term for more than 100 diseases affecting your joint health and mobility, typically categorized as:"
+        ],
+        secondTitleBulletedList: [
+            "Osteoarthritis related to joint wear-and-tear over time",
+            "Inflammatory arthritis such as rheumatoid arthritis or lupus",
+            "Post-traumatic arthritis following an injury",
+            "Septic arthritis caused by a bacterial, fungal, or viral infection"
+        ],
+        descriptionAfterSecondBulletedList: [
+            "Osteoarthritis is by far the most common type of arthritis and is sometimes considered a “natural” part of aging. However, regardless of what’s causing the joint inflammation, pain, and disability associated with arthritis, you shouldn’t consider it normal or unavoidable."
+        ],
+        thirdTitle: 'What are the symptoms of arthritis?',
+        descriptionThree: [
+            "Arthritis symptoms differ slightly depending on the underlying cause, but they usually include varying degrees of joint inflammation, swelling, stiffness, and pain that can eventually affect your daily routine.",
+            "For instance, osteoarthritis symptoms tend to start slowly and build over time. You may notice morning stiffness that improves as you become active. Eventually, however, pain can become constant as cartilage in the joint wears away, and bone rubs against bone. This can affect your ability to move the joint.",
+            "On the other hand, joint pain and swelling related to septic arthritis usually occur very quickly. They may be accompanied by worsening fever and other signs of systemic illness or infection.",
+            "Joint pain and inflammation related to rheumatoid arthritis and other inflammatory types are often accompanied by fatigue, low-grade fevers, and loss of appetite.",
+            "Any joint is vulnerable to arthritis, but those most often affected include the hands, shoulders, hips, knees, ankles, and spine."
+        ],
+        fourthTitle: 'What is arthritis care?',
+        descriptionFour: [
+            "Arthritis care at Los Angeles Orthopedic Surgery Specialists begins with a thorough exam and diagnostic evaluation to determine the type and level of arthritis you’re experiencing. Their treatment goals include reducing pain and inflammation while preventing further joint damage.",
+            "Based on evaluation results, your arthritis care strategy may include:"            
+        ],
+        fourthTitleBulletedList: [
+            "Oral medications to reduce inflammation and pain",
+            "Physical therapy to maintain flexibility and strength in muscles supporting your joints",
+            "Joint-friendly exercise routines",
+            "Biologics such as plasma-rich protein (PRP) injection therapy"
+        ],
+        descriptionAfterFourthBulletedList: [
+            "Should conservative measures fail to control your symptoms, the surgical team at Los Angeles Orthopedic Surgery Specialists may recommend minimally invasive arthroscopic surgery to address bone spurs, remove damaged joint lining (synovectomy), or replace severely worn joints.",
+            "For more information about arthritis care, schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today. Call the office or request an appointment online."
         ],
         link: '/arthritisCare',
-        imageTwo: '',
+        imageTwo: 'https://i.imgur.com/3BMvTfL.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Arthritis Care'
@@ -682,9 +1319,38 @@ export const expertiseBlocks = [
         width: '267px',
         height: '200px',
         name: 'Ligament Reconstruction',
-        firstTitle: '',
+        firstTitle: 'About Ligament Reconstruction',
         description: [
-            ''
+            'Ligament reconstruction may be your best treatment option if you’re experiencing joint instability, pain, and limited mobility. The board-certified surgeons at Los Angeles Orthopedic Surgery Specialists provide optimal care for numerous common orthopedic issues, including minimally invasive ligament reconstruction for sprains and tears not responding to conservative treatments. Call one of their offices in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — to schedule your evaluation today or request an appointment online.'
+        ],
+        secondTitle: 'What is a ligament?',
+        descriptionTwo: [
+            "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
+            "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
+            "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
+        ],
+        thirdTitle: 'Why would I need ligament reconstruction?',
+        descriptionThree: [
+            "Ligaments that connect bones and stabilize joints are vulnerable to arthritic changes, sprains, and other damage that can affect their ability to function normally.",
+            "A mild ligament injury typically responds well to rest, ice, and anti-inflammatory medications that reduce pain and promote healing within a few weeks. However, severely stretched or torn ligaments often require surgical reconstruction to restore joint stability and appropriate range of motion.",
+            "Ligaments most often treated with reconstruction include the following:"
+        ],
+        thirdTitleBulletedList: [
+            "Anterior cruciate ligament (ACL) in the knee",
+            "Posterior cruciate ligament (PCL) in the knee",
+            "Lateral (outer) ankle ligament",
+            "Carpometacarpal (CMC) ligament where the thumb meets the wrist"
+        ],
+        descriptionAfterThirdBulletedList: [
+            "A stretched or weakened ligament may respond to suturing. However, replacement with tendon tissue from your own body (autograft) or donor tissue (allograft) is often necessary for partial or complete tendon tears."
+        ],
+        fourthTitle: 'What happens during ligament reconstruction surgery?',
+        descriptionFour: [
+            "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
+            "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
+            "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
+            "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
         ],
         link: '/ligamentReconstruction',
         imageTwo: '',
@@ -697,9 +1363,39 @@ export const expertiseBlocks = [
         width: '267px',
         height: '200px',
         name: 'Joint Injections',
-        firstTitle: '',
+        firstTitle: 'About Joint Injections',
         description: [
-            ''
+            "When oral medications or physical therapy aren’t enough, joint injections may be your best nonsurgical option for relieving pain, stiffness, and decreased mobility caused by arthritis and other painful joint problems. The Los Angeles Orthopedic Surgery Specialists team is committed to offering long-term solutions for joint pain that may include injection-based therapy. Call one of their eight Los Angeles-area locations in East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, Montebello, or on Wilshire Boulevard today to schedule an evaluation. Or try their secure online service to request an appointment."
+        ],
+        secondTitle: 'What are joint injections?',
+        descriptionTwo: [
+            "Joint injections can help relieve inflammation and pain within a joint. They’re typically recommended as part of a comprehensive strategy that includes physical therapy, joint-friendly exercise programs, bracing, and other conservative treatments.",
+            "While injection-based therapy isn’t a permanent fix for arthritis or other painful joint conditions, it can temporarily relieve your symptoms for several weeks to months, making it possible to delay surgeries such as joint replacement."
+        ],
+        thirdTitle: 'What kind of joint injections are available?',
+        descriptionThree: [
+            "Joint injections may include:"
+        ],
+        fourthTitle: 'Corticosteroid injections',
+        descriptionFour: [
+            "Corticosteroid injections reduce inflammation and decrease pain caused by rheumatoid arthritis, lupus, osteoarthritis, and other painful joint conditions in the knees, ankles, shoulders, and small joints of the hands, feet, or spine (facet joints). Relief typically lasts 3-6 months."
+        ],
+        fifthTitle: 'Hyaluronic acid injections',
+        descriptionFive: [
+            "The joint fluid that normally helps lubricate cartilage and acts as a shock absorber within a joint can become thin and watery as you age or because of changes related to arthritis. Hyaluronic acid (HA) mimics the consistency of natural joint fluid.",
+            "HA injections, approved for use in the knee, can relieve pain and inflammation for several months. You may require a series of injections for full benefits."
+        ],
+        sixthTitle: 'Platelet-rich plasma (PRP) injections',
+        descriptionSix: [
+            "PRP injections are a newer therapy that uses cells from a sample of your blood, which is processed in a centrifuge to concentrate the platelets. Growth factors contained in the platelets relieve inflammation, sometimes more effectively than steroids.",
+            "Stem cells taken from your blood may also be injected into a joint to promote new tissue growth and repair damaged joint surfaces."
+        ],
+        seventhTitle: 'What can I expect during and after a joint injection?',
+        descriptionSeven: [
+            "The team at Los Angeles Orthopedic Surgery Specialists performs joint injections in-office for your convenience, and they generally take just a few moments.",
+            "A topical numbing agent prevents discomfort during the injection, and your provider may also combine an anesthetic with the steroid to offer temporary pain relief.",
+            "Depending on the type of injection and materials administered, it may take several weeks before you experience the full benefits of joint injections.",
+            "Schedule your evaluation at Los Angeles Orthopedic Surgery Specialists today by calling the office or requesting an appointment using their online service."
         ],
         link: '/jointInjections',
         imageTwo: '',
@@ -712,9 +1408,37 @@ export const expertiseBlocks = [
         width: '267px',
         height: '200px',
         name: 'PRP Injections',
-        firstTitle: '',
+        firstTitle: 'About PRP Injections',
         description: [
-            ''
+            "PRP injections help speed your body’s natural healing response to tendon injuries, joint inflammation, and other painful conditions that impact your orthopedic health. They are one of the many advanced solutions the experts at Los Angeles Orthopedic Surgery Specialists use to improve your overall mobility and quality of life. Call one of their eight Los Angeles locations in East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, Montebello, or on Wilshire Boulevard today to schedule an evaluation. Or try their secure online service to request an appointment."
+        ],
+        secondTitle: 'What are PRP injections?',
+        descriptionTwo: [
+            "PRP (platelet-rich plasma) injections contain a concentration of growth factors and plasma that enhance your body’s ability to repair damaged or diseased tissue through new cell growth.",
+            "The platelet-rich formula, which is obtained from a sample of your blood and processed in a centrifuge, is injected into targeted treatment sites during an office visit. PRP may also be introduced during surgeries such as rotator cuff repair to help accelerate healing."
+        ],
+        thirdTitle: 'What conditions can you treat with PRP injections?',
+        descriptionThree: [
+            "Your provider at Los Angeles Orthopedic Surgery Specialists may recommend PRP injections for a variety of musculoskeletal complaints, including:"
+        ],
+        fourthTitle: 'Muscle, tendon, and ligament injuries',
+        descriptionFour: [
+            "Acute sports injuries and chronic conditions such as tennis elbow, Achilles tendonitis, ligament tears, and muscular strains can take weeks to months to heal. PRP injections can speed the healing process, reducing pain and returning you to routine activity faster."
+        ],
+        fifthTitle: 'Postsurgical care',
+        descriptionFive: [
+            "Plastic surgeons first used PRP injections to speed recovery following jaw surgeries and other cosmetic procedures. Orthopedic surgeons now utilize the therapy to accelerate healing following joint, muscle, and tendon repairs."
+        ],
+        sixthTitle: 'Osteoarthritis',
+        descriptionSix: [
+            "Osteoarthritis is a chronic condition that affects the cartilage in your joints. When injected into the affected joint, PRP injections provide a natural anti-inflammatory effect that is often superior to cortisone injections and other joint treatments."
+        ],
+        seventhTitle: 'What can I expect during PRP injections?',
+        descriptionSeven: [
+            "PRP injections are an in-office procedure that starts with a blood draw. The mixture is taken from your blood, eliminating the risks of an allergic response or other potential side effects that some treatments may introduce.",
+            "The blood sample is then placed in a centrifuge, which quickly spins the blood to separate the plasma and platelets from other cells. The providers at Los Angeles Orthopedic Surgery Specialists use the highly trusted Stryker® PRP delivery system to prepare the mixture for injection.",
+            "Your specialist then injects the material into the targeted treatment site. A topical numbing agent may be used first to prevent discomfort during the injection. Because PRP therapy relies on your body’s natural healing response, it can take several weeks to experience the full benefits of the injection.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today to learn more about PRP injections. Call the office or request an appointment online."
         ],
         link: '/prpInjections',
         imageTwo: '',

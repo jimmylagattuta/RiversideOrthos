@@ -21,6 +21,7 @@ const SingleService = () => {
                         src={Service.image}
                         alt={Service.name}
                         className='page-image'
+                        
                     />
                 </div>
                 <div className='page-info'>
@@ -42,6 +43,27 @@ const SingleService = () => {
                 </>
             )}
 
+            {Service.secondTitleBulletedList && (
+                <>
+                    <div className='page-info'>
+                        <ul className='bulleted-list'>
+                            {Service.secondTitleBulletedList.map((item, index) => {
+                                return <li key={index} className='page-description'>{item}</li>;
+                            })}
+                        </ul>
+                    </div>
+                </>
+            )}
+
+            {Service.descriptionAfterSecondBulletedList && (
+                <>
+                    {Service.descriptionAfterSecondBulletedList.map((item, index) => {
+                        return <p key={index} className='page-description'>{item}</p>;
+                    })}
+                </>
+            )}
+
+
             {Service.thirdTitle && (
                 <>
                     <div className='page-info'>
@@ -50,6 +72,26 @@ const SingleService = () => {
                             return <p key={index} className='page-description'>{item}</p>;
                         })}
                     </div>
+                </>
+            )}
+
+            {Service.thirdTitleBulletedList && (
+                <>
+                    <div className='page-info'>
+                        <ul className='bulleted-list'>
+                            {Service.thirdTitleBulletedList.map((item, index) => {
+                                return <li key={index} className='page-description'>{item}</li>;
+                            })}
+                        </ul>
+                    </div>
+                </>
+            )}
+
+            {Service.descriptionAfterThirdBulletedList && (
+                <>
+                    {Service.descriptionAfterThirdBulletedList.map((item, index) => {
+                        return <p key={index} className='page-description'>{item}</p>;
+                    })}
                 </>
             )}
 
@@ -75,9 +117,9 @@ const SingleService = () => {
                 </>
             )}
             
-            {Service.descriptionAfterBulletedList && (
+            {Service.descriptionAfterFourthBulletedList && (
                 <>
-                    {Service.descriptionAfterBulletedList.map((item, index) => {
+                    {Service.descriptionAfterFourthBulletedList.map((item, index) => {
                         return <p key={index} className='page-description'>{item}</p>;
                     })}
                 </>
