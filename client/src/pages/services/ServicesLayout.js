@@ -1,9 +1,10 @@
-// import { Outlet } from 'react-router-dom';
-// import PagesHeader from '../../components/PagesHeader';
+import { Outlet } from 'react-router-dom';
+import PagesHeader from '../../components/PagesHeader';
 const ServicesLayout = () => {
     return (
         <>
-            ServicesLayout.js
+            <PagesHeader title='Services' />
+            <Outlet />
         </>
     );
 };

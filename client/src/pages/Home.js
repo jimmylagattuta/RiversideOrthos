@@ -101,7 +101,8 @@ const Home = () => {
                 </ReactBackgroundCarousel>
             </div>
             <div className='home-expertise'>
-                <h2 className='section-title'>Areas of Expertise</h2>
+                <h2 className='section-title'>Explore Our Services</h2>
+                <i className='fas fa-clipboard-list'></i>
                 <ExpertiseBlocks />
             </div>
             <TeamComponent />

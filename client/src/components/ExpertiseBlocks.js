@@ -1,13 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import { expertiseBlocks } from '../data';
+import { expertiseBlocks } from '../data';
 
 const ExpertiseBlocks = () => {
-    
+    const [showComponent, setShowComponent] = useState(false);
+
+    useEffect(() => {
+        const delay = setTimeout(() => {
+            setShowComponent(true);
+        }, 3000); // Adjust the delay time (in milliseconds) as needed
+
+        // Cleanup function to clear the timeout in case the component unmounts before the delay finishes
+        return () => clearTimeout(delay);
+    }, []);
+
+    if (!showComponent) {
+        return null; // Return null to prevent rendering the component until the delay is over
+    }
 
     return (
         <div className='expertise-grid'>
-           ExpertiseBlocks.js
+            {expertiseBlocks.map((block, index) => {
+                return (
+                    <div key={index} className='expertise-item'>
+                        <div className='expertise-top'>
+                            <div className='link-item'>
+                                <Link
+                                    className='expertise-image-link'
+                                    to={`/services/${block.name
+                                        .toLowerCase()
+                                        .split(' ')
+                                        .join('-')}`}>
+                                    <img
+                                        src={block.image}
+                                        alt={block.name}
+                                        className='expertise-image'
+                                        style={{ width: '267px', height: '200px' }}
+                                        loading="lazy"
+                                    />
+                                </Link>
+                            </div>
+                        </div>
+                        <Link
+                            className='expertise-name'
+                            to={`/services/${block.name
+                                .toLowerCase()
+                                .split(' ')
+                                .join('-')}`}>
+                            {block.name}
+                        </Link>
+                    </div>
+                );
+            })}
         </div>
     );
 };

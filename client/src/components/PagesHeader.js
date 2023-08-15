@@ -1,9 +1,7 @@
-// const PagesHeader = ({ title }) => {
-const PagesHeader = () => {
-
+const PagesHeader = ({ title }) => {
     return (
         <div className='pages-header'>
-            PagesHeader.js
+            <h2 className='pages-title'>{title}</h2>
         </div>
     );
 };

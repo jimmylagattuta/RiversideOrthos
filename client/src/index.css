@@ -27,6 +27,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 18px;
+    background-color: rgb(80, 80, 80);
 }
 
 a,
@@ -435,7 +436,7 @@ img {
 }
 
 .nav-link.active {
-    border-bottom: 2px solid var(--yellow);
+    border-bottom: 2px solid rgb(243,74, 2);
 }
 
 .nav-link-container:hover > .nav-link {
@@ -469,15 +470,15 @@ img {
 
 /* PAGES STYLES */
 .pages-header {
-    background-image: url(https://i.imgur.com/R51cppU.webp);
-    border-bottom: 5px solid #002e6d;
+    /* background-image: url(https://i.imgur.com/R51cppU.webp); */
+    border-bottom: 5px solid rgb(243,74, 2);
     color: #fff;
     padding: 40px;
     position: relative;
 }
 
 .pages-header:after {
-    background-color: var(--blue);
+    background-color: rgb(80, 80, 80);
     content: '';
     height: 100%;
     left: 0;
@@ -504,6 +505,7 @@ img {
 .pages-title {
     position: relative;
     z-index: 1;
+    font-size: 3rem;
 }
 
 .page-grid {
@@ -588,22 +590,41 @@ img {
 
 .home-expertise {
     padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-expertise .fas {
+    color: rgb(243,74, 2);
+    font-size: 2rem;
+}
+
+.expertise-header {
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    color: var(--white);
 }
 
 .expertise-header-description {
-    width: 800px;
-    margin: 35px auto;
+    width: 980px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: 500;
 }
 
 .expertise-grid {
     display: flex;
     flex-wrap: wrap;
-    margin: 60px 0;
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Adjust spacing between items */
+    padding: 30px 0px 0px 0px;
 }
 
 .expertise-name {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.95rem;
+    padding: 10px 0px 0px 0px;
     text-decoration: none;
 }
 
@@ -616,17 +637,18 @@ img {
 
 .expertise-item {
     width: calc(100% / 5);
-    padding: 32px;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--white); /* Very light blue background */
+
 }
 
 .expertise-image-link {
-    width: 60px;
     transition: 0.3s all ease-in-out;
-    display: inline-block;
 }
 
 .expertise-image-link:hover {
