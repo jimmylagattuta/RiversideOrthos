@@ -53,17 +53,6 @@ const SingleService = () => {
                 </>
             )}
 
-            {Service.thirdTitle && (
-                <>
-                    <div className='page-info'>
-                        <h2 className='page-title'>{Service.thirdTitle}</h2>
-                        {Service.descriptionThree.map((item, index) => {
-                            return <p key={index} className='page-description'>{item}</p>;
-                        })}
-                    </div>
-                </>
-            )}
-
             {Service.fourthTitle && (
                 <>
                     <div className='page-info'>
@@ -86,12 +75,41 @@ const SingleService = () => {
                 </>
             )}
             
+            {Service.descriptionAfterBulletedList && (
+                <>
+                    {Service.descriptionAfterBulletedList.map((item, index) => {
+                        return <p key={index} className='page-description'>{item}</p>;
+                    })}
+                </>
+            )}
 
             {Service.fifthTitle && (
                 <>
                     <div className='page-info'>
                         <h2 className='page-title'>{Service.fifthTitle}</h2>
                         {Service.descriptionFive.map((item, index) => {
+                            return <p key={index} className='page-description'>{item}</p>;
+                        })}
+                    </div>
+                </>
+            )}
+
+            {Service.sixthTitle && (
+                <>
+                    <div className='page-info'>
+                        <h2 className='page-title'>{Service.sixthTitle}</h2>
+                        {Service.descriptionSix.map((item, index) => {
+                            return <p key={index} className='page-description'>{item}</p>;
+                        })}
+                    </div>
+                </>
+            )}
+
+            {Service.seventhTitle && (
+                <>
+                    <div className='page-info'>
+                        <h2 className='page-title'>{Service.seventhTitle}</h2>
+                        {Service.descriptionSeven.map((item, index) => {
                             return <p key={index} className='page-description'>{item}</p>;
                         })}
                     </div>

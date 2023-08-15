@@ -100,30 +100,32 @@ const Navbar = () => {
                                         end>
                                         All {item.menu}
                                     </NavLink>
-                                    {item.subMenuItems.map((subItem) => {
-                                        return (
-                                            <NavLink
-                                                onClick={resetMobileMenu}
-                                                key={subItem}
-                                                to={`${item.link}/${
-                                                    item.menu === 'Physicians'
-                                                        ? subItem
-                                                              .toLowerCase()
-                                                              .split(' ')[0]
-                                                        : subItem
-                                                              .toLowerCase()
-                                                              .split(' ')
-                                                              .join('-')
-                                                }`}
-                                                className={({ isActive }) =>
-                                                    isActive
-                                                        ? 'sub-link active'
-                                                        : 'sub-link'
-                                                }>
-                                                {subItem}
-                                            </NavLink>
-                                        );
-                                    })}
+                                    <div className='submenu-list'>
+                                        {item.subMenuItems.map((subItem) => {
+                                            return (
+                                                <NavLink
+                                                    onClick={resetMobileMenu}
+                                                    key={subItem}
+                                                    to={`${item.link}/${
+                                                        item.menu === 'Physicians'
+                                                            ? subItem
+                                                                .toLowerCase()
+                                                                .split(' ')[0]
+                                                            : subItem
+                                                                .toLowerCase()
+                                                                .split(' ')
+                                                                .join('-')
+                                                    }`}
+                                                    className={({ isActive }) =>
+                                                        isActive
+                                                            ? 'sub-link active'
+                                                            : 'sub-link'
+                                                    }>
+                                                    {subItem}
+                                                </NavLink>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             )}
                         </div>

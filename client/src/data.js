@@ -68,8 +68,8 @@ export const services = [
         thirdTitle: 'When might I need foot and ankle surgery?',
         descriptionThree: [
             'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
+            "If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.",
+            "However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications."
         ],
         fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
         fourthTitleBulletedList: [
@@ -94,6 +94,192 @@ export const services = [
             'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
         ],
         link: '/services',
+    },
+    {
+        image: 'https://i.imgur.com/WN1zBdr.webp',
+        name: 'Fracture Care',
+        firstTitle: 'About Fracture Care',
+        description: [
+            'Americans break an average of two bones during their lives, and this injury can happen at any age. At Los Angeles Orthopedic Surgery Specialists, the team of premier fracture care specialists, offers compassionate, patient-focused care in Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. If you have a fracture, you need prompt fracture care to ensure a full recovery, so call the office nearest to you or book your appointment online today.'
+        ],
+        secondTitle: 'What is fracture care?',
+        descriptionTwo: [
+            'Fracture care is medical care focused on healing of bone fractures. At Los Angeles Orthopedic Surgery Specialists, fracture care includes comprehensive fracture management, from the initial evaluation to the treatments that help your bone heal in the proper position. '
+        ],
+        thirdTitle: 'What causes fractures?',
+        descriptionThree: [
+            'Fractures occur for three main reasons, including:'
+        ],
+        fourthTitle: 'Accidents',
+        descriptionFour: [
+            'Falls, sports injuries, and auto accidents are examples of accidents that often cause bone fractures. Accidents can happen at any age, from the junior high baseball team to slip-and-fall accidents in the nursing home.'
+        ],
+        fifthTitle: 'Overuse',
+        descriptionFive: [
+            'Overuse means consistently exercising too much or too hard, and placing too much stress on your body. Over time, small fractures (stress fractures) develop. Just as with accidents, overuse injuries can happen at any time in life, from childhood to senior years.'
+        ],
+        sixthTitle: 'Osteoporosis',
+        descriptionSix: [
+            "Osteoporosis causes porous bones, in which the bones thin and weaken from within. It usually happens as a person ages. When bones are thinner, they’re far more likely to fracture. Half of women and a quarter of men eventually break a bone because of osteoporosis.",
+            'There are many specific causes of fractures that might not be listed here, but most fractures fall into one of these three categories.'
+        ],
+        seventhTitle: 'What does fracture care involve?',
+        descriptionSeven: [
+            'Fracture care varies with the severity of the fracture, which bone it affects, your symptoms, and other individual aspects of your injury. Los Angeles Orthopedic Surgery Specialists offers all-encompassing fracture care in the office and in hospital settings.',
+            "Resting, modifying your activities, and wearing an immobilization device (cast, sling, brace, or other) is vital for most fractures. Some fractures can heal properly without surgery if the bone isn’t misaligned.",
+            "If your bone isn’t aligned properly, however, it must be returned to the proper position before the healing begins. The team may use nonsurgical fracture treatment techniques like traction to restore the bone to its proper position. But if you have a severe fracture, you could need surgery to place your bone in a prime position for ideal healing.",
+            'With all types of fracture care, pain management and physical therapy are also an integral part of the healing process.',
+            'Taking action as soon as you suffer a fracture can protect your bone health now and in the future. Call the Los Angeles Orthopedic Surgery Specialists office near you or book your appointment using the online scheduler now.'
+        ],
+        link: '/services'
+    },
+    {   
+        image: 'https://i.imgur.com/U0lwo9g.webp',
+        name: 'Diabetic Foot Care',
+        firstTitle: 'About Diabetic Foot Care',
+        description: [
+            "Diabetic foot care focuses on your feet, but it’s also about preventing bodywide damage from diabetes. At Los Angeles Orthopedic Surgery Specialists, the team of highly respected diabetic foot care experts provides personalized quality care in Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. If you have diabetes, your feet need special attention, so don’t wait to schedule your appointment. Call the nearest office or use the online scheduling feature now."
+        ],
+        secondTitle: 'What is diabetic foot care?',
+        descriptionTwo: [
+            "Diabetic foot care is medical care centered on diagnosing, treating, and preventing common diabetes complications like slow-healing wounds and foot ulcers."
+        ],
+        thirdTitle: 'Why do I need diabetic foot care?',
+        descriptionThree: [
+            "People with diabetes often experience nerve damage (neuropathy) and poor circulation in their extremities (peripheral artery disease).",
+            "These two issues can trigger serious problems in the feet, including slow-healing wounds, foot ulcers, and even complications like Charcot foot (rocker-bottom feet). Additionally, people with diabetes are more likely to have problems like bunions, hammertoe, corns, and calluses.",
+            "When a diabetic foot issue grows serious, it can lead to major complications like infections and gangrene (tissue death), which could spread to other parts of the body. Some people even need foot and ankle surgery to remove a severely infected or gangrenous toe, foot, or limb.",
+            "While people with diabetes do have a high risk of serious foot issues, the good news is that diabetic foot care can help you avoid those problems. If you develop foot problems, regularly scheduled diabetic foot care helps you treat them immediately.",
+            "You need diabetic foot care to protect your feet, which has benefits for your whole body. Diabetic foot care can ensure that you remain mobile and active now and for the rest of your life. "
+        ],
+        fourthTitle: 'What treatment does diabetic foot care include?',
+        fourthTitleBulletedList: [
+            'Wound Care',
+            'Debridement (removal of dead skin from a wound)',
+            'Oxygen therapy',
+            'Wound grafts',
+            'Custom orthotics',
+            'Prescription shoes',
+            'Medications like antibiotics',
+            'Pain management'
+        ],
+        descriptionFour: [
+            "Diabetic foot care at Los Angeles Orthopedic Surgery Specialists includes regular checkups (recommended at least once a year) along with a wide range of customized care for various diabetic foot problems. Some treatments that people with diabetes may need include:"
+        ],
+        descriptionAfterBulletedList: [
+            "Alongside your diabetic foot care in the office, the team provides diabetes education to help you take good care of your feet and whole body at home. You’ll learn preventive care steps to maintain healthy feet, like daily foot inspections, trimming your nails straight across, and never going shoeless.",
+            "Monitoring your blood sugar, taking your diabetes medications as directed, and responding to issues quickly are all critical parts of diabetic foot care as well. Good diabetic foot care can keep you out of the hospital, so it’s worth taking the time to do it.",
+            "If you have new foot issues or are due for a diabetic foot checkup, call Los Angeles Orthopedic Surgery Specialists or use the online booking tool now."
+        ],
+        link: '/services',
+    },
+    {
+        image: 'https://i.imgur.com/nRQYdRV.jpg',
+        name: 'Hand and Wrist Surgery',
+        firstTitle: 'About Hand and Wrist Surgery',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Shoulder Surgery',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Sports Medicine',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Athroscopy',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Knee Replacement Surgery',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Pain Management',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'ACL Reconstruction',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Meniscus Repairs',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Arthritis Care',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Ligament Reconstruction',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'Joint Injections',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
+    },
+    {
+        image: '',
+        name: 'PRP Injections',
+        firstTitle: '',
+        description: [
+            ''
+        ],
+        link: '/services'
     }
 ];
 export const aboutObj = [
@@ -235,8 +421,8 @@ export const expertiseBlocks = [
         thirdTitle: 'When might I need foot and ankle surgery?',
         descriptionThree: [
             'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
+            "If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.",
+            "However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications."
         ],
         fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
         fourthTitleBulletedList: [
@@ -267,664 +453,275 @@ export const expertiseBlocks = [
         spanString: 'Foot and Ankle Surgery',
     },
     {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+        image: 'https://i.imgur.com/WN1zBdr.webp',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Fracture Care',
+        firstTitle: 'About Fracture Care',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            'Americans break an average of two bones during their lives, and this injury can happen at any age. At Los Angeles Orthopedic Surgery Specialists, the team of premier fracture care specialists, offers compassionate, patient-focused care in Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. If you have a fracture, you need prompt fracture care to ensure a full recovery, so call the office nearest to you or book your appointment online today.'
         ],
-        secondTitle: 'What is foot and ankle surgery?',
+        secondTitle: 'What is fracture care?',
         descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
+            'Fracture care is medical care focused on healing of bone fractures. At Los Angeles Orthopedic Surgery Specialists, fracture care includes comprehensive fracture management, from the initial evaluation to the treatments that help your bone heal in the proper position. '
         ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
+        thirdTitle: 'What causes fractures?',
         descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
+            'Fractures occur for three main reasons, including:'
         ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
+        fourthTitle: 'Accidents',
         descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
+            'Falls, sports injuries, and auto accidents are examples of accidents that often cause bone fractures. Accidents can happen at any age, from the junior high baseball team to slip-and-fall accidents in the nursing home.'
         ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
+        fifthTitle: 'Overuse',
         descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
+            'Overuse means consistently exercising too much or too hard, and placing too much stress on your body. Over time, small fractures (stress fractures) develop. Just as with accidents, overuse injuries can happen at any time in life, from childhood to senior years.'
         ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        sixthTitle: 'Osteoporosis',
+        descriptionSix: [
+            "Osteoporosis causes porous bones, in which the bones thin and weaken from within. It usually happens as a person ages. When bones are thinner, they’re far more likely to fracture. Half of women and a quarter of men eventually break a bone because of osteoporosis.",
+            'There are many specific causes of fractures that might not be listed here, but most fractures fall into one of these three categories.'
+        ],
+        seventhTitle: 'What does fracture care involve?',
+        descriptionSeven: [
+            'Fracture care varies with the severity of the fracture, which bone it affects, your symptoms, and other individual aspects of your injury. Los Angeles Orthopedic Surgery Specialists offers all-encompassing fracture care in the office and in hospital settings.',
+            "Resting, modifying your activities, and wearing an immobilization device (cast, sling, brace, or other) is vital for most fractures. Some fractures can heal properly without surgery if the bone isn’t misaligned.",
+            "If your bone isn’t aligned properly, however, it must be returned to the proper position before the healing begins. The team may use nonsurgical fracture treatment techniques like traction to restore the bone to its proper position. But if you have a severe fracture, you could need surgery to place your bone in a prime position for ideal healing.",
+            'With all types of fracture care, pain management and physical therapy are also an integral part of the healing process.',
+            'Taking action as soon as you suffer a fracture can protect your bone health now and in the future. Call the Los Angeles Orthopedic Surgery Specialists office near you or book your appointment using the online scheduler now.'
+        ],
+        link: '/fractureCare',
+        imageTwo: 'https://i.imgur.com/WN1zBdr.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Fracture Care'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: 'https://i.imgur.com/U0lwo9g.webp',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Diabetic Foot Care',
+        firstTitle: 'About Diabetic Foot Care',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            "Diabetic foot care focuses on your feet, but it’s also about preventing bodywide damage from diabetes. At Los Angeles Orthopedic Surgery Specialists, the team of highly respected diabetic foot care experts provides personalized quality care in Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. If you have diabetes, your feet need special attention, so don’t wait to schedule your appointment. Call the nearest office or use the online scheduling feature now."
         ],
-        secondTitle: 'What is foot and ankle surgery?',
+        secondTitle: 'What is diabetic foot care?',
         descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
+            "Diabetic foot care is medical care centered on diagnosing, treating, and preventing common diabetes complications like slow-healing wounds and foot ulcers."
         ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
+        thirdTitle: 'Why do I need diabetic foot care?',
         descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
+            "People with diabetes often experience nerve damage (neuropathy) and poor circulation in their extremities (peripheral artery disease).",
+            "These two issues can trigger serious problems in the feet, including slow-healing wounds, foot ulcers, and even complications like Charcot foot (rocker-bottom feet). Additionally, people with diabetes are more likely to have problems like bunions, hammertoe, corns, and calluses.",
+            "When a diabetic foot issue grows serious, it can lead to major complications like infections and gangrene (tissue death), which could spread to other parts of the body. Some people even need foot and ankle surgery to remove a severely infected or gangrenous toe, foot, or limb.",
+            "While people with diabetes do have a high risk of serious foot issues, the good news is that diabetic foot care can help you avoid those problems. If you develop foot problems, regularly scheduled diabetic foot care helps you treat them immediately.",
+            "You need diabetic foot care to protect your feet, which has benefits for your whole body. Diabetic foot care can ensure that you remain mobile and active now and for the rest of your life. "
         ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
+        fourthTitle: 'What treatment does diabetic foot care include?',
         fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
+            'Wound Care',
+            'Debridement (removal of dead skin from a wound)',
+            'Oxygen therapy',
+            'Wound grafts',
+            'Custom orthotics',
+            'Prescription shoes',
+            'Medications like antibiotics',
+            'Pain management'
         ],
         descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
+            "Diabetic foot care at Los Angeles Orthopedic Surgery Specialists includes regular checkups (recommended at least once a year) along with a wide range of customized care for various diabetic foot problems. Some treatments that people with diabetes may need include:"
         ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
+        descriptionAfterBulletedList: [
+            "Alongside your diabetic foot care in the office, the team provides diabetes education to help you take good care of your feet and whole body at home. You’ll learn preventive care steps to maintain healthy feet, like daily foot inspections, trimming your nails straight across, and never going shoeless.",
+            "Monitoring your blood sugar, taking your diabetes medications as directed, and responding to issues quickly are all critical parts of diabetic foot care as well. Good diabetic foot care can keep you out of the hospital, so it’s worth taking the time to do it.",
+            "If you have new foot issues or are due for a diabetic foot checkup, call Los Angeles Orthopedic Surgery Specialists or use the online booking tool now."
         ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/diabeticFootCare',
+        imageTwo: 'https://i.imgur.com/U0lwo9g.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Diabetic Foot Care'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: 'https://i.imgur.com/nRQYdRV.webp',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Hand and Wrist Surgery',
+        firstTitle: 'About Hand and Wrist Surgery',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/handAndWristSurgery',
+        imageTwo: 'https://i.imgur.com/nRQYdRV.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Hand and Wrist Surgery'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Shoulder Surgery',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/shoulderSurgery',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Shoulder Surgery'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Sports Medicine',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/sportsMedicine',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Sports Medicine'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Arthroscopy',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/arthroscopy',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Arthroscopy'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Knee Replacement Surgery',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/kneeReplacementSurgery',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Knee Replacement Surgery'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Pain Management',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/painManagement',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Pain Management'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'ACL Reconstruction',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/aclReconstruction',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'ACL Reconstruction'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Meniscus Repairs',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/meniscusRepairs',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Meniscus Repairs'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Arthritis Care',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/arthritisCare',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Arthritis Care'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Ligament Reconstruction',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/ligamentReconstruction',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Ligament Reconstruction'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'Joint Injections',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/jointInjections',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
+        spanString: 'Joint Injections'
     },
-    {
-        image: 'https://i.imgur.com/xlHH02p.webp',
+    {   
+        image: '',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle Surgery',
-        firstTitle: 'About Foot and Ankle Surgery',
+        name: 'PRP Injections',
+        firstTitle: '',
         description: [
-            'Foot and ankle surgery offers an effective way to resolve issues rather than just managing them. At Los Angeles Orthopedic Surgery Specialists, the team of experienced surgeons offers solutions for foot and ankle issues of all types in their Los Angeles-area offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California. Click on the online booking tool or call the office nearest to you today.',
+            ''
         ],
-        secondTitle: 'What is foot and ankle surgery?',
-        descriptionTwo: [
-            'Foot and ankle surgery refers to any surgical procedure in the bones, joints, ligaments, tendons, and other parts of your feet and ankles. The team of renowned medical professionals at Los Angeles Orthopedic Surgery Specialists includes surgeons with specialized education and training in all types of foot and ankle surgery.'
-        ],
-        thirdTitle: 'When might I need foot and ankle surgery?',
-        descriptionThree: [
-            'After an injury, or when you have chronic pain, the first treatment plan usually involves physical therapy, bracing or other support devices, modifying your activities, and anti-inflammatory medication for pain management.',
-            'If those initial treatments aren’t helpful, the team might recommend advanced methods like platelet-rich plasma (PRP) or corticosteroid injections to decrease swelling and pain while aiding in healing.',
-            'However, you could need foot or ankle surgery if you have an issue that doesn’t get better after trying nonsurgical treatments. Some conditions, like structural issues and severe foot ulcers, require surgery to correct the issue and prevent future complications.'
-        ],
-        fourthTitle: 'Some of the most common reasons to have foot and ankle surgery include:',
-        fourthTitleBulletedList: [
-            'Tendon tears',
-            'Ligament tears',
-            'Fractures',
-            'Foot deformities',
-            'Plantar fasciitis',
-            'Flatfoot',
-            'Heel spurs',
-            'Neuromas',
-            'Diabetic foot ulcers'
-        ],
-        descriptionFour: [
-            "Los Angeles Orthopedic Surgery Specialists offers a complete range of foot and ankle treatments, so they only recommend surgery when it’s the most effective way for you to heal."
-        ],
-        fifthTitle: 'What happens during foot and ankle surgery?',
-        descriptionFive: [
-            'Each foot and ankle surgery is different based on your injury or problem. The team uses minimally invasive surgery methods, such as arthroscopy, whenever possible. This approach uses tiny incisions, a miniature camera, and thin instruments to repair problems inside the ankle joint or other joints.',
-            'With minimally invasive surgery, patients have far less bleeding, pain, and scarring compared with open surgery (traditional surgery with one long incision). The experienced surgeons are skilled in all types of foot and ankle surgery and can adapt your procedure to your needs.',
-            'In many cases, you may only need local anesthesia for minimally invasive foot and ankle surgery. Most foot and ankle surgeries are done as an outpatient, meaning you can go home that day.',
-            'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
-        ],
-        link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/xlHH02p.webp',
+        link: '/prpInjections',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle Surgery',
-    },
-
+        spanString: 'PRP Injections'
+    }
 ];
 
 export const aboutExtra = [
@@ -1213,9 +1010,20 @@ export const navMenu = [
         link: '/services',
         subMenuItems: [
             'Foot and Ankle Surgery',
-            'Service 2',
-            'Service 3',
-            'Sercice 4',
+            'Fracture Care',
+            'Diabetic Foot Care',
+            'Hand and Wrist Surgery',
+            'Shoulder Surgery',
+            'Sports Medicine',
+            'Arthroscopy',
+            'Knee Replacement Surgery',
+            'Pain Management',
+            'ACL Reconstruction',
+            'Meniscus Repairs',
+            'Arthritis Care',
+            'Ligament Reconstruction',
+            'Joint Injections',
+            'PRP Injections'
         ],
     },
     {
