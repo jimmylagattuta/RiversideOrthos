@@ -27,10 +27,6 @@ body {
     padding: 0;
     margin: 0;
     font-size: 18px;
-    background: grey;
-    /* background-image: url('/public/CaliBackground.jpg'); */
-    /* background-size: cover; */
-    /* background-attachment: fixed; */
 }
 
 a,
@@ -604,6 +600,10 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('/public/CaliBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .home-expertise .fas {
