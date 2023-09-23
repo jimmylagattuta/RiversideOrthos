@@ -34,8 +34,8 @@ const ExpertiseBlocks = () => {
                                     <img
                                         src={block.image}
                                         alt={block.name}
+                                        style={{ minHeight: '236px', width: '100%' }}
                                         className='expertise-image'
-                                        style={{ width: '267px', height: '200px' }}
                                         loading="lazy"
                                     />
                                 </Link>
@@ -48,6 +48,7 @@ const ExpertiseBlocks = () => {
                                 .split(' ')
                                 .join('-')}`}>
                             {block.name}
+                            <i style={{ fontSize: "0.8rem", alignSelf: "center", paddingLeft: "10px", marginBottom: "-5px" }} class="fas fa-angle-double-right"></i>
                         </Link>
                     </div>
                 );

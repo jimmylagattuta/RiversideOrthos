@@ -1041,7 +1041,7 @@ export const expertiseBlocks = [
         spanString: 'Sports Medicine'
     },
     {   
-        image: 'https://i.imgur.com/cRAxygj.webp',
+        image: '',
         width: '267px',
         height: '200px',
         name: 'Arthroscopy',
@@ -1094,7 +1094,7 @@ export const expertiseBlocks = [
             "Are you ready to learn more about arthroscopy? Click the online booking link or call the Los Angeles Orthopedic Surgery Specialists office near you now."
         ],
         link: '/arthroscopy',
-        imageTwo: 'https://i.imgur.com/cRAxygj.webp',
+        imageTwo: '',
         component: 'Services',
         link: '/services',
         spanString: 'Arthroscopy'
