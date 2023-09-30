@@ -1,5 +1,6 @@
 class Api::V1::JobsController < ApplicationController
     require 'open-uri'
+    require 'net/http'
     require 'json'
   
     def index
@@ -46,7 +47,13 @@ class Api::V1::JobsController < ApplicationController
   
         begin
           puts "7"
-          response = open(url).read
+          uri = URI.parse(url)
+          http = Net::HTTP.new(uri.host, uri.port)
+          http.use_ssl = (uri.scheme == 'https')
+          
+          request = Net::HTTP::Get.new(uri.request_uri)
+          
+          response = http.request(request)
           puts "8"
           puts "response"
           puts response.inspect
