@@ -57,10 +57,6 @@ class Api::V1::JobsController < ApplicationController
           puts "8"
           puts response.inspect
           data = JSON.parse(response)
-          puts "*" * 100
-          puts "data"
-          puts data.inspect
-          puts "*" * 100
           if data['status'] == 'OK'
             puts "9"
             place_details = data['result']
