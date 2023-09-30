@@ -55,7 +55,7 @@ class Api::V1::JobsController < ApplicationController
           
           response = http.request(request)
           puts "8"
-          data = JSON.parse(response)
+        #   data = JSON.parse(response)
           if data['status'] == 'OK'
             puts "9"
             place_details = data['result']
