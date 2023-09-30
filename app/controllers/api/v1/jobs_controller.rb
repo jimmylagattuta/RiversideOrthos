@@ -55,7 +55,6 @@ class Api::V1::JobsController < ApplicationController
           
           response = http.request(request)
           puts "8"
-          puts response.inspect
           data = JSON.parse(response)
           if data['status'] == 'OK'
             puts "9"
