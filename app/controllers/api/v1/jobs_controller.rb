@@ -8,7 +8,10 @@ class Api::V1::JobsController < ApplicationController
   
     def pull_yelp_cache
       api_key = ENV['GOOGLE_PLACES_API_KEY']
-  
+      puts "*" * 100
+      puts "api_key"
+      puts api_key
+      puts "*" * 100
       if api_key.nil? || api_key.empty?
         render json: { "error": "Please set the GOOGLE_PLACES_API_KEY environment variable." }
         return
