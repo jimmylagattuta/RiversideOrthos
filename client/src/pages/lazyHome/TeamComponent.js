@@ -30,7 +30,7 @@ const TeamComponent = () => {
                         <i className='fab fa-facebook fa-2x'></i>
                     </a>
                     <a style={{ color: 'white' }} href='https://www.youtube.com/@LAOrthopedics' target='_blank' rel='noopener noreferrer'>
-                        <i className='fab fa-youtube fa-2x'></i>
+                        <i style={{ fontSize: '1.8em' }} className='fab fa-youtube fa-2x'></i>
                     </a>
                 </div>
             </div>

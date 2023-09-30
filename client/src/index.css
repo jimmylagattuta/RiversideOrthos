@@ -708,7 +708,7 @@ img {
     text-align: center;
     /* padding: 10px 15px; */
     font-size: 3rem;
-    font-family: Roboto;
+    font-family: sans-serif;
     max-width: 740px;
     color: white;
 }
@@ -718,6 +718,7 @@ img {
     text-align: center;
     padding: 10px 15px;
     font-size: 3rem;
+    font-family: sans-serif;
     max-width: 840px;
     color: white;
 }
@@ -740,9 +741,10 @@ img {
 .home-locations {
     align-items: center;
     /* background: url(https://i.imgur.com/77LJQ2y.webp) 0 0 no-repeat; */
-    background-color: rgb(80, 80, 80);
-    background-position: 50%;
+    background-image: url('/public/CaliBackground.jpg');
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -985,7 +987,7 @@ img {
 }
 
 .home-banner:after {
-    background: rgba(243, 74, 2, 0.8);
+    background: rgba(243, 74, 2, 0.7);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.1px);
     -webkit-backdrop-filter: blur(0.1px);
@@ -998,7 +1000,7 @@ img {
     -webkit-transform: skew(-18deg);
     transform: skew(-18deg);
     width: calc(100% - 160px);
-    min-width: 720px;
+    min-width: 800px;
     z-index: -1;
 
 }
@@ -1009,13 +1011,17 @@ img {
 }
 
 .banner-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
+    letter-spacing: 0.04em;
+    font-weight: 550;
     padding: 0px;
-    margin: 0px
+    margin: -5px;
+    font-family: sans-serif;
 }
 
 .banner-description {
     width: 450px;
+    font-size: 1.2em;
 }
 
 .home-banner .btn {
