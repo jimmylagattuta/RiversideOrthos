@@ -32,7 +32,7 @@ const CompanyReviewsPage = () => {
         const fetchReviews = () => {
             const url =
                 process.env.NODE_ENV === 'production'
-                    ? 'https://www.midlandortho.com/api/v1/pull_yelp_cache'
+                    ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_yelp_cache'
                     : 'http://localhost:3000/api/v1/pull_yelp_cache';
 
             fetch(url)
