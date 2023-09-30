@@ -46,8 +46,6 @@ class Api::V1::JobsController < ApplicationController
   
         begin
           puts "7"
-          puts "open(url).read"
-          puts open(url).read
           response = open(url).read
           puts "8"
           puts "response"
