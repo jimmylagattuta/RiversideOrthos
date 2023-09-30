@@ -9,69 +9,70 @@ class Api::V1::JobsController < ApplicationController
   
     def pull_yelp_cache
       api_key = ENV['GOOGLE_PLACES_API_KEY']
-      puts "*" * 100
-      puts "api_key"
-      puts api_key
-      puts "*" * 100
       if api_key.nil? || api_key.empty?
         render json: { "error": "Please set the GOOGLE_PLACES_API_KEY environment variable." }
         return
       end
-      puts "1"
       places_api = GooglePlacesApi.new(api_key)
-      puts "3"
+      
       # Replace 'YOUR_PLACE_ID_TO_LOOKUP' with an actual place ID to retrieve details
-      place_id = 'ChIJ6wjoflfGwoARIQ4pYyXJCN8'
-      puts "4"
-      encoded_place_id = URI.encode_www_form_component(place_id)
-      puts "5"
-      place_details = places_api.get_place_details(encoded_place_id)
-      if place_details
-        puts "7"
-        render json: place_details
-      else
-        puts "8"
-        render json: { "error": "Failed to retrieve place details." }
+      place_ids = [
+        'ChIJ6wjoflfGwoARIQ4pYyXJCN8',
+        'ChIJo34riQ3GwoARLZD9o-uqI8Y',
+        'ChIJfc-vNJTTwoARtN9DZQQNDRc',
+        'ChIJ1e1EWx7RwoAReCY-TXXbhT4',
+        'ChIJm2ksPQiZwoARG_JhTUiR0pI',
+        'ChIJj3JTtm7BwoARcku_Ur8WuDE',
+        'ChIJsT3iMBWHwoARLfqsCmNi-C0'
+      ]
+      
+      reviews = []
+  
+      place_ids.each do |place_id|
+        encoded_place_id = URI.encode_www_form_component(place_id)
+        place_details = places_api.get_place_details(encoded_place_id)
+  
+        if place_details
+          # Assuming 'reviews' is an array in place_details that contains reviews
+          place_reviews = place_details['reviews'] || []
+          reviews.concat(place_reviews)
+        else
+          puts "Failed to retrieve place details for place ID: #{place_id}"
+        end
       end
+  
+      render json: reviews
     end
   
     class GooglePlacesApi
       def initialize(api_key)
-        puts "2"
         @api_key = api_key
       end
   
       def get_place_details(place_id)
-        puts "6"
         url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=#{place_id}&key=#{@api_key}"
   
         begin
-          puts "7"
           uri = URI.parse(url)
           http = Net::HTTP.new(uri.host, uri.port)
           http.use_ssl = (uri.scheme == 'https')
-          
+  
           request = Net::HTTP::Get.new(uri.request_uri)
-          
+  
           response = http.request(request)
-          puts "8"
           data = JSON.parse(response.body)
           if data['status'] == 'OK'
-            puts "9"
             place_details = data['result']
             # Process and use place_details as needed
             return place_details
           else
-            puts "10"
             puts "Error: #{data['status']}"
             return nil
           end
         rescue OpenURI::HTTPError => e
-          puts "11"
           puts "HTTP Error: #{e.message}"
           return nil
         rescue JSON::ParserError => e
-          puts "12"
           puts "JSON Parsing Error: #{e.message}"
           return nil
         end
