@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       post "/signup", to: "users#create"
       post "/login", to: "sessions#create"
       delete "/logout", to: "sessions#destroy"
-      get "/pull_yelp_cache", to: "jobs#pull_yelp_cache"
+      get "/pull_google_places_cache", to: "jobs#pull_google_places_cache"
 
     end
   end
