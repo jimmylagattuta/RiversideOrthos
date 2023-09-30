@@ -51,7 +51,12 @@ class Api::V1::JobsController < ApplicationController
       reviews = JSON.parse(cached_data) if cached_data
   
       if cached_data.present?
+        puts "*" * 100
+        puts "cached data present"
         reviews = process_reviews(reviews)
+        puts "reviews"
+        puts JSON.generate(reviews)
+        puts "*" * 100
         return JSON.generate(reviews)
       end
   
