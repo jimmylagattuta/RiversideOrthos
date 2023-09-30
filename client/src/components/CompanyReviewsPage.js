@@ -70,6 +70,7 @@ const CompanyReviewsPage = () => {
         }
     }, []);
 
+    console.log('reviews', reviews);
     return (
         <div className='reviews-container'>
             <div className='review-grid'>

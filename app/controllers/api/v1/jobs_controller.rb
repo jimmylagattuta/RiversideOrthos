@@ -39,7 +39,10 @@ class Api::V1::JobsController < ApplicationController
         begin
           response = open(url).read
           data = JSON.parse(response)
-  
+          puts "*" * 100
+          puts "data"
+          puts data.inspect
+          puts "*" * 100
           if data['status'] == 'OK'
             place_details = data['result']
             # Process and use place_details as needed
