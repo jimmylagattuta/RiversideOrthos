@@ -13,6 +13,7 @@ class Api::V1::JobsController < ApplicationController
       puts api_key
       puts "*" * 100
       if api_key.nil? || api_key.empty?
+        puts "nil"
         render json: { "error": "Please set the GOOGLE_PLACES_API_KEY environment variable." }
         return
       end
