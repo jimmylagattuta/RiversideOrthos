@@ -1,24 +1,57 @@
-class ApplicationController < ActionController::API
-include ActionController::Cookies
-before_action :authenticate_user
-rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
-rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
-
+class ApplicationController < ActionController::Base
+    include ActionController::Cookies
+    before_action :authenticate_user
+    before_action :cors_preflight_check
+    after_action :cors_set_access_control_headers
+  
+    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+    rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
+  
+    def cors_set_access_control_headers
+      allowed_origins = ['https://la-orthos-bdc751615c67.herokuapp.com/'] # Add any additional allowed origins as needed
+      allowed_methods = 'POST, GET, OPTIONS' # Specify the necessary methods allowed in the request
+      allowed_headers = 'Content-Type, Authorization' # Specify the necessary headers allowed in the request
+  
+      headers['Access-Control-Allow-Origin'] = allowed_origins.include?(request.headers['Origin']) ? request.headers['Origin'] : ''
+      headers['Access-Control-Allow-Methods'] = allowed_methods
+      headers['Access-Control-Allow-Headers'] = allowed_headers
+      headers['Access-Control-Max-Age'] = '31536000'
+    end
+  
+  
+    def cors_preflight_check
+      return unless request.method == 'OPTIONS'
+  
+      headers['Access-Control-Allow-Origin'] = request.headers['Origin'] || 'http://la-orthos-bdc751615c67.herokuapp.com'
+      headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+      headers['Access-Control-Allow-Headers'] = '*'
+      headers['Access-Control-Max-Age'] = '31536000'
+  
+      head :ok
+    end
+  
+    def redirect_to_root
+      redirect_to root_path
+    end
+  
     private
-
+  
     def current_user
-        @current_user = User.find_by_id(session[:user_id])
+      # Implement your logic to retrieve the current user
     end
-
+  
     def record_not_found(errors)
-        render json: errors.message, status: :not_found
+      # Handle the ActiveRecord::RecordNotFound error
     end
-
+  
     def invalid_record(invalid)
-        render json: invalid.record.errors, status: :unprocessable_entity
+      # Handle the ActiveRecord::RecordInvalid error
     end
-
+  
     def authenticate_user
-        render json: "Not authorized", status: :unauthorized unless current_user
+      # Implement your logic to authenticate the user
+      # Uncomment the following line if you want to restrict unauthorized access
+      # render json: 'Not authorized', status: :unauthorized unless current_user
     end
-end
+  end
+  

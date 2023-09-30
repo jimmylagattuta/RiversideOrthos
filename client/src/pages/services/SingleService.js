@@ -34,126 +34,150 @@ const SingleService = () => {
 
             {Service.secondTitle && (
                 <>
-                    <div className='page-info'>
-                        <h2 className='page-title'>{Service.secondTitle}</h2>
-                        {Service.descriptionTwo.map((item, index) => {
-                            return <p key={index} className='page-description'>{item}</p>;
-                        })}
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <h2 className='page-title'>{Service.secondTitle}</h2>
+                            {Service.descriptionTwo.map((item, index) => {
+                                return <p key={index} className='page-description'>{item}</p>;
+                            })}
+                        </div>
                     </div>
                 </>
             )}
 
             {Service.secondTitleBulletedList && (
                 <>
-                    <div className='page-info'>
-                        <ul className='bulleted-list'>
-                            {Service.secondTitleBulletedList.map((item, index) => {
-                                return <li key={index} className='page-description'>{item}</li>;
-                            })}
-                        </ul>
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <ul className='bulleted-list'>
+                                {Service.secondTitleBulletedList.map((item, index) => {
+                                    return <li key={index} className='page-description'>{item}</li>;
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </>
             )}
 
             {Service.descriptionAfterSecondBulletedList && (
                 <>
-                    {Service.descriptionAfterSecondBulletedList.map((item, index) => {
-                        return <p key={index} className='page-description'>{item}</p>;
-                    })}
+                    <div className='popout-content'>
+                        {Service.descriptionAfterSecondBulletedList.map((item, index) => {
+                            return <p key={index} className='page-description'>{item}</p>;
+                        })}
+                    </div>
                 </>
             )}
 
 
             {Service.thirdTitle && (
                 <>
-                    <div className='page-info'>
-                        <h2 className='page-title'>{Service.thirdTitle}</h2>
-                        {Service.descriptionThree.map((item, index) => {
-                            return <p key={index} className='page-description'>{item}</p>;
-                        })}
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <h2 className='page-title'>{Service.thirdTitle}</h2>
+                            {Service.descriptionThree.map((item, index) => {
+                                return <p key={index} className='page-description'>{item}</p>;
+                            })}
+                        </div>
                     </div>
                 </>
             )}
 
             {Service.thirdTitleBulletedList && (
                 <>
-                    <div className='page-info'>
-                        <ul className='bulleted-list'>
-                            {Service.thirdTitleBulletedList.map((item, index) => {
-                                return <li key={index} className='page-description'>{item}</li>;
-                            })}
-                        </ul>
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <ul className='bulleted-list'>
+                                {Service.thirdTitleBulletedList.map((item, index) => {
+                                    return <li key={index} className='page-description'>{item}</li>;
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </>
             )}
 
             {Service.descriptionAfterThirdBulletedList && (
                 <>
-                    {Service.descriptionAfterThirdBulletedList.map((item, index) => {
-                        return <p key={index} className='page-description'>{item}</p>;
-                    })}
-                </>
-            )}
-
-            {Service.fourthTitle && (
-                <>
-                    <div className='page-info'>
-                        <h2 className='page-title'>{Service.fourthTitle}</h2>
-                        {Service.descriptionFour.map((item, index) => {
+                    <div className='popout-content'>
+                        {Service.descriptionAfterThirdBulletedList.map((item, index) => {
                             return <p key={index} className='page-description'>{item}</p>;
                         })}
                     </div>
                 </>
             )}
+
+            {Service.fourthTitle && (
+                <>
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <h2 className='page-title'>{Service.fourthTitle}</h2>
+                            {Service.descriptionFour.map((item, index) => {
+                                return <p key={index} className='page-description'>{item}</p>;
+                            })}
+                        </div>
+                    </div>
+                </>
+            )}
             {Service.fourthTitleBulletedList && (
                 <>
-                    <div className='page-info'>
-                        <ul className='bulleted-list'>
-                            {Service.fourthTitleBulletedList.map((item, index) => {
-                                return <li key={index} className='page-description'>{item}</li>;
-                            })}
-                        </ul>
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <ul className='bulleted-list'>
+                                {Service.fourthTitleBulletedList.map((item, index) => {
+                                    return <li key={index} className='page-description'>{item}</li>;
+                                })}
+                            </ul>
+                        </div>
                     </div>
                 </>
             )}
             
             {Service.descriptionAfterFourthBulletedList && (
                 <>
-                    {Service.descriptionAfterFourthBulletedList.map((item, index) => {
-                        return <p key={index} className='page-description'>{item}</p>;
-                    })}
+                    <div className='popout-content'>
+                        {Service.descriptionAfterFourthBulletedList.map((item, index) => {
+                            return <p key={index} className='page-description'>{item}</p>;
+                        })}
+                    </div>
                 </>
             )}
 
             {Service.fifthTitle && (
                 <>
-                    <div className='page-info'>
-                        <h2 className='page-title'>{Service.fifthTitle}</h2>
-                        {Service.descriptionFive.map((item, index) => {
-                            return <p key={index} className='page-description'>{item}</p>;
-                        })}
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <h2 className='page-title'>{Service.fifthTitle}</h2>
+                            {Service.descriptionFive.map((item, index) => {
+                                return <p key={index} className='page-description'>{item}</p>;
+                            })}
+                        </div>
                     </div>
                 </>
             )}
 
             {Service.sixthTitle && (
                 <>
-                    <div className='page-info'>
-                        <h2 className='page-title'>{Service.sixthTitle}</h2>
-                        {Service.descriptionSix.map((item, index) => {
-                            return <p key={index} className='page-description'>{item}</p>;
-                        })}
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <h2 className='page-title'>{Service.sixthTitle}</h2>
+                            {Service.descriptionSix.map((item, index) => {
+                                return <p key={index} className='page-description'>{item}</p>;
+                            })}
+                        </div>
                     </div>
                 </>
             )}
 
             {Service.seventhTitle && (
                 <>
-                    <div className='page-info'>
-                        <h2 className='page-title'>{Service.seventhTitle}</h2>
-                        {Service.descriptionSeven.map((item, index) => {
-                            return <p key={index} className='page-description'>{item}</p>;
-                        })}
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            <h2 className='page-title'>{Service.seventhTitle}</h2>
+                            {Service.descriptionSeven.map((item, index) => {
+                                return <p key={index} className='page-description'>{item}</p>;
+                            })}
+                        </div>
                     </div>
                 </>
             )}
