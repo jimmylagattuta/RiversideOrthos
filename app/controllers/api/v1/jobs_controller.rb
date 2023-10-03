@@ -46,10 +46,13 @@ class Api::V1::JobsController < ApplicationController
   
   class RedisCached
     def self.cached_google_places_reviews
+        puts "1"
       redis = Redis.new(url: ENV['REDIS_URL'])
+      puts "2"
       cached_data = redis.get('cached_google_places_reviews')
+      puts "3"
       reviews = JSON.parse(cached_data) if cached_data
-  
+      puts "4"
       if cached_data.present?
         puts "*" * 100
         puts "cached data present"
@@ -74,7 +77,7 @@ class Api::V1::JobsController < ApplicationController
   
       place_ids.each do |place_id|
         encoded_place_id = URI.encode_www_form_component(place_id)
-        place_details = GooglePlacesApi.new(ENV['GOOGLE_PLACES_API_KEY']).get_place_details(encoded_place_id)
+        place_details = GooglePlacesApi.new(ENV['REACT_APP_GOOGLE_PLACES_API_KEY']).get_place_details(encoded_place_id)
   
         if place_details
           place_reviews = place_details['reviews'] || []
