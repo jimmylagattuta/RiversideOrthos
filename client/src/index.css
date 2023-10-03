@@ -274,6 +274,7 @@ img {
     min-height: 720px;
     /* background-color: var(--blue); */
     background-color: white;
+    border-bottom: 5px solid #f34a02;
 }
 
 .Carousel-container {
@@ -815,7 +816,7 @@ img {
 
 /* REVIEWS */
 .home-reviews {
-
+    border-top: 5px solid #f34a02;
     display: flex;
     flex-direction: column;
     align-items: center;
