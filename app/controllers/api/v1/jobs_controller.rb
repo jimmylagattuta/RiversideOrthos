@@ -33,9 +33,10 @@ class Api::V1::JobsController < ApplicationController
         puts "cached_data"
         puts users.inspect
         remove_user_by_name(users, 'Pdub ..')
-  
+        filtered_reviews = users.select { |review| review['rating'] == 5 }
+
         # Convert the updated data back to a JSON string
-        updated_reviews = JSON.generate(users)
+        updated_reviews = JSON.generate(filtered_reviews)
   
         return updated_reviews
       end
