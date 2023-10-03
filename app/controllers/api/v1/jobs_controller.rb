@@ -32,7 +32,6 @@ class Api::V1::JobsController < ApplicationController
         # Call the class method to remove the user with name "Pdub .."
         puts "cached_data"
         puts users.inspect
-        puts "1"
         remove_user_by_name(users, 'Pdub ..')
   
         # Convert the updated data back to a JSON string
