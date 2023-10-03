@@ -1,10 +1,52 @@
-// import { Link } from 'react-router-dom';
-// import { physicians } from '../../data';
+import { Link } from 'react-router-dom';
+import { physicians } from '../../data';
 
 const Physicians = () => {
     return (
         <div className='page-container'>
-           Physicians.js
+            <div className='physician-header'>
+                <h1 className='main-page-title'>Meet Our Physicians</h1>
+                <p className='main-page-description'>
+                    Located in Chicago, Hometown, La Grange, and Greenwood
+                    Plaza.
+                </p>
+            </div>
+            <div className='page-grid'>
+                {physicians.map((physician) => {
+                    return (
+                        <div className='grid-item' key={physician.name}>
+                            <div className='image-container'>
+                                <Link
+                                    className='physician-link'
+                                    to={`/physicians/${
+                                        physician.name.toLowerCase().split(' ')[0]
+                                    }`}>
+                                    <img
+                                        src={physician.image}
+                                        alt={physician.name}
+                                        className='grid-image'
+                                    />
+                                </Link>
+                            </div>
+                            <Link
+                                className='physician-link'
+                                to={`/physicians/${
+                                    physician.name.toLowerCase().split(' ')[0]
+                                }`}>
+                                <h5 className='physician-name'>{physician.name}</h5>
+                            </Link>
+                            <Link
+                                className='physician-link'
+                                to={`/physicians/${
+                                    physician.name.toLowerCase().split(' ')[0]
+                                }`}>
+                                Read Bio
+                                <i className='fas fa-arrow-right physician-bio-icon'></i>
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 };

@@ -31,7 +31,14 @@ export const products = [
 
 export const physicians = [
     {
-        name: 'Doctor 1, MD'
+        name: 'Whitty Lee',
+        bio: [
+            "Whitty Li is a Physician Assistant with experience in both primary care and orthopedic settings. She currently works at Manhattan Medical Arts in Manhattan, NY as a Primary Care PA, where she provides effective physician support for up to 30+ patients a day in an outpatient setting. Prior to this, Whitty worked at Hospital for Special Surgery as an Inpatient Orthopedic Floor PA, where she successfully triaged and managed medical and surgical issues for up to 40+ inpatient patients at a time, with a specialty in total knee and hip arthroplasty patients.",
+            "Whitty received her Master of Science from Stony Brook University's Physician Assistant Program, where her Master’s Project focused on TAVR vs SAVR in intermediate-risk patients. She also holds a Bachelor of Science in Biological Sciences from the University of California, Irvine.",
+            "In addition to her clinical experience, Whitty has worked as a Medical Assistant in various healthcare settings, including Coastal Cardiology of OC, Damirchi Family Practice, and Coastal Care Urgent Care. She has also volunteered her time with organizations such as Ronald McDonald House of Long Island and Ellen’s Breast Cancer 5k Run.",
+            "Whitty is certified as a Physician Assistant by the National Commission of Certification of Physician Assistants and is licensed to practice in both New York and California. She holds certifications in Advanced Cardiac Life Support, Basic Life Support, and Infection Control Barrier Protections. Whitty is a member of the New York State Society of Physician Assistants and the American Association of Physician Assistants."
+        ],
+        image: 'https://i.imgur.com/eHszN7V.webp'
     },
     {
         name: 'Doctor 2, MD'

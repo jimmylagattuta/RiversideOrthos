@@ -451,14 +451,14 @@ img {
     display: none;
     position: absolute;
     background-color: var(--white);
-    min-width: 538px;
+    min-width: 761px;
     z-index: 2;
 }
 
 .submenu-list {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two columns */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Two columns */
     grid-gap: 0px; /* Adjust the gap between items */
     padding: 10px;
 }
@@ -538,8 +538,12 @@ img {
 }
 
 .physician-name {
-    font-size: 20px;
+    font-size: 2rem;
     margin: 35px 0;
+}
+
+.page-description {
+    font-size: 1rem;
 }
 
 .specialty-list {
