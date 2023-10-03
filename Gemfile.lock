@@ -80,6 +80,11 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    et-orbi (1.2.7)
+      tzinfo
+    fugit (1.8.1)
+      et-orbi (~> 1, >= 1.2.7)
+      raabro (~> 1.4)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -119,6 +124,7 @@ GEM
     pg (1.5.3-x64-mingw-ucrt)
     puma (5.6.6)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.7.1)
     rack (2.2.7)
     rack-cors (2.0.1)
@@ -176,7 +182,19 @@ GEM
       redis (>= 4, < 6)
     reline (0.3.6)
       io-console (~> 0.5)
+    rufus-scheduler (3.9.1)
+      fugit (~> 1.1, >= 1.1.6)
+    sidekiq (7.1.5)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.14.0)
+    sidekiq-scheduler (5.0.3)
+      rufus-scheduler (~> 3.2)
+      sidekiq (>= 6, < 8)
+      tilt (>= 1.4.0)
     thor (1.2.2)
+    tilt (2.3.0)
     timeout (0.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -200,6 +218,9 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.0.5)
   redis-rails
+  rufus-scheduler
+  sidekiq
+  sidekiq-scheduler
   tzinfo-data
 
 RUBY VERSION

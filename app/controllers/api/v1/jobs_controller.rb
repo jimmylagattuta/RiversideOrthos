@@ -30,8 +30,6 @@ class Api::V1::JobsController < ApplicationController
         users = JSON.parse(cached_data)
   
         # Call the class method to remove the user with name "Pdub .."
-        puts "cached_data"
-        puts users.inspect
         remove_user_by_name(users, 'Pdub ..')
         filtered_reviews = users.select { |review| review['rating'] == 5 }
 

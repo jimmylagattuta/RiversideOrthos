@@ -141,6 +141,11 @@ const CompanyReviewsPage = () => {
                                     aria-hidden='true'></i>
                                 <p className='review-paragraph'>{item.text}</p>
                             </div>
+                            <div className='google-link'>
+                                <a href={item.author_url} target="_blank" rel="noopener noreferrer">
+                                    <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
+                                </a>
+                            </div>
                         </div>
                     );
                 })}

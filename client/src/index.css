@@ -920,6 +920,17 @@ img {
     font-size: 1rem;
 }
 
+.google-link {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    cursor: pointer;
+}
+.google-link:active {
+    transform: translateY(2px); /* Adjust the number of pixels as needed */
+}
+
+
 /* END REVIEWS */
 
 .home-team:after,
