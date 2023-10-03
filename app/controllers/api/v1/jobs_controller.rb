@@ -1,12 +1,10 @@
 class Api::V1::JobsController < ApplicationController
     def index
-      render json: "Midland Orthopedic Group " * 1000
+      render json: "Los Angeles Orthopedic Group " * 1000
     end
   
     def pull_google_places_cache
-      puts "27"
       reviews = GooglePlacesCached.cached_google_places_reviews
-      puts "28"
       render json: reviews
     end
   end
@@ -35,9 +33,10 @@ class Api::V1::JobsController < ApplicationController
 
         # Convert the updated data back to a JSON string
         updated_reviews = JSON.generate(filtered_reviews)
+        puts "returning cached reviews"
         return updated_reviews
       end
-  
+      puts "fetching new reviews"
       place_ids = [
         'ChIJ6wjoflfGwoARIQ4pYyXJCN8',
         'ChIJo34riQ3GwoARLZD9o-uqI8Y',
