@@ -17,52 +17,73 @@ class MonthlyJob
       'ChIJj3JTtm7BwoARcku_Ur8WuDE',
       'ChIJsT3iMBWHwoARLfqsCmNi-C0'
     ]
-
+    puts "1"
     http = Net::HTTP.new("maps.googleapis.com", 443)
+    puts "2"
     http.use_ssl = true
-
+    puts "3"
     reviews = []
 
     places.each do |place|
+      puts "4"
       place_id = place[:place_id]
+      puts "5"
       location = place[:location]
 
       # Fetch place details from Google Places API
+      puts "6"
       encoded_place_id = URI.encode_www_form_component(place_id)
+      puts "7"
       url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
+      puts "8"
       request = Net::HTTP::Get.new(url)
+      puts "9"
       response = http.request(request)
+      puts "10"
       body = response.read_body
+      puts "11"
       parsed_response = JSON.parse(body)
-
+      puts "12"
       if parsed_response['status'] == 'OK'
+        puts "13"
         place_details = parsed_response['result']
+        puts "14"
         place_reviews = place_details.present? ? place_details['reviews'] || [] : []
+        puts "15"
         reviews.concat(place_reviews)
+        puts "16"
       else
+        puts "17"
         puts "Failed to retrieve place details for place ID: #{place_id}"
       end
     end
 
     # Filter and process the reviews as needed
     filtered_reviews = []
-
+    puts "18"
     reviews.each do |review|
+      puts "19"
       # You can apply filtering or processing logic here
       if review['rating'] == 5 && review['user']['name'] != 'Pdub ..'
+        puts "20"
         filtered_reviews << {
           location_one: location, # Adjust this as needed
           location_two: review['author_name'], # Adjust this as needed
           text: review['text'].strip # Remove leading/trailing spaces
           # Add other fields as needed
         }
+        puts "21"
       end
     end
-
+    puts "22"
     redis = Redis.new(url: ENV['REDIS_URL'])
+    puts "23"
     redis.set('cached_google_places_reviews', JSON.generate(filtered_reviews))
+    puts "24"
     redis.expire('cached_google_places_reviews', 30.days.to_i)
+    puts "25"
   rescue StandardError => e
+    puts "26"
     puts "Error in fetch_google_places_reviews: #{e.message}"
   end
 end

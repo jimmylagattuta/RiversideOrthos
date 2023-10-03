@@ -4,7 +4,9 @@ class Api::V1::JobsController < ApplicationController
     end
   
     def pull_google_places_cache
+      puts "27"
       reviews = GooglePlacesCached.cached_google_places_reviews
+      puts "28"
       render json: reviews
     end
   end
@@ -14,28 +16,32 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-  
+    puts "29"
     def self.remove_user_by_name(users, name)
+        puts "30"
         users.reject! { |user| user['user'] && user['user']['name'] == name }
       end
       
   
     def self.cached_google_places_reviews
+      puts "31"
       redis = Redis.new(url: ENV['REDIS_URL'])
       cached_data = redis.get('cached_google_places_reviews')
       reviews = JSON.parse(cached_data) if cached_data
-  
+      puts "32"
       if cached_data.present?
+        puts "33"
         # Parse the JSON data into an array of hashes
         users = JSON.parse(cached_data)
   
         # Call the class method to remove the user with name "Pdub .."
+        puts "34"
         remove_user_by_name(users, 'Pdub ..')
         filtered_reviews = users.select { |review| review['rating'] == 5 }
 
         # Convert the updated data back to a JSON string
         updated_reviews = JSON.generate(filtered_reviews)
-  
+        puts "35"
         return updated_reviews
       end
   
@@ -51,7 +57,7 @@ class Api::V1::JobsController < ApplicationController
       http = Net::HTTP.new("maps.googleapis.com", 443)
       http.use_ssl = true
       reviews = []
-  
+      puts "36"
       place_ids.each do |place_id|
         encoded_place_id = URI.encode_www_form_component(place_id)
         url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
