@@ -26,9 +26,9 @@ class MonthlyJob
 
     places.each do |place|
       puts "4"
-      place_id = place[:place_id]
+      place_id = place
       puts "5"
-      location = place[:location]
+
 
       # Fetch place details from Google Places API
       puts "6"
@@ -63,15 +63,11 @@ class MonthlyJob
     puts "18"
     reviews.each do |review|
       puts "19"
+      puts review.inspect
       # You can apply filtering or processing logic here
-      if review['rating'] == 5 && review['user']['name'] != 'Pdub ..'
+      if review['rating'] == 5 && review['author_name'] != 'Pdub ..'
         puts "20"
-        filtered_reviews << {
-          location_one: location, # Adjust this as needed
-          location_two: review['author_name'], # Adjust this as needed
-          text: review['text'].strip # Remove leading/trailing spaces
-          # Add other fields as needed
-        }
+        filtered_reviews << review
         puts "21"
       end
     end
