@@ -100,7 +100,7 @@ const Navbar = () => {
                                         end>
                                         All {item.menu}
                                     </NavLink>
-                                    <div className='submenu-list'>
+                                    <div className={`submenu-list ${item.subMenuItems.length > 16 ? 'submenu-multi-column' : item.subMenuItems.length > 6 ? 'submenu-two-column' : ''}`}>
                                         {item.subMenuItems.map((subItem) => {
                                             return (
                                                 <NavLink

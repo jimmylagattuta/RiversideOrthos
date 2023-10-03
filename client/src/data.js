@@ -47,7 +47,7 @@ export const physicians = [
         name: 'Doctor 3, MD'
     },
     {
-        name: 'Doctor 4, MD'
+        name: 'Natalie Hammond'
     },
     {
         name: 'Doctor 5, MD'
@@ -57,6 +57,39 @@ export const physicians = [
     },
     {
         name: 'Doctor 7, MD'
+    },
+    {
+        name: 'Doctor 8, MD'
+    },
+    {
+        name: 'Doctor 9, MD'
+    },
+    {
+        name: 'Doctor 10, MD'
+    },
+    {
+        name: 'Doctor 11, MD'
+    },
+    {
+        name: 'Doctor 12, MD'
+    },
+    {
+        name: 'Doctor 13, MD'
+    },
+    {
+        name: 'Doctor 14, MD'
+    },
+    {
+        name: 'Doctor 15, MD'
+    },
+    {
+        name: 'Doctor 16, MD'
+    },
+    {
+        name: 'Doctor 17, MD'
+    },
+    {
+        name: 'Doctor 18, MDMDMD'
     }
 ];
 
