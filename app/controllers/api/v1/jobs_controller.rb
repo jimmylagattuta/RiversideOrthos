@@ -1,66 +1,44 @@
 class Api::V1::JobsController < ApplicationController
-    require 'open-uri'
-    require 'net/http'
-    require 'json'
-    require 'redis'
-  
     def index
-      render json: "Los Angeles Orthopedic Group " * 1000
+      render json: "Midland Orthopedic Group " * 1000
     end
   
     def pull_google_places_cache
-      reviews = RedisCached.cached_google_places_reviews
+      reviews = GooglePlacesCached.cached_google_places_reviews
   
       render json: reviews
     rescue StandardError => e
       puts "Error in pull_google_places_cache: #{e.message}"
       render json: { "error": e.message }
     end
-  
-    class GooglePlacesApi
-      def initialize(api_key)
-        @api_key = api_key
-      end
-  
-      def get_place_details(place_id)
-        url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=#{place_id}&key=#{@api_key}"
-  
-        uri = URI.parse(url)
-        http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = (uri.scheme == 'https')
-  
-        request = Net::HTTP::Get.new(uri.request_uri)
-  
-        response = http.request(request)
-        data = JSON.parse(response.body)
-        if data['status'] == 'OK'
-          place_details = data['result']
-          return place_details
-        else
-          puts "Error: #{data['status']}"
-          return nil
-        end
-      end
-    end
   end
   
-  class RedisCached
+  class GooglePlacesCached
+    require 'redis'
+    require 'json'
+    require 'uri'
+    require 'net/http'
+  
+    def self.remove_user_by_name(users, name)
+      users.reject! { |user| user['user']['name'] == name }
+    end
+  
     def self.cached_google_places_reviews
-        puts "1"
       redis = Redis.new(url: ENV['REDIS_URL'])
-      puts "2"
       cached_data = redis.get('cached_google_places_reviews')
-      puts "3"
       reviews = JSON.parse(cached_data) if cached_data
-      puts "4"
+  
       if cached_data.present?
-        puts "*" * 100
-        puts "cached data present"
-        reviews = process_reviews(reviews)
-        puts "reviews"
-        puts JSON.generate(reviews)
-        puts "*" * 100
-        return JSON.generate(reviews)
+        # Parse the JSON data into an array of hashes
+        users = JSON.parse(cached_data)
+  
+        # Call the class method to remove the user with name "Pdub .."
+        remove_user_by_name(users, 'Pdub ..')
+  
+        # Convert the updated data back to a JSON string
+        updated_reviews = JSON.generate(users)
+  
+        return updated_reviews
       end
   
       place_ids = [
@@ -72,14 +50,20 @@ class Api::V1::JobsController < ApplicationController
         'ChIJj3JTtm7BwoARcku_Ur8WuDE',
         'ChIJsT3iMBWHwoARLfqsCmNi-C0'
       ]
-  
+      http = Net::HTTP.new("maps.googleapis.com", 443)
+      http.use_ssl = true
       reviews = []
   
       place_ids.each do |place_id|
         encoded_place_id = URI.encode_www_form_component(place_id)
-        place_details = GooglePlacesApi.new(ENV['REACT_APP_GOOGLE_PLACES_API_KEY']).get_place_details(encoded_place_id)
+        url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
+        request = Net::HTTP::Get.new(url)
+        response = http.request(request)
+        body = response.read_body
+        parsed_response = JSON.parse(body)
   
-        if place_details
+        if parsed_response['status'] == 'OK'
+          place_details = parsed_response['result']
           place_reviews = place_details['reviews'] || []
           reviews.concat(place_reviews)
         else
@@ -88,16 +72,27 @@ class Api::V1::JobsController < ApplicationController
       end
   
       redis.set("cached_google_places_reviews", JSON.generate(reviews))
-      redis.expire("cached_google_places_reviews", 1.hour.to_i)
+      redis.expire("cached_google_places_reviews", 30.days.to_i)
+      cached_reviews = redis.get("cached_google_places_reviews")
+      reviews = JSON.parse(cached_reviews) if cached_reviews
   
-      reviews = process_reviews(reviews)
-      JSON.generate(reviews)
-    end
+      if cached_reviews.present?
+        # Parse the JSON data into an array of hashes
+        users = JSON.parse(cached_reviews)
   
-    def self.process_reviews(reviews)
-      # Process and manipulate reviews here as needed
-      # For example, remove specific users, filter by rating, etc.
-      reviews
+        # Call the class method to remove the user with name "Pdub .."
+        remove_user_by_name(users, 'Pdub ..')
+  
+        # Convert the updated data back to a JSON string
+        updated_reviews = JSON.generate(users)
+  
+        return updated_reviews
+      end
+  
+      return { reviews: "No cached reviews" }
+    rescue StandardError => e
+      puts "Error in cached_google_places_reviews: #{e.message}"
+      render json: { "error": e.message }
     end
   end
   
