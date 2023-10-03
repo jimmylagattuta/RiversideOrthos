@@ -1,11 +1,10 @@
-class Api::V1::JobsController < ApplicationController
+  class Api::V1::JobsController < ApplicationController
     def index
       render json: "Midland Orthopedic Group " * 1000
     end
   
     def pull_google_places_cache
       reviews = GooglePlacesCached.cached_google_places_reviews
-  
       render json: reviews
     rescue StandardError => e
       puts "Error in pull_google_places_cache: #{e.message}"
@@ -64,7 +63,7 @@ class Api::V1::JobsController < ApplicationController
   
         if parsed_response['status'] == 'OK'
           place_details = parsed_response['result']
-          place_reviews = place_details['reviews'] || []
+          place_reviews = place_details.present? ? place_details['reviews'] || [] : []
           reviews.concat(place_reviews)
         else
           puts "Failed to retrieve place details for place ID: #{place_id}"
@@ -90,9 +89,9 @@ class Api::V1::JobsController < ApplicationController
       end
   
       return { reviews: "No cached reviews" }
-    rescue StandardError => e
-      puts "Error in cached_google_places_reviews: #{e.message}"
-      render json: { "error": e.message }
+    rescue StandardError
+        puts "Error in cached_google_places_reviews: #{e.message}"
+        render json: { "error": e.message }
+      end
     end
-  end
   
