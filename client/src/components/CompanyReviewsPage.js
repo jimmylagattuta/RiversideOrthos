@@ -75,7 +75,8 @@ const CompanyReviewsPage = () => {
         <div className='reviews-container'>
             <div className='review-grid'>
                 {reviews.map((item, index) => {
-                    if (item.user.name === "Pdub ..") {
+                    console.log('item', item);
+                    if (item.author_name === "Pdub ..") {
                     } else {          
                         return (
                             <div key={index} className='single-review-container'>
@@ -91,21 +92,11 @@ const CompanyReviewsPage = () => {
                                     </div>
                                     <div className='review-name-container'>
                                         <div className='user-name'>
-                                            {item.user.name}{' '}
+                                            {item.author_name}{' '}
                                             <i className='fab fa-yelp'></i>
                                         </div>
-                                        <div className='review-location'>
-                                            {item.location_two}
-                                        </div>
-                                        <div className='review-location'>
-                                            <span className='review-city'>
-                                                {item.location_one}
-                                            </span>
-                                            <span className='review-date'>
-                                                Reviewed on{' '}
-                                                {formatDate(item.time_created)}
-                                            </span>
-                                        </div>
+                                   
+                              
                                     </div>
                                 </div>
 
