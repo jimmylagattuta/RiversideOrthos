@@ -24,6 +24,7 @@ const CompanyReviewsPage = () => {
         'https://lh3.googleusercontent.com/a/ACg8ocIFg5G-JO49VMdkvA4N5IwxQ9XKjHP3HHTytStrVCI=s128-c0x00000000-cc-rp-mo'
     
     ];
+    
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -54,7 +55,7 @@ const CompanyReviewsPage = () => {
                 process.env.NODE_ENV === 'production'
                     ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
                     : 'http://localhost:3000/api/v1/pull_google_places_cache';
-
+        
             fetch(url)
                 .then((response) => {
                     if (response.ok) {
@@ -71,15 +72,15 @@ const CompanyReviewsPage = () => {
                                 item.profile_photo_url
                             )
                     );
-                    setReviews(filteredReviews);
+        
+                    // Shuffle the filteredReviews array
+                    const shuffledReviews = shuffleArray(filteredReviews);
+        
+                    // Take the first three reviews
+                    const randomReviews = shuffledReviews.slice(0, 3);
+        
+                    setReviews(randomReviews);
                     setLoading(false);
-                    // Cache the reviews
-                    const expiry = Date.now() + 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
-                    const cachedData = JSON.stringify({
-                        reviews: JSON.stringify(filteredReviews),
-                        expiry,
-                    });
-                    localStorage.setItem(cacheKey, cachedData);
                 })
                 .catch((err) => {
                     console.error(err);
@@ -87,6 +88,16 @@ const CompanyReviewsPage = () => {
                     setLoading(false);
                 });
         };
+        
+        // Function to shuffle an array using the Fisher-Yates algorithm
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        
 
         const cachedReviews = getCachedReviews();
         if (cachedReviews) {
@@ -100,7 +111,6 @@ const CompanyReviewsPage = () => {
     console.log('reviews', reviews);
     return (
         <div className='reviews-container'>
-            <div className='review-grid'>
                 {reviews.map((item, index) => {
                     console.log('item', item);
                     return (
@@ -134,7 +144,6 @@ const CompanyReviewsPage = () => {
                         </div>
                     );
                 })}
-            </div>
         </div>
     );
 };

@@ -111,7 +111,6 @@ const Home = () => {
                 {renderMapContainer()}
             </div>
             <div className='home-reviews'>
-                <h1 className='section-title'>Company Reviews</h1>
                 <CompanyReviewsPage />
             </div>
         </main>

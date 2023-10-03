@@ -815,13 +815,22 @@ img {
 
 /* REVIEWS */
 .home-reviews {
-    min-height: 600px;
-    padding: 0 100px 50px 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://i.imgur.com/tV7inxB.webp);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 .reviews-container {
-    max-width: 1024px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 150px 0px 150px 0px;
 }
 
 .review-date {
@@ -837,12 +846,16 @@ img {
 }
 
 .single-review-container {
+    width: calc(88% / 3);
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--white);
-    box-shadow: 2px 2px 20px rgb(112 156 233 / 75%);
-    border-radius: 12px;
-    background-color: #1463f3;
-    padding: 35px;
-    margin: 0 0 20px 0;
+    box-shadow: 0px 0px 6px rgba(243, 74, 2, 50%);
+    border-radius: 4px;
+    background-color: #696969	;
 }
 
 .user-name {
@@ -857,8 +870,8 @@ img {
 
 .review-info .fa {
     position: absolute;
-    color: rgb(112, 156, 233);
-    font-size: 23px;
+    color: rgba(243, 74, 2, 100%);
+    font-size: 1rem;
 }
 
 .review-info .fa-quote-right {
@@ -903,6 +916,7 @@ img {
 
 .review-paragraph {
     font-style: italic;
+    font-size: 1rem;
 }
 
 /* END REVIEWS */
@@ -1054,13 +1068,19 @@ img {
     align-self: center;
 }
 
+
+
 @media (min-width: 1025px) {
     .nav-link-container:hover > .submenu {
         display: flex;
         flex-direction: column;
     }
 }
-
+@media (max-width: 1295px) {
+    .single-review-container {
+        width: calc(88% / 2);
+    }
+}
 @media (max-width: 1160px) {
     .header-title {
         display: none;
@@ -1245,6 +1265,9 @@ img {
 
 }
 @media (max-width: 850px) {
+    .single-review-container {
+        width: calc(88%);
+    }
     .expertise-item {
         width: calc(90% / 3)
     }
