@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
     include ActionController::Cookies
     before_action :authenticate_user
-    before_action :cors_preflight_check
-    after_action :cors_set_access_control_headers
+    # before_action :cors_preflight_check
+    # after_action :cors_set_access_control_headers
   
     rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     rescue_from ActiveRecord::RecordInvalid, with: :invalid_record
