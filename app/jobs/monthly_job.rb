@@ -84,6 +84,6 @@ class MonthlyJob
     puts "25"
   rescue StandardError => e
     puts "26"
-    puts "Error in fetch_google_places_reviews: #{e.message}"
+    puts "Error in monthly_job fetch_google_places_reviews: #{e.message}"
   end
 end
