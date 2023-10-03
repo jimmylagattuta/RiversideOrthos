@@ -1,4 +1,4 @@
-  class Api::V1::JobsController < ApplicationController
+class Api::V1::JobsController < ApplicationController
     def index
       render json: "Midland Orthopedic Group " * 1000
     end
@@ -6,9 +6,6 @@
     def pull_google_places_cache
       reviews = GooglePlacesCached.cached_google_places_reviews
       render json: reviews
-    rescue StandardError => e
-      puts "Error in pull_google_places_cache: #{e.message}"
-      render json: { "error": e.message }
     end
   end
   
@@ -89,9 +86,6 @@
       end
   
       return { reviews: "No cached reviews" }
-    rescue StandardError
-        puts "Error in cached_google_places_reviews: #{e.message}"
-        render json: { "error": e.message }
-      end
     end
+  end
   
