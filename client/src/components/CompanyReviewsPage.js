@@ -84,9 +84,9 @@ const CompanyReviewsPage = () => {
                                     <div
                                         className='user-icon'
                                         style={{
-                                            backgroundImage: `url(${item.user.image_url})`,
+                                            backgroundImage: `url(${item.profile_photo_url})`,
                                         }}>
-                                        {!item.user.image_url && (
+                                        {!item.profile_photo_url && (
                                             <i className='fas fa-user-circle'></i>
                                         )}
                                     </div>
