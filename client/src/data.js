@@ -56,7 +56,14 @@ export const physicians = [
         name: 'Doctor 6, DPM'
     },
     {
-        name: 'Doctor 7, MD'
+        name: 'Nora Nazarian',
+        bio: [
+            "Nora Nazarian, PA, is a board-certified physician associate at Los Angeles Orthopedic Surgery Specialists, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "A Southern California native, Nora earned her Bachelor of Arts in psychology, with a minor in child development, at the University of California, Los Angeles. She earned her Master of Physician Assistant Practice (MPAP) in 2017 from Keck School of Medicine of the University of Southern California. ",
+            "She found her passion for orthopedic surgery during her first clinical clerkship at the Glendale Adventist Medical Center. As a physician associate, Nora is a medical provider able to work autonomously managing complex patient conditions and assist the Los Angeles Orthopedic Surgery Specialists surgeons in various procedures. She enjoys building lasting relationships with all patients and has experience treating pediatric patients in the private orthopedic office. She also manages the practice’s Worker’s Compensation patients. ",
+            "Nora enjoys spending time with her family & friends, traveling, golfing, and exploring new restaurants. Nora is available for patient care at the Tarzana and Valencia location."
+        ],
+        image: 'https://i.imgur.com/bmFp0yU.webp'
     },
     {
         name: 'Doctor 8, MD'

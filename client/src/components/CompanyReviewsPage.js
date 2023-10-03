@@ -49,6 +49,11 @@ const CompanyReviewsPage = () => {
             }
             return null;
         };
+        const saveToCache = (data) => {
+            const expiry = Date.now() + 7 * 24 * 60 * 60 * 1000; // Cache for 7 days
+            const cacheData = JSON.stringify({ reviews: data, expiry });
+            localStorage.setItem(cacheKey, cacheData);
+        };
 
         const fetchReviews = () => {
             const url =
@@ -78,7 +83,7 @@ const CompanyReviewsPage = () => {
         
                     // Take the first three reviews
                     const randomReviews = shuffledReviews.slice(0, 3);
-        
+                    saveToCache(filteredReviews);
                     setReviews(randomReviews);
                     setLoading(false);
                 })

@@ -57,8 +57,11 @@ const SinglePhysician = () => {
         const cachedDataBeforeJson = localStorage.getItem(cacheKey);
         if (cachedDataBeforeJson) {
             const cachedDataOne = JSON.parse(cachedDataBeforeJson);
-            const cachedData = JSON.parse(cachedDataOne.reviews);
-            return cachedData.map((review, index) => {
+            console.log('cachedDataOne', cachedDataOne);
+            // const cachedData = JSON.parse(cachedDataOne);
+            // console.log('cachedData', cachedData);
+            return cachedDataOne.reviews.map((review, index) => {
+                console.log('review', review);
                 const filteredName = name
                     .split(/[,.]\s*/)
                     .filter(
@@ -79,50 +82,42 @@ const SinglePhysician = () => {
                 const matchedNames = review.text.match(regex);
 
                 if (matchedNames) {
-                    if (review.user.name === "Pdub ..") {
+                    if (review.author_name === "Pdub ..") {
                     } else {          
                         return (
                             <div key={index} className='single-review-container'>
-                                <div className='review-top-info'>
-                                    <div
-                                        className='user-icon'
-                                        style={{
-                                            backgroundImage: `url(${review.user.image_url})`,
-                                        }}>
-                                        {!review.user.image_url && (
-                                            <i className='fas fa-user-circle'></i>
-                                        )}
-                                    </div>
-                                    <div className='review-name-container'>
-                                        <div className='user-name'>
-                                            {review.user.name}{' '}
-                                            <i className='fab fa-yelp'></i>
-                                        </div>
-                                        <div className='review-location'>
-                                            {review.location_two}
-                                        </div>
-                                        <div className='review-location'>
-                                            {review.location_one}{' '}
-                                            <span className='review-date'>
-                                                Reviewed on{' '}
-                                                {formatDate(review.time_created)}
-                                            </span>
-                                        </div>
-                                    </div>
+                            <div className='review-top-info'>
+                                <div
+                                    className='user-icon'
+                                    style={{
+                                        backgroundImage: `url(${review.profile_photo_url})`,
+                                    }}>
+                                    {!review.profile_photo_url && (
+                                        <i className='fas fa-user-circle'></i>
+                                    )}
                                 </div>
-
-                                <div className='review-info'>
-                                    <i
-                                        className='fa fa-quote-left'
-                                        aria-hidden='true'></i>
-                                    <i
-                                        className='fa fa-quote-right'
-                                        aria-hidden='true'></i>
-                                    <p className='review-paragraph'>
-                                        {review.text}
-                                    </p>
+                                <div className='review-name-container'>
+                                    <div className='user-name'>
+                                        {review.author_name}{' '}
+                                        <i className='fab fa-yelp'></i>
+                                    </div>
                                 </div>
                             </div>
+                            <div className='review-info'>
+                                <i
+                                    className='fa fa-quote-left'
+                                    aria-hidden='true'></i>
+                                <i
+                                    className='fa fa-quote-right'
+                                    aria-hidden='true'></i>
+                                <p className='review-paragraph'>{review.text}</p>
+                            </div>
+                            <div className='google-link'>
+                                <a href={review.author_url} target="_blank" rel="noopener noreferrer">
+                                    <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
                         );
                     }
                 }
@@ -131,33 +126,37 @@ const SinglePhysician = () => {
         return null;
     };
     return (
-        <div style={{ padding: '50px', margin: '0 auto', display: 'flex' }}>
-            <div className='page-grid'>
-                <div className='physician-left'>
-                    <div className='physician-image'>
-                        <img src={image} alt={name} />
+        <>
+            <div style={{ padding: '50px', margin: '0 auto', display: 'flex' }}>
+                <div className='page-grid'>
+                    <div className='physician-left'>
+                        <div className='physician-image'>
+                            <img src={image} alt={name} />
+                        </div>
+
+
                     </div>
+                    <div className='physician-right'>
+                        <h5 className='physician-name'>{name}</h5>
+                        {bio.map((item, index) => {
+                            return (
+                                <div key={index}>
+                                    {index > 0 && <div className='popout-content'><p className='page-description'>{item}</p></div>}
+                                    {index === 0 && <p className='page-description'>{item}</p>}
+                                </div>
+                                // <p key={index} className='page-description'>
+                                //     {item}
+                                // </p>
+                            );
+                        })}
 
-
-                </div>
-                <div className='physician-right'>
-                    <h5 className='physician-name'>{name}</h5>
-                    {bio.map((item, index) => {
-                        return (
-                            <div key={index}>
-                                {index > 0 && <div className='popout-content'><p className='page-description'>{item}</p></div>}
-                                {index === 0 && <p className='page-description'>{item}</p>}
-                            </div>
-                            // <p key={index} className='page-description'>
-                            //     {item}
-                            // </p>
-                        );
-                    })}
-
+                    </div>
                 </div>
             </div>
-            {getCachedReviews()}
-        </div>
+            <div className='reviews-container'>
+                {getCachedReviews()}
+            </div>
+        </>
     );
 };
 
