@@ -4,6 +4,10 @@ const CompanyReviewsPage = () => {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const defaultProfilePhotoUrls = [
+        'https://lh3.googleusercontent.com/a/ACg8ocLIudbeWrIiWWZp7p9ibYtGWt7_t2sZhu3GhVETjeORZQ=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocKWoslacgKVxr6_0nu2yNq78qvJS_JmSt-o-sm0Poz1=s128-c0x00000000-cc-rp-mo',
+    ];
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -44,9 +48,12 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
-                    // Filter reviews with a profile photo
+                    // Filter reviews with the default profile photo URLs
                     const filteredReviews = data.filter(
-                        (item) => item.profile_photo_url && item.profile_photo_url !== 'default_url'
+                        (item) =>
+                            !defaultProfilePhotoUrls.includes(
+                                item.profile_photo_url
+                            )
                     );
                     setReviews(filteredReviews);
                     setLoading(false);
