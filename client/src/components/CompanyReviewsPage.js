@@ -4,6 +4,8 @@ const CompanyReviewsPage = () => {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const defaultProfilePhotoUrl =
+        'https://lh3.googleusercontent.com/a/ACg8ocLIudbeWrIiWWZp7p9ibYtGWt7_t2sZhu3GhVETjeORZQ=s128-c0x00000000-cc-rp-mo';
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -44,12 +46,17 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
-                    setReviews(data);
+                    // Filter reviews with the default profile photo URL
+                    const filteredReviews = data.filter(
+                        (item) =>
+                            item.profile_photo_url !== defaultProfilePhotoUrl
+                    );
+                    setReviews(filteredReviews);
                     setLoading(false);
                     // Cache the reviews
                     const expiry = Date.now() + 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
                     const cachedData = JSON.stringify({
-                        reviews: JSON.stringify(data),
+                        reviews: JSON.stringify(filteredReviews),
                         expiry,
                     });
                     localStorage.setItem(cacheKey, cachedData);
@@ -76,42 +83,36 @@ const CompanyReviewsPage = () => {
             <div className='review-grid'>
                 {reviews.map((item, index) => {
                     console.log('item', item);
-                    if (item.author_name === "Pdub ..") {
-                    } else {          
-                        return (
-                            <div key={index} className='single-review-container'>
-                                <div className='review-top-info'>
-                                    <div
-                                        className='user-icon'
-                                        style={{
-                                            backgroundImage: `url(${item.profile_photo_url})`,
-                                        }}>
-                                        {!item.profile_photo_url && (
-                                            <i className='fas fa-user-circle'></i>
-                                        )}
-                                    </div>
-                                    <div className='review-name-container'>
-                                        <div className='user-name'>
-                                            {item.author_name}{' '}
-                                            <i className='fab fa-yelp'></i>
-                                        </div>
-                                   
-                              
-                                    </div>
+                    return (
+                        <div key={index} className='single-review-container'>
+                            <div className='review-top-info'>
+                                <div
+                                    className='user-icon'
+                                    style={{
+                                        backgroundImage: `url(${item.profile_photo_url})`,
+                                    }}>
+                                    {!item.profile_photo_url && (
+                                        <i className='fas fa-user-circle'></i>
+                                    )}
                                 </div>
-
-                                <div className='review-info'>
-                                    <i
-                                        className='fa fa-quote-left'
-                                        aria-hidden='true'></i>
-                                    <i
-                                        className='fa fa-quote-right'
-                                        aria-hidden='true'></i>
-                                    <p className='review-paragraph'>{item.text}</p>
+                                <div className='review-name-container'>
+                                    <div className='user-name'>
+                                        {item.author_name}{' '}
+                                        <i className='fab fa-yelp'></i>
+                                    </div>
                                 </div>
                             </div>
-                        );
-                    }
+                            <div className='review-info'>
+                                <i
+                                    className='fa fa-quote-left'
+                                    aria-hidden='true'></i>
+                                <i
+                                    className='fa fa-quote-right'
+                                    aria-hidden='true'></i>
+                                <p className='review-paragraph'>{item.text}</p>
+                            </div>
+                        </div>
+                    );
                 })}
             </div>
         </div>
