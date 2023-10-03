@@ -50,11 +50,8 @@ class MonthlyJob
     end
     redis = Redis.new(url: ENV['REDIS_URL'])
     if redis.exists('cached_google_places_reviews')
-      puts "deleting old redis reviews"
       redis.del('cached_google_places_reviews')
     end
-    puts "setting redis reviews"
-    puts filtered_reviews
     redis.set('cached_google_places_reviews', JSON.generate(filtered_reviews))
     redis.expire('cached_google_places_reviews', 30.days.to_i)
   rescue StandardError => e
