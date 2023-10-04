@@ -1,6 +1,7 @@
 import PagesHeader from '../components/PagesHeader';
 import { Link } from 'react-router-dom';
 import MapContainer from '../components/googleMapReact/MapContainer';
+import ChatBox from './../components/helpers/ChatBox';
 const Locations = () => {
     return (
         <>
@@ -18,9 +19,7 @@ const Locations = () => {
                 <MapContainer />
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', padding: '100px' }}>
-                <h1>
-                    Contact Us Form
-                </h1>
+                <ChatBox />
             </div>
         </>
     );
