@@ -2116,8 +2116,7 @@ export const navMenu = [
             'PRP Injections'
         ],
     },
-    { menu: 'Locations', link: '/locations' },
-    { menu: 'Contact Us', link: '/locations' },
+    { menu: 'Locations', link: '/locations' }
 ];
 
 export const officesData = [
