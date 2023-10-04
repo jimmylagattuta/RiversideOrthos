@@ -11,15 +11,14 @@ const About = () => {
                             <p className='about-description'>
                                 {item.descriptionOne}
                             </p>
-                            <div className='about-image-container'>
+                            {/* <div className='about-image-container'>
                                 <img
                                     src={item.imageOne}
                                     alt={item.nameOne}
                                     className='about-image'
                                 />
-                            </div>
-                            <div className="pop-out-content">
-                                <h2>{item.nameTwo}</h2>
+                            </div> */}
+                            <div className="popout-content">
 
                                 {item.descriptionTwo.map((itemTwo, index) => {
                                     return (
@@ -29,13 +28,13 @@ const About = () => {
                                     );
                                 })}
 
-                                <div className='about-image-container'>
+                                {/* <div className='about-image-container'>
                                     <img
                                         src={item.imageTwo}
                                         alt={item.descriptionTwo}
                                         className='about-image'
                                     />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     );
