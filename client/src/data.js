@@ -978,10 +978,26 @@ export const services = [
 ];
 export const aboutObj = [
     {
-        nameOne: "About",
-        link: '/about'
+        imageOne: 'https://i.imgur.com/LPskgPR.webp',
+        imageTwo: 'https://i.imgur.com/pliYCGe.webp',
+        nameOne: "Midland's Mission",
+        descriptionOne:
+            'Since its founding in 1964, the Chicago orthopedic doctors of Midland Orthopedic Associates have been dedicated to providing our patients with the highest standard of care. We strive to provide high quality, cost-effective, compassionate care with our goal being to exceed our patients’ expectations. We treat every patient with dignity and respect the disruption that pain and injury can cause to their lifestyle. At Midland Orthopedic Associates we are large enough to provide comprehensive sub-specialty orthopedic care to address the most complex of problems, yet we are small enough to provide personal attention to our patients. We emphasize a team approach to treatment, coordinating care between our physicians to ensure that our patients benefit from the variety of advanced sub-specialty training and experience of our physicians.',
+        nameTwo: 'Our History',
+        descriptionTwo: [
+            'Established in 1964 by Dr. Gerald F. Loftus, Midland Orthopedic Associates is one of the oldest dedicated orthopedic practices in Chicago. Dr. Loftus began his practice on Chicago’s Near South Side, quickly establishing a reputation for outstanding orthopedic care. As his practice grew he accepted more responsibilities, including that of team physician for the Chicago White Sox. In 1981 Dr. Loftus recruited Dr. John D. Sonnenberg to join him. Dr. Sonnenberg had just completed advanced training in hand surgery within the University of California system following his residency at the University of Pittsburgh. With continued growth of the practice, in 1984 Drs. Loftus and Sonnenberg recruited Dr. D. Dirk Nelson to join them upon completing his residency at the University of Pittsburgh.',
+            'Midland Orthopedic Associates soon outgrew its facilities at 2600 South Michigan Avenue and in 1988 opened a larger office at 2850 South Michigan, as well as expanding to a second office near Midway Airport, at 57th and Pulaski Road. In 1992 Dr. Michael G. Maday completed an Orthopedic Sports Medicine fellowship under Dr. Freddie Fu at the University of Pittsburgh. He joined Midland Orthopedic Associates, contributing additional levels of sports medicine expertise. The practice soon expanded to an office in La Grange to provide orthopedic services in the western suburbs, ultimately moving into their current office in 1997.',
+            'In 1998 Dr. William A. Heller completed a Hand and Upper Extremity fellowship at the Curtis Clinic in Baltimore and joined Midland Orthopedic Associates, specializing in caring for patients with hand and upper extremity disorders.',
+            'In order to accommodate a growing patient population, in 2001 Midland Orthopedic Associates moved its main office to a larger, customized facility at 2850 South Wabash Avenue while the Pulaski office moved to a larger, free-standing facility at 87th and Southwest Highway in Hometown. In that same year Dr. Jay M. Brooker was recruited to help establish and run a new office in the Beverly neighborhood.',
+            'In 2005 Dr. Robert J. Strugala was recruited to join Midland Orthopedic Associates following completion of a Primary Care Sports Medicine fellowship at Hennepin County Medical Center in Minneapolis. In 2008 Midland Orthopedic Associates recruited Dr. Telly Psaradellis to join the practice, bringing his expertise in orthopedic trauma surgery after completing an Orthopedic Trauma fellowship with Ortho Indy in Indianapolis.',
+            'In 2017, Dr. Jonathan L Hook joined Midland Orthopedic Associates, brining his expertise in foot and ankle surgery after completing Podiatric Medicine and Surgery Residency with the added credential in Reconstructive Rearfoot/Ankle Surgery at Mercy Hospital and Medical Center in Chicago. ',
+            'Currently, Midland Orthopedic Associates offers patients access to sub-specialty trained physicians at four convenient office locations with our goal of providing the best orthopedic care for our patients.',
+            'Contact Midland Orthopedic Surgeons today to set up a consultation.',
+        ],
+        link: '/about',
     },
 ];
+
 
 export const aboutTerms = [
     {
@@ -2004,6 +2020,17 @@ export const aboutExtra = [
             },
         ],
     },
+    {
+        name: "Privacy Policy",
+        title: "Privacy Policy",
+        content: [
+            {
+                body: [
+                    'Render Privacy Policy'                    
+                ],
+            },
+        ],
+    }
 ];
 
 export const locations = [
@@ -2058,7 +2085,7 @@ export const navMenu = [
             'FAQs',
             'Important Information',
             'Patient Education',
-            "Worker's Compensation",
+            "Worker's Compensation"
         ],
     },
     {
@@ -2089,11 +2116,8 @@ export const navMenu = [
             return item.name;
         }),
     },
-    { menu: 'Location', link: '/locations' },
-    { menu: 'Testimonials', link: '/testimonials' },
-    { menu: 'Careers', link: '/careers' },
-    { menu: 'Faq', link: '/faq' },
-    { menu: 'Blog', link: '/blog' },
+    { menu: 'Locations', link: '/locations' },
+    { menu: 'Contact Us', link: '/locations' },
 ];
 
 export const officesData = [

@@ -1,9 +1,10 @@
-// import { Outlet, useLocation } from 'react-router-dom';
-// import PagesHeader from '../../components/PagesHeader';
+import { Outlet, useLocation } from 'react-router-dom';
+import PagesHeader from '../../components/PagesHeader';
 const Home = () => {
     return (
         <>
-            AboutLayout.js
+            <PagesHeader title='About Midland' />
+            <Outlet />
         </>
     );
 };

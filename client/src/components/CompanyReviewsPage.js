@@ -113,11 +113,9 @@ const CompanyReviewsPage = () => {
         }
     }, []);
 
-    console.log('reviews', reviews);
     return (
         <div className='reviews-container'>
                 {reviews.map((item, index) => {
-                    console.log('item', item);
                     return (
                         <div key={index} className='single-review-container'>
                             <div className='review-top-info'>

@@ -7,8 +7,7 @@ const Footer = () => {
             <div className='container'>
                 <div className='footer-grid'>
                     <div className='footer-item word-wrap-container'>
-                        <div className='footer-word-wrap'>Los Angeles Orthopedic</div>
-                        <div className='footer-word-wrap'>Surgery Specialists</div>
+                        <div className='footer-word-wrap'>Los Angeles Orthopedic Surgery Specialists</div>
                     </div>
                     <div className='footer-item'>
                         <Link
@@ -21,7 +20,7 @@ const Footer = () => {
                     <div className='footer-item'>
                         <Link
                             className='footer-link'
-                            to='/'
+                            to='/about/privacy-policy'
                         >
                             TERMS & CONDITIONS
                         </Link>
@@ -29,7 +28,7 @@ const Footer = () => {
                     <div className='footer-item'>
                         <Link
                             className='footer-link'
-                            to='/'
+                            to='/locations'
                         >
                             ACCESSIBILITY
                         </Link>
