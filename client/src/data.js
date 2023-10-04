@@ -41,19 +41,60 @@ export const physicians = [
         image: 'https://i.imgur.com/eHszN7V.webp'
     },
     {
-        name: 'Doctor 2, MD'
+        name: 'Raj Desai',
+        bio: [
+            "Raj Desai, MD, FAAPMR, is a double-board certified physician in physical medicine and rehabilitation and pain medicine.",
+            "Dr. Desai and the team at Los Angeles Orthopedic Surgery Specialists provide care all over the Los Angeles area, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "After his undergraduate studies at Pennsylvania State University, Dr. Desai earned a medical degree at the American University of Antigua in Antigua and Barbuda. He served an internship in internal medicine at Icahn School of Medicine at Mount Sinai at Mount Sinai Queens in Queens, New York.",
+            "Dr. Desai later served as a resident physician and then chief resident at Northwestern Medicine Marianjoy Rehabilitation Hospital in Wheaton, Illinois, and completed a pain medicine fellowship at the University of Wisconsin School of Medicine and Public Health in Madison, Wisconsin.",
+            "Among his professional pursuits, Dr. Desai was co-founder of a brain injury tele-rehabilitation clinic at Marianjoy Rehabilitation Hospital; pain medicine physician consultant; interventional pain physician; and physiatrist. ",
+            "When not in the office, Dr. Desai likes to remain active and adventurous. He enjoys biking, hiking, and boxing, as well as spending time with his family and tasting a wide range of culinary cuisines."
+        ],
+        image: 'https://i.imgur.com/YXq97Qa.webp'
     },
     {
-        name: 'Doctor 3, MD'
+        name: 'Kevin Pelton',
+        bio: [
+            "Kevin Pelton, MD, is President and Chief Operating Officer of Los Angeles Orthopedic Surgery Specialists. As a board-certified orthopedic surgeon, his clinical practices focus on treating injuries in patients from all walks of life. Los Angeles Orthopedic Surgery Specialists currently serves patients in and around Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "A native of Texas, Dr. Pelton graduated from Texas A&M University in College Station, with a degree in biomedical science. After earning his medical degree from the University of Texas Southwestern Medical School in Dallas, Dr. Pelton completed a residency in orthopedic surgery and a fellowship in orthopedic trauma at the University of Southern California, in Los Angeles.",
+            "He is a member of the California Orthopaedic Association, the American Academy of Orthopaedic Surgeons, the Los Angeles County Museum of Art, and the American Academy of Magical Arts.",
+            "From complex to minimally invasive surgery, Dr. Pelton is an expert in his field. Many local orthopedic surgeons in Southern California refer complicated cases to Dr. Pelton due to his level of experience and outcomes. As an industry leader in orthopedic surgery, Dr. Kevin Pelton has transformed many of his patients’ lives and is ready to help them thrive and live pain-free.",
+            "Dr. Pelton is available for patient care at the Los Angeles, Encino, and Valencia locations."
+        ],
+        image: 'https://i.imgur.com/QD2lJt9.webp'
     },
     {
-        name: 'Natalie Hammond'
+        name: 'Natalie Hammond',
+        bio: [
+            "Natalie Hammond, RCP, PA-C, provides extraordinary patient care with a deep knowledge of family and internal medicine.",
+            "In her 10 years at Los Angeles Orthopedic Surgery Specialists, Natalie is part of an expert team of providers within the Los Angeles region. The team has offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Natalie has a passion for providing culturally adaptive quality care. She started her career journey with an associate of arts in psychology from Moorpark College in Moorpark, California, followed by an associate of science in health science from Excelsior University in Albany, New York.",
+            "She then went on to complete her bachelor’s from Charles Drew University of Medicine and Science in Los Angeles, where she graduated with honors.",
+            "Natalie brings extensive clinical experience to caring for her clients. After completing several rounds of physician assistant rotations in 2011, she started her journey in orthopedic medicine at First Choice Healthcare Medical Group.",
+            "Natalie has an energy and passion for providing quality orthopedic care. She continues to hone her skills in orthopedic care."
+        ],
+        image: 'https://i.imgur.com/AxgMPr1.webp'
     },
     {
-        name: 'Doctor 5, MD'
+        name: 'Matthew D. Longacre',
+        bio: [
+            "Matthew D. Longacre, MD, is a board-certified physician at Los Angeles Orthopedic Surgery Specialists. With offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, Dr. Longacre and his colleagues at the practice serve patients throughout Los Angeles County.",
+            "Dr. Longacre specializes in orthopedic surgery and sports medicine. Originally from Southern California, Dr. Longacre earned his undergraduate degree in biomedical sciences at the University of California, Riverside. He continued on to earn his medical degree from the David Geffen School of Medicine at the University of California, Los Angeles, in 2008. For his residency in orthopedic surgery, Dr. Longacre trained at the University of Southern California Medical Center. Dr. Longacre is a member of the California Orthopaedic Association and the American Academy of Orthopaedic Surgeons.",
+            "Intrigued by the constant challenge to stay abreast of the latest technologies and procedures within the orthopedic specialty, Dr. Longacre enjoys interacting daily with patients and using his surgical skills to improve patient disabilities.",
+            "Dr. Longacre is available for patient care at the Los Angeles, Encino, and Valencia locations."
+        ],
+        image: 'https://i.imgur.com/FLfeSQg.webp'
     },
     {
-        name: 'Doctor 6, DPM'
+        name: 'Michael Perrone',
+        bio: [
+            "Michael Perrone, MD, is a board-certified orthopaedic surgeon with dual-fellowship training in Orthopedic Sports Medicine and Foot & Ankle Surgery. Dr. Perrone and his team serve patients throughout Los Angeles County, with offices in East Los Angeles, DTLA-Wilshire, Santa Fe Springs, Pico, Tarzana, Encino, Valencia, and Montebello.",
+            "Originally from New York, Dr. Perrone completed his undergraduate studies at the University of Florida in Gainesville, where he earned his bachelor’s in health science and master’s in public health with a concentration on public health policy and administration. He then moved on to the Morsani College of Medicine at the University of South Florida in Tampa. He graduated in 2014 and earned election into the prestigious Alpha Omega Alpha Honor Society. Dr. Perrone completed his orthopedic surgery residency at the University of Chicago in Illinois in 2019.",
+            "Dr. Perrone completed an orthopedic sports medicine fellowship in 2020 at the Kerlan-Jobe Orthopaedic Institute in Los Angeles, California. Here, he served as an associate team physician for several local professional and collegiate teams, including the LA Galaxy, the USC Trojans Men’s Football Team, and the Anaheim Ducks. He then received specialized training in sports foot & ankle and trauma at the Steadman Clinic and Steadman Philippon Research Institute in Vail, Colorado. At Steadman, Dr. Perrone had the opportunity to serve as an associate team physician for the United States Ski & Snowboard Team – a role he still maintains today.",
+            "Dr. Perrone is a committee member of the American Orthopaedic Society for Sports Medicine (AOSSM) and is an active member of the American Academy of Orthopaedic Surgeons (AAOS) and the American Orthopaedic Foot & Ankle Society (AOFAS). He has published research articles in several academic journals and has given talks at numerous national conferences.",
+            "Outside of medicine, Dr. Perrone is an avid endurance athlete, having completed a dozen marathons, including Boston, Chicago, and New York, as well as multiple triathlons. He is particularly interested in lower extremity sports injuries and the care of athletes of all ages and abilities."
+        ],
+        image: 'https://i.imgur.com/dEmopYX.webp'
     },
     {
         name: 'Nora Nazarian',
@@ -66,37 +107,281 @@ export const physicians = [
         image: 'https://i.imgur.com/bmFp0yU.webp'
     },
     {
-        name: 'Doctor 8, MD'
+        name: 'David Barba',
+        bio: [
+            "David Barba, MD, is a bilingual, board-certified orthopedic surgeon at Los Angeles Orthopedic Surgery Specialists, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. He is trained to treat and diagnose all injury forms to the musculoskeletal system, including the joints, muscles, bones, tendons, and ligaments.",
+            "Dr. Barba earned his undergraduate degree at San Francisco State University, majoring in physiology. After completing medical school at the University of California, Los Angeles, Dr. Barba moved to the Indiana University School of Medicine in Indianapolis to complete his orthopedic residency. He subsequently participated in a sports medicine fellowship with the Orthopedic Clinic Association in Phoenix, Arizona.",
+            "Dr. Barba finds it rewarding to help patients return to activities they love but once thought were too painful or challenging to do. He values the importance of providing his patients with quality care for their individual needs.",
+            "Dr. Barba is available for patient care at the East Los Angeles and Downtown Los Angeles locations."
+        ],
+        image: 'https://i.imgur.com/64ccRXb.webp'
     },
     {
-        name: 'Doctor 9, MD'
+        name: 'Erik Dworsky',
+        bio: [
+            "Erik Dworsky, MD, is a skilled orthopedic surgeon and total joint specialist at Los Angeles Orthopedic Surgery Specialists. With offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, Dr. Dworsky and his colleagues at the practice serve patients throughout Los Angeles County.",
+            "Originally from Southern California, Dr. Dworsky earned his undergraduate degree at the University of California, Berkeley, and his medical degree from the Case Western Reserve University School of Medicine in Cleveland, Ohio. He completed his orthopedic surgery residency at the University of California, Los Angeles, and completed an arthroplasty fellowship at the University of California, San Diego.",
+            "Dr. Dworsky has extensive training in all musculoskeletal complaints and advanced training in hip and knee replacement. He enjoys building trusting relationships with his patients and prioritizing patient education. Moreover, his revision arthroplasty training allows him to help patients who are having problems with their current joint replacement.",
+            "Dr. Dworsky is a member of the American Academy of Orthopaedic Surgeons (AAOS) and the American Association of Hip and Knee Surgeons (AAHKS). He has numerous orthopedic publications in academic journals and has given talks at both national and international conferences.",
+            "Dr. Dworsky is available for patient care at the Los Angeles and Santa Fe Springs locations."
+        ],
+        image: 'https://i.imgur.com/sUbIV1X.webp'
     },
     {
-        name: 'Doctor 10, MD'
+        name: 'Michelle Sugi',
+        bio: [
+            "Michelle Sugi, MD, is a board-certified, fellowship-trained orthopedic surgeon specializing in general pediatric orthopedic surgery and sports medicine. Serving patients with Los Angeles Orthopedic Surgery Specialists, the practice offers convenient locations in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. ",
+            "Dr. Sugi combines her love of healing, her passion for children’s health and development, and her intellectual drive to improve patient outcomes. She is dedicated to supporting children’s health from birth to young adulthood with bone, joint, and muscle problems.",
+            "A Southern California native, Dr. Sugi earned her undergraduate degree in biomedical engineering from the esteemed Johns Hopkins University in Baltimore, Maryland. She then entered medical school at the David Geffen School of Medicine at the University of California, Los Angeles. For her residency, Dr. Sugi moved to the University of Southern California LAC+USC Medical Center. She also completed dual fellowships at UCLA Medical Center and Stanford University.",
+            "Dr. Sugi is committed to pioneering innovative approaches to complex pediatric and sports orthopedic conditions, including fractures, injuries, spine disorders, neuromuscular weakness, and hip, hand, and joint abnormalities. Dr. Sugi enjoys spending her free time with her family and friends. She enjoys traveling, hiking, swimming, skiing, and all outdoor activities.",
+            "Dr. Sugi is available for patient care at the Los Angeles and Tarzana locations."
+        ],
+        image: 'https://i.imgur.com/7uElbsh.webp'
     },
     {
-        name: 'Doctor 11, MD'
+        name: 'Danny Wang',
+        bio: [
+            "Danny Wang, DPM, is a skilled podiatrist at Los Angeles Orthopedic Surgery Specialists, currently serving patients in and around Los Angeles. He proudly serves alongside his colleagues at the Los Angeles Orthopedic Surgery Specialists offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Dr. Wang graduated from the Western University College of Podiatric Medicine in Pomona, California, in 2018. He is qualified with a Doctor of Podiatric Medicine (DPM) degree, licensed by the state, and practicing within the scope of that license. Dr. Wang is particularly skilled in diagnosing and treating foot diseases and deformities. He can perform medical, surgical, and other operative procedures, prescribe corrective devices, and both prescribe and administer drugs and physical therapy.",
+            "To better care for his patients, Dr. Wang accepts the Medicare-approved amount. Patients will not be billed for any more than the Medicare deductible and coinsurance."
+        ],
+        image: 'https://i.imgur.com/tzeJoMZ.webp'
     },
     {
-        name: 'Doctor 12, MD'
+        name: 'Menyoli Malafa',
+        bio: [
+            "Menyoli Michael Malafa, MD, is an exceptional plastic and reconstructive surgery specialist at Los Angeles Orthopedic Surgery Specialists, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Dr. Malafa received his undergraduate degree in biology at Stanford University in California. He graduated medical school with honors from the University of South Florida’s College of Medicine in 2011. From there, he moved on to the University of Texas Southwestern in Dallas, where he completed his hand surgery residency. Finding hand surgery particularly interesting, Dr. Malafa moved to California to complete a fellowship in hand surgery at the University of California, Los Angeles.",
+            "Having more than nine years of diverse experience, especially in plastic and reconstructive surgery and hand surgery, Dr. Malafa performs all surgical hand procedures, including fracture repair, joint replacement, nerve, and tendon repair. He has vast experience in successful non-operative and rehabilitative treatment techniques that avoid surgery. He treats all patients, both young and old, with varied backgrounds, including the injured worker, non-athlete, and athlete, and takes pride in treating each patient as an individual and tailoring care to their specific needs and complaints.",
+            "Dr. Malafa is available for patient care at the Los Angeles and Tarzana locations."
+        ],
+        image: 'https://i.imgur.com/OKPNOKF.webp'
     },
     {
-        name: 'Doctor 13, MD'
+        name: 'Yixi Lu',
+        bio: [
+            "Yixi Lu, DPM, is a podiatric surgical specialist and a highly regarded member of the team at Los Angeles Orthopedic Surgery Specialists. Working with patients in and around Los Angeles, at  offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, Dr. Lu offers unparalleled care. ",
+            "Education has always played a central role in Dr. Lu’s life. He began his studies at Ohio State University in Columbus, Ohio, earning a Bachelor of Science in microbiology. He then earned his Doctor of Podiatric Medicine from Western University of Health Sciences in Pomona, California.",
+            "Dr. Lu expanded his understanding of podiatric practice through a podiatric medicine and surgery residency with a focus in reconstructive rearfoot and ankle procedures at Emory Decatur Hospital in Decatur, Georgia. He then entered his profession with roles as a podiatrist and assistant professor.",
+            "With experience in both clinical and academic settings, Dr. Lu has advanced skills in numerous areas of podiatric care. He brings experience in surgical reconstruction, external fixation, diabetic wound care, and limb salvage. Minimally invasive surgical procedures are also an area of focus.",
+            "Patients rely on Dr. Lu for highly personalized care that aligns with their unique needs and goals. Many are so pleased with their results they introduce friends and family to the practice when foot and ankle issues arise."
+        ],
+        image: 'https://i.imgur.com/sV3HLin.webp'
     },
     {
-        name: 'Doctor 14, MD'
+        name: 'Yung Cho',
+        bio: [
+            "Yung R. Cho, MD, brings a wealth of experience to his role at Los Angeles Orthopedic Surgery Specialists.",
+            "The practice serves patients in and around Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California, many of whom are pleased to call Dr. Cho their orthopedic specialist.",
+            "Dr. Cho completed his medical degree at Santa Casa de Sao Paulo in Sao Paulo, Brazil. Upon arriving in the United States, he completed a residency in orthopedics at Stanford University Medical Center in Palo, Alto, California.",
+            "Dr. Cho remained at Stanford University Medical Center to complete a fellowship in pediatric orthopedics. He also sought out a sports medicine orthopedic fellowship at Kaiser Permanente Medical Center in Santa Clara, California.",
+            "A proud member of the American Board of Orthopedic Surgeons, Dr. Cho continues to search for opportunities to refine and expand his surgical skills. He enjoys staying abreast of advancements within his field.",
+            "Patients enjoy working with Dr. Cho as they move toward enhanced joint health. They find him to be a highly skilled specialist who also understands the power of personalized care."
+        ],
+        image: 'https://i.imgur.com/8ez4TRw.webp'
     },
     {
-        name: 'Doctor 15, MD'
+        name: 'Brent Pickrell',
+        bio: [
+            "Brent Pickrell, MD, is a fellowship-trained hand surgeon at Los Angeles Orthopedic Surgery Specialists. He completed his undergraduate studies at the University of Texas at Austin, earning a degree in finance from the McCombs School of Business. He then matriculated to Baylor College of Medicine in Houston, Texas, on a 4-year full-tuition scholarship and graduated with honors. Dr. Pickrell completed his 6-year integrated plastic surgery residency at Harvard Medical School. Dr. Pickrell subsequently completed an orthopedic hand fellowship at Harvard Medical School, focusing on the complex reconstruction of the hand, wrist, and forearm.",
+            "Dr. Pickrell received numerous accolades during his surgical training, including the Harvard Plastic Surgery Resident Teacher of the Year Award. He was a 4-time recipient of the Harvard Academic Achievement Award for earning the highest national in-service exam score. He has over 30 peer-reviewed publications and book chapters and remains involved in select research endeavors.",
+            "Dr. Pickrell enjoys treating all aspects of hand and upper extremity pathology, including injuries and disorders of the bones, tendons, ligaments, vessels, nerves, and soft tissues. At LAOSS, he uniquely offers office-based surgery for common hand ailments, including trigger finger and carpal tunnel syndrome. Dr. Pickrell prioritizes patient education and aims to treat all of his patients as if they were his own family members.",
+            "Dr. Pickrell enjoys spending time with his wife and two children in his spare time. He is also an avid golfer.",
+            "Dr. Pickrell can see patients in East LA, Santa Fe Springs, Wilshire, and Tarzana."
+        ],
+        image: 'https://i.imgur.com/bXoR4QJ.webp'
     },
     {
-        name: 'Doctor 16, MD'
+        name: 'Micheal Marcus',
+        bio: [
+            "Michael Marcus, MD, is a highly accomplished orthopedic surgeon with a passion for personalized care.",
+            "Through his work at Los Angeles Orthopedic Surgery Specialists, Dr. Marcus improves foot and ankle conditions for residents of Greater Los Angeles, including East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Dr. Marcus began his studies at the University of Maryland in College Park, earning a degree in zoology. He went on to earn his medical degree from Temple University School of Podiatric Medicine, formerly known as the Pennsylvania College of Podiatric Medicine, in Philadelphia, Pennsylvania.",
+            "He continues to seek out opportunities to expand his knowledge and skill set through continuing education opportunities. Dr. Marcus is also focused on remaining on the cutting edge of podiatric care.",
+            "Over the years, Dr. Marcus has held numerous academic positions, assisting others in their foot and ankle specialty training. He understands the importance of giving back to the academic community and furthering education and research.",
+            "Patients appreciate the compassionate care they receive from Dr. Marcus. There is never any pressure to choose one treatment path over another, and patients receive full details on what to expect in terms of the procedure and the recovery process."
+        ],
+        image: 'https://i.imgur.com/5lHGept.webp'
     },
     {
-        name: 'Doctor 17, MD'
+        name: 'Sevag Bastian',
+        bio: [
+            "Sevag Bastian, MD, is a board-certified orthopedic surgeon at Los Angeles Orthopedic Surgery, serving the community with a patient-first mindset. Patients can find this unparalleled care at conveniently located offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "After earning his Bachelor of Science from the University of California, Los Angeles, Dr. Bastian attended Chicago Medical School in Illinois. He then completed his residency in orthopedic surgery at Rutgers New Jersey Medical School. During his time there, Dr. Bastian received recognition for his dedication with the Resident Teaching Award. He then returned to California to complete a fellowship at the Cedar-Sinai Kerlan-Jobe Institute in shoulder and elbow reconstruction. There, he studied under the prestigious surgeon Dr. John Itamura.",
+            "Dr. Bastian has taken the skills he acquired during his extensive training and incorporated them into his practice. He uses an educational approach to treatment, teaching his patients about each option available and empowering them to choose their own path. He makes himself known as a resource to his patients and breaks down their options so that every aspect of their treatment plan is clear.",
+            "By partnering with patients, Dr. Bastian provides care for chronic pain, including arthritis, joint pain, and persistent neck and back pain. He offers cutting-edge treatment options in the form of regenerative medicine and other nonsurgical treatments like physical therapy and acupuncture. Dr. Bastian is also skilled in surgical solutions such as joint replacement and arthroscopic surgery.",
+            "Committed to staying active in his field, Dr. Bastian is a member of the American Academy of Orthopaedic Surgeons and serves as an editor and peer reviewer for the Journal of Shoulder and Elbow Surgery. Dr. Bastian has numerous publications in academic journals and has presented to his peers on topics within the field of orthopedic surgery. He is also fluent in Spanish and Armenian, in addition to English, allowing him to serve a more diverse patient population. Call the office or request an appointment online to schedule a time to meet with Dr. Bastian."
+        ],
+        image: 'https://i.imgur.com/PxmtBqo.webp'
     },
     {
-        name: 'Doctor 18, MDMDMD'
+        name: 'Siamak Yasmeh',
+        bio: [
+            "Siamak Yasmeh, MD, is a board-certified orthopedic and spine surgeon at Los Angeles Orthopedic Surgery Specialists, providing complete orthopedic spine care to East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Dr. Yasmeh attended the University of California, Los Angeles (UCLA), earning his bachelor’s degree and graduating summa cum laude (highest distinction). He graduated medical school from the Keck School of Medicine of the University of Southern California (USC) and completed an orthopedic surgery residency. He then went on to complete a spine surgery fellowship at the University of Wisconsin–Madison.",
+            "Dr. Yasmeh diagnoses and treats various musculoskeletal problems at Los Angeles Orthopedic Surgery Specialists. These include sciatica, disc herniations, spinal stenosis, and spinal trauma. He takes a minimally invasive treatment approach whenever possible, emphasizing therapies that lead to the fastest possible recovery. He has authored peer-reviewed papers in leading journals such as Spine and presented at national and international conferences. He is a member of the American Academy of Orthopaedic Surgeons, AOSpine North America, Lumbar Spine Research Society, and the Society for Minimally Invasive Spine Surgery.",
+            "Away from work, Dr. Yasmeh enjoys mentoring surgeons in training, skiing, travel, and live music.",
+            "He welcomes patients to schedule an appointment at Los Angeles Orthopedic Surgery Specialists in Santa Fe Springs, East Los Angeles, and Glendale."
+        ],
+        image: 'https://i.imgur.com/9BrJjyn.webp'
+    },
+    {
+        name: 'Jason Kaushik',
+        bio: [
+            "Jason Kaushik, MD, is a board-certified physical medicine and rehabilitation specialist at Los Angeles Orthopedic Surgery Specialists in East Los Angeles, Santa Fe Springs, and Glendale.",
+            "Dr. Kaushik began his career at George Washington University in Washington, DC, earning his bachelor’s degree in psychology. After graduation, he stayed at George Washington, enrolling in its School of Medicine and Health Sciences and obtaining his Doctor of Medicine degree.",
+            "Before entering private practice, Dr. Kaushik completed a physical and rehabilitation medicine residency at the University of Arkansas for Medical Sciences (UAMS) in Little Rock and an interventional spine pain management fellowship at the University of Southern California’s (USC) Keck School of Medicine in Los Angeles.",
+            "Dr. Kaushik received training in various noninvasive and minimally invasive treatment approaches, including physical medicine and rehabilitation, interventional pain management, and minimally invasive surgery.",
+            "Dr. Kaushik diagnoses and treats various musculoskeletal problems at Los Angeles Orthopedic Surgery Specialists in Santa Fe Springs, East Los Angeles, and Glendale. He welcomes anyone with chronic pain to schedule an appointment with the team."
+        ],
+        image: 'https://i.imgur.com/15jcQyy.webp'
+    },
+    {
+        name: 'Daniel Acevedo',
+        bio: [
+            "Daniel Acevedo, MD, is a board-certified orthopedic surgeon with a subspecialty focus on shoulder and elbow reconstruction. He practices at Los Angeles Orthopedic Surgery Specialists, which has locations in offices in East Los Angeles, Wilshire, Santa Fe Springs, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Dr. Acevedo grew up in Southern California and attended UC Irvine for his undergraduate and medical school training. In medical school, he was elected to the Alpha Omega Alpha Honor Medical Society and earned numerous awards for scholastic and clinical achievement. After medical school, he pursued training in orthopedic surgery at LAC+USC Medical Center, where he was elected administrative chief resident. He also received multiple awards, including the Herman Epstein Award, which is awarded to the best senior resident in the class. He then traveled to Philadelphia to complete a shoulder and elbow surgery fellowship at the prestigious Rothman Institute at Thomas Jefferson University Hospital.",
+            "During his fellowship, he worked with world-renowned surgeons in the field of shoulder and elbow surgery. He received advanced training in shoulder and elbow replacements, shoulder and elbow arthroscopy, shoulder and elbow instability, upper extremity fractures, rotator cuff repairs, tendon transfers for the shoulder, and sports injuries surrounding the shoulder and elbow, including Tommy John surgery, also known as ulnar collateral ligament (UCL) reconstruction.",
+            "He has published numerous book chapters, journal articles, and surgical training videos for shoulder and elbow surgery. He enjoys teaching and has served as faculty for many local and national courses. He has published over 30 peer-reviewed articles and has a research interest in biologic augments for rotator cuff tendon repair, shoulder arthroplasty, and Tommy John surgery outcomes.",
+            "He continues to use evidence-based practices with the latest medical research and cutting-edge treatments to provide his patients with the best possible care. Dr. Acevedo’s skill set allows him to treat a wide array of patients, and he has a keen interest in treating competitive and recreational athletes. He specializes in minimally invasive shoulder replacements.",
+            "Dr. Acevedo enjoys staying fit, working out, golfing, eating healthy, and spending time with his family and his dogs."
+        ],
+        image: 'https://i.imgur.com/iJphX4d.webp'
+    },
+    {
+        name: 'Annie Yang',
+        bio: [
+            "As a physician assistant at Los Angeles Orthopedic Surgery Specialists, Annie Yang, PA-C, delivers top-quality care to residents in Greater Los Angeles. The practice has offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Education is a central focus for Annie. She earned a Bachelor of Science in health promotion and disease prevention at the University of Southern California Keck School of Medicine in Los Angeles. She remained at USC to earn her Master of Science in global medicine as well as a Master of Physician Assistant Practice.",
+            "Annie has extensive research experience, delving into the risks of vitamin D deficiency during pregnancy and the role of emotional health in addiction. She also has experience in occupational health.",
+            "Patients enjoy working with Annie, in part because of her dedication to providing outstanding care that always places the patient’s unique needs as the overriding focus. A compassionate provider, she ensures each patient feels heard and understood as they navigate treatment."
+        ],
+        image: 'https://i.imgur.com/hMChcLM.webp'
+    },
+    {
+        name: 'Bryan Sandoval',
+        bio: [
+            "Bryan Sandoval, PA-C, is a deeply compassionate physician assistant and an integral part of the team at Los Angeles Orthopedic Surgery Specialists.",
+            "Through his role at the practice, Bryan works closely with patients throughout the Los Angeles area, including East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Bryan completed a Bachelor of Science in kinesiology at the University of Nevada, Las Vegas. He then earned a Masters in Physician Assistant Studies at Western University of Health Sciences in Pomona, California.",
+            "His professional experience includes a leadership role in a dermatology practice. With a focus on orthopedic sports medicine, Bryan also has significant experience addressing a wide range of orthopedic needs.",
+            "Bryan is a proud member of the California Association of Physician Assistants and the American Academy of Physician Assistants. Community service work like providing high school sports physical exams and health screenings at an assisted living facility allow him to give back."
+        ],
+        image: 'https://i.imgur.com/dD2Loba.webp'
+    },
+    {
+        name: 'David Collazo',
+        bio: [
+            "David Collazo, DC, leverages his extensive chiropractic training and experience to improve the quality of life of those in his care.",
+            "As a chiropractor at Los Angeles Orthopedic Surgery Specialists, Dr. Collazo currently serves patients in and around Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Dr. Collazo began his studies at Cerritos College in Norwalk, California, where he earned an associate degree in physical education. He went on to study at California State University Long Beach before entering Southern California University of Health Sciences, Los Angeles College of Chiropractic, where he completed his Doctor of Chiropractic.",
+            "Licensed to practice chiropractic care in California since 1995, Dr. Collazo has experience in both private practice and within larger group practices. Those in his care appreciate his communication skills and willingness to truly get to know them and their unique needs and goals.",
+            "Dr. Collazo uses a wide range of techniques to assist patients, relying on his advanced training and experience to deliver highly customized care. He finds his work deeply rewarding, and loves watching patients go on to thrive without pain and physical limitation.",
+            "Remaining connected to his community is important to Dr. Collazo. He enjoys taking on roles with Baldwin Park Healthy Kids Program, San Gabriel Chamber of Commerce, and Alhambra Rotary Club."
+        ],
+        image: 'https://i.imgur.com/hytDGBN.webp'
+    },
+    {
+        name: 'David Moriel',
+        bio: [
+            "David Moriel, NP, is an exceptional adult-gerontology acute care nurse practitioner at Los Angeles Orthopedic Surgery Specialists, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "A native Angeleno, David is a bilingual, nationally-accredited, and board-certified nurse practitioner. After completing his undergraduate studies at the Interamerican University of Puerto Rico with a degree in nursing, he completed his Master of Science in Nursing from Walden University in Minneapolis, Minnesota.",
+            "David worked in the Subspecialty & Critical Care settings at White Memorial, LAC+USC, and USC Keck Medical Centers before joining Los Angeles Orthopedic Surgery Specialists in 2019. He has experience in critical care, fracture care, wound care management, suturing and assisting during surgical procedures, giving injections, and monitoring and treating patients pre-and post-surgery.",
+            "David is ANCC (American Nurses Credentialing Certification) and BLS/ACLS certified.",
+            "David enjoys staying up to date on the most current practice recommendations by attending continuing education courses based on the advanced critical care provider’s formation. During his spare time, David enjoys traveling, working out, reading, and spending time with family.",
+            "David is available for patient care at the Los Angeles location."
+        ],
+        image: 'https://i.imgur.com/EdrJ2sh.webp'
+    },
+    {
+        name: 'Daniel Rivas-Tejeda',
+        bio: [
+            "Daniel Rivas-Tejada, PA, cares about his patients and provides them with decades of personalized, high-quality health care.",
+            "Daniel works with the team at Los Angeles Orthopedic Surgery Specialists to provide that care in Greater Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Daniel’s physician assistant journey began as an X-ray and computer technician, where he obtained certifications from Los Angeles City College in the East Hollywood area of Los Angeles, and then from the Modern Technology School of X-ray in North Hollywood.",
+            "He continued his education at Los Angeles Valley College in Van Nuys, California, and received his physician assistant certificate through Riverside City College’s physician assistant program at Riverside County Regional Medical Center, now called Riverside University Health System Medical Center.",
+            "He also served an orthopedic residency at Arrowhead Orthopedics and has extensive experience treating work-related injuries."
+        ],
+        image: 'https://i.imgur.com/5R1qcJb.webp'
+    },
+    {
+        name: 'Felipe Nunez',
+        bio: [
+            "Felipe Nuñez, PA-C, is the  VP of Medical Affairs for Los Angeles Orthopedic Surgery Specialists. He understands the importance of quality health care. As a 12-year interdisciplinary team member at Los Angeles Orthopedic Surgery Specialists, Felipe Nuñez focuses on each patient’s unique needs.",
+            "The practice has several locations in Greater Los Angeles: East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Felipe started his studies at Cal Poly Pomona in Pomona, California, with a Bachelor of Science in sports medicine, learning about surgical and rehabilitative techniques. He then completed a Masters of Science in physician assistant studies from Western University of Health Sciences, also in Pomona.",
+            "He built on his skills through clinical rotations and practical experience in family medicine, emergency medicine, internal medicine, and general surgery. He started as a physician assistant with Family Care Specialist in Montebello for three years.",
+            "Felipe is a proud member of the California Academy of PAs and the American Academy of Physician Assistants."
+        ],
+        image: 'https://i.imgur.com/TKBoe5n.webp'
+    },
+    {
+        name: 'John Giannini',
+        bio: [
+            "John R. Giannini, PA-C, is a seasoned professional who brings more than 40 years of applied practice as a physician assistant, now with the team at Los Angeles Orthopedic Surgery Specialists.",
+            "The practice provides extensive care for communities within Greater Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "John found his passion for quality health care right after high school, first earning his emergency medical technician certification from Loma Linda University in Loma Linda, California, and then paramedic certification a year later.",
+            "He followed this with an Associate of Applied Science degree from Cerritos College in Norwalk, California, and then completed his physician assistant credentials from the LAC+USC Medical Center in Los Angeles.",
+            "Mr. Giannini also is part of Galloni Enterprises Medical Group Inc. in Los Angeles and Integrated Health Services Inc. in Santa Ana, California."
+        ],
+        image: 'https://i.imgur.com/EDc3Fgg.webp'
+    },
+    {
+        name: 'Jonathan Naick',
+        bio: [
+            "Jonathan Naick, MSPAS, MPH, MEd, PA-C, ATC, CPH, values quality orthopedic care and thrives with Los Angeles Orthopedic Surgery Specialists.",
+            "The team serves people of all ages in and around Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Jonathan shares a deep passion about providing his patients with nothing short of excellent care. His journey in health care started with a Bachelor of Science in athletic training from the University of Nevada, Las Vegas in Las Vegas, Nevada.",
+            "This was immediately followed with a Master of Education in advanced athletic training and sports medicine from the University of Virginia in Charlottesville, Virginia.",
+            "After completing his master’s, Jonathan worked as an assistant athletic trainer at Whittier College in Whittier, California, and then an athletic trainer and physical therapy aide at Gardena Physical Therapy in Gardena, California. He also realized a second calling within the world of orthopedic medicine.",
+            "Jonathan completed a master of science in physician assistant studies in 2017 from Touro University in Vallejo, California. He currently continues his education at the University of Lynchburg in Lynchburg, Virginia, with a distance doctor of medical science program."
+        ],
+        image: 'https://i.imgur.com/JVSapeo.webp'
+    },
+    {
+        name: 'Michelle Chang',
+        bio: [
+            "Michelle Chang, PA-C, prides herself on quality care for her patients at Los Angeles Orthopedic Surgery Specialists. The team serves people of all ages in and around Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California. Michelle received her Bachelor of Arts in Human Development from the University of California, San Diego, where she graduated summa cum laude and was inducted into the Phi Beta Kappa honor society.",
+            "She then completed the Post-Baccalaureate Pre-Medical Program at the University of Southern California where she also obtained her Master of Physician Assistant Practice.",
+            "Michelle enjoys golfing and pilates."
+        ],
+        image: 'https://i.imgur.com/mCccSXP.webp'
+    },
+    {
+        name: 'Mark Lee',
+        bio: [
+            "Mark Lee, PA-C, expands the limits of routine health services to assure a patient-wellness approach. With the team at Los Angeles Orthopedic Surgery Specialists, Mr. Lee expands on what it means to customize care around a patient’s individual needs.",
+            "The practice provides several locations within Greater Los Angeles, with offices in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Mark’s path as a physician assistant started with a Bachelor of Science and physician assistant certificate of completion from Charles Drew University of Medicine and Science in Los Angeles. He then eagerly jumped into the field to acquire hands-on experience, although he remains passionate about lifelong learning.",
+            "Mark has more than a decade of practical experience in family and internal medicine settings. Among his early experiences, he served as a physician assistant for First Choice Health Medical Group.",
+            "He went on to hone his expertise elsewhere, such as Bell Gardens Family Medical Center in Bell Gardens, California, and East Valley Community Health Center.",
+            "These experiences provide him with the necessary skills to treat a wide array of common acute conditions with incredible precision. Additionally, Mr. Lee helps manage chronic conditions with the proper medical examinations and supportive care.",
+            "His patient-wellness approach comes full circle with his extensive knowledge of working in multicultural environments."
+        ],
+        image: 'https://i.imgur.com/7EwZJd8.webp'
+    },
+    {
+        name: 'Matt Cikra',
+        bio: [
+            "Matt Cikra, DPM, AACFAS, is a fellowship-trained podiatrist and foot and ankle surgeon at Los Angeles Orthopedic Surgery Specialists, providing high-quality orthopedic care to people in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Dr. Cikra began his career at California State University, Long Beach, earning his bachelor’s degree in psychology. After graduating, he decided to pursue a medical career and enrolled at the Western University of Health Sciences in Pomona, California, earning his Doctor of Podiatric Medicine.",
+            "Before entering private practice, Dr. Cikra completed a podiatric medicine and surgery residency at West Penn Hospital in Pittsburgh, Pennsylvania, and a podiatry fellowship at Newport Foot & Ankle Center in Newport Beach, California.",
+            "Dr. Cikra excelled in both programs, receiving extensive training in traditional and minimally invasive foot and ankle surgeries.",
+            "When he isn’t working, Dr. Cikra participates in continuing education. He also enjoys writing and contributing to medical publications.",
+            "Dr. Cikra is a member of several professional organizations, including the American College of Foot & Ankle Surgeons and the American Academy of Podiatric Sports Medicine.",
+            "He welcomes anyone suffering from foot or ankle pain to schedule an appointment at Los Angeles Orthopedic Surgery Specialists in Montebello, Santa Fe Springs, East Los Angeles, and Wilshire."
+        ],
+        image: 'https://i.imgur.com/pWYLeGo.webp'
+    },
+    {
+        name: 'Matt Lee',
+        bio: [
+            "Matt Lee, PA-C, is a certified physician assistant at Los Angeles Orthopedic Surgery Specialists, providing complete orthopedic care and pain management to people in East Los Angeles, Wilshire, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California.",
+            "Matt began his professional education at the University of Pittsburgh in Pennsylvania. He completed one year of training there before transferring to the University of California, San Diego, in La Jolla, earning his bachelor’s degree in global health. While at UC San Diego, Matt also completed a minor in health care and social issues.",
+            "After graduation, Matt enrolled at the Southern California University of Health Sciences in Whittier, earning his master’s degree in the physician assistant program. Matt excelled in his studies, receiving training in emergency medicine, orthopedic surgery, and pain management.",
+            "Before joining the team at Los Angeles Orthopedic Surgery Specialists, Matt worked as a patient care technician, phlebotomist, and patient services representative. He welcomes anyone suffering from musculoskeletal pain to Los Angeles Orthopedic Surgery Specialists in Glendale, East Los Angeles and Tarzana."
+        ],
+        image: 'https://i.imgur.com/krE9ZBc.webp'
     }
 ];
 
