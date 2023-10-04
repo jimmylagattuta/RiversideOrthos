@@ -2084,8 +2084,7 @@ export const navMenu = [
         subMenuItems: [
             'FAQs',
             'Important Information',
-            'Patient Education',
-            "Worker's Compensation"
+            'Patient Education'
         ],
     },
     {
