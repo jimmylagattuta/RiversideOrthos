@@ -7,60 +7,46 @@ const Footer = () => {
             <div className='container'>
                 <div className='footer-grid'>
                     <div className='footer-item word-wrap-container'>
-                        <div className='footer-word-wrap'>Los Angeles</div>
-                        <div className='footer-word-wrap'>Orthopedic</div>
-                        <div className='footer-word-wrap'>Surgery</div>
-                        <div className='footer-word-wrap'>Specialists</div>
+                        <div className='footer-word-wrap'>Los Angeles Orthopedic</div>
+                        <div className='footer-word-wrap'>Surgery Specialists</div>
                     </div>
                     <div className='footer-item'>
-                        <span id="h-four-temp-fix" className='footer-title'>Our Physicians</span>
-                        {physicians.map((item, index) => {
-                            return (
-                                <Link
-                                    key={index}
-                                    className='footer-link'
-                                    to={`/physicians/${
-                                        item.name.toLowerCase().split(' ')[0]
-                                    }`}>
-                                    {item.name}
-                                </Link>
-                            );
-                        })}
+                        <Link
+                            className='footer-link'
+                            to='/about/privacy-policy'
+                        >
+                            PRIVACY
+                        </Link>
                     </div>
                     <div className='footer-item'>
-                        <span id="h-four-temp-fix" className='footer-title'>Our Locations</span>
-                        {locations.map((item, index) => {
-                            return (
-                                <Link
-                                    key={index}
-                                    className='footer-link'
-                                    to={item.link}>
-                                    {item.name}
-                                </Link>
-                            );
-                        })}
+                        <Link
+                            className='footer-link'
+                            to='/'
+                        >
+                            TERMS & CONDITIONS
+                        </Link>
                     </div>
                     <div className='footer-item'>
-                        <span id="h-four-temp-fix" className='footer-title'>Our Services</span>
-                        {expertiseBlocks.map((item, index) => {
-                            return (
-                                <Link
-                                    key={index}
-                                    className='footer-link'
-                                    to={`/services/${item.name
-                                        .toLowerCase()
-                                        .split(' ')
-                                        .join('-')}`}>
-                                    {item.name}
-                                </Link>
-                            );
-                        })}
+                        <Link
+                            className='footer-link'
+                            to='/'
+                        >
+                            ACCESSIBILITY
+                        </Link>
+                    </div>
+                    <div className='footer-item'>
+                        <Link
+                            className='footer-link'
+                            to='/'
+                        >
+                            CONTACT US
+                        </Link>
                     </div>
                 </div>
                 {/*----------------------------------------------------------------------------------------------*/}
-                <span id="h-four-temp-fix" className='footer-name'>Powered By James Lagattuta</span>
                 {/*----------------------------------------------------------------------------------------------*/}
             </div>
+            <div id="h-four-temp-fix" className='footer-name'>Powered By James Lagattuta</div>
         </footer>
     );
 };
