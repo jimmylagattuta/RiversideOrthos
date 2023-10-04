@@ -2089,6 +2089,13 @@ export const navMenu = [
         ],
     },
     {
+        menu: 'Physicians',
+        link: '/physicians',
+        subMenuItems: physicians.map((item) => {
+            return item.name;
+        }),
+    },
+    {
         menu: 'Services',
         link: '/services',
         subMenuItems: [
@@ -2108,13 +2115,6 @@ export const navMenu = [
             'Joint Injections',
             'PRP Injections'
         ],
-    },
-    {
-        menu: 'Physicians',
-        link: '/physicians',
-        subMenuItems: physicians.map((item) => {
-            return item.name;
-        }),
     },
     { menu: 'Locations', link: '/locations' },
     { menu: 'Contact Us', link: '/locations' },
