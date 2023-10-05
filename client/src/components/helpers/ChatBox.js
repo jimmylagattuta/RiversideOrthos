@@ -1,8 +1,4 @@
 import react, { Component } from 'react';
-// import ReCAPTCHA from "react-google-recaptcha";
-
-
-
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -72,11 +68,32 @@ class ChatBox extends Component {
 	    		lastTyped: '',
 	    		showAllErrors: false,
                 phoneNumber: '',
-                agreeToTerms: false, // Add a state property for the radio button,
-                recaptchaValue: null
-
+                agreeToTerms: false, // Add a state property for the radio button
+                recaptchaToken: '', // To store the reCAPTCHA token
 		}
     }
+    componentDidMount() {
+        // Load the reCAPTCHA script
+        this.loadRecaptchaScript();
+      }
+
+      loadRecaptchaScript() {
+        const script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/enterprise.js?render=YOUR_RECAPTCHA_SITE_KEY';
+        script.async = true;
+        script.defer = true;
+        script.onload = this.initializeRecaptcha;
+        document.head.appendChild(script);
+      }
+      initializeRecaptcha = () => {
+        // Initialize reCAPTCHA with your site key
+        console.log('process.env.REACT_APP_RECAPTCHA', process.env.REACT_APP_RECAPTCHA)
+        window.grecaptcha.enterprise.ready(() => {
+          window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
+            this.setState({ recaptchaToken: token });
+          });
+        });
+      };
     handleAgreeChange = () => {
         this.setState((prevState) => ({
             agreeToTerms: !prevState.agreeToTerms, // Toggle the value
@@ -325,24 +342,8 @@ class ChatBox extends Component {
 			return "field-id-red";
 		}
 	}
-    handleSubmit = (values) => {
-        const { recaptchaValue } = this.state;
-        // Check if reCAPTCHA has been successfully completed
-        if (recaptchaValue) {
-          // Your form submission logic here
-          console.log('reCAPTCHA token:', recaptchaValue);
-          console.log('Form values:', values);
-    
-          // Reset the reCAPTCHA value if needed
-          // this.setState({ recaptchaValue: null });
-        } else {
-          // Handle the case where reCAPTCHA hasn't been completed
-          console.error('reCAPTCHA not completed');
-        }
-      };
 	render() {
-		console.log("process.env['REACT_APP_RECAPTCHA']", process.env['REACT_APP_RECAPTCHA']);
-        return (
+		return (
 			<Form 
 				validate={values => {
 					const errors = {};
@@ -498,10 +499,6 @@ class ChatBox extends Component {
                                     <div id="terms-and-policy">
                                         By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
                                     </div>
-                                    {/* <ReCAPTCHA
-                                        siteKey={process.env['REACT_APP_RECAPTCHA']}
-                                        onChange={this.handleRecaptchaChange}
-                                    /> */}
                                 </div>
                             </div>
 
