@@ -1156,18 +1156,13 @@ display: none;
 #chatbox-div {
   display: flex;
   flex-direction: row;
-  /*    border-width:1px;*/
-  /*    border-style:double;*/
   border-radius: 2px;
-  /*    border-color: #BAE1FB;*/
-  background-color: white;
   overflow: hidden;
   z-index: 11;
   opacity: 100%;
-/*  margin-right: 1vw;*/
-transition: background-color 2.2s, opacity 6s;
+  transition: background-color 2.2s, opacity 6s;
   margin-bottom: 1.5vw;
-/*  justify-content: flex-end;*/ 
+  padding: 25px;
 }
 #chat-top-component {
   display: flex;
@@ -1261,7 +1256,6 @@ transition: background-color 2.2s, opacity 6s;
 #chat-middle-component {
     display: flex;
     flex: 1 1;
-    background-color: #fff;
     opacity: 100%;
     /* align-self: center; */
     /* justify-content: center; */
@@ -1317,15 +1311,14 @@ transition: background-color 2.2s, opacity 6s;
 }
 #chat-box-button {
   display: flex;
-  padding: 0.3rem;
-  padding-left: ;
+  padding: 8px 20px 8px 20px;
   margin: 1.6rem;
-  min-width: 23.5rem;
-  border-radius: 0.3rem;
+  border-radius: 8rem;
   border: none;
-  background-color: #697492;
-  color: white;
+  background-color: rgba(243,74, 2, 100%);
+  color: black;
   align-self: center;
+  font-size: 0.9rem;
   opacity: 30%;
   align-items: center;
   justify-content: center;
@@ -1393,20 +1386,21 @@ transition: background-color 2.2s, opacity 6s;
   display: flex;
   flex: 1;
   flex-direction: column;
-  width: 20rem;
   position: relative;
-  justify-content: space-evenly;
+  min-width: 130%;
+  justify-content: space-between;
 }
 #field-id::placeholder {
-  color: rgba(128, 128, 128, 75%);/*#808080|Greyed Out Text Color Chat Comopnent*/
+    color: rgba(128, 128, 128, 75%);/*#808080|Greyed Out Text Color Chat Comopnent*/
 }
 #chat-form-lines input {
-  display: flex;
-  border: none;
-  padding: 0.4rem;
-  width: 25rem;
-  border-radius: 3px;
-  background-color: rgba(192,200,200, 15%);
+    display: flex;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+    background-color: rgba(192,200,200, 25%);
+    min-width: 205%;
+    height: 40px;
 
 }
 #first-last {
@@ -1425,28 +1419,13 @@ transition: background-color 2.2s, opacity 6s;
 #terms-and-policy {
   font-size: 0.8rem;
   margin-bottom: -0.8rem;
+  padding: 25px;
+  line-height: 20px;
 }
 @media screen and (max-width: 501px) {
   #chatbox-div-parent {
     position: relative;
   }
-  #chatbox-div {
-    display: flex;
-    flex-direction: column;
-    /*    border-width:1px;*/
-    /*    border-style:double;*/
-    border-radius: 0px;
-    /*    border-color: #BAE1FB;*/
-    background-color: white;
-    overflow: hidden;
-    z-index: 2;
-    position: fixed;
-    top:0;
-    right:0;
-    left: 0;
-    height:80.5vh;
-    align-self: center;
-  } 
   #chat-top-component {
     display: flex;
     justify-content: space-between;
@@ -1477,7 +1456,7 @@ transition: background-color 2.2s, opacity 6s;
     padding-left: 0.5rem;
 
   }
-  #chat-middle-component {
+  /* #chat-middle-component {
     display: flex;
     flex: 1;
     background-color: #fff;
@@ -1490,7 +1469,7 @@ transition: background-color 2.2s, opacity 6s;
     z-index: 4;
     margin-bottom: 6.2rem;
     bottom: 0;
-  }
+  } */
 
   #chat-bottom-component {
     display: flex;
@@ -1525,7 +1504,6 @@ transition: background-color 2.2s, opacity 6s;
   #chat-box-button {
     padding: 0.6rem;
     margin: 1.6rem;
-    width: 28rem;
     border-radius: 0.3rem;
     border: none;
     background-color: #697492;
@@ -2035,6 +2013,7 @@ transition: background-color 2.2s, opacity 6s;
         display: flex;
         flex-direction: column;
     }
+    
 }
 @media (max-width: 1295px) {
     .single-review-container {
@@ -2223,6 +2202,23 @@ transition: background-color 2.2s, opacity 6s;
         opacity: 0.7;
     }
 
+}
+@media (max-width: 1015px) {
+    #chatbox-div {
+        display: flex;
+        flex-direction: column;
+        /*    border-width:1px;*/
+        /*    border-style:double;*/
+        border-radius: 2px;
+        /*    border-color: #BAE1FB;*/
+        overflow: hidden;
+        z-index: 11;
+        opacity: 100%;
+      /*  margin-right: 1vw;*/
+      transition: background-color 2.2s, opacity 6s;
+        margin-bottom: 1.5vw;
+      /*  justify-content: flex-end;*/ 
+      }
 }
 @media (max-width: 850px) {
     .single-review-container {

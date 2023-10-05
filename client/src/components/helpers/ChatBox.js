@@ -1,4 +1,8 @@
 import react, { Component } from 'react';
+// import ReCAPTCHA from "react-google-recaptcha";
+
+
+
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -67,9 +71,17 @@ class ChatBox extends Component {
 
 	    		lastTyped: '',
 	    		showAllErrors: false,
-                phoneNumber: ''
+                phoneNumber: '',
+                agreeToTerms: false, // Add a state property for the radio button,
+                recaptchaValue: null
+
 		}
-    } 
+    }
+    handleAgreeChange = () => {
+        this.setState((prevState) => ({
+            agreeToTerms: !prevState.agreeToTerms, // Toggle the value
+        }));
+    };
     formatPhoneNumber = (value) => {
         if (value) {
           // Remove all non-numeric characters from the input
@@ -257,7 +269,7 @@ class ChatBox extends Component {
 
 
 					}} type="submit">
-						Send
+						SEND
 					</button>
 			} else {
 				return <button id="chat-box-button-blue" 
@@ -265,7 +277,7 @@ class ChatBox extends Component {
 						this.setState({ showAllErrors: true });
 						e.preventDefault();
 					}} type="submit">
-						Send
+						SEND
 					</button>
 			}
 		} else {
@@ -273,7 +285,7 @@ class ChatBox extends Component {
 				onClick={(e) => {
 					e.preventDefault();
 				}} type="submit">
-					Send
+					SEND
 				</button>
 		}
 	}
@@ -313,8 +325,24 @@ class ChatBox extends Component {
 			return "field-id-red";
 		}
 	}
+    handleSubmit = (values) => {
+        const { recaptchaValue } = this.state;
+        // Check if reCAPTCHA has been successfully completed
+        if (recaptchaValue) {
+          // Your form submission logic here
+          console.log('reCAPTCHA token:', recaptchaValue);
+          console.log('Form values:', values);
+    
+          // Reset the reCAPTCHA value if needed
+          // this.setState({ recaptchaValue: null });
+        } else {
+          // Handle the case where reCAPTCHA hasn't been completed
+          console.error('reCAPTCHA not completed');
+        }
+      };
 	render() {
-		return (
+		console.log("process.env['REACT_APP_RECAPTCHA']", process.env['REACT_APP_RECAPTCHA']);
+        return (
 			<Form 
 				validate={values => {
 					const errors = {};
@@ -374,8 +402,20 @@ class ChatBox extends Component {
 				}}
 				onSubmit={this.onSubmit}
 			    render={({ props, handleSubmit, values, errors, form }) => (
-			        <form style={{ display: 'flex' }} onSubmit={handleSubmit} >
-						<div id="chatbox-div">
+			        <form 
+                        className='popout-content'
+                        style={{ 
+                            display: 'flex',
+                            width: '70%',
+                            flexDirection: 'column',
+                            backgroundColor: 'white',
+                        }}
+                        onSubmit={handleSubmit} >
+                        <p style={{ fontWeight: '400', letterSpacing: '0.05rem', alignSelf: 'center', fontSize: '0.8rem', fontFamily: 'sans-serif', paddingTop: '10px' }}>CONTACT US</p>
+                        <h2 style={{ fontWeight: '400', letterSpacing: '0.01rem', alignSelf: 'center', fontFamily: 'sans-serif', padding: '10px 5px 0px 5px', marginBottom: '0px' }}>Send A Message To Los Angeles Orthopedic Surgery Specialists</h2>
+                        <p style={{ fontWeight: '400', alignSelf: 'center', fontSize: '0.9rem', padding: '10px 10px 0px 10px', maxWidth: '90%' }}>If you have any questions, concerns, or comments regarding Los Angeles Orthopedic Surgery Specialists, please fill out the short contact form below.</p>
+                        
+						<div style={{ maxWidth: '90%', alignSelf: 'center', padding: '10px 10px 0px 10px' }} id="chatbox-div">
 							<div id="chat-middle-component">
 								<div id="middle-form-top-div">
 							      	<div id="chat-form-top-div">
@@ -384,7 +424,7 @@ class ChatBox extends Component {
                                                 <Field
                                                     key="fNameKey"
                                                     id={this.renderBorderFName(errors)}
-                                                    style={{ borderRadius: '3px' }}
+                                                    style={{ borderRadius: '10px' }}
                                                     name="fName"
                                                     component="input" 
                                                     placeholder="First Name"
@@ -397,7 +437,7 @@ class ChatBox extends Component {
                                                 <Field
                                                     key="lNameKey"
                                                     id={this.renderBorderLName(errors)}
-                                                    style={{ borderRadius: '3px' }}
+                                                    style={{ borderRadius: '10px' }}
                                                     name="lName"
                                                     component="input"
                                                     placeholder="Last Name"
@@ -410,7 +450,7 @@ class ChatBox extends Component {
 									          	<Field
 													key="emailKey"
 									          		id={this.renderBorderEmail(errors)}
-									          		style={{ borderRadius: '3px' }}
+									          		style={{ borderRadius: '10px' }}
 									          		name="email"
 									          		component="input"
 									          		placeholder="Email address"
@@ -422,7 +462,7 @@ class ChatBox extends Component {
 									        <div id="chat-form-lines">
                                             <Field
                                                 id={this.renderBorderPhone(errors)}
-                                                style={{ padding: '0.5rem', borderRadius: '3px' }}
+                                                style={{ padding: '0.5rem', borderRadius: '10px' }}
                                                 type="tel" // Use type="tel" for phone numbers
                                                 name="phone"
                                                 component="input"
@@ -438,20 +478,37 @@ class ChatBox extends Component {
 							      	</div>
 								</div>
 							</div>
-							<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} id="chat-middle-component">
-                                <div >
-                                    <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', backgroundColor: "rgba(192,200,200, 15%)",  padding: '0.5rem', borderRadius: '3px', width: '20rem'  }}  name="message" component="textarea" rows="5" placeholder="Send a message..." />
+							<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
+                                <div>
+                                    <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', minWidth: '100%',  padding: '0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
                                     {this.renderErrorMessage(errors.message)}
                                 </div>
-                                <div id="terms-and-policy">
-                                    I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
+                                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                    <div id="terms-and-policy">
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                name="terms"
+                                                style={{ transform: 'scale(2)' }}
+                                                checked={this.state.agreeToTerms}
+                                                onChange={this.handleAgreeChange}
+                                                />
+                                        </label>
+                                    </div>
+                                    <div id="terms-and-policy">
+                                        By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
+                                    </div>
+                                    {/* <ReCAPTCHA
+                                        siteKey={process.env['REACT_APP_RECAPTCHA']}
+                                        onChange={this.handleRecaptchaChange}
+                                    /> */}
                                 </div>
-                                    {
-                                        this.renderSendButton(values, errors, form)
-                                    }
                             </div>
 
 						</div>
+                        {
+                            this.renderSendButton(values, errors, form)
+                        }
 			        </form>
 			    )}
 			  />
