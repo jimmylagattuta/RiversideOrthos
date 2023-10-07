@@ -511,15 +511,11 @@ class ChatBox extends Component {
                                         By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
                                     </div>
                                 </div>
-								{/* <ReCAPTCHA
-									sitekey={process.env.REACT_APP_RECAPTCHA}
-									onChange={this.handleSubmitRecaptcha}
-								/> */}
-								<div
+								<ReCAPTCHA
 									className='g-recaptcha'
 									data-sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
-									data-callback={this.handleSubmitRecaptcha} // Define your callback function
-								></div>
+									onChange={this.handleSubmitRecaptcha}
+								/>
                             </div>
 
 						</div>
