@@ -1,4 +1,5 @@
 import react, { Component } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -95,6 +96,8 @@ class ChatBox extends Component {
           });
         });
       };
+
+
     handleAgreeChange = () => {
         this.setState((prevState) => ({
             agreeToTerms: !prevState.agreeToTerms, // Toggle the value
@@ -497,6 +500,10 @@ class ChatBox extends Component {
                                         By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
                                     </div>
                                 </div>
+								<ReCAPTCHA
+									sitekey="Your client site key"
+									onChange={onChange}
+								/>
                             </div>
 
 						</div>
