@@ -5,6 +5,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
 import { Form, Field } from 'react-final-form';
 import { Link } from 'react-router-dom';
+//copy site key 6LfGeYIoAAAAAHbpEasH2XEmpv9_oJJ9fK1uA5db
+// copy secret key 6LfGeYIoAAAAABhdCQcwwhn5OhMBWkz23i7Oedjx
+
 class ChatBox extends Component {
 	constructor(props){  
 	    super(props);  
@@ -508,15 +511,15 @@ class ChatBox extends Component {
                                         By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
                                     </div>
                                 </div>
-								<ReCAPTCHA
+								{/* <ReCAPTCHA
 									sitekey={process.env.REACT_APP_RECAPTCHA}
 									onChange={this.handleSubmitRecaptcha}
-								/>
-								{/* <div
+								/> */}
+								<div
 									className='g-recaptcha'
 									data-sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
-									data-callback='onRecaptchaSuccess' // Define your callback function
-								></div> */}
+									data-callback={this.handleSubmitRecaptcha} // Define your callback function
+								></div>
                             </div>
 
 						</div>
