@@ -298,7 +298,7 @@ class ChatBox extends Component {
 						SEND
 					</button>
 			} else {
-				return <button id="chat-box-button-blue" 
+				return <button id="chat-box-button" 
 					onClick={(e) => {
 						this.setState({ showAllErrors: true });
 						e.preventDefault();
@@ -307,7 +307,7 @@ class ChatBox extends Component {
 					</button>
 			}
 		} else {
-			return <button id="chat-box-button-blue" 
+			return <button id="chat-box-button" 
 				onClick={(e) => {
 					e.preventDefault();
 				}} type="submit">
