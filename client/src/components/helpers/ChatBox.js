@@ -79,9 +79,10 @@ class ChatBox extends Component {
 
       loadRecaptchaScript() {
         const script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/enterprise.js?render=YOUR_RECAPTCHA_SITE_KEY';
+        script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
         script.async = true;
         script.defer = true;
+		console.log('here');
         script.onload = this.initializeRecaptcha;
         document.head.appendChild(script);
       }
