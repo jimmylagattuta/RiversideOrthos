@@ -509,7 +509,7 @@ class ChatBox extends Component {
                                     </div>
                                 </div>
 								<ReCAPTCHA
-									sitekey="Your client site key"
+									sitekey={process.env.REACT_APP_RECAPTCHA}
 									onChange={this.handleSubmitRecaptcha}
 								/>
 								{/* <div
