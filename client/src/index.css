@@ -1376,22 +1376,28 @@ display: none;
 #middle-form-top-div {
   display: flex;
   justify-content: initial;
+  flex: 1;
 }
 #chat-form-top-div {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
 }
 #chat-form-inner-div {
   display: flex;
   flex: 1;
   flex-direction: column;
   position: relative;
-  min-width: 130%;
+  width: 90%;
   justify-content: space-between;
 }
 #field-id::placeholder {
     color: rgba(128, 128, 128, 75%);/*#808080|Greyed Out Text Color Chat Comopnent*/
+}
+#chat-form-lines {
+    width: 100%;
 }
 #chat-form-lines input {
     display: flex;
@@ -1399,7 +1405,7 @@ display: none;
     padding: 0.5rem;
     border-radius: 3px;
     background-color: rgba(192,200,200, 25%);
-    min-width: 205%;
+    width: 100%;
     height: 40px;
 
 }
