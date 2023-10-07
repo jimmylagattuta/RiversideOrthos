@@ -12,41 +12,6 @@ class ChatBox extends Component {
 	constructor(props){  
 	    super(props);  
 	    this.state = {  
-	    		selectLocationItems: [
-		    		{
-		    			item: 'Wabash Ave, Chicago',
-		    			link: "/"
-		    		},
-	    			{
-	    				item: 'Hometown',
-	    				link: "/"
-	    			},
-	    			{
-	    				item: 'La Grange',
-	    				link: "/"
-	    			},
-	    			{
-	    				item: 'Greenwood Plaza, Chicago',
-	    				link: "/"
-	    			}
-	    		],
-	    		newOrReturning: [
-		    		{
-		    			item: 'New Patient',
-		    			link: "/",
-		    			icon: "fas fa-clipboard-check fa-lg"
-		    		},
-		    		{
-		    			item: 'Returning Patient',
-		    			link: "/",
-		    			icon: "fas fa-hospital-user fa-sm"
-		    		},
-		    		{
-		    			item: 'Other',
-		    			link: "/",
-		    			icon: "fas fa-envelope-open-text"
-		    		}
-	    		],
 	    		showDropdownLocations: false,
 	    		showDropdownNewOrReturning: false,
 	    		titleVarLocations: 'Select a location',
