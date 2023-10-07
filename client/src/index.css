@@ -1337,22 +1337,21 @@ display: none;
 @keyframes disappear {
   0% { opacity: 1; }
   100% { opacity: 0; }
-}
-    
+} 
 @-webkit-keyframes appear {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 #chat-box-button-blue {
   display: flex;
-  padding: 0.3rem;
+  padding: 8px 20px 8px 20px;
   margin: 1.6rem;
-  min-width: 23.5rem;
-  border-radius: 0.3rem;
+  border-radius: 8rem;
   border: none;
   background-color: rgba(243,74, 2, 100%);
-  color: white;
+  color: black;
   align-self: center;
+  font-size: 0.9rem;
   opacity: 100%;
   align-items: center;
   justify-content: center;
