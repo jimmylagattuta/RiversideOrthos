@@ -89,13 +89,11 @@ class ChatBox extends Component {
         script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
         script.async = true;
         script.defer = true;
-		console.log('here');
         script.onload = this.initializeRecaptcha;
         document.head.appendChild(script);
       }
     initializeRecaptcha = () => {
         // Initialize reCAPTCHA with your site key
-        console.log('process.env.REACT_APP_RECAPTCHA', process.env.REACT_APP_RECAPTCHA)
         window.grecaptcha.enterprise.ready(() => {
           window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
             this.setState({ recaptchaToken: token });
@@ -104,7 +102,6 @@ class ChatBox extends Component {
       };
 
 	  handleSubmitRecaptcha = (values) => {
-		console.log('values', values);
 		if (values) {
 			this.setState({ recaptchaChecked: true, errorRecaptcha: '' });
 		}
