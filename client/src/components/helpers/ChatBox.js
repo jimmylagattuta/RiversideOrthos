@@ -513,7 +513,7 @@ class ChatBox extends Component {
                                 </div>
 								<ReCAPTCHA
 									className='g-recaptcha'
-									data-sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
+									sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
 									onChange={this.handleSubmitRecaptcha}
 								/>
                             </div>
