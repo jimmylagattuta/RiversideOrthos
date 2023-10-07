@@ -499,8 +499,8 @@ class ChatBox extends Component {
                                     <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%',  padding: '0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
                                     {this.renderErrorMessage(errors.message)}
                                 </div>
-                                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <div style={{ displa: 'flex',flexDirection: 'column' }}>
+								<div style={{ displa: 'flex',flexDirection: 'column' }}>
+									<div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
 										<div id="terms-and-policy">
 											<label>
 												<input
@@ -515,9 +515,9 @@ class ChatBox extends Component {
 										<div id="terms-and-policy">
 											By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
 										</div>
-										<div style={{ marginBottom: '0.3rem', padding: '50px' }}>
-											{this.renderErrorAgree(errors.agree)}
-										</div>
+									</div>
+									<div style={{ marginBottom: '0.3rem', padding: '5px' }}>
+										{this.renderErrorAgree(errors.agree)}
 									</div>
                                 </div>
 								<ReCAPTCHA
