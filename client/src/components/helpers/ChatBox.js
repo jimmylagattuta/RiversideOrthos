@@ -360,42 +360,32 @@ class ChatBox extends Component {
 
 					if (!values.fName) {
 						errors.fName = "First Name is empty";
-						// this.setState({ errorFName: "First Name is empty" });
 					} else if (values.fName.length > 20) {
 						errors.fName = "First Name is too long";
-						// this.setState({ errorFName: "First Name is too long" });
 					} else if (!/^[a-z]+$/i.test(values.fName)) {
 						errors.fName = "First Name can only contain letters";
-						// this.setState({ errorFName: "First Name can only contain letters" });
 					}
 
 					if (!values.lName) {
 						errors.lName = "Last Name is empty";
-						// this.setState({ errorLName: "Last Name is empty" });
 					} else if (values.lName.length > 30) {
 						errors.lName = "Last Name is too long";
-						// this.setState({ errorLName: "Last Name is too long" });
 					} else if (!/^[a-z]+$/i.test(values.lName)) {
 						if (!values.lName.includes("-")) {
 							errors.lName = "Last Name can only contain letters";
-							// this.setState({ errorLName: "Last Name can only contain letters" });
 						}
 					}
 
 					if (!values.email) {
 						errors.email = "Email is empty";
-						// this.setState({ errorEmail: "Email is empty" });
 					} else if (values.email.length > 40) {
 						errors.email = "Email is too long";
-						// this.setState({ errorEmail: "Email is too long" });
 					} else if (!values.email.includes('@')) {
 						errors.email = "Please enter a valid email format";
-						// this.setState({ errorEmail: "Please enter a valid email format" });
 					}
 
 					if (!values.phone) {
 						errors.phone = "Phone is empty";
-						// this.setState({ errorPhone: "Phone is empty" });
 					}
 
 					if (!this.state.agreeToTerms) {
@@ -404,10 +394,8 @@ class ChatBox extends Component {
 
 					if (!values.message) {
 						errors.message = "Message is empty";
-						// this.setState({ errorMessage: "Message is empty" });
 					} else if (values.message.length > 2000) {
 						errors.message = "Message is too long";
-						// this.setState({ errorMessage: "Message is too long" });
 					}
 
 					if (!this.state.recaptchaChecked) {
