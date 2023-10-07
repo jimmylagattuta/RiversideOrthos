@@ -496,7 +496,7 @@ class ChatBox extends Component {
 								</div>
 							</div>
 							<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
-                                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                                <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
                                     <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%',  padding: '0.5rem 0.5rem 0rem 0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
                                     {this.renderErrorMessage(errors.message)}
                                 </div>
