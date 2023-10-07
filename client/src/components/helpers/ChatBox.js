@@ -74,6 +74,8 @@ class ChatBox extends Component {
                 phoneNumber: '',
                 agreeToTerms: false, // Add a state property for the radio button
                 recaptchaToken: '', // To store the reCAPTCHA token
+				recaptchaChecked: false,
+				errorRecaptcha: ''
 		}
     }
     componentDidMount() {
@@ -102,6 +104,9 @@ class ChatBox extends Component {
 
 	  handleSubmitRecaptcha = (values) => {
 		console.log('values', values);
+		if (values) {
+			this.setState({ recaptchaChecked: true, errorRecaptcha: '' });
+		}
 		// Here, you can use this.state.recaptchaToken in your form submission
 		// to validate the reCAPTCHA response.
 	
@@ -213,6 +218,17 @@ class ChatBox extends Component {
 		}
 	}
 	renderErrorMessage(error) {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	renderErrorRecaptcha(error) {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
@@ -353,7 +369,6 @@ class ChatBox extends Component {
 		}
 	}
 	render() {
-		console.log('this.state', this.state);
 		return (
 			<Form 
 				validate={values => {
@@ -409,6 +424,9 @@ class ChatBox extends Component {
 						// this.setState({ errorMessage: "Message is too long" });
 					}
 
+					if (!this.state.recaptchaChecked) {
+						errors.recaptcha = this.state.errorRecaptcha;
+					}
 
 					return errors;
 				}}
@@ -516,6 +534,9 @@ class ChatBox extends Component {
 									sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
 									onChange={this.handleSubmitRecaptcha}
 								/>
+								<div style={{ marginBottom: '0.3rem' }}>
+									{this.renderErrorRecaptcha(this.state.errorRecaptcha)}
+								</div>
                             </div>
 
 						</div>
