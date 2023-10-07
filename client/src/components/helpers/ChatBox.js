@@ -142,7 +142,13 @@ class ChatBox extends Component {
 	return ''; // Return an empty string for undefined or null values
 	};
 	onSubmit(values) {
-		console.log('onSubmit sign up!', values);
+		const formData = {
+			values,
+			recaptcha: this.state.recaptchaToken,
+			agreeToTerms: this.state.agreeToTerms,
+		};
+		
+		console.log("Combined form data:", formData);
 	}
 	handleSubmitFunction(handleSubmit) {
 	}
@@ -310,10 +316,12 @@ class ChatBox extends Component {
 					onClick={(e) => {
 						e.preventDefault();
 						this.onSubmit(values);
-						form.reset();
 						document.getElementById("chat-middle-component").style.opacity = '0%';
 						document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
 						document.getElementById("chatbox-div").style.opacity = '0%';
+						setTimeout(() => {
+							form.reset();
+						  }, 3000);
 
 
 						// !!!!!

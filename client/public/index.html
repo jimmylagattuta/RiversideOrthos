@@ -55,31 +55,9 @@
       link.setAttribute('defer', 'true');
       document.head.appendChild(link);
     </script>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le8mnkoAAAAACllYZwWXF84fcdabf6oXuyyyUJ3"></script>
-    <script>
-      // Define a function to execute reCAPTCHA verification
-      function onClick(e) {
-        e.preventDefault();
-  
-        // Use reCAPTCHA Enterprise ready() to ensure the library is loaded
-        grecaptcha.enterprise.ready(async () => {
-          try {
-            // Execute reCAPTCHA verification with your site key and action
-            const token = await grecaptcha.enterprise.execute('6Le8mnkoAAAAACllYZwWXF84fcdabf6oXuyyyUJ3', { action: 'LOGIN' });
-  
-            // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
-            // reCAPTCHA Enterprise to the end user's browser.
-            // This token must be validated by creating an assessment on your server.
-            // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
-  
-            // You can handle the token here or send it to your server for validation
-            console.log('reCAPTCHA token:', token);
-          } catch (error) {
-            console.error('reCAPTCHA error:', error);
-          }
-        });
-      }
-    </script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYGTF545WK"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-RYGTF545WK'); </script>
   </head>
   <body>
