@@ -1350,7 +1350,7 @@ display: none;
   min-width: 23.5rem;
   border-radius: 0.3rem;
   border: none;
-  background-color: #24a0ed;
+  background-color: rgba(243,74, 2, 100%);
   color: white;
   align-self: center;
   opacity: 100%;
