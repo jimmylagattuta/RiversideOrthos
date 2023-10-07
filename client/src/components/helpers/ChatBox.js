@@ -485,10 +485,11 @@ class ChatBox extends Component {
                                                 placeholder="(•••) ••• ••••"
                                                 parse={this.parsePhoneNumber} // Parse the phone number
                                                 format={this.formatPhoneNumber} // Format the phone number
-                                            />									        </div>
+                                            />									        
                                             <div style={{ marginBottom: '0.3rem' }}>
                                                 {this.renderErrorPhone(errors.phone)}
                                             </div>
+											</div>
 									    </div>
 										{this.renderErrorMain(this.state.errorMain)}
 							      	</div>
@@ -496,7 +497,7 @@ class ChatBox extends Component {
 							</div>
 							<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
                                 <div>
-                                    <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%',  padding: '0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
+                                    <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%',  padding: '0.5rem 0.5rem 0rem 0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
                                     {this.renderErrorMessage(errors.message)}
                                 </div>
 								<div style={{ displa: 'flex',flexDirection: 'column' }}>
@@ -516,7 +517,7 @@ class ChatBox extends Component {
 											By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
 										</div>
 									</div>
-									<div style={{ marginBottom: '0.3rem', padding: '5px' }}>
+									<div style={{ marginBottom: '0.3rem' }}>
 										{this.renderErrorAgree(errors.agree)}
 									</div>
                                 </div>
