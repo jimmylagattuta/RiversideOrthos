@@ -510,7 +510,7 @@ class ChatBox extends Component {
                                 </div>
 								<ReCAPTCHA
 									sitekey="Your client site key"
-									onChange={handleSubmitRecaptcha}
+									onChange={this.handleSubmitRecaptcha}
 								/>
 								{/* <div
 									className='g-recaptcha'
