@@ -77,7 +77,7 @@ class ChatBox extends Component {
         this.loadRecaptchaScript();
       }
 
-      loadRecaptchaScript() {
+    loadRecaptchaScript() {
         const script = document.createElement('script');
         script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
         script.async = true;
@@ -86,7 +86,7 @@ class ChatBox extends Component {
         script.onload = this.initializeRecaptcha;
         document.head.appendChild(script);
       }
-      initializeRecaptcha = () => {
+    initializeRecaptcha = () => {
         // Initialize reCAPTCHA with your site key
         console.log('process.env.REACT_APP_RECAPTCHA', process.env.REACT_APP_RECAPTCHA)
         window.grecaptcha.enterprise.ready(() => {
@@ -115,27 +115,23 @@ class ChatBox extends Component {
         }
       
         return ''; // Return an empty string for undefined or null values
-      };
-      
-      parsePhoneNumber = (value) => {
-        if (value) {
-          // Remove all non-numeric characters from the input
-          return value.replace(/\D/g, '');
-        }
-      
-        return ''; // Return an empty string for undefined or null values
-      };
+    };
+	parsePhoneNumber = (value) => {
+	if (value) {
+		// Remove all non-numeric characters from the input
+		return value.replace(/\D/g, '');
+	}
+	
+	return ''; // Return an empty string for undefined or null values
+	};
 	onSubmit(values) {
 		console.log('onSubmit sign up!', values);
 	}
 	handleSubmitFunction(handleSubmit) {
 	}
-	
-
 	renderIcon(icon) {
 		return <i style={{ marginRight: '0.5rem', alignSelf: 'center', color: 'black' }} class={icon}></i>
 	}
-
 	hideDropdown() {
 		if (!this.state.clickShowNewOrReturning) {
 			this.setState({ show: false });
@@ -307,7 +303,6 @@ class ChatBox extends Component {
 				</button>
 		}
 	}
-
 	renderBorderFName(errors) {
 		if (!errors.fName || !this.state.showAllErrors) {
 			return "field-id";
@@ -344,6 +339,7 @@ class ChatBox extends Component {
 		}
 	}
 	render() {
+		console.log('this.state', this.state);
 		return (
 			<Form 
 				validate={values => {
