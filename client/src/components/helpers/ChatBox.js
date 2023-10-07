@@ -277,7 +277,7 @@ class ChatBox extends Component {
 			values.message
 		) {
 			if (Object.keys(errors).length === 0) {
-				return <button id="chat-box-button-blue" 
+				return <button id="chat-box-button" 
 					onClick={(e) => {
 						e.preventDefault();
 						this.onSubmit(values);
@@ -298,7 +298,7 @@ class ChatBox extends Component {
 						SEND
 					</button>
 			} else {
-				return <button id="chat-box-button-blue" 
+				return <button id="chat-box-button" 
 					onClick={(e) => {
 						this.setState({ showAllErrors: true });
 						e.preventDefault();
@@ -510,14 +510,14 @@ class ChatBox extends Component {
                                                 onChange={this.handleAgreeChange}
                                                 />
                                         </label>
+										<div style={{ marginBottom: '0.3rem' }}>
+											{this.renderErrorAgree(errors.agree)}
+										</div>
                                     </div>
                                     <div id="terms-and-policy">
                                         By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
                                     </div>
                                 </div>
-								<div style={{ marginBottom: '0.3rem' }}>
-									{this.renderErrorAgree(errors.agree)}
-								</div>
 								<ReCAPTCHA
 									className='g-recaptcha'
 									sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
