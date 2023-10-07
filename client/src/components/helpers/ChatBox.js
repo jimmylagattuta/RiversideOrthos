@@ -81,7 +81,7 @@ class ChatBox extends Component {
     }
     componentDidMount() {
         // Load the reCAPTCHA script
-        this.loadRecaptchaScript();
+        // this.loadRecaptchaScript();
       }
 
     loadRecaptchaScript() {
