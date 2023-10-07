@@ -73,6 +73,7 @@ class ChatBox extends Component {
 	    		showAllErrors: false,
                 phoneNumber: '',
                 agreeToTerms: false, // Add a state property for the radio button
+				errorAgree: '',
                 recaptchaToken: '', // To store the reCAPTCHA token
 				recaptchaChecked: false,
 				errorRecaptcha: ''
@@ -229,6 +230,17 @@ class ChatBox extends Component {
 		}
 	}
 	renderErrorRecaptcha(error) {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	renderErrorAgree(error) {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
@@ -416,6 +428,10 @@ class ChatBox extends Component {
 						// this.setState({ errorPhone: "Phone is empty" });
 					}
 
+					if (!this.state.agreeToTerms) {
+						errors.agree = 'Please Agree';
+					}
+
 					if (!values.message) {
 						errors.message = "Message is empty";
 						// this.setState({ errorMessage: "Message is empty" });
@@ -425,7 +441,7 @@ class ChatBox extends Component {
 					}
 
 					if (!this.state.recaptchaChecked) {
-						errors.recaptcha = this.state.errorRecaptcha;
+						errors.recaptcha = "Please Prove You're Not A Robot";
 					}
 
 					return errors;
@@ -529,13 +545,16 @@ class ChatBox extends Component {
                                         By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
                                     </div>
                                 </div>
+								<div style={{ marginBottom: '0.3rem' }}>
+									{this.renderErrorAgree(errors.agree)}
+								</div>
 								<ReCAPTCHA
 									className='g-recaptcha'
 									sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
 									onChange={this.handleSubmitRecaptcha}
 								/>
 								<div style={{ marginBottom: '0.3rem' }}>
-									{this.renderErrorRecaptcha(this.state.errorRecaptcha)}
+									{this.renderErrorRecaptcha(errors.recaptcha)}
 								</div>
                             </div>
 
