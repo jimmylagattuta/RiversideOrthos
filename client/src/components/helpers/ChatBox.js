@@ -496,26 +496,28 @@ class ChatBox extends Component {
 							</div>
 							<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
                                 <div>
-                                    <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '100%',  padding: '0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
+                                    <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%',  padding: '0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
                                     {this.renderErrorMessage(errors.message)}
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                    <div id="terms-and-policy">
-                                        <label>
-                                            <input
-                                                type="checkbox"
-                                                name="terms"
-                                                style={{ transform: 'scale(2)' }}
-                                                checked={this.state.agreeToTerms}
-                                                onChange={this.handleAgreeChange}
-                                                />
-                                        </label>
-                                    </div>
-                                    <div id="terms-and-policy">
-                                        By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
-                                    </div>
-									<div style={{ marginBottom: '0.3rem' }}>
-										{this.renderErrorAgree(errors.agree)}
+                                    <div style={{ displa: 'flex',flexDirection: 'column' }}>
+										<div id="terms-and-policy">
+											<label>
+												<input
+													type="checkbox"
+													name="terms"
+													style={{ transform: 'scale(2)' }}
+													checked={this.state.agreeToTerms}
+													onChange={this.handleAgreeChange}
+													/>
+											</label>
+										</div>
+										<div id="terms-and-policy">
+											By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
+										</div>
+										<div style={{ marginBottom: '0.3rem', padding: '50px' }}>
+											{this.renderErrorAgree(errors.agree)}
+										</div>
 									</div>
                                 </div>
 								<ReCAPTCHA
