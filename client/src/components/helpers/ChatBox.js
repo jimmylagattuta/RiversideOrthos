@@ -146,7 +146,7 @@ class ChatBox extends Component {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -157,7 +157,7 @@ class ChatBox extends Component {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -190,7 +190,7 @@ class ChatBox extends Component {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -201,7 +201,7 @@ class ChatBox extends Component {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -212,7 +212,7 @@ class ChatBox extends Component {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -223,7 +223,7 @@ class ChatBox extends Component {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -249,7 +249,7 @@ class ChatBox extends Component {
 		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -261,7 +261,7 @@ class ChatBox extends Component {
 
 			return (
 				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
