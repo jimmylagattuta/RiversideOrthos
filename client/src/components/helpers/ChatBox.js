@@ -97,7 +97,15 @@ class ChatBox extends Component {
         });
       };
 
-
+	  handleSubmitRecaptcha = (values) => {
+		console.log('values', values);
+		// Here, you can use this.state.recaptchaToken in your form submission
+		// to validate the reCAPTCHA response.
+	
+		// Perform your form submission logic
+		// ...
+	  };
+	  
     handleAgreeChange = () => {
         this.setState((prevState) => ({
             agreeToTerms: !prevState.agreeToTerms, // Toggle the value
@@ -502,8 +510,13 @@ class ChatBox extends Component {
                                 </div>
 								<ReCAPTCHA
 									sitekey="Your client site key"
-									onChange={onChange}
+									onChange={handleSubmitRecaptcha}
 								/>
+								{/* <div
+									className='g-recaptcha'
+									data-sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
+									data-callback='onRecaptchaSuccess' // Define your callback function
+								></div> */}
                             </div>
 
 						</div>
