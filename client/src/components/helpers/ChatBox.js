@@ -399,7 +399,7 @@ class ChatBox extends Component {
 					}
 
 					if (!this.state.agreeToTerms) {
-						errors.agree = 'Please Agree';
+						errors.agree = 'Please Agree To Terms & Conditions';
 					}
 
 					if (!values.message) {
@@ -510,13 +510,13 @@ class ChatBox extends Component {
                                                 onChange={this.handleAgreeChange}
                                                 />
                                         </label>
-										<div style={{ marginBottom: '0.3rem' }}>
-											{this.renderErrorAgree(errors.agree)}
-										</div>
                                     </div>
                                     <div id="terms-and-policy">
                                         By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
                                     </div>
+									<div style={{ marginBottom: '0.3rem' }}>
+										{this.renderErrorAgree(errors.agree)}
+									</div>
                                 </div>
 								<ReCAPTCHA
 									className='g-recaptcha'
