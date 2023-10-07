@@ -422,7 +422,7 @@ class ChatBox extends Component {
                         className='popout-content'
                         style={{ 
                             display: 'flex',
-                            width: '70%',
+                            maxWidth: '80%',
                             flexDirection: 'column',
                             backgroundColor: 'white',
                         }}
