@@ -84,9 +84,11 @@ const CompanyReviewsPage = () => {
                 if (typeof data.reviews === 'string') {
                   // Parse the JSON string into an array
                   const reviewsArray = JSON.parse(data.reviews);
-          
+                    console.log('reviewsArray', reviewsArray);
                   // Set the CSRF token in the context (if needed)
+                  console.log('data', data);
                   if (data.csrf_token) {
+                    console.log('token present');
                     setCsrfToken(data.csrf_token);
                   }
           
