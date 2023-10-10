@@ -1,160 +1,178 @@
-import React, { useState, useEffect } from 'react';
+import react, { Component } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useCsrfToken } from '../CsrfTokenContext'; // Import the hook
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
 import { Form, Field } from 'react-final-form';
 import { Link } from 'react-router-dom';
+//copy site key 6LfGeYIoAAAAAHbpEasH2XEmpv9_oJJ9fK1uA5db
+// copy secret key 6LfGeYIoAAAAABhdCQcwwhn5OhMBWkz23i7Oedjx
 
-function ChatBox(props) {
-  const { csrfToken } = useCsrfToken();
+class ChatBox extends Component {
+	constructor(props){  
+	    super(props);  
+	    this.state = {  
+	    		showDropdownLocations: false,
+	    		showDropdownNewOrReturning: false,
+	    		titleVarLocations: 'Select a location',
+	    		titleVarNewOrReturning: 'New or returning patient?',
+	    		titleLocations: 'Select a location',
+	    		titleNewOrReturning: 'New or returning patient?',
+	    		clickShowLocations: false,
+	    		clickShowNewOrReturning: false,
 
-  const [state, setState] = useState({
-    showDropdownLocations: false,
-    showDropdownNewOrReturning: false,
-    titleVarLocations: 'Select a location',
-    titleVarNewOrReturning: 'New or returning patient?',
-    titleLocations: 'Select a location',
-    titleNewOrReturning: 'New or returning patient?',
-    clickShowLocations: false,
-    clickShowNewOrReturning: false,
-    errorFName: "",
-    errorFNameShow: false,
-    errorLName: "",
-    errorLNameShow: false,
-    errorEmail: "",
-    errorEmailShow: false,
-    errorPhone: "",
-    errorPhoneShow: false,
-    errorMessage: "",
-    errorMessageShow: false,
-    errorMain: "",
-    errorMainShow: false,
-    lastTyped: '',
-    showAllErrors: false,
-    phoneNumber: '',
-    agreeToTerms: false,
-    errorAgree: '',
-    recaptchaToken: '',
-    recaptchaChecked: false,
-    errorRecaptcha: '',
-    csrfToken: csrfToken
-  });
+	    		errorFName: "",
+	    		errorFNameShow: false,
+	    		errorLName: "",
+	    		errorLNameShow: false,
+	    		errorEmail: "",
+	    		errorEmailShow: false,
+	    		errorPhone: "",
+	    		errorPhoneShow: false,
+	    		errorMessage: "",
+	    		errorMessageShow: false,
+	    		errorMain: "",
+	    		errorMainShow: false,
 
-  useEffect(() => {
-    // Load and initialize reCAPTCHA
-    const loadRecaptchaScript = () => {
-      const script = document.createElement('script');
-      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
+	    		lastTyped: '',
+	    		showAllErrors: false,
+                phoneNumber: '',
+                agreeToTerms: false, // Add a state property for the radio button
+				errorAgree: '',
+                recaptchaToken: '', // To store the reCAPTCHA token
+				recaptchaChecked: false,
+				errorRecaptcha: ''
+		}
+    }
+    componentDidMount() {
+        // Load the reCAPTCHA script
+        // this.loadRecaptchaScript();
+      }
+
+    loadRecaptchaScript() {
+        const script = document.createElement('script');
+        script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
+        script.async = true;
+        script.defer = true;
+        script.onload = this.initializeRecaptcha;
+        document.head.appendChild(script);
+      }
+    initializeRecaptcha = () => {
         // Initialize reCAPTCHA with your site key
         window.grecaptcha.enterprise.ready(() => {
           window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
-            setState({ ...state, recaptchaToken: token });
+            this.setState({ recaptchaToken: token });
           });
         });
       };
-      document.head.appendChild(script);
+
+	  handleSubmitRecaptcha = (values) => {
+		if (values) {
+			this.setState({ recaptchaChecked: true, errorRecaptcha: '' });
+		}
+		// Here, you can use this.state.recaptchaToken in your form submission
+		// to validate the reCAPTCHA response.
+	
+		// Perform your form submission logic
+		// ...
+	  };
+	  
+    handleAgreeChange = () => {
+        this.setState((prevState) => ({
+            agreeToTerms: !prevState.agreeToTerms, // Toggle the value
+        }));
     };
-
-    loadRecaptchaScript();
-  }, []);
-
-  const loadRecaptchaScript = () => {
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
-    script.async = true;
-    script.defer = true;
-    script.onload = initializeRecaptcha;
-    document.head.appendChild(script);
-  };
-
-  const initializeRecaptcha = () => {
-    // Initialize reCAPTCHA with your site key
-    window.grecaptcha.enterprise.ready(() => {
-      window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
-        setState({ ...state, recaptchaToken: token });
-      });
-    });
-  };
-
-  const handleSubmitRecaptcha = (values) => {
-    if (values) {
-      setState({ ...state, recaptchaChecked: true, errorRecaptcha: '' });
-    }
-    // Here, you can use state.recaptchaToken in your form submission
-    // to validate the reCAPTCHA response.
-
-    // Perform your form submission logic
-    // ...
-  };
-
-  const handleAgreeChange = () => {
-    setState((prevState) => ({
-      ...state,
-      agreeToTerms: !prevState.agreeToTerms, // Toggle the value
-    }));
-  };
-
-  const formatPhoneNumber = (value) => {
-    if (value) {
-      // Remove all non-numeric characters from the input
-      const phoneNumber = value.replace(/\D/g, '');
-
-      // Format the phone number as (XXX) XXX-XXXX
-      const formattedPhoneNumber = `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
-
-      return formattedPhoneNumber;
-    }
-
-    return ''; // Return an empty string for undefined or null values
-  };
-
-  const parsePhoneNumber = (value) => {
-    if (value) {
-      // Remove all non-numeric characters from the input
-      return value.replace(/\D/g, '');
-    }
-
-    return ''; // Return an empty string for undefined or null values
-  };
-
-  const onSubmit = async (values) => {
-    const formData = {
-      ...values, // Include the form values
-      recaptcha: state.recaptchaChecked,
-      agreeToTerms: state.agreeToTerms,
+    formatPhoneNumber = (value) => {
+        if (value) {
+          // Remove all non-numeric characters from the input
+          const phoneNumber = value.replace(/\D/g, '');
+      
+          // Format the phone number as (XXX) XXX-XXXX
+          const formattedPhoneNumber = `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+            3,
+            6
+          )}-${phoneNumber.slice(6, 10)}`;
+      
+          return formattedPhoneNumber;
+        }
+      
+        return ''; // Return an empty string for undefined or null values
     };
-
-    try {
-      const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': state.csrfToken,
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        // Email sent successfully
-        console.log('Email sent successfully');
-        // You can also reset the form or perform any other actions here
-      } else {
-        // Email sending failed
-        console.error('Email sending failed');
-        // Handle the error or display a message to the user
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-      // Handle the error
-    }
-  };
-	const renderErrorEmail = (error) => {
-		if (error && state.showAllErrors) {
+	parsePhoneNumber = (value) => {
+	if (value) {
+		// Remove all non-numeric characters from the input
+		return value.replace(/\D/g, '');
+	}
+	
+	return ''; // Return an empty string for undefined or null values
+	};
+	onSubmit = async (values) => {
+		const formData = {
+		  ...values, // Include the form values
+		  recaptcha: this.state.recaptchaChecked,
+		  agreeToTerms: this.state.agreeToTerms,
+		};
+	  
+		try {
+			let csrfToken = null;
+			document.addEventListener("DOMContentLoaded", function() {
+				csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+				// Use csrfToken as needed
+				});
+		  // Send a POST request to your Rails endpoint with the CSRF token
+		  const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
+			method: 'POST',
+			headers: {
+			  'Content-Type': 'application/json',
+			  'X-CSRF-Token': csrfToken, // Include the CSRF token in the headers
+			},
+			body: JSON.stringify(formData),
+		  });
+	  
+		  if (response.ok) {
+			// Email sent successfully
+			console.log('Email sent successfully');
+			// You can also reset the form or perform any other actions here
+		  } else {
+			// Email sending failed
+			console.error('Email sending failed');
+			// Handle the error or display a message to the user
+		  }
+		} catch (error) {
+		  console.error('Error sending email:', error);
+		  // Handle the error
+		}
+	  };
+	  
+	handleSubmitFunction(handleSubmit) {
+	}
+	renderIcon(icon) {
+		return <i style={{ marginRight: '0.5rem', alignSelf: 'center', color: 'black' }} class={icon}></i>
+	}
+	hideDropdown() {
+		if (!this.state.clickShowNewOrReturning) {
+			this.setState({ show: false });
+		}
+	}
+	showDropdown() {
+		this.setState({ show: true });
+	}
+	renderShow() {/*for Dropdown Menu*/
+		if (this.state.clickShowNewOrReturning) {
+			return "dropdown-basic-button-new-or-returning";
+		} else {
+			return "dropdown-basic-button-new-or-returning"
+		}
+	}
+	renderLocationsClicked() {
+		if (this.state.clickShowLocations) {
+			return "dropdown-basic-button-locations";
+		} else {
+			return "dropdown-basic-button-locations"
+		}
+	}
+	renderErrorEmail(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -164,8 +182,8 @@ function ChatBox(props) {
 			)
 		}
 	}
-	const renderErrorPhone = (error) => {
-		if (error && state.showAllErrors) {
+	renderErrorPhone(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -175,32 +193,8 @@ function ChatBox(props) {
 			)
 		}
 	}
-
-	const renderErrorFName = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorLName = (error) => {
-		if (error && state.showAllErrors) {
-
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorLocations = (error) => {
-		if (error && state.showAllErrors) {
+	renderErrorLocations(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
@@ -210,8 +204,8 @@ function ChatBox(props) {
 			)
 		}
 	}
-	const renderErrorNewOrReturning = (error) => {
-		if (error && state.showAllErrors) {
+	renderErrorNewOrReturning(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
@@ -221,8 +215,8 @@ function ChatBox(props) {
 			)
 		}
 	}
-	const renderErrorMessage = (error) => {
-		if (error && state.showAllErrors) {
+	renderErrorMessage(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -232,8 +226,8 @@ function ChatBox(props) {
 			)
 		}
 	}
-	const renderErrorRecaptcha = (error) => {
-		if (error && state.showAllErrors) {
+	renderErrorRecaptcha(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -243,8 +237,8 @@ function ChatBox(props) {
 			)
 		}
 	}
-	const renderErrorAgree = (error) => {
-		if (error && state.showAllErrors) {
+	renderErrorAgree(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -254,8 +248,8 @@ function ChatBox(props) {
 			)
 		}
 	}
-	const renderErrorMain = (error) => {
-		if (error && state.showAllErrors) {
+	renderErrorMain(error) {
+		if (error && this.state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -265,280 +259,306 @@ function ChatBox(props) {
 			)
 		}
 	}
-  const renderSendButton = (values, errors, form) => {
-    if (
-      values.fName ||
-      values.lName ||
-      values.email ||
-      values.phone ||
-      values.message ||
-      state.recaptchaChecked ||
-      state.agreeToTerms
-    ) {
-      if (Object.keys(errors).length === 0) {
-        return (
-          <button
-            id="chat-box-button-ready"
-            onClick={(e) => {
-              e.preventDefault();
-              onSubmit(values);
-              document.getElementById("chat-middle-component").style.opacity = '0%';
-              document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
-              document.getElementById("chatbox-div").style.opacity = '0%';
-              setTimeout(() => {
-                form.reset();
-                document.getElementById("chat-box-button-ready").style.opacity = '0%';
-              }, 3000);
+	checkDoneOnForm(typing) {
+		if (typing === 'location') {
+			if (this.state.emailDone) {
 
-              // !!!!!
-              // document.getElementById("giant icon guy")
-              // !!!!!
-            }}
-            type="submit"
-          >
-            SEND
-          </button>
-        );
-      } else {
-        return (
-          <button
-            id="chat-box-button-blue"
-            onClick={(e) => {
-              setState({ ...state, showAllErrors: true });
-              e.preventDefault();
-            }}
-            type="submit"
-          >
-            SEND
-          </button>
-        );
-      }
-    } else {
-      return (
-        <button
-          id="chat-box-button"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
-          type="submit"
-        >
-          SEND
-        </button>
-      );
-    }
-  };
+			}
+		}
+	}
+	validateField(field, value) {
+		if (field === 'fName') {
+			const passed = /^[a-z]+$/i.test(field);
+		}
+	}
+	inputChangeHandler(k) {
+	  this.setState({ [k]: true });
+	}
+	renderErrorFName(error) {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	renderErrorLName(error) {
+		if (error && this.state.showAllErrors) {
 
-  const renderBorderFName = (errors) => {
-    if (!errors.fName || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
-  };
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	renderSendButton(values, errors, form) {
+		if (
+			values.fName ||
+			values.lName ||
+			values.email ||
+			values.phone ||
+			values.message ||
+			this.state.recaptchaChecked ||
+			this.state.agreeToTerms
+		) {
+			if (Object.keys(errors).length === 0) {
+				return <button id="chat-box-button-ready" 
+					onClick={(e) => {
+						e.preventDefault();
+						this.onSubmit(values);
+						document.getElementById("chat-middle-component").style.opacity = '0%';
+						document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
+						document.getElementById("chatbox-div").style.opacity = '0%';
+						setTimeout(() => {
+							form.reset();
+							document.getElementById("chat-box-button-ready").style.opacity = '0%';
+						  }, 3000);
 
-  const renderBorderLName = (errors) => {
-    if (!errors.lName || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
-  };
 
-  const renderBorderEmail = (errors) => {
-    if (!errors.email || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
-  };
+						// !!!!!
+						// document.getElementById("giant icon guy")
+						// !!!!!
 
-  const renderBorderPhone = (errors) => {
-    if (!errors.phone || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
-  };
 
-  const renderBorderMessage = (errors) => {
-    if (!errors.message || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
-  };
+					}} type="submit">
+						SEND
+					</button>
+			} else {
+				return <button id="chat-box-button-blue" 
+					onClick={(e) => {
+						this.setState({ showAllErrors: true });
+						e.preventDefault();
+					}} type="submit">
+						SEND
+					</button>
+			}
+		} else {
+			return <button id="chat-box-button" 
+				onClick={(e) => {
+					e.preventDefault();
+				}} type="submit">
+					SEND
+				</button>
+		}
+	}
+	renderBorderFName(errors) {
+		if (!errors.fName || !this.state.showAllErrors) {
+			return "field-id";
+		} else {
+			return "field-id-red";
+		}
+	}
+	renderBorderLName(errors) {
+		if (!errors.lName || !this.state.showAllErrors) {
+			return "field-id";
+		} else {
+			return "field-id-red";
+		}
+	}
+	renderBorderEmail(errors) {
+		if (!errors.email || !this.state.showAllErrors) {
+			return "field-id";
+		} else {
+			return "field-id-red";
+		}
+	}
+	renderBorderPhone(errors) {
+		if (!errors.phone || !this.state.showAllErrors) {
+			return "field-id";
+		} else {
+			return "field-id-red";
+		}
+	}
+	renderBorderMessage(errors) {
+		if (!errors.message || !this.state.showAllErrors) {
+			return "field-id";
+		} else {
+			return "field-id-red";
+		}
+	}
+	render() {
+		return (
+			<Form 
+				validate={values => {
+					const errors = {};
+					let newObject = [];
+					
 
-  return (
-    <Form
-      validate={(values) => {
-        const errors = {};
-        let newObject = [];
+					if (!values.fName) {
+						errors.fName = "First Name is empty";
+					} else if (values.fName.length > 20) {
+						errors.fName = "First Name is too long";
+					} else if (!/^[a-z]+$/i.test(values.fName)) {
+						errors.fName = "First Name can only contain letters";
+					}
 
-        if (!values.fName) {
-          errors.fName = "First Name is empty";
-        } else if (values.fName.length > 20) {
-          errors.fName = "First Name is too long";
-        } else if (!/^[a-z]+$/i.test(values.fName)) {
-          errors.fName = "First Name can only contain letters";
-        }
+					if (!values.lName) {
+						errors.lName = "Last Name is empty";
+					} else if (values.lName.length > 30) {
+						errors.lName = "Last Name is too long";
+					} else if (!/^[a-z]+$/i.test(values.lName)) {
+						if (!values.lName.includes("-")) {
+							errors.lName = "Last Name can only contain letters";
+						}
+					}
 
-        if (!values.lName) {
-          errors.lName = "Last Name is empty";
-        } else if (values.lName.length > 30) {
-          errors.lName = "Last Name is too long";
-        } else if (!/^[a-z]+$/i.test(values.lName)) {
-          if (!values.lName.includes("-")) {
-            errors.lName = "Last Name can only contain letters";
-          }
-        }
+					if (!values.email) {
+						errors.email = "Email is empty";
+					} else if (values.email.length > 40) {
+						errors.email = "Email is too long";
+					} else if (!values.email.includes('@')) {
+						errors.email = "Please enter a valid email format";
+					}
 
-        if (!values.email) {
-          errors.email = "Email is empty";
-        } else if (values.email.length > 40) {
-          errors.email = "Email is too long";
-        } else if (!values.email.includes('@')) {
-          errors.email = "Please enter a valid email format";
-        }
+					if (!values.phone) {
+						errors.phone = "Phone is empty";
+					}
 
-        if (!values.phone) {
-          errors.phone = "Phone is empty";
-        }
+					if (!this.state.agreeToTerms) {
+						errors.agree = 'Please Agree To Terms & Conditions';
+					}
 
-        if (!state.agreeToTerms) {
-          errors.agree = 'Please Agree To Terms & Conditions';
-        }
+					if (!values.message) {
+						errors.message = "Message is empty";
+					} else if (values.message.length > 2000) {
+						errors.message = "Message is too long";
+					}
 
-        if (!values.message) {
-          errors.message = "Message is empty";
-        } else if (values.message.length > 2000) {
-          errors.message = "Message is too long";
-        }
+					if (!this.state.recaptchaChecked) {
+						errors.recaptcha = "Please Prove You're Not A Robot";
+					}
 
-        if (!state.recaptchaChecked) {
-          errors.recaptcha = "Please Prove You're Not A Robot";
-        }
+					return errors;
+				}}
+				onSubmit={this.onSubmit}
+			    render={({ props, handleSubmit, values, errors, form }) => (
+			        <form 
+                        className='popout-content'
+                        style={{ 
+                            display: 'flex',
+                            maxWidth: '80%',
+                            flexDirection: 'column',
+                            backgroundColor: 'white',
+                        }}
+                        onSubmit={handleSubmit} >
+                        <p style={{ fontWeight: '400', letterSpacing: '0.05rem', alignSelf: 'center', fontSize: '0.8rem', fontFamily: 'sans-serif', paddingTop: '10px' }}>CONTACT US</p>
+                        <h2 style={{ fontWeight: '400', letterSpacing: '0.01rem', alignSelf: 'center', fontFamily: 'sans-serif', padding: '10px 5px 0px 5px', marginBottom: '0px' }}>Send A Message To Los Angeles Orthopedic Surgery Specialists</h2>
+                        <p style={{ fontWeight: '400', alignSelf: 'center', fontSize: '0.9rem', padding: '10px 10px 0px 10px', maxWidth: '90%' }}>If you have any questions, concerns, or comments regarding Los Angeles Orthopedic Surgery Specialists, please fill out the short contact form below.</p>
+                        
+						<div style={{ maxWidth: '90%', alignSelf: 'center', padding: '10px 10px 0px 10px' }} id="chatbox-div">
+							<div id="chat-middle-component">
+								<div id="middle-form-top-div">
+							      	<div id="chat-form-top-div">
+							      		<div id="chat-form-inner-div">
+									       	<div id="chat-form-lines">
+                                                <Field
+                                                    key="fNameKey"
+                                                    id={this.renderBorderFName(errors)}
+                                                    style={{ borderRadius: '10px' }}
+                                                    name="fName"
+                                                    component="input" 
+                                                    placeholder="First Name"
+                                                />
+                                                <div style={{ marginBottom: '0.3rem' }}>
+                                                    {this.renderErrorFName(errors.fName)}
+                                                </div>
+                                            </div>
+									       	<div id="chat-form-lines">
+                                                <Field
+                                                    key="lNameKey"
+                                                    id={this.renderBorderLName(errors)}
+                                                    style={{ borderRadius: '10px' }}
+                                                    name="lName"
+                                                    component="input"
+                                                    placeholder="Last Name"
+                                                />
+                                                <div style={{ marginBottom: '0.3rem' }}>
+                                                    {this.renderErrorLName(errors.lName)}
+                                                </div>
+											</div>
+									        <div id="chat-form-lines">
+									          	<Field
+													key="emailKey"
+									          		id={this.renderBorderEmail(errors)}
+									          		style={{ borderRadius: '10px' }}
+									          		name="email"
+									          		component="input"
+									          		placeholder="Email address"
+									          	/>
+                                                <div style={{ marginBottom: '0.3rem' }}>
+                                                    {this.renderErrorEmail(errors.email)}
+                                                </div>
+									        </div>
+									        <div id="chat-form-lines">
+                                            <Field
+                                                id={this.renderBorderPhone(errors)}
+                                                style={{ padding: '0.5rem', borderRadius: '10px' }}
+                                                type="tel" // Use type="tel" for phone numbers
+                                                name="phone"
+                                                component="input"
+                                                placeholder="(•••) ••• ••••"
+                                                parse={this.parsePhoneNumber} // Parse the phone number
+                                                format={this.formatPhoneNumber} // Format the phone number
+                                            />									        
+                                            <div style={{ marginBottom: '0.3rem' }}>
+                                                {this.renderErrorPhone(errors.phone)}
+                                            </div>
+											</div>
+									    </div>
+										{this.renderErrorMain(this.state.errorMain)}
+							      	</div>
+								</div>
+							</div>
+							<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
+                                <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
+                                    <Field id={this.renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%',  padding: '0.5rem 0.5rem 0rem 0.5rem'  }}  name="message" component="textarea" rows="5" placeholder="Comments" />
+                                    {this.renderErrorMessage(errors.message)}
+                                </div>
+								<div style={{ displa: 'flex',flexDirection: 'column' }}>
+									<div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+										<div id="terms-and-policy">
+											<label>
+												<input
+													type="checkbox"
+													name="terms"
+													style={{ transform: 'scale(2)' }}
+													checked={this.state.agreeToTerms}
+													onChange={this.handleAgreeChange}
+													/>
+											</label>
+										</div>
+										<div id="terms-and-policy">
+											By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
+										</div>
+									</div>
+									<div style={{ marginBottom: '0.3rem' }}>
+										{this.renderErrorAgree(errors.agree)}
+									</div>
+                                </div>
+								<ReCAPTCHA
+									className='g-recaptcha'
+									sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
+									onChange={this.handleSubmitRecaptcha}
+								/>
+								<div style={{ marginBottom: '0.3rem' }}>
+									{this.renderErrorRecaptcha(errors.recaptcha)}
+								</div>
+                            </div>
 
-        return errors;
-      }}
-      onSubmit={onSubmit}
-      render={({ props, handleSubmit, values, errors, form }) => (
-        <form
-          className='popout-content'
-          style={{
-            display: 'flex',
-            maxWidth: '80%',
-            flexDirection: 'column',
-            backgroundColor: 'white',
-          }}
-          onSubmit={handleSubmit}>
-          <p style={{ fontWeight: '400', letterSpacing: '0.05rem', alignSelf: 'center', fontSize: '0.8rem', fontFamily: 'sans-serif', paddingTop: '10px' }}>CONTACT US</p>
-          <h2 style={{ fontWeight: '400', letterSpacing: '0.01rem', alignSelf: 'center', fontFamily: 'sans-serif', padding: '10px 5px 0px 5px', marginBottom: '0px' }}>Send A Message To Los Angeles Orthopedic Surgery Specialists</h2>
-          <p style={{ fontWeight: '400', alignSelf: 'center', fontSize: '0.9rem', padding: '10px 10px 0px 10px', maxWidth: '90%' }}>If you have any questions, concerns, or comments regarding Los Angeles Orthopedic Surgery Specialists, please fill out the short contact form below.</p>
-
-          <div style={{ maxWidth: '90%', alignSelf: 'center', padding: '10px 10px 0px 10px' }} id="chatbox-div">
-            <div id="chat-middle-component">
-              <div id="middle-form-top-div">
-                <div id="chat-form-top-div">
-                  <div id="chat-form-inner-div">
-                    <div id="chat-form-lines">
-                      <Field
-                        key="fNameKey"
-                        id={renderBorderFName(errors)}
-                        style={{ borderRadius: '10px' }}
-                        name="fName"
-                        component="input"
-                        placeholder="First Name"
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorFName(errors.fName)}
-                      </div>
-                    </div>
-                    <div id="chat-form-lines">
-                      <Field
-                        key="lNameKey"
-                        id={renderBorderLName(errors)}
-                        style={{ borderRadius: '10px' }}
-                        name="lName"
-                        component="input"
-                        placeholder="Last Name"
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorLName(errors.lName)}
-                      </div>
-                    </div>
-                    <div id="chat-form-lines">
-                      <Field
-                        key="emailKey"
-                        id={renderBorderEmail(errors)}
-                        style={{ borderRadius: '10px' }}
-                        name="email"
-                        component="input"
-                        placeholder="Email address"
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorEmail(errors.email)}
-                      </div>
-                    </div>
-                    <div id="chat-form-lines">
-                      <Field
-                        id={renderBorderPhone(errors)}
-                        style={{ padding: '0.5rem', borderRadius: '10px' }}
-                        type="tel" // Use type="tel" for phone numbers
-                        name="phone"
-                        component="input"
-                        placeholder="(•••) ••• ••••"
-                        parse={parsePhoneNumber} // Parse the phone number
-                        format={formatPhoneNumber} // Format the phone number
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorPhone(errors.phone)}
-                      </div>
-                    </div>
-                  </div>
-                  {renderErrorMain(state.errorMain)}
-                </div>
-              </div>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
-              <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
-                <Field id={renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%', padding: '0.5rem 0.5rem 0rem 0.5rem' }} name="message" component="textarea" rows="5" placeholder="Comments" />
-                {renderErrorMessage(errors.message)}
-              </div>
-              <div style={{ displa: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                  <div id="terms-and-policy">
-                    <label>
-                      <input
-                        type="checkbox"
-                        name="terms"
-                        style={{ transform: 'scale(2)' }}
-                        checked={state.agreeToTerms}
-                        onChange={handleAgreeChange}
-                      />
-                    </label>
-                  </div>
-                  <div id="terms-and-policy">
-                    By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
-                  </div>
-                </div>
-                <div style={{ marginBottom: '0.3rem' }}>
-                  {renderErrorAgree(errors.agree)}
-                </div>
-              </div>
-              <ReCAPTCHA
-                className='g-recaptcha'
-                sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
-                onChange={handleSubmitRecaptcha}
-              />
-              <div style={{ marginBottom: '0.3rem' }}>
-                {renderErrorRecaptcha(errors.recaptcha)}
-              </div>
-            </div>
-          </div>
-          {renderSendButton(values, errors, form)}
-        </form>
-      )}
-    />
-  );
-};
+						</div>
+                        {
+                            this.renderSendButton(values, errors, form)
+                        }
+			        </form>
+			    )}
+			  />
+		);
+	}
+}
 export default ChatBox;
