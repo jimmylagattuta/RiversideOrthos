@@ -58,6 +58,9 @@ const SinglePhysician = () => {
         if (cachedDataBeforeJson) {
             const cachedDataOne = JSON.parse(cachedDataBeforeJson);
             console.log('cachedDataOne', cachedDataOne);
+            console.log('cachedDataBeforeJson', cachedDataBeforeJson);
+            console.log('cachedDataOne.parse(cachedDataOne)', JSON.parse(cachedDataOne));
+
             // const cachedData = JSON.parse(cachedDataOne);
             // console.log('cachedData', cachedData);
             return cachedDataOne.map((review, index) => {

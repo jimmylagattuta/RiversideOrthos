@@ -153,7 +153,94 @@ function ChatBox(props) {
       // Handle the error
     }
   };
-
+	const renderErrorEmail = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorPhone = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorLocations = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorNewOrReturning = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorMessage = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorRecaptcha = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorAgree = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorMain = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
   const renderSendButton = (values, errors, form) => {
     if (
       values.fName ||
@@ -339,7 +426,7 @@ function ChatBox(props) {
                         placeholder="First Name"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {this.renderErrorFName(errors.fName)}
+                        {renderErrorFName(errors.fName)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
@@ -352,7 +439,7 @@ function ChatBox(props) {
                         placeholder="Last Name"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {this.renderErrorLName(errors.lName)}
+                        {renderErrorLName(errors.lName)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
@@ -365,7 +452,7 @@ function ChatBox(props) {
                         placeholder="Email address"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {this.renderErrorEmail(errors.email)}
+                        {renderErrorEmail(errors.email)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
@@ -380,18 +467,18 @@ function ChatBox(props) {
                         format={formatPhoneNumber} // Format the phone number
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {this.renderErrorPhone(errors.phone)}
+                        {renderErrorPhone(errors.phone)}
                       </div>
                     </div>
                   </div>
-                  {this.renderErrorMain(state.errorMain)}
+                  {renderErrorMain(state.errorMain)}
                 </div>
               </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
               <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
                 <Field id={renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%', padding: '0.5rem 0.5rem 0rem 0.5rem' }} name="message" component="textarea" rows="5" placeholder="Comments" />
-                {this.renderErrorMessage(errors.message)}
+                {renderErrorMessage(errors.message)}
               </div>
               <div style={{ displa: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
@@ -411,7 +498,7 @@ function ChatBox(props) {
                   </div>
                 </div>
                 <div style={{ marginBottom: '0.3rem' }}>
-                  {this.renderErrorAgree(errors.agree)}
+                  {renderErrorAgree(errors.agree)}
                 </div>
               </div>
               <ReCAPTCHA
@@ -420,7 +507,7 @@ function ChatBox(props) {
                 onChange={handleSubmitRecaptcha}
               />
               <div style={{ marginBottom: '0.3rem' }}>
-                {this.renderErrorRecaptcha(errors.recaptcha)}
+                {renderErrorRecaptcha(errors.recaptcha)}
               </div>
             </div>
           </div>
