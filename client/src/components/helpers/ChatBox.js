@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useCsrfToken } from '../CsrfTokenContext'; // Import the hook
+import { useCsrfToken,setCsrfToken } from '../CsrfTokenContext'; // Import the hook
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -41,7 +41,6 @@ function ChatBox(props) {
     errorRecaptcha: '',
     csrfToken: csrfToken
   });
-  console.log('state.csrfToken 2', state.csrfToken);
 
   useEffect(() => {
     // Load and initialize reCAPTCHA
@@ -62,7 +61,35 @@ function ChatBox(props) {
     };
 
     loadRecaptchaScript();
+
+    if (!csrfToken) {
+      fetchCsrfToken();
+    }
   }, []);
+  const fetchCsrfToken = () => {
+    // Fetch the CSRF token from your server
+    const csrfUrl =
+      process.env.NODE_ENV === 'production'
+        ? 'https://your-production-url/csrf-token'
+        : 'http://localhost:3000/csrf-token';
+
+    fetch(csrfUrl)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Failed to fetch CSRF token');
+        }
+      })
+      .then((data) => {
+        if (data.csrf_token) {
+          setCsrfToken(data.csrf_token);
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching CSRF token:', error);
+      });
+  };
 
   const loadRecaptchaScript = () => {
     const script = document.createElement('script');
@@ -129,7 +156,6 @@ function ChatBox(props) {
       recaptcha: state.recaptchaChecked,
       agreeToTerms: state.agreeToTerms,
     };
-	console.log('state.csrfToken 1', state.csrfToken);
     try {
       const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
         method: 'POST',
@@ -285,8 +311,8 @@ function ChatBox(props) {
               onSubmit(values);
               document.getElementById("chat-middle-component").style.opacity = '0%';
               document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
-              document.getElementById("chatbox-div").style.opacity = '0%';
-			  document.getElementById("chat-box-button-ready").style.opacity = '0%';
+              document.getElementById("cif hatbox-div").style.opacity = '0%';
+			        document.getElementById("chat-box-button-ready").style.opacity = '0%';
               setTimeout(() => {
                 form.reset();
               }, 3000);

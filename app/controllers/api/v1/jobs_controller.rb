@@ -5,10 +5,6 @@ class Api::V1::JobsController < ApplicationController
 
   def pull_google_places_cache
     csrf_token = form_authenticity_token
-    puts "csrf_token"
-    puts csrf_token
-    puts "csrf_token.inspect"
-    puts csrf_token.inspect
     reviews = GooglePlacesCached.cached_google_places_reviews
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
