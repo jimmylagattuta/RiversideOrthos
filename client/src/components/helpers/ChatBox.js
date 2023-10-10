@@ -81,6 +81,7 @@ function ChatBox(props) {
     };
   
     fetch(url, { headers })
+
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -188,7 +189,7 @@ function ChatBox(props) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRF-Token': state.csrfToken,
+          'X-CSRF-Token': csrfToken,
         },
         body: JSON.stringify(formData),
       });
