@@ -44,10 +44,15 @@ class ChatBox extends Component {
 				errorRecaptcha: ''
 		}
     }
-    componentDidMount() {
-        // Load the reCAPTCHA script
-        // this.loadRecaptchaScript();
-      }
+	componentDidMount() {
+		// Access the CSRF token from the HTML document's <head>
+		const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+		
+		// Now, you have the CSRF token in the `csrfToken` variable
+		console.log("CSRF Token:", csrfToken);
+		
+		// You can store it in the component's state or use it in your fetch requests
+	  }
 
     loadRecaptchaScript() {
         const script = document.createElement('script');
@@ -315,9 +320,9 @@ class ChatBox extends Component {
 						document.getElementById("chat-middle-component").style.opacity = '0%';
 						document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
 						document.getElementById("chatbox-div").style.opacity = '0%';
-						document.getElementById("chat-box-button-ready").style.opacity = '0%';
 						setTimeout(() => {
 							form.reset();
+							document.getElementById("chat-box-button-ready").style.opacity = '0%';
 						  }, 3000);
 
 
