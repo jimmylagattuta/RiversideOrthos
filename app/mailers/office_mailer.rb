@@ -1,5 +1,5 @@
 class OfficeMailer < ApplicationMailer
-    default from: 'unitymskwebsite@gmail.com' # Set your default sender email address
+    default from: 'unitymskwebsites@gmail.com' # Set your default sender email address
   
     # Method for sending the contact form submission email
     def contact_us_email(form_data)
