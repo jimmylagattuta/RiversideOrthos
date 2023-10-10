@@ -74,7 +74,7 @@ const CompanyReviewsPage = () => {
                 if (typeof data.reviews === 'string') {
                   // Parse the JSON string into an array
                   const reviewsArray = JSON.parse(data.reviews);
-          
+                  const csrfToken = JSON.parse(data.csrf_token);
                   // Filter reviews with the default profile photo URLs
                   const filteredReviews = reviewsArray.filter(
                     (item) =>
