@@ -106,15 +106,37 @@ class ChatBox extends Component {
 	
 	return ''; // Return an empty string for undefined or null values
 	};
-	onSubmit(values) {
+	onSubmit = (values) => {
 		const formData = {
-			values,
-			recaptcha: this.state.recaptchaToken,
-			agreeToTerms: this.state.agreeToTerms,
+		  ...values, // Include the form values
+		  recaptcha: this.state.recaptchaToken,
+		  agreeToTerms: this.state.agreeToTerms,
 		};
-		
-		console.log("Combined form data:", formData);
-	}
+	  
+		// Send a POST request to your Rails endpoint
+		fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
+		  method: 'POST',
+		  headers: {
+			'Content-Type': 'application/json',
+		  },
+		  body: JSON.stringify(formData),
+		})
+		  .then((response) => {
+			if (response.ok) {
+			  // Email sent successfully
+			  console.log('Email sent successfully');
+			  // You can also reset the form or perform any other actions here
+			} else {
+			  // Email sending failed
+			  console.error('Email sending failed');
+			  // Handle the error or display a message to the user
+			}
+		  })
+		  .catch((error) => {
+			console.error('Error sending email:', error);
+			// Handle the error
+		  });
+	  };
 	handleSubmitFunction(handleSubmit) {
 	}
 	renderIcon(icon) {
