@@ -175,6 +175,30 @@ function ChatBox(props) {
 			)
 		}
 	}
+
+	const renderErrorFName = (error) => {
+		if (error && this.state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorLName = (error) => {
+		if (error && this.state.showAllErrors) {
+
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
 	const renderErrorLocations = (error) => {
 		if (error && this.state.showAllErrors) {
 			return (
