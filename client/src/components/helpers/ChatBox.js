@@ -114,8 +114,9 @@ class ChatBox extends Component {
 		};
 	  
 		try {
+			let csrfToken = null;
 			document.addEventListener("DOMContentLoaded", function() {
-				const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+				csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 				// Use csrfToken as needed
 				});
 		  // Send a POST request to your Rails endpoint with the CSRF token
