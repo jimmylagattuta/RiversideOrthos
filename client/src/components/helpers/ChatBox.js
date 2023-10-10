@@ -1,5 +1,6 @@
 import react, { Component } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import { useCsrfToken } from '../CsrfTokenContext'; // Import the hook
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -10,7 +11,8 @@ import { Link } from 'react-router-dom';
 
 class ChatBox extends Component {
 	constructor(props){  
-	    super(props);  
+	    super(props);
+		const { csrfToken } = useCsrfToken();  
 	    this.state = {  
 	    		showDropdownLocations: false,
 	    		showDropdownNewOrReturning: false,
@@ -41,7 +43,8 @@ class ChatBox extends Component {
 				errorAgree: '',
                 recaptchaToken: '', // To store the reCAPTCHA token
 				recaptchaChecked: false,
-				errorRecaptcha: ''
+				errorRecaptcha: '',
+				csrfToken: csrfToken
 		}
     }
 	componentDidMount() {
@@ -119,18 +122,11 @@ class ChatBox extends Component {
 		};
 	  
 		try {
-			let csrfToken = null;
-			document.addEventListener("DOMContentLoaded", function() {
-				csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-				// Use csrfToken as needed
-				});
-		  // Send a POST request to your Rails endpoint with the CSRF token
-		//   console.log('csrfToken', csrfToken);
 		  const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',
-			//   'X-CSRF-Token': csrfToken, // Include the CSRF token in the headers
+			  'X-CSRF-Token': this.state.csrfToken,
 			},
 			body: JSON.stringify(formData),
 		  });
