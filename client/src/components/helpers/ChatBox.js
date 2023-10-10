@@ -129,7 +129,7 @@ class ChatBox extends Component {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json',
-			  'X-CSRF-Token': csrfToken, // Include the CSRF token in the headers
+			//   'X-CSRF-Token': csrfToken, // Include the CSRF token in the headers
 			},
 			body: JSON.stringify(formData),
 		  });
