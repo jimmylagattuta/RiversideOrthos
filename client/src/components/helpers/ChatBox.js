@@ -315,9 +315,9 @@ class ChatBox extends Component {
 						document.getElementById("chat-middle-component").style.opacity = '0%';
 						document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
 						document.getElementById("chatbox-div").style.opacity = '0%';
+						document.getElementById("chat-box-button-ready").style.opacity = '0%';
 						setTimeout(() => {
 							form.reset();
-							document.getElementById("chat-box-button-ready").style.opacity = '0%';
 						  }, 3000);
 
 
