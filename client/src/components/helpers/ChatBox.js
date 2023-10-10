@@ -352,7 +352,7 @@ function ChatBox(props) {
                         placeholder="Last Name"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorLName(errors.lName)}
+                        {this.renderErrorLName(errors.lName)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
@@ -365,7 +365,7 @@ function ChatBox(props) {
                         placeholder="Email address"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorEmail(errors.email)}
+                        {this.renderErrorEmail(errors.email)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
@@ -380,7 +380,7 @@ function ChatBox(props) {
                         format={formatPhoneNumber} // Format the phone number
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorPhone(errors.phone)}
+                        {this.renderErrorPhone(errors.phone)}
                       </div>
                     </div>
                   </div>
@@ -391,7 +391,7 @@ function ChatBox(props) {
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
               <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
                 <Field id={renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%', padding: '0.5rem 0.5rem 0rem 0.5rem' }} name="message" component="textarea" rows="5" placeholder="Comments" />
-                {renderErrorMessage(errors.message)}
+                {this.renderErrorMessage(errors.message)}
               </div>
               <div style={{ displa: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
@@ -411,7 +411,7 @@ function ChatBox(props) {
                   </div>
                 </div>
                 <div style={{ marginBottom: '0.3rem' }}>
-                  {renderErrorAgree(errors.agree)}
+                  {this.renderErrorAgree(errors.agree)}
                 </div>
               </div>
               <ReCAPTCHA
