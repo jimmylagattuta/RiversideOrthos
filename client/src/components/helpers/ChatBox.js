@@ -109,7 +109,7 @@ class ChatBox extends Component {
 	onSubmit = (values) => {
 		const formData = {
 		  ...values, // Include the form values
-		  recaptcha: this.state.recaptchaToken,
+		  recaptcha: this.state.recaptchaChecked,
 		  agreeToTerms: this.state.agreeToTerms,
 		};
 	  
@@ -296,7 +296,9 @@ class ChatBox extends Component {
 			values.lName ||
 			values.email ||
 			values.phone ||
-			values.message
+			values.message ||
+			this.state.recaptchaChecked ||
+			this.state.agreeToTerms
 		) {
 			if (Object.keys(errors).length === 0) {
 				return <button id="chat-box-button" 
