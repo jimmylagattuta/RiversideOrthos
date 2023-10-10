@@ -114,10 +114,10 @@ class ChatBox extends Component {
 		};
 	  
 		try {
-		  // Fetch the CSRF token from a meta tag
-		  const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-		  console.log('csrfToken', csrfToken);
-	  
+			document.addEventListener("DOMContentLoaded", function() {
+				const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+				// Use csrfToken as needed
+				});
 		  // Send a POST request to your Rails endpoint with the CSRF token
 		  const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
 			method: 'POST',
@@ -312,7 +312,7 @@ class ChatBox extends Component {
 			console.log('1');
 			if (Object.keys(errors).length === 0) {
 				console.log('2');
-				return <button id="chat-box-button" 
+				return <button id="chat-box-button-ready" 
 					onClick={(e) => {
 						e.preventDefault();
 						this.onSubmit(values);
