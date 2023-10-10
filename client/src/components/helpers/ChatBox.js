@@ -339,7 +339,7 @@ function ChatBox(props) {
                         placeholder="First Name"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorFName(errors.fName)}
+                        {this.renderErrorFName(errors.fName)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
