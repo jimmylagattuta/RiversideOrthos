@@ -57,43 +57,50 @@ const CompanyReviewsPage = () => {
 
         const fetchReviews = () => {
             const url =
-                process.env.NODE_ENV === 'production'
-                    ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
-                    : 'http://localhost:3000/api/v1/pull_google_places_cache';
-        
+              process.env.NODE_ENV === 'production'
+                ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
+                : 'http://localhost:3000/api/v1/pull_google_places_cache';
+          
             fetch(url)
-                .then((response) => {
-                    if (response.ok) {
-                        return response.json();
-                    } else {
-                        throw new Error('Failed to fetch reviews');
-                    }
-                })
-                .then((data) => {
-                    // Filter reviews with the default profile photo URLs
-                    console.log('data', data);
-                    const filteredReviews = data.reviews.filter(
-                        (item) =>
-                        !defaultProfilePhotoUrls.includes(
-                            item.profile_photo_url
-                            )
-                            );
-                            
-                            // Shuffle the filteredReviews array
-                            const shuffledReviews = shuffleArray(filteredReviews);
-                            
-                            // Take the first three reviews
-                            const randomReviews = shuffledReviews.slice(0, 3);
-                            saveToCache(data);
-                    setReviews(randomReviews);
-                    setLoading(false);
-                })
-                .catch((err) => {
-                    console.error(err);
-                    setError(err.message);
-                    setLoading(false);
-                });
-        };
+              .then((response) => {
+                if (response.ok) {
+                  return response.json();
+                } else {
+                  throw new Error('Failed to fetch reviews');
+                }
+              })
+              .then((data) => {
+                // Check if data.reviews is a string
+                if (typeof data.reviews === 'string') {
+                  // Parse the JSON string into an array
+                  const reviewsArray = JSON.parse(data.reviews);
+          
+                  // Filter reviews with the default profile photo URLs
+                  const filteredReviews = reviewsArray.filter(
+                    (item) =>
+                      !defaultProfilePhotoUrls.includes(item.profile_photo_url)
+                  );
+          
+                  // Shuffle the filteredReviews array
+                  const shuffledReviews = shuffleArray(filteredReviews);
+          
+                  // Take the first three reviews
+                  const randomReviews = shuffledReviews.slice(0, 3);
+          
+                  saveToCache(data);
+                  setReviews(randomReviews);
+                  setLoading(false);
+                } else {
+                  throw new Error('Data.reviews is not a string');
+                }
+              })
+              .catch((err) => {
+                console.error(err);
+                setError(err.message);
+                setLoading(false);
+              });
+          };
+          
         
         // Function to shuffle an array using the Fisher-Yates algorithm
         function shuffleArray(array) {
