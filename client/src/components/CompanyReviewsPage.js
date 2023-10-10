@@ -85,7 +85,7 @@ const CompanyReviewsPage = () => {
           
                 // Take the first three reviews
                 const randomReviews = shuffledReviews.slice(0, 3);
-          
+                console.log('csrfToken', csrfToken);
                 saveToCache(data);
                 setReviews(randomReviews);
                 setLoading(false);

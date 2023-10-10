@@ -125,6 +125,7 @@ class ChatBox extends Component {
 				// Use csrfToken as needed
 				});
 		  // Send a POST request to your Rails endpoint with the CSRF token
+		//   console.log('csrfToken', csrfToken);
 		  const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
 			method: 'POST',
 			headers: {
