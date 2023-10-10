@@ -70,29 +70,25 @@ const CompanyReviewsPage = () => {
                 }
               })
               .then((data) => {
-                // Check if data.reviews is a string
-                if (typeof data.reviews === 'string') {
-                  // Parse the JSON string into an array
-                  const reviewsArray = JSON.parse(data.reviews);
-                  const csrfToken = JSON.parse(data.csrf_token);
-                  // Filter reviews with the default profile photo URLs
-                  const filteredReviews = reviewsArray.filter(
-                    (item) =>
-                      !defaultProfilePhotoUrls.includes(item.profile_photo_url)
-                  );
+                // Use data.reviews and data.csrf_token directly
+                const reviewsArray = JSON.parse(data.reviews);
+                const csrfToken = data.csrf_token;
           
-                  // Shuffle the filteredReviews array
-                  const shuffledReviews = shuffleArray(filteredReviews);
+                // Filter reviews with the default profile photo URLs
+                const filteredReviews = reviewsArray.filter(
+                  (item) =>
+                    !defaultProfilePhotoUrls.includes(item.profile_photo_url)
+                );
           
-                  // Take the first three reviews
-                  const randomReviews = shuffledReviews.slice(0, 3);
+                // Shuffle the filteredReviews array
+                const shuffledReviews = shuffleArray(filteredReviews);
           
-                  saveToCache(data);
-                  setReviews(randomReviews);
-                  setLoading(false);
-                } else {
-                  throw new Error('Data.reviews is not a string');
-                }
+                // Take the first three reviews
+                const randomReviews = shuffledReviews.slice(0, 3);
+          
+                saveToCache(data);
+                setReviews(randomReviews);
+                setLoading(false);
               })
               .catch((err) => {
                 console.error(err);
@@ -100,6 +96,7 @@ const CompanyReviewsPage = () => {
                 setLoading(false);
               });
           };
+          
           
         
         // Function to shuffle an array using the Fisher-Yates algorithm
