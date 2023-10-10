@@ -72,7 +72,7 @@ const CompanyReviewsPage = () => {
                 .then((data) => {
                     // Filter reviews with the default profile photo URLs
                     console.log('data', data);
-                    const filteredReviews = data.filter(
+                    const filteredReviews = data.reviews.filter(
                         (item) =>
                         !defaultProfilePhotoUrls.includes(
                             item.profile_photo_url
