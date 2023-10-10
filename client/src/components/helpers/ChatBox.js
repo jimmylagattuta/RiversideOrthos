@@ -154,7 +154,7 @@ function ChatBox(props) {
     }
   };
 	const renderErrorEmail = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -165,7 +165,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorPhone = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -177,7 +177,7 @@ function ChatBox(props) {
 	}
 
 	const renderErrorFName = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -188,7 +188,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorLName = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 
 			return (
 				<div id="error-div">
@@ -200,7 +200,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorLocations = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
@@ -211,7 +211,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorNewOrReturning = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
@@ -222,7 +222,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorMessage = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -233,7 +233,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorRecaptcha = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -244,7 +244,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorAgree = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -255,7 +255,7 @@ function ChatBox(props) {
 		}
 	}
 	const renderErrorMain = (error) => {
-		if (error && this.state.showAllErrors) {
+		if (error && state.showAllErrors) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
