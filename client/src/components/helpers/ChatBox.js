@@ -71,7 +71,7 @@ function ChatBox(props) {
     // Fetch the CSRF token from your server
     const csrfUrl =
       process.env.NODE_ENV === 'production'
-        ? 'https://your-production-url/csrf-token'
+        ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
         : 'http://localhost:3000/csrf-token';
 
     fetch(csrfUrl)
