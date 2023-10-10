@@ -64,7 +64,6 @@ const CompanyReviewsPage = () => {
             fetch(url)
                 .then((response) => {
                     if (response.ok) {
-                        console.log('response', response.json());
                         return response.json();
                     } else {
                         throw new Error('Failed to fetch reviews');
@@ -72,19 +71,20 @@ const CompanyReviewsPage = () => {
                 })
                 .then((data) => {
                     // Filter reviews with the default profile photo URLs
+                    console.log('data', data);
                     const filteredReviews = data.filter(
                         (item) =>
-                            !defaultProfilePhotoUrls.includes(
-                                item.profile_photo_url
+                        !defaultProfilePhotoUrls.includes(
+                            item.profile_photo_url
                             )
-                    );
-        
-                    // Shuffle the filteredReviews array
-                    const shuffledReviews = shuffleArray(filteredReviews);
-        
-                    // Take the first three reviews
-                    const randomReviews = shuffledReviews.slice(0, 3);
-                    saveToCache(data);
+                            );
+                            
+                            // Shuffle the filteredReviews array
+                            const shuffledReviews = shuffleArray(filteredReviews);
+                            
+                            // Take the first three reviews
+                            const randomReviews = shuffledReviews.slice(0, 3);
+                            saveToCache(data);
                     setReviews(randomReviews);
                     setLoading(false);
                 })
