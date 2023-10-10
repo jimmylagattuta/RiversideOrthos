@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useCsrfToken } from './CsrfTokenContext'; // Import the hook
+
 
 const CompanyReviewsPage = () => {
     const [reviews, setReviews] = useState([]);
