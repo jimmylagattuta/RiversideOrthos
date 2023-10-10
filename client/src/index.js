@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import { CsrfTokenProvider } from './CsrfTokenContext';
+import { CsrfTokenProvider } from '../components/CsrfTokenContext';
 
 const rootElement = document.getElementById('root');
 
