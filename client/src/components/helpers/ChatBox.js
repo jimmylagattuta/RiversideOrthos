@@ -298,9 +298,6 @@ class ChatBox extends Component {
 		}
 	}
 	renderSendButton(values, errors, form) {
-		console.log('values', values);
-		console.log('errors', errors);
-		console.log('form', form);
 		if (
 			values.fName ||
 			values.lName ||
@@ -310,9 +307,7 @@ class ChatBox extends Component {
 			this.state.recaptchaChecked ||
 			this.state.agreeToTerms
 		) {
-			console.log('1');
 			if (Object.keys(errors).length === 0) {
-				console.log('2');
 				return <button id="chat-box-button-ready" 
 					onClick={(e) => {
 						e.preventDefault();
@@ -320,6 +315,7 @@ class ChatBox extends Component {
 						document.getElementById("chat-middle-component").style.opacity = '0%';
 						document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
 						document.getElementById("chatbox-div").style.opacity = '0%';
+						document.getElementById("chat-box-button-ready").style.opacity = '0%';
 						setTimeout(() => {
 							form.reset();
 						  }, 3000);
@@ -334,7 +330,6 @@ class ChatBox extends Component {
 						SEND
 					</button>
 			} else {
-				console.log('3');
 				return <button id="chat-box-button-blue" 
 					onClick={(e) => {
 						this.setState({ showAllErrors: true });
@@ -344,7 +339,6 @@ class ChatBox extends Component {
 					</button>
 			}
 		} else {
-			console.log('4');
 			return <button id="chat-box-button" 
 				onClick={(e) => {
 					e.preventDefault();

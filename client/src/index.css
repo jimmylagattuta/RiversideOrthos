@@ -1333,7 +1333,7 @@ display: none;
     color: black;
     align-self: center;
     font-size: 0.9rem;
-    opacity: 100%;
+    opacity: 80%;
     align-items: center;
     justify-content: center;
   }
@@ -1372,6 +1372,9 @@ display: none;
 }
 #chat-box-button-blue:active {
   transform: translateY(0.8px);
+}
+#chat-box-button-ready:active {
+    transform: translateY(0.8px);
 }
 #touchable {
   opacity: 60%;
