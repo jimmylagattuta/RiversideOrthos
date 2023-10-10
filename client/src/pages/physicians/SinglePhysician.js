@@ -2,9 +2,14 @@ import { Link, useParams } from 'react-router-dom';
 import { physicians } from '../../data';
 const SinglePhysician = () => {
     const { physicianId } = useParams();
-    const physician = physicians.find(
-        (item) => item.name.split(' ')[0].toLowerCase() === physicianId
-    );
+    console.log('physicianId', physicianId);
+    const physician = physicians.find((item) => {
+        const [firstName, ...otherNames] = item.name.split(' ');
+        const lastName = otherNames.join(' ').replace(/\s/g, '-'); // Replace spaces with hyphens
+        const fullName = `${firstName}-${lastName}`.toLowerCase();
+        return fullName === physicianId;
+    });
+    
     const { bio, image, name, practiceEmphasis, specialProcedures } = physician;
     const cacheKey = 'cached_yelp_reviews';
     const formatDate = (dateString) => {
