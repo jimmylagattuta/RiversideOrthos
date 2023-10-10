@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useCsrfToken,setCsrfToken } from '../CsrfTokenContext'; // Import the hook
+import { useCsrfToken } from '../CsrfTokenContext'; // Import the hook
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -8,7 +8,7 @@ import { Form, Field } from 'react-final-form';
 import { Link } from 'react-router-dom';
 
 function ChatBox(props) {
-  const { csrfToken } = useCsrfToken();
+  const { csrfToken,setCsrfToken } = useCsrfToken();
 
   const [state, setState] = useState({
     showDropdownLocations: false,
@@ -39,7 +39,8 @@ function ChatBox(props) {
     recaptchaToken: '',
     recaptchaChecked: false,
     errorRecaptcha: '',
-    csrfToken: csrfToken
+    csrfToken: csrfToken,
+    setCsrfToken: setCsrfToken
   });
 
   useEffect(() => {
