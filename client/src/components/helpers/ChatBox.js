@@ -384,7 +384,7 @@ function ChatBox(props) {
                       </div>
                     </div>
                   </div>
-                  {renderErrorMain(state.errorMain)}
+                  {this.renderErrorMain(state.errorMain)}
                 </div>
               </div>
             </div>
@@ -420,7 +420,7 @@ function ChatBox(props) {
                 onChange={handleSubmitRecaptcha}
               />
               <div style={{ marginBottom: '0.3rem' }}>
-                {renderErrorRecaptcha(errors.recaptcha)}
+                {this.renderErrorRecaptcha(errors.recaptcha)}
               </div>
             </div>
           </div>
