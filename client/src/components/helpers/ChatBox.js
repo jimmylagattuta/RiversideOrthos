@@ -106,37 +106,43 @@ class ChatBox extends Component {
 	
 	return ''; // Return an empty string for undefined or null values
 	};
-	onSubmit = (values) => {
+	onSubmit = async (values) => {
 		const formData = {
 		  ...values, // Include the form values
 		  recaptcha: this.state.recaptchaChecked,
 		  agreeToTerms: this.state.agreeToTerms,
 		};
 	  
-		// Send a POST request to your Rails endpoint
-		fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
-		  method: 'POST',
-		  headers: {
-			'Content-Type': 'application/json',
-		  },
-		  body: JSON.stringify(formData),
-		})
-		  .then((response) => {
-			if (response.ok) {
-			  // Email sent successfully
-			  console.log('Email sent successfully');
-			  // You can also reset the form or perform any other actions here
-			} else {
-			  // Email sending failed
-			  console.error('Email sending failed');
-			  // Handle the error or display a message to the user
-			}
-		  })
-		  .catch((error) => {
-			console.error('Error sending email:', error);
-			// Handle the error
+		try {
+		  // Fetch the CSRF token from a meta tag
+		  const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+		  console.log('csrfToken', csrfToken);
+	  
+		  // Send a POST request to your Rails endpoint with the CSRF token
+		  const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
+			method: 'POST',
+			headers: {
+			  'Content-Type': 'application/json',
+			  'X-CSRF-Token': csrfToken, // Include the CSRF token in the headers
+			},
+			body: JSON.stringify(formData),
 		  });
+	  
+		  if (response.ok) {
+			// Email sent successfully
+			console.log('Email sent successfully');
+			// You can also reset the form or perform any other actions here
+		  } else {
+			// Email sending failed
+			console.error('Email sending failed');
+			// Handle the error or display a message to the user
+		  }
+		} catch (error) {
+		  console.error('Error sending email:', error);
+		  // Handle the error
+		}
 	  };
+	  
 	handleSubmitFunction(handleSubmit) {
 	}
 	renderIcon(icon) {
@@ -291,6 +297,9 @@ class ChatBox extends Component {
 		}
 	}
 	renderSendButton(values, errors, form) {
+		console.log('values', values);
+		console.log('errors', errors);
+		console.log('form', form);
 		if (
 			values.fName ||
 			values.lName ||
@@ -300,7 +309,9 @@ class ChatBox extends Component {
 			this.state.recaptchaChecked ||
 			this.state.agreeToTerms
 		) {
+			console.log('1');
 			if (Object.keys(errors).length === 0) {
+				console.log('2');
 				return <button id="chat-box-button" 
 					onClick={(e) => {
 						e.preventDefault();
@@ -322,6 +333,7 @@ class ChatBox extends Component {
 						SEND
 					</button>
 			} else {
+				console.log('3');
 				return <button id="chat-box-button-blue" 
 					onClick={(e) => {
 						this.setState({ showAllErrors: true });
@@ -331,6 +343,7 @@ class ChatBox extends Component {
 					</button>
 			}
 		} else {
+			console.log('4');
 			return <button id="chat-box-button" 
 				onClick={(e) => {
 					e.preventDefault();

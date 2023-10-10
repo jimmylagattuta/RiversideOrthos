@@ -7,6 +7,9 @@ class Api::V1::EmailController < ApplicationController
         # ...
 
         # Send the email using Action Mailer
+        puts "form_data"
+        puts form_data.inspect
+        puts "send_email_to_office(form_data)"
         if send_email_to_office(form_data)
           render json: { message: "Email sent successfully" }, status: :ok
         else
@@ -25,6 +28,7 @@ class Api::V1::EmailController < ApplicationController
         # Use the form_data to construct the email content
 
         # Example (you should customize this):
+        puts "OfficeMailer.contact_us_email(form_data).deliver_now"
         OfficeMailer.contact_us_email(form_data).deliver_now
 
         # Return true if the email was sent successfully, or false otherwise
