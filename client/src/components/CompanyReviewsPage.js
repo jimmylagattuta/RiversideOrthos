@@ -56,12 +56,20 @@ const CompanyReviewsPage = () => {
         };
 
         const fetchReviews = () => {
+            const { csrfToken, setCsrfToken } = useCsrfToken(); // Get the CSRF token and setter function from the context
+          
             const url =
               process.env.NODE_ENV === 'production'
                 ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
                 : 'http://localhost:3000/api/v1/pull_google_places_cache';
           
-            fetch(url)
+            // Include the CSRF token in the headers of your fetch request
+            const headers = {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': csrfToken,
+            };
+          
+            fetch(url, { headers })
               .then((response) => {
                 if (response.ok) {
                   return response.json();
@@ -70,25 +78,34 @@ const CompanyReviewsPage = () => {
                 }
               })
               .then((data) => {
-                // Use data.reviews and data.csrf_token directly
-                const reviewsArray = JSON.parse(data.reviews);
-                const csrfToken = data.csrf_token;
+                // Check if data.reviews is a string
+                if (typeof data.reviews === 'string') {
+                  // Parse the JSON string into an array
+                  const reviewsArray = JSON.parse(data.reviews);
           
-                // Filter reviews with the default profile photo URLs
-                const filteredReviews = reviewsArray.filter(
-                  (item) =>
-                    !defaultProfilePhotoUrls.includes(item.profile_photo_url)
-                );
+                  // Set the CSRF token in the context (if needed)
+                  if (data.csrf_token) {
+                    setCsrfToken(data.csrf_token);
+                  }
           
-                // Shuffle the filteredReviews array
-                const shuffledReviews = shuffleArray(filteredReviews);
+                  // Filter reviews with the default profile photo URLs
+                  const filteredReviews = reviewsArray.filter(
+                    (item) =>
+                      !defaultProfilePhotoUrls.includes(item.profile_photo_url)
+                  );
           
-                // Take the first three reviews
-                const randomReviews = shuffledReviews.slice(0, 3);
-                console.log('csrfToken', csrfToken);
-                saveToCache(data);
-                setReviews(randomReviews);
-                setLoading(false);
+                  // Shuffle the filteredReviews array
+                  const shuffledReviews = shuffleArray(filteredReviews);
+          
+                  // Take the first three reviews
+                  const randomReviews = shuffledReviews.slice(0, 3);
+          
+                  saveToCache(data);
+                  setReviews(randomReviews);
+                  setLoading(false);
+                } else {
+                  throw new Error('Data.reviews is not a string');
+                }
               })
               .catch((err) => {
                 console.error(err);
@@ -96,6 +113,7 @@ const CompanyReviewsPage = () => {
                 setLoading(false);
               });
           };
+          
           
           
         
