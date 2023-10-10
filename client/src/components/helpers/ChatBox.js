@@ -41,6 +41,7 @@ function ChatBox(props) {
     errorRecaptcha: '',
     csrfToken: csrfToken
   });
+  console.log('state.csrfToken 2', state.csrfToken);
 
   useEffect(() => {
     // Load and initialize reCAPTCHA
@@ -128,7 +129,7 @@ function ChatBox(props) {
       recaptcha: state.recaptchaChecked,
       agreeToTerms: state.agreeToTerms,
     };
-	console.log('state.csrfToken', state.csrfToken);
+	console.log('state.csrfToken 1', state.csrfToken);
     try {
       const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
         method: 'POST',
