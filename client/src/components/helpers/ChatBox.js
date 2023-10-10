@@ -46,10 +46,10 @@ class ChatBox extends Component {
     }
 	componentDidMount() {
 		// Access the CSRF token from the HTML document's <head>
-		const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+		// const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 		
 		// Now, you have the CSRF token in the `csrfToken` variable
-		console.log("CSRF Token:", csrfToken);
+		// console.log("CSRF Token:", csrfToken);
 		
 		// You can store it in the component's state or use it in your fetch requests
 	  }

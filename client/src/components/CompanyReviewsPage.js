@@ -64,6 +64,7 @@ const CompanyReviewsPage = () => {
             fetch(url)
                 .then((response) => {
                     if (response.ok) {
+                        console.log('response', response.json());
                         return response.json();
                     } else {
                         throw new Error('Failed to fetch reviews');
