@@ -509,7 +509,10 @@ img {
 
 /* PAGES STYLES */
 .pages-header {
-    /* background-image: url(https://i.imgur.com/R51cppU.webp); */
+    background-image: url(https://i.imgur.com/V3Vfsqi.webp);
+    background-size: contain;
+    background-position: top;
+    background-attachment: fixed;
     border-bottom: 5px solid rgb(243,74, 2);
     color: #fff;
     padding: 40px;
@@ -554,7 +557,7 @@ img {
 }
 
 .grid-item {
-    padding: 15px;
+    padding: 22px;
     width: calc(100% / 3);
 }
 
@@ -587,6 +590,10 @@ img {
 
 .physician-link {
     text-decoration: none;
+}
+
+.physician-link:active {
+    transform: translateY(2px) scale(0.95);
 }
 
 .physician-link .fas {
