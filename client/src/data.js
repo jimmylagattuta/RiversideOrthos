@@ -38,7 +38,9 @@ export const physicians = [
             "In addition to her clinical experience, Whitty has worked as a Medical Assistant in various healthcare settings, including Coastal Cardiology of OC, Damirchi Family Practice, and Coastal Care Urgent Care. She has also volunteered her time with organizations such as Ronald McDonald House of Long Island and Ellen’s Breast Cancer 5k Run.",
             "Whitty is certified as a Physician Assistant by the National Commission of Certification of Physician Assistants and is licensed to practice in both New York and California. She holds certifications in Advanced Cardiac Life Support, Basic Life Support, and Infection Control Barrier Protections. Whitty is a member of the New York State Society of Physician Assistants and the American Association of Physician Assistants."
         ],
-        image: 'https://i.imgur.com/eHszN7V.webp'
+        image: 'https://i.imgur.com/eHszN7V.webp',
+        imageMedium: 'https://i.imgur.com/bpLcmgn.webp'
+
     },
     {
         name: 'Raj Desai',
@@ -50,7 +52,8 @@ export const physicians = [
             "Among his professional pursuits, Dr. Desai was co-founder of a brain injury tele-rehabilitation clinic at Marianjoy Rehabilitation Hospital; pain medicine physician consultant; interventional pain physician; and physiatrist. ",
             "When not in the office, Dr. Desai likes to remain active and adventurous. He enjoys biking, hiking, and boxing, as well as spending time with his family and tasting a wide range of culinary cuisines."
         ],
-        image: 'https://i.imgur.com/YXq97Qa.webp'
+        image: 'https://i.imgur.com/YXq97Qa.webp',
+        imageMedium: 'https://i.imgur.com/DwvXv9d.webp'
     },
     {
         name: 'Kevin Pelton',
@@ -61,7 +64,8 @@ export const physicians = [
             "From complex to minimally invasive surgery, Dr. Pelton is an expert in his field. Many local orthopedic surgeons in Southern California refer complicated cases to Dr. Pelton due to his level of experience and outcomes. As an industry leader in orthopedic surgery, Dr. Kevin Pelton has transformed many of his patients’ lives and is ready to help them thrive and live pain-free.",
             "Dr. Pelton is available for patient care at the Los Angeles, Encino, and Valencia locations."
         ],
-        image: 'https://i.imgur.com/QD2lJt9.webp'
+        image: 'https://i.imgur.com/QD2lJt9.webp',
+        imageMedium: 'https://i.imgur.com/I3MNNjV.webp'
     },
     {
         name: 'Natalie Hammond',
@@ -73,7 +77,8 @@ export const physicians = [
             "Natalie brings extensive clinical experience to caring for her clients. After completing several rounds of physician assistant rotations in 2011, she started her journey in orthopedic medicine at First Choice Healthcare Medical Group.",
             "Natalie has an energy and passion for providing quality orthopedic care. She continues to hone her skills in orthopedic care."
         ],
-        image: 'https://i.imgur.com/AxgMPr1.webp'
+        image: 'https://i.imgur.com/AxgMPr1.webp',
+        imageMedium: 'https://i.imgur.com/Wy9nRnS.webp'
     },
     {
         name: 'Matthew D. Longacre',
@@ -83,7 +88,8 @@ export const physicians = [
             "Intrigued by the constant challenge to stay abreast of the latest technologies and procedures within the orthopedic specialty, Dr. Longacre enjoys interacting daily with patients and using his surgical skills to improve patient disabilities.",
             "Dr. Longacre is available for patient care at the Los Angeles, Encino, and Valencia locations."
         ],
-        image: 'https://i.imgur.com/FLfeSQg.webp'
+        image: 'https://i.imgur.com/FLfeSQg.webp',
+        imageMedium: 'https://i.imgur.com/8U6aM1l.webp'
     },
     {
         name: 'Michael Perrone',
@@ -94,7 +100,8 @@ export const physicians = [
             "Dr. Perrone is a committee member of the American Orthopaedic Society for Sports Medicine (AOSSM) and is an active member of the American Academy of Orthopaedic Surgeons (AAOS) and the American Orthopaedic Foot & Ankle Society (AOFAS). He has published research articles in several academic journals and has given talks at numerous national conferences.",
             "Outside of medicine, Dr. Perrone is an avid endurance athlete, having completed a dozen marathons, including Boston, Chicago, and New York, as well as multiple triathlons. He is particularly interested in lower extremity sports injuries and the care of athletes of all ages and abilities."
         ],
-        image: 'https://i.imgur.com/dEmopYX.webp'
+        image: 'https://i.imgur.com/dEmopYX.webp',
+        imageMedium: 'https://i.imgur.com/ePi5e2T.webp'
     },
     {
         name: 'Nora Nazarian',
@@ -104,7 +111,8 @@ export const physicians = [
             "She found her passion for orthopedic surgery during her first clinical clerkship at the Glendale Adventist Medical Center. As a physician associate, Nora is a medical provider able to work autonomously managing complex patient conditions and assist the Los Angeles Orthopedic Surgery Specialists surgeons in various procedures. She enjoys building lasting relationships with all patients and has experience treating pediatric patients in the private orthopedic office. She also manages the practice’s Worker’s Compensation patients. ",
             "Nora enjoys spending time with her family & friends, traveling, golfing, and exploring new restaurants. Nora is available for patient care at the Tarzana and Valencia location."
         ],
-        image: 'https://i.imgur.com/bmFp0yU.webp'
+        image: 'https://i.imgur.com/bmFp0yU.webp',
+        imageMedium: 'https://i.imgur.com/tXDWgIq.webp'
     },
     {
         name: 'David Barba',
@@ -114,7 +122,8 @@ export const physicians = [
             "Dr. Barba finds it rewarding to help patients return to activities they love but once thought were too painful or challenging to do. He values the importance of providing his patients with quality care for their individual needs.",
             "Dr. Barba is available for patient care at the East Los Angeles and Downtown Los Angeles locations."
         ],
-        image: 'https://i.imgur.com/64ccRXb.webp'
+        image: 'https://i.imgur.com/64ccRXb.webp',
+        imageMedium: 'https://i.imgur.com/cSmM1CQ.webp'
     },
     {
         name: 'Erik Dworsky',
@@ -125,7 +134,9 @@ export const physicians = [
             "Dr. Dworsky is a member of the American Academy of Orthopaedic Surgeons (AAOS) and the American Association of Hip and Knee Surgeons (AAHKS). He has numerous orthopedic publications in academic journals and has given talks at both national and international conferences.",
             "Dr. Dworsky is available for patient care at the Los Angeles and Santa Fe Springs locations."
         ],
-        image: 'https://i.imgur.com/sUbIV1X.webp'
+        image: 'https://i.imgur.com/sUbIV1X.webp',
+        imageMedium: 'https://i.imgur.com/RJgZDKh.webp'
+
     },
     {
         name: 'Michelle Sugi',
@@ -136,7 +147,8 @@ export const physicians = [
             "Dr. Sugi is committed to pioneering innovative approaches to complex pediatric and sports orthopedic conditions, including fractures, injuries, spine disorders, neuromuscular weakness, and hip, hand, and joint abnormalities. Dr. Sugi enjoys spending her free time with her family and friends. She enjoys traveling, hiking, swimming, skiing, and all outdoor activities.",
             "Dr. Sugi is available for patient care at the Los Angeles and Tarzana locations."
         ],
-        image: 'https://i.imgur.com/7uElbsh.webp'
+        image: 'https://i.imgur.com/7uElbsh.webp',
+        imageMedium: 'https://i.imgur.com/PhspEbm.webp'
     },
     {
         name: 'Danny Wang',
@@ -145,7 +157,8 @@ export const physicians = [
             "Dr. Wang graduated from the Western University College of Podiatric Medicine in Pomona, California, in 2018. He is qualified with a Doctor of Podiatric Medicine (DPM) degree, licensed by the state, and practicing within the scope of that license. Dr. Wang is particularly skilled in diagnosing and treating foot diseases and deformities. He can perform medical, surgical, and other operative procedures, prescribe corrective devices, and both prescribe and administer drugs and physical therapy.",
             "To better care for his patients, Dr. Wang accepts the Medicare-approved amount. Patients will not be billed for any more than the Medicare deductible and coinsurance."
         ],
-        image: 'https://i.imgur.com/tzeJoMZ.webp'
+        image: 'https://i.imgur.com/tzeJoMZ.webp',
+        imageMedium: 'https://i.imgur.com/ErYkO8z.webp'
     },
     {
         name: 'Menyoli Malafa',
@@ -155,7 +168,8 @@ export const physicians = [
             "Having more than nine years of diverse experience, especially in plastic and reconstructive surgery and hand surgery, Dr. Malafa performs all surgical hand procedures, including fracture repair, joint replacement, nerve, and tendon repair. He has vast experience in successful non-operative and rehabilitative treatment techniques that avoid surgery. He treats all patients, both young and old, with varied backgrounds, including the injured worker, non-athlete, and athlete, and takes pride in treating each patient as an individual and tailoring care to their specific needs and complaints.",
             "Dr. Malafa is available for patient care at the Los Angeles and Tarzana locations."
         ],
-        image: 'https://i.imgur.com/OKPNOKF.webp'
+        image: 'https://i.imgur.com/OKPNOKF.webp',
+        imageMedium: 'https://i.imgur.com/AyNLZUh.webp'
     },
     {
         name: 'Yixi Lu',
@@ -166,7 +180,8 @@ export const physicians = [
             "With experience in both clinical and academic settings, Dr. Lu has advanced skills in numerous areas of podiatric care. He brings experience in surgical reconstruction, external fixation, diabetic wound care, and limb salvage. Minimally invasive surgical procedures are also an area of focus.",
             "Patients rely on Dr. Lu for highly personalized care that aligns with their unique needs and goals. Many are so pleased with their results they introduce friends and family to the practice when foot and ankle issues arise."
         ],
-        image: 'https://i.imgur.com/sV3HLin.webp'
+        image: 'https://i.imgur.com/sV3HLin.webp',
+        imageMedium: 'https://i.imgur.com/yTGJC5j.webp'
     },
     {
         name: 'Yung Cho',
@@ -178,7 +193,8 @@ export const physicians = [
             "A proud member of the American Board of Orthopedic Surgeons, Dr. Cho continues to search for opportunities to refine and expand his surgical skills. He enjoys staying abreast of advancements within his field.",
             "Patients enjoy working with Dr. Cho as they move toward enhanced joint health. They find him to be a highly skilled specialist who also understands the power of personalized care."
         ],
-        image: 'https://i.imgur.com/8ez4TRw.webp'
+        image: 'https://i.imgur.com/8ez4TRw.webp',
+        imageMedium: 'https://i.imgur.com/MuRn5rI.webp'
     },
     {
         name: 'Brent Pickrell',
@@ -189,7 +205,8 @@ export const physicians = [
             "Dr. Pickrell enjoys spending time with his wife and two children in his spare time. He is also an avid golfer.",
             "Dr. Pickrell can see patients in East LA, Santa Fe Springs, Wilshire, and Tarzana."
         ],
-        image: 'https://i.imgur.com/bXoR4QJ.webp'
+        image: 'https://i.imgur.com/bXoR4QJ.webp',
+        imageMedium: 'https://i.imgur.com/p7z3Wfe.webp'
     },
     {
         name: 'Micheal Marcus',
@@ -201,7 +218,8 @@ export const physicians = [
             "Over the years, Dr. Marcus has held numerous academic positions, assisting others in their foot and ankle specialty training. He understands the importance of giving back to the academic community and furthering education and research.",
             "Patients appreciate the compassionate care they receive from Dr. Marcus. There is never any pressure to choose one treatment path over another, and patients receive full details on what to expect in terms of the procedure and the recovery process."
         ],
-        image: 'https://i.imgur.com/5lHGept.webp'
+        image: 'https://i.imgur.com/5lHGept.webp',
+        imageMedium: 'https://i.imgur.com/Q6A2PNI.webp'
     },
     {
         name: 'Sevag Bastian',
@@ -212,7 +230,8 @@ export const physicians = [
             "By partnering with patients, Dr. Bastian provides care for chronic pain, including arthritis, joint pain, and persistent neck and back pain. He offers cutting-edge treatment options in the form of regenerative medicine and other nonsurgical treatments like physical therapy and acupuncture. Dr. Bastian is also skilled in surgical solutions such as joint replacement and arthroscopic surgery.",
             "Committed to staying active in his field, Dr. Bastian is a member of the American Academy of Orthopaedic Surgeons and serves as an editor and peer reviewer for the Journal of Shoulder and Elbow Surgery. Dr. Bastian has numerous publications in academic journals and has presented to his peers on topics within the field of orthopedic surgery. He is also fluent in Spanish and Armenian, in addition to English, allowing him to serve a more diverse patient population. Call the office or request an appointment online to schedule a time to meet with Dr. Bastian."
         ],
-        image: 'https://i.imgur.com/PxmtBqo.webp'
+        image: 'https://i.imgur.com/PxmtBqo.webp',
+        imageMedium: 'https://i.imgur.com/Q6XMZva.webp'
     },
     {
         name: 'Siamak Yasmeh',
@@ -223,7 +242,8 @@ export const physicians = [
             "Away from work, Dr. Yasmeh enjoys mentoring surgeons in training, skiing, travel, and live music.",
             "He welcomes patients to schedule an appointment at Los Angeles Orthopedic Surgery Specialists in Santa Fe Springs, East Los Angeles, and Glendale."
         ],
-        image: 'https://i.imgur.com/9BrJjyn.webp'
+        image: 'https://i.imgur.com/9BrJjyn.webp',
+        imageMedium: 'https://i.imgur.com/CVbBua1.webp'
     },
     {
         name: 'Jason Kaushik',
@@ -234,7 +254,8 @@ export const physicians = [
             "Dr. Kaushik received training in various noninvasive and minimally invasive treatment approaches, including physical medicine and rehabilitation, interventional pain management, and minimally invasive surgery.",
             "Dr. Kaushik diagnoses and treats various musculoskeletal problems at Los Angeles Orthopedic Surgery Specialists in Santa Fe Springs, East Los Angeles, and Glendale. He welcomes anyone with chronic pain to schedule an appointment with the team."
         ],
-        image: 'https://i.imgur.com/15jcQyy.webp'
+        image: 'https://i.imgur.com/15jcQyy.webp',
+        imageMedium: 'https://i.imgur.com/Iw8gBbd.webp'
     },
     {
         name: 'Daniel Acevedo',
@@ -246,7 +267,8 @@ export const physicians = [
             "He continues to use evidence-based practices with the latest medical research and cutting-edge treatments to provide his patients with the best possible care. Dr. Acevedo’s skill set allows him to treat a wide array of patients, and he has a keen interest in treating competitive and recreational athletes. He specializes in minimally invasive shoulder replacements.",
             "Dr. Acevedo enjoys staying fit, working out, golfing, eating healthy, and spending time with his family and his dogs."
         ],
-        image: 'https://i.imgur.com/iJphX4d.webp'
+        image: 'https://i.imgur.com/iJphX4d.webp',
+        imageMedium: 'https://i.imgur.com/1ctDHWW.webp'
     },
     {
         name: 'Annie Yang',
@@ -256,7 +278,8 @@ export const physicians = [
             "Annie has extensive research experience, delving into the risks of vitamin D deficiency during pregnancy and the role of emotional health in addiction. She also has experience in occupational health.",
             "Patients enjoy working with Annie, in part because of her dedication to providing outstanding care that always places the patient’s unique needs as the overriding focus. A compassionate provider, she ensures each patient feels heard and understood as they navigate treatment."
         ],
-        image: 'https://i.imgur.com/hMChcLM.webp'
+        image: 'https://i.imgur.com/hMChcLM.webp',
+        imageMedium: 'https://i.imgur.com/465THjb.webp'
     },
     {
         name: 'Bryan Sandoval',
@@ -267,7 +290,8 @@ export const physicians = [
             "His professional experience includes a leadership role in a dermatology practice. With a focus on orthopedic sports medicine, Bryan also has significant experience addressing a wide range of orthopedic needs.",
             "Bryan is a proud member of the California Association of Physician Assistants and the American Academy of Physician Assistants. Community service work like providing high school sports physical exams and health screenings at an assisted living facility allow him to give back."
         ],
-        image: 'https://i.imgur.com/dD2Loba.webp'
+        image: 'https://i.imgur.com/dD2Loba.webp',
+        imageMedium: 'https://i.imgur.com/X6kduLV.webp'
     },
     {
         name: 'David Collazo',
@@ -279,7 +303,8 @@ export const physicians = [
             "Dr. Collazo uses a wide range of techniques to assist patients, relying on his advanced training and experience to deliver highly customized care. He finds his work deeply rewarding, and loves watching patients go on to thrive without pain and physical limitation.",
             "Remaining connected to his community is important to Dr. Collazo. He enjoys taking on roles with Baldwin Park Healthy Kids Program, San Gabriel Chamber of Commerce, and Alhambra Rotary Club."
         ],
-        image: 'https://i.imgur.com/hytDGBN.webp'
+        image: 'https://i.imgur.com/hytDGBN.webp',
+        imageMedium: 'https://i.imgur.com/U74jqAd.webp'
     },
     {
         name: 'David Moriel',
@@ -291,7 +316,9 @@ export const physicians = [
             "David enjoys staying up to date on the most current practice recommendations by attending continuing education courses based on the advanced critical care provider’s formation. During his spare time, David enjoys traveling, working out, reading, and spending time with family.",
             "David is available for patient care at the Los Angeles location."
         ],
-        image: 'https://i.imgur.com/EdrJ2sh.webp'
+        image: 'https://i.imgur.com/EdrJ2sh.webp',
+        imageMedium: 'https://i.imgur.com/WuBjGfD.webp'
+
     },
     {
         name: 'Daniel Rivas-Tejeda',
@@ -302,7 +329,8 @@ export const physicians = [
             "He continued his education at Los Angeles Valley College in Van Nuys, California, and received his physician assistant certificate through Riverside City College’s physician assistant program at Riverside County Regional Medical Center, now called Riverside University Health System Medical Center.",
             "He also served an orthopedic residency at Arrowhead Orthopedics and has extensive experience treating work-related injuries."
         ],
-        image: 'https://i.imgur.com/5R1qcJb.webp'
+        image: 'https://i.imgur.com/5R1qcJb.webp',
+        imageMedium: 'https://i.imgur.com/qkCtR1f.webp'
     },
     {
         name: 'Felipe Nunez',
@@ -313,7 +341,8 @@ export const physicians = [
             "He built on his skills through clinical rotations and practical experience in family medicine, emergency medicine, internal medicine, and general surgery. He started as a physician assistant with Family Care Specialist in Montebello for three years.",
             "Felipe is a proud member of the California Academy of PAs and the American Academy of Physician Assistants."
         ],
-        image: 'https://i.imgur.com/TKBoe5n.webp'
+        image: 'https://i.imgur.com/TKBoe5n.webp',
+        imageMedium: 'https://i.imgur.com/RPVdhmY.webp'
     },
     {
         name: 'John Giannini',
@@ -324,7 +353,8 @@ export const physicians = [
             "He followed this with an Associate of Applied Science degree from Cerritos College in Norwalk, California, and then completed his physician assistant credentials from the LAC+USC Medical Center in Los Angeles.",
             "Mr. Giannini also is part of Galloni Enterprises Medical Group Inc. in Los Angeles and Integrated Health Services Inc. in Santa Ana, California."
         ],
-        image: 'https://i.imgur.com/EDc3Fgg.webp'
+        image: 'https://i.imgur.com/EDc3Fgg.webp',
+        imageMedium: 'https://i.imgur.com/cWkcDle.webp'
     },
     {
         name: 'Jonathan Naick',
@@ -336,7 +366,8 @@ export const physicians = [
             "After completing his master’s, Jonathan worked as an assistant athletic trainer at Whittier College in Whittier, California, and then an athletic trainer and physical therapy aide at Gardena Physical Therapy in Gardena, California. He also realized a second calling within the world of orthopedic medicine.",
             "Jonathan completed a master of science in physician assistant studies in 2017 from Touro University in Vallejo, California. He currently continues his education at the University of Lynchburg in Lynchburg, Virginia, with a distance doctor of medical science program."
         ],
-        image: 'https://i.imgur.com/JVSapeo.webp'
+        image: 'https://i.imgur.com/JVSapeo.webp',
+        imageMedium: 'https://i.imgur.com/VU3k4Ta.webp'
     },
     {
         name: 'Michelle Chang',
@@ -345,7 +376,8 @@ export const physicians = [
             "She then completed the Post-Baccalaureate Pre-Medical Program at the University of Southern California where she also obtained her Master of Physician Assistant Practice.",
             "Michelle enjoys golfing and pilates."
         ],
-        image: 'https://i.imgur.com/mCccSXP.webp'
+        image: 'https://i.imgur.com/mCccSXP.webp',
+        imageMedium: 'https://i.imgur.com/hXrEpk8.webp'
     },
     {
         name: 'Mark Lee',
@@ -358,7 +390,8 @@ export const physicians = [
             "These experiences provide him with the necessary skills to treat a wide array of common acute conditions with incredible precision. Additionally, Mr. Lee helps manage chronic conditions with the proper medical examinations and supportive care.",
             "His patient-wellness approach comes full circle with his extensive knowledge of working in multicultural environments."
         ],
-        image: 'https://i.imgur.com/7EwZJd8.webp'
+        image: 'https://i.imgur.com/7EwZJd8.webp',
+        imageMedium: 'https://i.imgur.com/EA9r6UD.webp'
     },
     {
         name: 'Matt Cikra',
@@ -371,7 +404,8 @@ export const physicians = [
             "Dr. Cikra is a member of several professional organizations, including the American College of Foot & Ankle Surgeons and the American Academy of Podiatric Sports Medicine.",
             "He welcomes anyone suffering from foot or ankle pain to schedule an appointment at Los Angeles Orthopedic Surgery Specialists in Montebello, Santa Fe Springs, East Los Angeles, and Wilshire."
         ],
-        image: 'https://i.imgur.com/pWYLeGo.webp'
+        image: 'https://i.imgur.com/pWYLeGo.webp',
+        imageMedium: 'https://i.imgur.com/ZfNEpMF.webp'
     },
     {
         name: 'Matt Lee',
@@ -381,7 +415,8 @@ export const physicians = [
             "After graduation, Matt enrolled at the Southern California University of Health Sciences in Whittier, earning his master’s degree in the physician assistant program. Matt excelled in his studies, receiving training in emergency medicine, orthopedic surgery, and pain management.",
             "Before joining the team at Los Angeles Orthopedic Surgery Specialists, Matt worked as a patient care technician, phlebotomist, and patient services representative. He welcomes anyone suffering from musculoskeletal pain to Los Angeles Orthopedic Surgery Specialists in Glendale, East Los Angeles and Tarzana."
         ],
-        image: 'https://i.imgur.com/7FwA1eX.webp'
+        image: 'https://i.imgur.com/aGc5DAe.webp',
+        imageMedium: 'https://i.imgur.com/J7lJrSd.webp'
     }
 ];
 

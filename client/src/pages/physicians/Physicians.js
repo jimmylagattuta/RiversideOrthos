@@ -26,7 +26,7 @@ const Physicians = () => {
                                     }`}
                                 >
                                     <img
-                                        src={physician.image}
+                                        src={physician.imageMedium}
                                         alt={physician.name}
                                         className='grid-image'
                                     />
