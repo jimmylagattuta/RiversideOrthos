@@ -547,7 +547,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/Ml61WEi.webp',
+        image: 'https://i.imgur.com/eJYpk8G.webp',
         name: 'Shoulder Surgery',
         firstTitle: 'About Shoulder Surgery',
         description: [
@@ -624,7 +624,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/cRAxygj.webp',
+        image: 'https://i.imgur.com/AHavI6m.webp',
         name: 'Arthroscopy',
         firstTitle: 'About Arthroscopy',
         description: [
@@ -677,7 +677,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/R3QISDB.jpg',
+        image: 'https://i.imgur.com/kNfSdcm.webp',
         name: 'Knee Replacement Surgery',
         firstTitle: 'About Knee Replacement Surgery',
         description: [
@@ -750,7 +750,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/OT3wbCt.webp',
+        image: 'https://i.imgur.com/oM8DFV9.webp',
         name: 'ACL Reconstruction',
         firstTitle: 'About ACL Reconstruction',
         description: [
@@ -777,10 +777,24 @@ export const services = [
             "It does take several months to recover from any ACL injury, but with a customized rehab program, you can generally return to full activity following ACL reconstruction.",
             "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today by calling the nearest office or requesting an appointment online."
         ],
+        fifthTitle: "What is a Ligament?",
+        descriptionFive: [
+            "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
+            "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
+            "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
+        ],
+        sixthTitle: 'What happens during ligament reconstruction surgery?',
+        descriptionSix: [
+            "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
+            "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
+            "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
+            "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
+        ],
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/7GB0AQc.webp',
+        image: 'https://i.imgur.com/H5SJHUM.webp',
         name: 'Meniscus Repairs',
         firstTitle: 'About Meniscus Repairs',
         description: [
@@ -861,44 +875,44 @@ export const services = [
         ],
         link: '/services',
     },
-    {
-        image: 'https://i.imgur.com/oM8DFV9.webp',
-        name: 'Ligament Reconstruction',
-        firstTitle: 'About Ligament Reconstruction',
-        description: [
-            'Ligament reconstruction may be your best treatment option if you’re experiencing joint instability, pain, and limited mobility. The board-certified surgeons at Los Angeles Orthopedic Surgery Specialists provide optimal care for numerous common orthopedic issues, including minimally invasive ligament reconstruction for sprains and tears not responding to conservative treatments. Call one of their offices in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — to schedule your evaluation today or request an appointment online.'
-        ],
-        secondTitle: 'What is a ligament?',
-        descriptionTwo: [
-            "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
-            "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
-            "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
-        ],
-        thirdTitle: 'Why would I need ligament reconstruction?',
-        descriptionThree: [
-            "Ligaments that connect bones and stabilize joints are vulnerable to arthritic changes, sprains, and other damage that can affect their ability to function normally.",
-            "A mild ligament injury typically responds well to rest, ice, and anti-inflammatory medications that reduce pain and promote healing within a few weeks. However, severely stretched or torn ligaments often require surgical reconstruction to restore joint stability and appropriate range of motion.",
-            "Ligaments most often treated with reconstruction include the following:"
-        ],
-        thirdTitleBulletedList: [
-            "Anterior cruciate ligament (ACL) in the knee",
-            "Posterior cruciate ligament (PCL) in the knee",
-            "Lateral (outer) ankle ligament",
-            "Carpometacarpal (CMC) ligament where the thumb meets the wrist"
-        ],
-        descriptionAfterThirdBulletedList: [
-            "A stretched or weakened ligament may respond to suturing. However, replacement with tendon tissue from your own body (autograft) or donor tissue (allograft) is often necessary for partial or complete tendon tears."
-        ],
-        fourthTitle: 'What happens during ligament reconstruction surgery?',
-        descriptionFour: [
-            "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
-            "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
-            "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
-            "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
-            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
-        ],
-        link: '/services',
-    },
+    // {
+    //     image: 'https://i.imgur.com/oM8DFV9.webp',
+    //     name: 'Ligament Reconstruction',
+    //     firstTitle: 'About Ligament Reconstruction',
+    //     description: [
+    //         'Ligament reconstruction may be your best treatment option if you’re experiencing joint instability, pain, and limited mobility. The board-certified surgeons at Los Angeles Orthopedic Surgery Specialists provide optimal care for numerous common orthopedic issues, including minimally invasive ligament reconstruction for sprains and tears not responding to conservative treatments. Call one of their offices in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — to schedule your evaluation today or request an appointment online.'
+    //     ],
+    //     secondTitle: 'What is a ligament?',
+    //     descriptionTwo: [
+    //         "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
+    //         "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
+    //         "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
+    //     ],
+    //     thirdTitle: 'Why would I need ligament reconstruction?',
+    //     descriptionThree: [
+    //         "Ligaments that connect bones and stabilize joints are vulnerable to arthritic changes, sprains, and other damage that can affect their ability to function normally.",
+    //         "A mild ligament injury typically responds well to rest, ice, and anti-inflammatory medications that reduce pain and promote healing within a few weeks. However, severely stretched or torn ligaments often require surgical reconstruction to restore joint stability and appropriate range of motion.",
+    //         "Ligaments most often treated with reconstruction include the following:"
+    //     ],
+    //     thirdTitleBulletedList: [
+    //         "Anterior cruciate ligament (ACL) in the knee",
+    //         "Posterior cruciate ligament (PCL) in the knee",
+    //         "Lateral (outer) ankle ligament",
+    //         "Carpometacarpal (CMC) ligament where the thumb meets the wrist"
+    //     ],
+    //     descriptionAfterThirdBulletedList: [
+    //         "A stretched or weakened ligament may respond to suturing. However, replacement with tendon tissue from your own body (autograft) or donor tissue (allograft) is often necessary for partial or complete tendon tears."
+    //     ],
+    //     fourthTitle: 'What happens during ligament reconstruction surgery?',
+    //     descriptionFour: [
+    //         "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
+    //         "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
+    //         "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
+    //         "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
+    //         "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
+    //     ],
+    //     link: '/services',
+    // },
     {
         image: 'https://i.imgur.com/rZaoIFC.webp',
         name: 'Joint Injections',
@@ -1296,7 +1310,7 @@ export const expertiseBlocks = [
         spanString: 'Hand and Wrist Surgery'
     },
     {   
-        image: 'https://i.imgur.com/Ml61WEi.webp',
+        image: 'https://i.imgur.com/eJYpk8G.webp',
         width: '267px',
         height: '200px',
         name: 'Shoulder Surgery',
@@ -1334,7 +1348,7 @@ export const expertiseBlocks = [
             "To schedule your shoulder surgery, call Los Angeles Orthopedic Surgery Specialists or click on the online booking feature today."
         ],
         link: '/shoulderSurgery',
-        imageTwo: 'https://i.imgur.com/Ml61WEi.webp',
+        imageTwo: 'https://i.imgur.com/eJYpk8G.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Shoulder Surgery'
@@ -1385,7 +1399,7 @@ export const expertiseBlocks = [
         spanString: 'Sports Medicine'
     },
     {   
-        image: 'https://i.imgur.com/cRAxygj.webp',
+        image: 'https://i.imgur.com/AHavI6m.webp',
         width: '267px',
         height: '200px',
         name: 'Arthroscopy',
@@ -1438,13 +1452,13 @@ export const expertiseBlocks = [
             "Are you ready to learn more about arthroscopy? Click the online booking link or call the Los Angeles Orthopedic Surgery Specialists office near you now."
         ],
         link: '/arthroscopy',
-        imageTwo: 'https://i.imgur.com/cRAxygj.webp',
+        imageTwo: 'https://i.imgur.com/AHavI6m.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Arthroscopy'
     },
     {   
-        image: 'https://i.imgur.com/R3QISDB.jpg',
+        image: 'https://i.imgur.com/kNfSdcm.webp',
         width: '267px',
         height: '200px',
         name: 'Knee Replacement Surgery',
@@ -1474,7 +1488,7 @@ export const expertiseBlocks = [
             "Are you ready for knee pain relief? Call the Los Angeles Orthopedic Surgery Specialists office nearest to you or book your appointment using online scheduling now."
         ],
         link: '/kneeReplacementSurgery',
-        imageTwo: 'https://i.imgur.com/R3QISDB.jpg',
+        imageTwo: 'https://i.imgur.com/kNfSdcm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Knee Replacement Surgery'
@@ -1529,7 +1543,7 @@ export const expertiseBlocks = [
         spanString: 'Pain Management'
     },
     {   
-        image: 'https://i.imgur.com/OT3wbCt.webp',
+        image: 'https://i.imgur.com/oM8DFV9.webp',
         width: '267px',
         height: '200px',
         name: 'ACL Reconstruction',
@@ -1558,14 +1572,28 @@ export const expertiseBlocks = [
             "It does take several months to recover from any ACL injury, but with a customized rehab program, you can generally return to full activity following ACL reconstruction.",
             "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today by calling the nearest office or requesting an appointment online."
         ],
+        fifthTitle: "What is a Ligament?",
+        descriptionFive: [
+            "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
+            "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
+            "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
+        ],
+        sixthTitle: 'What happens during ligament reconstruction surgery?',
+        descriptionSix: [
+            "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
+            "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
+            "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
+            "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
+            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
+        ],
         link: '/aclReconstruction',
-        imageTwo: 'https://i.imgur.com/OT3wbCt.webp',
+        imageTwo: 'https://i.imgur.com/oM8DFV9.webp',
         component: 'Services',
         link: '/services',
         spanString: 'ACL Reconstruction'
     },
     {   
-        image: 'https://i.imgur.com/7GB0AQc.webp',
+        image: 'https://i.imgur.com/H5SJHUM.webp',
         width: '267px',
         height: '200px',
         name: 'Meniscus Repairs',
@@ -1602,7 +1630,7 @@ export const expertiseBlocks = [
             "Schedule your evaluation today. Call the office or request an appointment online."
         ],
         link: '/meniscusRepairs',
-        imageTwo: 'https://i.imgur.com/7GB0AQc.webp',
+        imageTwo: 'https://i.imgur.com/H5SJHUM.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Meniscus Repairs'
@@ -1658,50 +1686,50 @@ export const expertiseBlocks = [
         link: '/services',
         spanString: 'Arthritis Care'
     },
-    {   
-        image: 'https://i.imgur.com/oM8DFV9.webp',
-        width: '267px',
-        height: '200px',
-        name: 'Ligament Reconstruction',
-        firstTitle: 'About Ligament Reconstruction',
-        description: [
-            'Ligament reconstruction may be your best treatment option if you’re experiencing joint instability, pain, and limited mobility. The board-certified surgeons at Los Angeles Orthopedic Surgery Specialists provide optimal care for numerous common orthopedic issues, including minimally invasive ligament reconstruction for sprains and tears not responding to conservative treatments. Call one of their offices in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — to schedule your evaluation today or request an appointment online.'
-        ],
-        secondTitle: 'What is a ligament?',
-        descriptionTwo: [
-            "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
-            "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
-            "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
-        ],
-        thirdTitle: 'Why would I need ligament reconstruction?',
-        descriptionThree: [
-            "Ligaments that connect bones and stabilize joints are vulnerable to arthritic changes, sprains, and other damage that can affect their ability to function normally.",
-            "A mild ligament injury typically responds well to rest, ice, and anti-inflammatory medications that reduce pain and promote healing within a few weeks. However, severely stretched or torn ligaments often require surgical reconstruction to restore joint stability and appropriate range of motion.",
-            "Ligaments most often treated with reconstruction include the following:"
-        ],
-        thirdTitleBulletedList: [
-            "Anterior cruciate ligament (ACL) in the knee",
-            "Posterior cruciate ligament (PCL) in the knee",
-            "Lateral (outer) ankle ligament",
-            "Carpometacarpal (CMC) ligament where the thumb meets the wrist"
-        ],
-        descriptionAfterThirdBulletedList: [
-            "A stretched or weakened ligament may respond to suturing. However, replacement with tendon tissue from your own body (autograft) or donor tissue (allograft) is often necessary for partial or complete tendon tears."
-        ],
-        fourthTitle: 'What happens during ligament reconstruction surgery?',
-        descriptionFour: [
-            "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
-            "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
-            "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
-            "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
-            "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
-        ],
-        link: '/ligamentReconstruction',
-        imageTwo: 'https://i.imgur.com/oM8DFV9.webp',
-        component: 'Services',
-        link: '/services',
-        spanString: 'Ligament Reconstruction'
-    },
+    // {   
+    //     image: 'https://i.imgur.com/oM8DFV9.webp',
+    //     width: '267px',
+    //     height: '200px',
+    //     name: 'Ligament Reconstruction',
+    //     firstTitle: 'About Ligament Reconstruction',
+    //     description: [
+    //         'Ligament reconstruction may be your best treatment option if you’re experiencing joint instability, pain, and limited mobility. The board-certified surgeons at Los Angeles Orthopedic Surgery Specialists provide optimal care for numerous common orthopedic issues, including minimally invasive ligament reconstruction for sprains and tears not responding to conservative treatments. Call one of their offices in the Los Angeles area — Wilshire, East Los Angeles, Santa Fe Springs, Pico Rivera, Tarzana, Encino, Valencia, and Montebello, California — to schedule your evaluation today or request an appointment online.'
+    //     ],
+    //     secondTitle: 'What is a ligament?',
+    //     descriptionTwo: [
+    //         "Ligaments are bands of tough, somewhat stretchy tissue that connect bones and provide joint stability. There are about 900 ligaments in the human body, and most are found in the arms, hands, legs, and feet. Ligaments also help keep the liver, intestines, uterus, and other internal organs in place.",
+    //         "The ligaments involving your joints prevent dislocation while allowing the joint to move in its intended direction. Your knee, for instance, has four major ligaments that prevent the joint from moving side to side or bending backward as you walk, run, or jump.",
+    //         "Ankle ligaments connect your foot to your lower leg and prevent your ankle from collapsing or twisting, while those in your thumb and hand help you grasp and hold objects. Ligaments in your shoulder help hold it in place and provide an extensive range of motion that allows you to rotate the shoulder joint in a full circle."
+    //     ],
+    //     thirdTitle: 'Why would I need ligament reconstruction?',
+    //     descriptionThree: [
+    //         "Ligaments that connect bones and stabilize joints are vulnerable to arthritic changes, sprains, and other damage that can affect their ability to function normally.",
+    //         "A mild ligament injury typically responds well to rest, ice, and anti-inflammatory medications that reduce pain and promote healing within a few weeks. However, severely stretched or torn ligaments often require surgical reconstruction to restore joint stability and appropriate range of motion.",
+    //         "Ligaments most often treated with reconstruction include the following:"
+    //     ],
+    //     thirdTitleBulletedList: [
+    //         "Anterior cruciate ligament (ACL) in the knee",
+    //         "Posterior cruciate ligament (PCL) in the knee",
+    //         "Lateral (outer) ankle ligament",
+    //         "Carpometacarpal (CMC) ligament where the thumb meets the wrist"
+    //     ],
+    //     descriptionAfterThirdBulletedList: [
+    //         "A stretched or weakened ligament may respond to suturing. However, replacement with tendon tissue from your own body (autograft) or donor tissue (allograft) is often necessary for partial or complete tendon tears."
+    //     ],
+    //     fourthTitle: 'What happens during ligament reconstruction surgery?',
+    //     descriptionFour: [
+    //         "Your surgeon at Los Angeles Orthopedic Surgery Specialists discusses the procedure thoroughly before scheduling ligament reconstruction.",
+    //         "Generally, however, it’s a minimally invasive arthroscopic procedure performed via small puncture-like incisions or “portals” that your surgeon uses to insert a high-definition camera and surgical instruments.",
+    //         "The benefits of arthroscopic surgery compared with open or traditional surgery include smaller incisions, decreased postsurgical pain, and quicker healing.",
+    //         "Full recovery following ligament reconstruction can take several months, during which you participate in a rehabilitation program designed to promote joint health and protect you from future injury.",
+    //         "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
+    //     ],
+    //     link: '/ligamentReconstruction',
+    //     imageTwo: 'https://i.imgur.com/oM8DFV9.webp',
+    //     component: 'Services',
+    //     link: '/services',
+    //     spanString: 'Ligament Reconstruction'
+    // },
     {   
         image: 'https://i.imgur.com/rZaoIFC.webp',
         width: '267px',
@@ -2102,7 +2130,6 @@ export const navMenu = [
             'ACL Reconstruction',
             'Meniscus Repairs',
             'Arthritis Care',
-            'Ligament Reconstruction',
             'Joint Injections',
             'PRP Injections'
         ],
