@@ -3,6 +3,7 @@ import ExpertiseBlocks from '../components/ExpertiseBlocks';
 import { Link } from 'react-router-dom';
 import ReactBackgroundCarousel from '../components/Carousel';
 import CompanyReviewsPage from '../components/CompanyReviewsPage';
+import AboutUsComponent from '../components/AboutUsComponent';
 import TeamComponent from './lazyHome/TeamComponent';
 import LocationComponent from './lazyHome/LocationComponent';
 import MapContainer from '../components/googleMapReact/MapContainer';
@@ -100,9 +101,7 @@ const Home = () => {
                     />
                 </ReactBackgroundCarousel>
             </div>
-            <div>
-                About Component
-            </div>
+            <AboutUsComponent />
             <div className='home-expertise'>
                 <h2 className='section-title'>Explore Our Services</h2>
                 <i className='fas fa-th'></i>

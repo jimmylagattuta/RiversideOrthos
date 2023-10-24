@@ -507,9 +507,113 @@ img {
 
 /* END NAVBAR STYLES */
 
+/* AboutUsComponent styles */
+.about-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 60vh; */
+}
+.about-container-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+.about-title {
+    padding: 0px 0px 0px 0px;
+    font-size: 3.2rem;
+    width: 65vw;
+    text-align: center;
+    font-weight: 600;
+    line-height: 50px;
+}
+.about-title-right {
+    text-align: left;
+    margin: 0px;
+    padding: 5px 0px 0px 0px;
+    font-weight: 400;
+    border-bottom: 1px solid rgb(243,74, 2); /* Set the color you want for the line */
+    padding-bottom: 15px; /* Adjust as needed to control the space between the text and the line */
+    color: white;
+    font-size: 3rem;
+    width: 75%;
+    line-height: 50px;
+}
+.about-bar {
+    padding: 0px;
+    margin: 0px;
+}
+.about-container-bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.about-container-bottom-left {
+    display: flex;
+    flex: 1;
+    background-image: url(https://i.imgur.com/thiV4LE.webp);
+    background-size: cover;
+
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.about-container-bottom-right {
+    display: flex;
+    flex: 1;
+    background-color: #232323;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-right-button {
+    width: 75%;
+    padding: 20px 0px 20px 0px;
+}
+.about-description-right {
+    text-align: left;
+    margin: 0px;
+    padding: 20px 0px 0px 0px;
+    font-weight: 400;
+    color: white;
+    font-size: 1rem;
+    width: 75%;
+
+}
+.about-description {
+    text-align: center;
+    margin: 0px;
+    padding: 20px 0px 0px 0px;
+    font-weight: 400;
+    color: black;
+    font-size: 1.2rem;
+    width: 75%;
+    border-bottom: 1px solid black; /* Set the color you want for the line */
+    padding-bottom: 15px; /* Adjust as needed to control the space between the text and the line */
+
+}
+.header-button-white,
+.header-button-white:active {
+    background-color: var(--white);
+    color: var(--black);
+    align-self: flex-start;
+}
+/* End AboutUSComponent styles */
+
 /* PAGES STYLES */
 .pages-header {
-    background-image: url(https://i.imgur.com/V3Vfsqi.webp);
+    background-image: url(https://i.imgur.com/IvKGHXY.webp);
     background-size: contain;
     background-position: top;
     background-attachment: fixed;
@@ -2044,6 +2148,11 @@ display: none;
     }
     
 }
+@media (max-width: 1650px) {
+    .pages-header {
+        background-image: url(https://i.imgur.com/V3Vfsqi.webp);
+    }
+}
 @media (max-width: 1295px) {
     .single-review-container {
         width: calc(88% / 2);
@@ -2052,6 +2161,16 @@ display: none;
 @media (max-width: 1160px) {
     .header-title {
         display: none;
+    }
+    .about-title-right {
+        font-size: 2rem;
+        width: 80%;
+    }
+    .about-description-right {
+        width: 80%;
+    }
+    .about-right-button {
+        width: 80%;
     }
     span#h-four-temp-fix {
         margin: 45px 0 15px 0;
@@ -2233,6 +2352,17 @@ display: none;
 
 }
 @media (max-width: 1015px) {
+    .about-title {
+        /* padding: 55px 0px 0px 0px; */
+        font-size: 2.5rem;
+        width: 70vw;
+        text-align: center;
+        font-weight: 600;
+        line-height: 50px;
+    }
+    .about-description-right {
+        font-size: 0.9rem;
+    }
     #chatbox-div {
         display: flex;
         flex-direction: column;
@@ -2250,6 +2380,22 @@ display: none;
       }
 }
 @media (max-width: 850px) {
+    .about-container-bottom {
+        flex-direction: column;
+    }
+    .about-container-bottom-left {
+        padding: 60vw 0px 0px 0px;
+        border-bottom: 4px solid #f34a02;
+        display: flex;
+        flex: 1;
+    }
+    .about-container-bottom-right {
+        padding: 30px 0px 40px 0px;
+    }
+    .about-right-button {
+        padding: 30px 0px 40px 0px;
+        width: 80%;
+    }
     .single-review-container {
         width: calc(88%);
     }
@@ -2258,6 +2404,26 @@ display: none;
     }
 }
 @media (max-width: 768px) {
+    .about-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-title {
+        /* padding: 100px 0px 0px 0px; */
+        font-size: 1.5rem;
+        width: 70vw;
+        text-align: center;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    .about-description {
+        width: 80vw;
+        font: 1em;
+        font-weight: 400;
+    }
     .header-image-container {
         display: block;
     }
