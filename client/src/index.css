@@ -2154,6 +2154,11 @@ display: none;
     }
 }
 @media (max-width: 1295px) {
+    .pages-header {
+        background-image: url(https://i.imgur.com/pCBq2TF.webp);
+        background-size: inherit;
+    
+    }
     .single-review-container {
         width: calc(88% / 2);
     }
@@ -2404,6 +2409,11 @@ display: none;
     }
 }
 @media (max-width: 768px) {
+    .pages-header {
+        background-image: url(https://i.imgur.com/MdQsFeE.webp);
+        background-size: cover;
+        background-position: center;
+    }
     .about-container {
         display: flex;
         flex: 1;
@@ -2545,6 +2555,10 @@ display: none;
 }
 
 @media (max-width: 576px) {
+    .pages-header {
+        background-size: cover;
+
+    }
     .grid-item {
         width: 100%;
     }
