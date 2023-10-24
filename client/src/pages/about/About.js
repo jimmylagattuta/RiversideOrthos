@@ -18,11 +18,11 @@ const About = () => {
                                     className='about-image'
                                 />
                             </div> */}
-                            <div className="popout-content">
+                            <div>
 
                                 {item.descriptionTwo.map((itemTwo, index) => {
                                     return (
-                                        <p key={index}>
+                                        <p key={index} className="popout-content">
                                             {itemTwo}
                                         </p>
                                     );
