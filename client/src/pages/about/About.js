@@ -6,9 +6,9 @@ const About = () => {
             <div className='about-content'>
                 {aboutObj.map((item, index) => {
                     return (
-                        <div key={index} className='about-info'>
+                        <div key={index} style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }} className='about-info'>
                             <h2>{item.nameOne}</h2>
-                            <p className='about-description'>
+                            <p>
                                 {item.descriptionOne}
                             </p>
                             {/* <div className='about-image-container'>
@@ -22,7 +22,7 @@ const About = () => {
 
                                 {item.descriptionTwo.map((itemTwo, index) => {
                                     return (
-                                        <p key={index} className='about-description'>
+                                        <p key={index}>
                                             {itemTwo}
                                         </p>
                                     );
