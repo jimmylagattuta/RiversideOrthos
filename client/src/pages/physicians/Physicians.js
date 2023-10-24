@@ -14,7 +14,7 @@ const Physicians = () => {
             <div className='page-grid'>
                 {physicians.map((physician) => {
                     return (
-                        <div className='grid-item' key={physician.name}>
+                        <div style={{ boxShadow: "6px 6px 8px #ddd" }} className='grid-item' key={physician.name}>
                             <div className='image-container'>
                                 <Link
                                     className='physician-link'
