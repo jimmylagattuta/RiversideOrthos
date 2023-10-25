@@ -60,7 +60,7 @@ const Home = () => {
                         <div className='button-wrapper'>
                             <a
                                 className='btn header-button-yellow'
-                                href='#https://patientportal.oa-pa.com/phxportal/'>
+                                href='https://patientportal.oa-pa.com/phxportal/'>
                                 Request Appointment
                                 <i id="banner-btn-arrow" className="fas fa-long-arrow-alt-right"></i>
                             </a>

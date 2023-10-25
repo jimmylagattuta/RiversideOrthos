@@ -50,7 +50,7 @@ const Navbar = () => {
                     </NavLink>
                     <a
                         className='btn header-button-yellow'
-                        href='#https://patientportal.oa-pa.com/phxportal/'>
+                        href='https://patientportal.oa-pa.com/phxportal/'>
                         Request Appointment
                     </a>
                 </div>
