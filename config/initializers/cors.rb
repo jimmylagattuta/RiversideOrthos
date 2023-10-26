@@ -6,9 +6,8 @@
 # Read more: https://github.com/cyu/rack-cors
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
-    allow do
-      origins 'https://la-orthos-bdc751615c67.herokuapp.com'
-      resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete, :options, :head], credentials: true
-    end
+  allow do
+    origins 'https://la-orthos-bdc751615c67.herokuapp.com', 'http://localhost:3001' # Add localhost:3001 to the allowed origins
+    resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete, :options, :head], credentials: true
   end
-  
+end

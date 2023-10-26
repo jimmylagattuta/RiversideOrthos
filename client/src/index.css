@@ -507,6 +507,49 @@ img {
 
 /* END NAVBAR STYLES */
 
+/* START REQUESTAPPOINTMENTFORM STYLES */
+.form-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #ffffff;
+    min-width: 60%;
+    align-self: center;
+    padding: 20px 40px 20px 40px;
+}
+.title-request-appointment {
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    align-self: center;
+    font-size: 1.1rem;
+    font-family: sans-serif; 
+}
+.close-button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    opacity: 20%;
+    font-family: monospace;
+    font-size: 2rem;
+}
+.close-button:active {
+    opacity: 100%;
+}
+#chat-middle-component-request-apt {
+    display: flex;
+    flex: 1 1;
+    opacity: 100%;
+    /* align-self: center; */
+    /* justify-content: center; */
+    border-radius: 4.5px;
+    z-index: 2;
+    /* margin-bottom: 11.2vh; */
+    bottom: 0;
+    transition: opacity 2s;
+}
+/* END REQUESTAPPOINTMENTFORM STYLES */
+
 /* AboutUsComponent styles */
 .about-container {
     display: flex;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useCsrfToken } from '../CsrfTokenContext'; // Import the hook
+import { useCsrfToken } from '../CsrfTokenContext';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -8,80 +8,57 @@ import { Form, Field } from 'react-final-form';
 import { Link } from 'react-router-dom';
 
 function RequestAppointmentForm(props) {
-  const { csrfToken,setCsrfToken } = useCsrfToken();
+  const { csrfToken, setCsrfToken } = useCsrfToken();
+  const [isFormVisible, setIsFormVisible] = useState(true);
 
   const [state, setState] = useState({
     showDropdownLocations: false,
     showDropdownNewOrReturning: false,
     titleVarLocations: 'Select a location',
     titleVarNewOrReturning: 'New or returning patient?',
-    titleLocations: 'Select a location',
-    titleNewOrReturning: 'New or returning patient?',
     clickShowLocations: false,
     clickShowNewOrReturning: false,
-    errorFName: "",
-    errorFNameShow: false,
-    errorLName: "",
-    errorLNameShow: false,
-    errorEmail: "",
-    errorEmailShow: false,
-    errorPhone: "",
-    errorPhoneShow: false,
-    errorMessage: "",
-    errorMessageShow: false,
-    errorMain: "",
-    errorMainShow: false,
+    errors: {
+      fName: '',
+      lName: '',
+      email: '',
+      phone: '',
+      message: '',
+      agree: '',
+      recaptcha: '',
+    },
     lastTyped: '',
     showAllErrors: false,
     phoneNumber: '',
     agreeToTerms: false,
-    errorAgree: '',
     recaptchaToken: '',
     recaptchaChecked: false,
-    errorRecaptcha: '',
     csrfToken: csrfToken,
-    setCsrfToken: setCsrfToken
+    setCsrfToken: setCsrfToken,
   });
 
   useEffect(() => {
-    // Load and initialize reCAPTCHA
-    const loadRecaptchaScript = () => {
-      const script = document.createElement('script');
-      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
-        // Initialize reCAPTCHA with your site key
-        window.grecaptcha.enterprise.ready(() => {
-          window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
-            setState({ ...state, recaptchaToken: token });
-          });
-        });
-      };
-      document.head.appendChild(script);
-    };
-
-    loadRecaptchaScript();
+   
 
     if (!csrfToken) {
       fetchReviews();
     }
   }, []);
+
   const fetchReviews = () => {
-          
+    console.log('fetchReviews');
+
     const url =
       process.env.NODE_ENV === 'production'
         ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
         : 'http://localhost:3000/api/v1/pull_google_places_cache';
-  
-    // Include the CSRF token in the headers of your fetch request
+
     const headers = {
       'Content-Type': 'application/json',
       'X-CSRF-Token': csrfToken,
     };
-  
-    fetch(url, { headers })
 
+    fetch(url, { headers })
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -90,22 +67,11 @@ function RequestAppointmentForm(props) {
         }
       })
       .then((data) => {
-        // Check if data.reviews is a string
         if (typeof data.reviews === 'string') {
-          // Parse the JSON string into an array
           const reviewsArray = JSON.parse(data.reviews);
-          // Set the CSRF token in the context (if needed)
           if (data.csrf_token) {
             setCsrfToken(data.csrf_token);
           }
-  
-          // Filter reviews with the default profile photo URLs
-
-          // Shuffle the filteredReviews array
-  
-          // Take the first three reviews
-  
-
         } else {
           throw new Error('Data.reviews is not a string');
         }
@@ -114,19 +80,9 @@ function RequestAppointmentForm(props) {
         console.error(err);
       });
   };
-  
 
-  const loadRecaptchaScript = () => {
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
-    script.async = true;
-    script.defer = true;
-    script.onload = initializeRecaptcha;
-    document.head.appendChild(script);
-  };
 
   const initializeRecaptcha = () => {
-    // Initialize reCAPTCHA with your site key
     window.grecaptcha.enterprise.ready(() => {
       window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
         setState({ ...state, recaptchaToken: token });
@@ -136,48 +92,36 @@ function RequestAppointmentForm(props) {
 
   const handleSubmitRecaptcha = (values) => {
     if (values) {
-      setState({ ...state, recaptchaChecked: true, errorRecaptcha: '' });
+      setState({ ...state, recaptchaChecked: true, errors: { ...state.errors, recaptcha: '' } });
     }
-    // Here, you can use state.recaptchaToken in your form submission
-    // to validate the reCAPTCHA response.
-
-    // Perform your form submission logic
-    // ...
   };
 
   const handleAgreeChange = () => {
     setState((prevState) => ({
       ...state,
-      agreeToTerms: !prevState.agreeToTerms, // Toggle the value
+      agreeToTerms: !prevState.agreeToTerms,
     }));
   };
 
   const formatPhoneNumber = (value) => {
     if (value) {
-      // Remove all non-numeric characters from the input
       const phoneNumber = value.replace(/\D/g, '');
-
-      // Format the phone number as (XXX) XXX-XXXX
       const formattedPhoneNumber = `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
-
       return formattedPhoneNumber;
     }
-
-    return ''; // Return an empty string for undefined or null values
+    return '';
   };
 
   const parsePhoneNumber = (value) => {
     if (value) {
-      // Remove all non-numeric characters from the input
       return value.replace(/\D/g, '');
     }
-
-    return ''; // Return an empty string for undefined or null values
+    return '';
   };
 
   const onSubmit = async (values) => {
     const formData = {
-      ...values, // Include the form values
+      ...values,
       recaptcha: state.recaptchaChecked,
       agreeToTerms: state.agreeToTerms,
     };
@@ -192,239 +136,78 @@ function RequestAppointmentForm(props) {
       });
 
       if (response.ok) {
-        // Email sent successfully
         console.log('Email sent successfully');
-        // You can also reset the form or perform any other actions here
       } else {
-        // Email sending failed
         console.error('Email sending failed');
-        // Handle the error or display a message to the user
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      // Handle the error
     }
   };
-	const renderErrorEmail = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorPhone = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
 
-	const renderErrorFName = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorLName = (error) => {
-		if (error && state.showAllErrors) {
-
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorLocations = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorNewOrReturning = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorMessage = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorRecaptcha = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorAgree = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorMain = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-  const renderSendButton = (values, errors, form) => {
-    if (
-      values.fName ||
-      values.lName ||
-      values.email ||
-      values.phone ||
-      values.message ||
-      state.recaptchaChecked ||
-      state.agreeToTerms
-    ) {
-      if (Object.keys(errors).length === 0) {
-        return (
-          <button
-            id="chat-box-button-ready"
-            onClick={(e) => {
-              e.preventDefault();
-              onSubmit(values);
-              document.getElementById("chat-middle-component").style.opacity = '0%';
-              document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
-              document.getElementById("chatbox-div").style.opacity = '0%';
-			        document.getElementById("chat-box-button-ready").style.opacity = '0%';
-              setTimeout(() => {
-                form.reset();
-              }, 3000);
-
-              // !!!!!
-              // document.getElementById("giant icon guy")
-              // !!!!!
-            }}
-            type="submit"
-          >
-            SEND
-          </button>
-        );
-      } else {
-        return (
-          <button
-            id="chat-box-button-blue"
-            onClick={(e) => {
-              setState({ ...state, showAllErrors: true });
-              e.preventDefault();
-            }}
-            type="submit"
-          >
-            SEND
-          </button>
-        );
-      }
-    } else {
+  const renderError = (field) => {
+    if (field && state.showAllErrors) {
       return (
-        <button
-          id="chat-box-button"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
-          type="submit"
-        >
-          SEND
-        </button>
+        <div id="error-div">
+          <h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+            {field}
+          </h8>
+        </div>
       );
     }
+    return null;
   };
 
-  const renderBorderFName = (errors) => {
-    if (!errors.fName || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
+  const renderSendButton = (values, errors, form) => {
+    const shouldDisable = (
+      !values.fName ||
+      !values.lName ||
+      !values.email ||
+      !values.phone ||
+      !values.message ||
+      !state.recaptchaChecked ||
+      !state.agreeToTerms
+    );
+
+    const buttonClass = shouldDisable ? 'chat-box-button' : (Object.keys(errors).length === 0 ? 'chat-box-button-ready' : 'chat-box-button-blue');
+
+    return (
+      <button
+        id="chat-box-button"
+        onClick={(e) => {
+          e.preventDefault();
+          if (shouldDisable) {
+            setState({ ...state, showAllErrors: true });
+          } else {
+            onSubmit(values);
+            document.getElementById("chat-middle-component").style.opacity = '0%';
+            document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
+            document.getElementById("chatbox-div").style.opacity = '0%';
+            document.getElementById("chat-box-button-ready").style.opacity = '0%';
+            setTimeout(() => {
+              form.reset();
+            }, 3000);
+          }
+        }}
+        type="submit"
+        className={buttonClass}
+      >
+        SEND
+      </button>
+    );
   };
 
-  const renderBorderLName = (errors) => {
-    if (!errors.lName || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
+  const renderFieldBorder = (error) => {
+    return !error || !state.showAllErrors ? "field-id" : "field-id-red";
   };
-
-  const renderBorderEmail = (errors) => {
-    if (!errors.email || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
+  const handleCloseForm = () => {
+    console.log('handleCloseForm');
+    setIsFormVisible(false);
   };
-
-  const renderBorderPhone = (errors) => {
-    if (!errors.phone || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
-  };
-
-  const renderBorderMessage = (errors) => {
-    if (!errors.message || !state.showAllErrors) {
-      return "field-id";
-    } else {
-      return "field-id-red";
-    }
-  };
-
   return (
     <Form
       validate={(values) => {
         const errors = {};
-        let newObject = [];
 
         if (!values.fName) {
           errors.fName = "First Name is empty";
@@ -438,17 +221,13 @@ function RequestAppointmentForm(props) {
           errors.lName = "Last Name is empty";
         } else if (values.lName.length > 30) {
           errors.lName = "Last Name is too long";
-        } else if (!/^[a-z]+$/i.test(values.lName)) {
-          if (!values.lName.includes("-")) {
-            errors.lName = "Last Name can only contain letters";
-          }
+        } else if (!/^[a-z]+$/i.test(values.lName) && !values.lName.includes("-")) {
+          errors.lName = "Last Name can only contain letters";
         }
 
         if (!values.email) {
           errors.email = "Email is empty";
-        } else if (values.email.length > 40) {
-          errors.email = "Email is too long";
-        } else if (!values.email.includes('@')) {
+        } else if (values.email.length > 40 || !values.email.includes('@')) {
           errors.email = "Please enter a valid email format";
         }
 
@@ -470,91 +249,103 @@ function RequestAppointmentForm(props) {
           errors.recaptcha = "Please Prove You're Not A Robot";
         }
 
+        setState({ ...state, errors });
+
         return errors;
       }}
       onSubmit={onSubmit}
-      render={({ props, handleSubmit, values, errors, form }) => (
+      render={({ handleSubmit, values, form }) => (
         <form
           className='popout-content'
           style={{
             display: 'flex',
-            maxWidth: '80%',
+            // maxWidth: '80%',
+            height: '100vh',
+            width: '100vw',
             flexDirection: 'column',
-            backgroundColor: 'white',
+            backgroundColor: 'rgba(0,0,0,.8)',
+            position: 'fixed',
+            zIndex: 12,
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
           }}
-          onSubmit={handleSubmit}>
-          <p style={{ fontWeight: '400', letterSpacing: '0.05rem', alignSelf: 'center', fontSize: '0.8rem', fontFamily: 'sans-serif', paddingTop: '10px' }}>CONTACT US</p>
-          <h2 style={{ fontWeight: '400', letterSpacing: '0.01rem', alignSelf: 'center', fontFamily: 'sans-serif', padding: '10px 5px 0px 5px', marginBottom: '0px' }}>Send A Message To Los Angeles Orthopedic Surgery Specialists</h2>
-          <p style={{ fontWeight: '400', alignSelf: 'center', fontSize: '0.9rem', padding: '10px 10px 0px 10px', maxWidth: '90%' }}>If you have any questions, concerns, or comments regarding Los Angeles Orthopedic Surgery Specialists, please fill out the short contact form below.</p>
-
-          <div style={{ maxWidth: '90%', alignSelf: 'center', padding: '10px 10px 0px 10px' }} id="chatbox-div">
-            <div id="chat-middle-component">
+          onSubmit={handleSubmit}
+        >
+          <div className="form-title">
+            <p className="title-request-appointment">
+                    Appointment Request
+            </p>
+            <button className="close-button" onClick={handleCloseForm}>x</button>
+          </div>
+          <div style={{ maxWidth: '60%', alignSelf: 'center', padding: '10px 10px 0px 10px', backgroundColor: 'white' }} id="chatbox-div">
+            <div id="chat-middle-component-request-apt">
               <div id="middle-form-top-div">
                 <div id="chat-form-top-div">
                   <div id="chat-form-inner-div">
                     <div id="chat-form-lines">
                       <Field
                         key="fNameKey"
-                        id={renderBorderFName(errors)}
+                        id={renderFieldBorder(state.errors.fName)}
                         style={{ borderRadius: '10px' }}
                         name="fName"
                         component="input"
                         placeholder="First Name"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorFName(errors.fName)}
+                        {renderError(state.errors.fName)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
                       <Field
                         key="lNameKey"
-                        id={renderBorderLName(errors)}
+                        id={renderFieldBorder(state.errors.lName)}
                         style={{ borderRadius: '10px' }}
                         name="lName"
                         component="input"
                         placeholder="Last Name"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorLName(errors.lName)}
+                        {renderError(state.errors.lName)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
                       <Field
                         key="emailKey"
-                        id={renderBorderEmail(errors)}
+                        id={renderFieldBorder(state.errors.email)}
                         style={{ borderRadius: '10px' }}
                         name="email"
                         component="input"
                         placeholder="Email address"
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorEmail(errors.email)}
+                        {renderError(state.errors.email)}
                       </div>
                     </div>
                     <div id="chat-form-lines">
                       <Field
-                        id={renderBorderPhone(errors)}
+                        id={renderFieldBorder(state.errors.phone)}
                         style={{ padding: '0.5rem', borderRadius: '10px' }}
-                        type="tel" // Use type="tel" for phone numbers
+                        type="tel"
                         name="phone"
                         component="input"
                         placeholder="(•••) ••• ••••"
-                        parse={parsePhoneNumber} // Parse the phone number
-                        format={formatPhoneNumber} // Format the phone number
+                        parse={parsePhoneNumber}
+                        format={formatPhoneNumber}
                       />
                       <div style={{ marginBottom: '0.3rem' }}>
-                        {renderErrorPhone(errors.phone)}
+                        {renderError(state.errors.phone)}
                       </div>
                     </div>
                   </div>
-                  {renderErrorMain(state.errorMain)}
+                  {renderError(state.errors.errorMain)}
                 </div>
               </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
               <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
-                <Field id={renderBorderMessage(errors)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%', padding: '0.5rem 0.5rem 0rem 0.5rem' }} name="message" component="textarea" rows="5" placeholder="Comments" />
-                {renderErrorMessage(errors.message)}
+                <Field id={renderFieldBorder(state.errors.message)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%', padding: '0.5rem 0.5rem 0rem 0.5rem' }} name="message" component="textarea" rows="5" placeholder="Comments" />
+                {renderError(state.errors.message)}
               </div>
               <div style={{ displa: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
@@ -574,23 +365,19 @@ function RequestAppointmentForm(props) {
                   </div>
                 </div>
                 <div style={{ marginBottom: '0.3rem' }}>
-                  {renderErrorAgree(errors.agree)}
+                  {renderError(state.errors.agree)}
                 </div>
               </div>
-              <ReCAPTCHA
-                className='g-recaptcha'
-                sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
-                onChange={handleSubmitRecaptcha}
-              />
               <div style={{ marginBottom: '0.3rem' }}>
-                {renderErrorRecaptcha(errors.recaptcha)}
+                {renderError(state.errors.recaptcha)}
               </div>
             </div>
           </div>
-          {renderSendButton(values, errors, form)}
+          {renderSendButton(values, state.errors, form)}
         </form>
       )}
     />
   );
 };
+
 export default RequestAppointmentForm;

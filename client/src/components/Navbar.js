@@ -21,6 +21,7 @@ const Navbar = () => {
         setIsSubmenuOpen(null);
     };
     const toggleAppointmentForm = () => {
+        console.log('toggleAppointmentForm');
         setIsAppointmentFormOpen(!isAppointmentFormOpen);
     };
     return (

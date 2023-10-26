@@ -2145,7 +2145,7 @@ export const navMenu = [
         menu: 'Physicians',
         link: '/physicians',
         subMenuItems: physicians.map((item) => {
-            console.log('item', item);
+            // console.log('item', item);
             return item.name;
         }),
     },
