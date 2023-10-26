@@ -1,9 +1,11 @@
 import { NavLink, Link } from 'react-router-dom';
 import { navMenu } from '../data';
 import { useState } from 'react';
+import RequestAppointmentForm from './helpers/RequestAppointmentForm';
 const Navbar = () => {
     const [isMobileMenuopen, setIsMobileMenuOpen] = useState(false);
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(null);
+    const [isAppointmentFormOpen, setIsAppointmentFormOpen] = useState(false); // State to manage appointment form visibility
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuopen);
@@ -17,6 +19,9 @@ const Navbar = () => {
     const resetMobileMenu = () => {
         setIsMobileMenuOpen(false);
         setIsSubmenuOpen(null);
+    };
+    const toggleAppointmentForm = () => {
+        setIsAppointmentFormOpen(!isAppointmentFormOpen);
     };
     return (
         <header className='main-header'>
@@ -50,9 +55,15 @@ const Navbar = () => {
                     </NavLink>
                     <a
                         className='btn header-button-yellow'
-                        href='https://patientportal.oa-pa.com/phxportal/'>
+                        onClick={toggleAppointmentForm}
+                    >
                         Request Appointment
                     </a>
+                    {isAppointmentFormOpen && (
+                        <div className="appointment-form-overlay">
+                            <RequestAppointmentForm />
+                        </div>
+                    )}
                 </div>
             </div>
             <nav
