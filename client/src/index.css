@@ -516,11 +516,14 @@ img {
     background-color: #ffffff;
     min-width: 60%;
     align-self: center;
-    padding: 20px 40px 20px 40px;
+    padding: 0px 40px 0px 40px;
+    margin: 30px 0px 0px 0px;
 }
 .title-request-appointment {
+    display: flex;
     font-weight: 400;
     letter-spacing: 0.05rem;
+    min-width: 60%;
     align-self: center;
     font-size: 1.1rem;
     font-family: sans-serif; 
@@ -546,7 +549,24 @@ img {
     z-index: 2;
     /* margin-bottom: 11.2vh; */
     bottom: 0;
+    width: 100%;
+    min-width: 60%;
     transition: opacity 2s;
+}
+#chat-form-lines-request-apt {
+    width: 100%;
+    margin: 0px 0px 0px 20px;
+    padding: 0.2rem 0.5rem;
+}
+#chat-form-lines-request-apt input {
+    display: flex;
+    border: none;
+    /* padding: 0.5rem; */
+    border-radius: 3px;
+    background-color: rgba(192,200,200, 25%);
+    width: 100%;
+    height: 40px;
+
 }
 /* END REQUESTAPPOINTMENTFORM STYLES */
 
@@ -2452,6 +2472,10 @@ display: none;
     }
 }
 @media (max-width: 768px) {
+    .apt-line {
+        flex-direction: column;
+        text-align: left;
+    }
     .pages-header {
         background-image: url(https://i.imgur.com/MdQsFeE.webp);
         background-size: cover;

@@ -62,7 +62,7 @@ const Navbar = () => {
                     </a>
                     {isAppointmentFormOpen && (
                         <div className="appointment-form-overlay">
-                            <RequestAppointmentForm />
+                            <RequestAppointmentForm toggleAppointmentForm={toggleAppointmentForm} />
                         </div>
                     )}
                 </div>

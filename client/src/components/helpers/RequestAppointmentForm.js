@@ -31,6 +31,7 @@ function RequestAppointmentForm(props) {
     showAllErrors: false,
     phoneNumber: '',
     agreeToTerms: false,
+    agreeToTermsText: false,
     recaptchaToken: '',
     recaptchaChecked: false,
     csrfToken: csrfToken,
@@ -103,6 +104,13 @@ function RequestAppointmentForm(props) {
     }));
   };
 
+  const handleAgreeTextChange = () => {
+    setState((prevState) => ({
+      ...state,
+      agreeToTermsText: !prevState.agreeToTermsText,
+    }));
+  };
+
   const formatPhoneNumber = (value) => {
     if (value) {
       const phoneNumber = value.replace(/\D/g, '');
@@ -172,36 +180,60 @@ function RequestAppointmentForm(props) {
     const buttonClass = shouldDisable ? 'chat-box-button' : (Object.keys(errors).length === 0 ? 'chat-box-button-ready' : 'chat-box-button-blue');
 
     return (
-      <button
-        id="chat-box-button"
-        onClick={(e) => {
-          e.preventDefault();
-          if (shouldDisable) {
-            setState({ ...state, showAllErrors: true });
-          } else {
-            onSubmit(values);
-            document.getElementById("chat-middle-component").style.opacity = '0%';
-            document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
-            document.getElementById("chatbox-div").style.opacity = '0%';
-            document.getElementById("chat-box-button-ready").style.opacity = '0%';
-            setTimeout(() => {
-              form.reset();
-            }, 3000);
-          }
-        }}
-        type="submit"
-        className={buttonClass}
-      >
-        SEND
-      </button>
+        <div style={{ backgroundColor: 'white', justifyContent: 'flex-end', display: 'flex', padding: "0px", margin: '0px', width: '60%', borderRadius: '0px 0px 10px 10px' }}>
+            <button
+            id="chat-box-button"
+            onClick={(e) => {
+            e.preventDefault();
+            if (shouldDisable) {
+                console.log('shouldDisable true');
+                console.log('values', values);
+
+                setState({ ...state, showAllErrors: true });
+            } else {
+                console.log('onSubmit(values)', values);
+                onSubmit(values);
+                document.getElementById("chat-middle-component").style.opacity = '0%';
+                document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
+                document.getElementById("chatbox-div").style.opacity = '0%';
+                document.getElementById("chat-box-button-ready").style.opacity = '0%';
+                setTimeout(() => {
+                form.reset();
+                }, 3000);
+            }
+            }}
+            style={{ backgroundColor: "rgb(243,74, 2)" }}
+            type="submit"
+            className={buttonClass}
+        >
+            Request Appointment <i style={{ justifySelf: 'center' }} class="fas fa-envelope"></i>
+            </button>
+        </div>
     );
   };
+  // Date of Birth formatter
+  const formatDob = (value) => {
+    if (value) {
+      const dob = value.replace(/\D/g, '');
+      const formattedDob = `${dob.slice(0, 2)}/${dob.slice(2, 4)}/${dob.slice(4, 8)}`;
+      return formattedDob;
+    }
+    return '';
+  };
 
+  // Date of Birth parser
+  const parseDob = (value) => {
+    if (value) {
+      return value.replace(/\D/g, '');
+    }
+    return '';
+  };
   const renderFieldBorder = (error) => {
     return !error || !state.showAllErrors ? "field-id" : "field-id-red";
   };
   const handleCloseForm = () => {
     console.log('handleCloseForm');
+    props.toggleAppointmentForm(false);
     setIsFormVisible(false);
   };
   return (
@@ -236,7 +268,7 @@ function RequestAppointmentForm(props) {
         }
 
         if (!state.agreeToTerms) {
-          errors.agree = 'Please Agree To Terms & Conditions';
+          errors.agree = 'Please agree to Privacy Policy & Terms of Use';
         }
 
         if (!values.message) {
@@ -245,9 +277,11 @@ function RequestAppointmentForm(props) {
           errors.message = "Message is too long";
         }
 
-        if (!state.recaptchaChecked) {
-          errors.recaptcha = "Please Prove You're Not A Robot";
-        }
+
+        if (!state.dob) {
+            errors.dob = 'Date of birth is empty';
+          }
+
 
         setState({ ...state, errors });
 
@@ -267,113 +301,168 @@ function RequestAppointmentForm(props) {
             position: 'fixed',
             zIndex: 12,
             top: "50%",
+            padding: "0px 0px 0px 0px",
+            margin: "0px",
+            borderRadius: "0px",
             left: "50%",
-            transform: "translate(-50%, -50%)"
+            alignItems: 'center',
+            justifyContent: 'center',
+            transform: "translate(-50%, -50%)",
+            overflowY: 'scroll'
           }}
           onSubmit={handleSubmit}
-        >
-          <div className="form-title">
-            <p className="title-request-appointment">
-                    Appointment Request
-            </p>
-            <button className="close-button" onClick={handleCloseForm}>x</button>
-          </div>
-          <div style={{ maxWidth: '60%', alignSelf: 'center', padding: '10px 10px 0px 10px', backgroundColor: 'white' }} id="chatbox-div">
-            <div id="chat-middle-component-request-apt">
-              <div id="middle-form-top-div">
-                <div id="chat-form-top-div">
-                  <div id="chat-form-inner-div">
-                    <div id="chat-form-lines">
-                      <Field
-                        key="fNameKey"
-                        id={renderFieldBorder(state.errors.fName)}
-                        style={{ borderRadius: '10px' }}
-                        name="fName"
-                        component="input"
-                        placeholder="First Name"
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderError(state.errors.fName)}
-                      </div>
-                    </div>
-                    <div id="chat-form-lines">
-                      <Field
-                        key="lNameKey"
-                        id={renderFieldBorder(state.errors.lName)}
-                        style={{ borderRadius: '10px' }}
-                        name="lName"
-                        component="input"
-                        placeholder="Last Name"
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderError(state.errors.lName)}
-                      </div>
-                    </div>
-                    <div id="chat-form-lines">
-                      <Field
-                        key="emailKey"
-                        id={renderFieldBorder(state.errors.email)}
-                        style={{ borderRadius: '10px' }}
-                        name="email"
-                        component="input"
-                        placeholder="Email address"
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderError(state.errors.email)}
-                      </div>
-                    </div>
-                    <div id="chat-form-lines">
-                      <Field
-                        id={renderFieldBorder(state.errors.phone)}
-                        style={{ padding: '0.5rem', borderRadius: '10px' }}
-                        type="tel"
-                        name="phone"
-                        component="input"
-                        placeholder="(•••) ••• ••••"
-                        parse={parsePhoneNumber}
-                        format={formatPhoneNumber}
-                      />
-                      <div style={{ marginBottom: '0.3rem' }}>
-                        {renderError(state.errors.phone)}
-                      </div>
-                    </div>
-                  </div>
-                  {renderError(state.errors.errorMain)}
-                </div>
-              </div>
+        > 
+          <div style={{ borderRadius: "10px", width: '60%', height: '90%' }}>
+
+            <div className="form-title">
+                <p className="title-request-appointment">
+                        Appointment Request
+                </p>
+                <button className="close-button" onClick={handleCloseForm}>x</button>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }} id="chat-middle-component">
-              <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
-                <Field id={renderFieldBorder(state.errors.message)} style={{ resize: 'none', border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '90%', padding: '0.5rem 0.5rem 0rem 0.5rem' }} name="message" component="textarea" rows="5" placeholder="Comments" />
-                {renderError(state.errors.message)}
-              </div>
-              <div style={{ displa: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                  <div id="terms-and-policy">
-                    <label>
-                      <input
-                        type="checkbox"
-                        name="terms"
-                        style={{ transform: 'scale(2)' }}
-                        checked={state.agreeToTerms}
-                        onChange={handleAgreeChange}
-                      />
-                    </label>
-                  </div>
-                  <div id="terms-and-policy">
-                    By clicking I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.
-                  </div>
+            <div style={{ maxHeight: '100%', minWidth: '150px', alignSelf: 'center', padding: '10px 10px 0px 0px', margin: '0px', backgroundColor: 'white' }} id="chatbox-div">
+                <div id="chat-middle-component-request-apt">
+                <div id="middle-form-top-div">
+                    <div style={{ justifyContent: 'flex-start', display: 'flex' }} id="chat-form-top-div">
+                    <div id="chat-form-inner-div" style={{ width: '97%' }}>
+                        <div className="apt-line" style={{ display: 'flex', flex: '1'  }}>
+                            <div id="chat-form-lines-request-apt">
+                            <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>First Name</label>
+                            <Field
+                                key="fNameKey"
+                                id={renderFieldBorder(state.errors.fName)}
+                                style={{ borderRadius: '10px' }}
+                                name="fName"
+                                component="input"
+                                />
+                            <div style={{ marginBottom: '0.3rem' }}>
+                                {renderError(state.errors.fName)}
+                            </div>
+                            </div>
+                            <div id="chat-form-lines-request-apt">
+                            <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Last Name</label>
+                            <Field
+                                key="lNameKey"
+                                id={renderFieldBorder(state.errors.lName)}
+                                style={{ borderRadius: '10px' }}
+                                name="lName"
+                                component="input"
+                                />
+                            <div style={{ marginBottom: '0.3rem' }}>
+                                {renderError(state.errors.lName)}
+                            </div>
+                            </div>
+
+
+                            <div id="chat-form-lines-request-apt">
+                            <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Phone</label>
+                            <Field
+                                id={renderFieldBorder(state.errors.phone)}
+                                style={{ padding: '0.5rem', borderRadius: '10px' }}
+                                type="tel"
+                                name="phone"
+                                label="Phone"
+                                component="input"
+                                placeholder="(•••) ••• ••••"
+                                parse={parsePhoneNumber}
+                                format={formatPhoneNumber}
+                            />
+                            <div style={{ marginBottom: '0.3rem' }}>
+                                {renderError(state.errors.phone)}
+                            </div>
+                            </div>
+                        </div>
+                        <div className='apt-line' style={{ display: 'flex', flex: '1'  }}>
+                            <div id="chat-form-lines-request-apt">
+                            <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Date of Birth</label>
+                            <Field
+                                id={renderFieldBorder(state.errors.dob)}
+                                style={{ padding: '0.5rem', borderRadius: '10px' }}
+                                type="tel"
+                                name="dob"
+                                component="input"
+                                placeholder="MM/DD/YYYY"
+                                format={formatDob} // Use the date of birth formatter
+                                parse={parseDob} // Use the date of birth parser
+                            />
+                            <div style={{ marginBottom: '0.3rem' }}>
+                                {renderError(state.errors.dob)}
+                            </div>
+                            </div>
+                            <div id="chat-form-lines-request-apt">
+                                <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Email</label>
+                                <Field
+                                    key="emailKey"
+                                    id={renderFieldBorder(state.errors.email)}
+                                    style={{ borderRadius: '10px' }}
+                                    name="email"
+                                    component="input"
+                                />
+                                <div style={{ marginBottom: '0.3rem' }}>
+                                    {renderError(state.errors.email)}
+                                </div>
+                                </div>
+                        </div>
+
+
+
+
+
+                       
+                        <div id="chat-form-lines-request-apt">
+                            <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', textAlign: "left" }}>
+                                <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Additional Information</label>
+                                <Field id={renderFieldBorder(state.errors.message)} style={{ border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '97%' }} name="message" component="textarea" rows="5" />
+                                {renderError(state.errors.message)}
+                            </div>
+                        </div>
+                    </div>
+                    {renderError(state.errors.errorMain)}
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', margin: '0px 0px 0px 0px', padding: '0.2rem 0.5rem'  }} id="chat-middle-component">
+                        <div style={{ displa: 'flex', flexDirection: 'column' }}>
+                            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                            <div id="terms-and-policy">
+                                <label>
+                                <input
+                                    type="checkbox"
+                                    name="terms"
+                                    style={{ transform: 'scale(2)' }}
+                                    checked={state.agreeToTerms}
+                                    onChange={handleAgreeChange}
+                                />
+                                </label>
+                            </div>
+                            <div id="terms-and-policy">
+                                I have read and agreed to the Privacy Policy and Terms of Use and I am at least 13 and have the authority to make this appointment.
+                            </div>
+                            </div>
+                            <div style={{ marginBottom: '0.3rem' }}>
+                            {renderError(state.errors.agree)}
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                            <div id="terms-and-policy">
+                                <label>
+                                <input
+                                    type="checkbox"
+                                    name="termsText"
+                                    style={{ transform: 'scale(2)' }}
+                                    checked={state.agreeToTermsText}
+                                    onChange={handleAgreeTextChange}
+                                />
+                                </label>
+                            </div>
+                            <div id="terms-and-policy">
+                                I agree to receive text messages from this practice and understand that message frequency and data rates may apply.
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div style={{ marginBottom: '0.3rem' }}>
-                  {renderError(state.errors.agree)}
                 </div>
-              </div>
-              <div style={{ marginBottom: '0.3rem' }}>
-                {renderError(state.errors.recaptcha)}
-              </div>
             </div>
+            {renderSendButton(values, state.errors, form)}
           </div>
-          {renderSendButton(values, state.errors, form)}
         </form>
       )}
     />
