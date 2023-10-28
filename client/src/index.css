@@ -508,6 +508,11 @@ img {
 /* END NAVBAR STYLES */
 
 /* START REQUESTAPPOINTMENTFORM STYLES */
+#appointment-form {
+    border-radius: 10px;
+    width: 60%;
+    height: 90%;
+}
 .form-title {
     display: flex;
     align-items: center;
@@ -518,10 +523,11 @@ img {
     align-self: center;
     padding: 0px 40px 0px 40px;
     margin: 30px 0px 0px 0px;
+    border-bottom: 1px solid var(--grey-light);
 }
 .title-request-appointment {
     display: flex;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0.05rem;
     min-width: 60%;
     align-self: center;
@@ -567,6 +573,25 @@ img {
     width: 100%;
     height: 40px;
 
+}
+.apt-request-radio {
+    font-size: 1rem;
+    padding: 0px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+.radio-circle {
+    width: 20px; /* Increase the width to make the circle larger */
+    height: 20px; /* Increase the height to make the circle larger */
+    border: 2px solid #333; /* Border style for the circle */
+    border-radius: 50%; /* Make it a circle */
+    display: inline-block;
+    justify-self: baseline;
+    margin-right: 8px; /* Adjust spacing between the circle and label text */
+}
+.new-returning-div {
+    display: flex;
+    flex-direction: row;
 }
 /* END REQUESTAPPOINTMENTFORM STYLES */
 
@@ -2622,6 +2647,11 @@ display: none;
 }
 
 @media (max-width: 576px) {
+    #appointment-form {
+        border-radius: 10px;
+        width: 90%;
+        height: 90%;
+    }
     .pages-header {
         background-size: cover;
 
