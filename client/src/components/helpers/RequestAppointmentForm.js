@@ -40,14 +40,15 @@ function RequestAppointmentForm(props) {
   });
 
   useEffect(() => {
+    console.log('useEffect !csrfToken');
     if (!csrfToken) {
       fetchReviews();
     }
   }, []);
-
+  
   const fetchReviews = () => {
     console.log('fetchReviews');
-
+    
     const url =
       process.env.NODE_ENV === 'production'
         ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
@@ -96,6 +97,7 @@ function RequestAppointmentForm(props) {
   };
 
   const handleAgreeChange = () => {
+    console.log('handleAgreeChange');
     setState((prevState) => ({
       ...state,
       agreeToTerms: !prevState.agreeToTerms,
@@ -103,6 +105,7 @@ function RequestAppointmentForm(props) {
   };
 
   const handleAgreeTextChange = () => {
+    console.log('handleAgreeTextChange');
     setState((prevState) => ({
       ...state,
       agreeToTermsText: !prevState.agreeToTermsText,
@@ -110,6 +113,7 @@ function RequestAppointmentForm(props) {
   };
 
   const formatPhoneNumber = (value) => {
+    // console.log('formatPhoneNumber', value);
     if (value) {
       const phoneNumber = value.replace(/\D/g, '');
       const formattedPhoneNumber = `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
@@ -119,6 +123,7 @@ function RequestAppointmentForm(props) {
   };
 
   const parsePhoneNumber = (value) => {
+    // console.log('parsePhoneNumber', value);
     if (value) {
       return value.replace(/\D/g, '');
     }
@@ -154,7 +159,10 @@ function RequestAppointmentForm(props) {
   };
 
   const renderError = (field) => {
+    // console.log('field', field);
+    
     if (field && state.showAllErrors) {
+      // console.log('here?');
       return (
         <div id="error-div">
           <h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -167,10 +175,10 @@ function RequestAppointmentForm(props) {
   };
 
   const renderSendButton = (values, errors, form) => {
-    console.log('Here you are in your code');
-    console.log('values', values);
-    console.log('errors', errors);
-    console.log('form', form);
+    // console.log('Here you are in your code');
+    // console.log('values', values);
+    // console.log('errors', errors);
+    // console.log('form', form);
     const shouldDisable = (
       !values.fName ||
       !values.lName ||
@@ -216,6 +224,7 @@ function RequestAppointmentForm(props) {
   };
   // Date of Birth formatter
   const formatDob = (value) => {
+    // console.log('formatDate', value);
     if (value) {
       const dob = value.replace(/\D/g, '');
       const formattedDob = `${dob.slice(0, 2)}/${dob.slice(2, 4)}/${dob.slice(4, 8)}`;
@@ -226,6 +235,7 @@ function RequestAppointmentForm(props) {
 
   // Date of Birth parser
   const parseDob = (value) => {
+    // console.log('parseDob', value);
     if (value) {
       return value.replace(/\D/g, '');
     }
@@ -235,11 +245,12 @@ function RequestAppointmentForm(props) {
     return !error || !state.showAllErrors ? "field-id" : "field-id-red";
   };
   const handleCloseForm = () => {
-    console.log('handleCloseForm');
+    // console.log('handleCloseForm');
     props.toggleAppointmentForm(false);
     setIsFormVisible(false);
   };
   const renderPatientTypeRadio = () => {
+    // console.log('renderPatientTypeRadio');
     return (
       <div className='apt-line' style={{ fontSize: "1rem", padding: "0 0 0 5px" }}>
         <div style={{ margin: '0px 0px 0px 20px', padding: '0.2rem 0.5rem', display: 'flex', flexDirection: 'column' }}>
@@ -450,7 +461,6 @@ function RequestAppointmentForm(props) {
                             </div>
                         </div>
                     </div>
-                    {renderError(state.errors.errorMain)}
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', margin: '0px 0px 0px 0px', padding: '0.2rem 0.5rem'  }} id="chat-middle-component">
                         <div style={{ displa: 'flex', flexDirection: 'column' }}>
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
@@ -494,6 +504,7 @@ function RequestAppointmentForm(props) {
                 </div>
                 </div>
             </div>
+            {renderError(state.errors.errorMain)}
             {renderSendButton(values, state.errors, form)}
           </div>
         </form>
