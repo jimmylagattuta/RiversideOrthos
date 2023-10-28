@@ -11,6 +11,9 @@ function RequestAppointmentForm(props) {
   const { csrfToken, setCsrfToken } = useCsrfToken();
   const [isFormVisible, setIsFormVisible] = useState(true);
   const [selectedPatientType, setSelectedPatientType] = useState('new');
+  const [selectedSex, setSelectedSex] = useState(''); // Step 1: State for selected sex
+  const [selectedLocation, setSelectedLocation] = useState(''); // Step 1: State for selected location
+  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(true);
 
   const [state, setState] = useState({
     showDropdownLocations: false,
@@ -37,6 +40,8 @@ function RequestAppointmentForm(props) {
     recaptchaChecked: false,
     csrfToken: csrfToken,
     setCsrfToken: setCsrfToken,
+    submitting: false, // Added to track form submission state
+
   });
 
   useEffect(() => {
@@ -97,7 +102,6 @@ function RequestAppointmentForm(props) {
   };
 
   const handleAgreeChange = () => {
-    console.log('handleAgreeChange');
     setState((prevState) => ({
       ...state,
       agreeToTerms: !prevState.agreeToTerms,
@@ -105,7 +109,6 @@ function RequestAppointmentForm(props) {
   };
 
   const handleAgreeTextChange = () => {
-    console.log('handleAgreeTextChange');
     setState((prevState) => ({
       ...state,
       agreeToTermsText: !prevState.agreeToTermsText,
@@ -131,12 +134,15 @@ function RequestAppointmentForm(props) {
   };
 
   const onSubmit = async (values) => {
-    console.log('onSubmit');
+    console.log('onSubmit', values);
+    console.log('state.agreeToTerms', state.agreeToTerms);
+    console.log('state.agreeToTermsText', state.agreeToTermsText);
+    console.log('selectedSex', selectedSex);
     const formData = {
       ...values,
-      recaptcha: state.recaptchaChecked,
       agreeToTerms: state.agreeToTerms,
-      selectedPatientType: selectedPatientType
+      selectedPatientType: selectedPatientType,
+      selectedSex: selectedSex
     };
     try {
       const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
@@ -147,9 +153,22 @@ function RequestAppointmentForm(props) {
         },
         body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         console.log('Email sent successfully');
+        
+        // Apply the CSS animation to #appointment-form on success
+        const appointmentForm = document.getElementById('appointment-form');
+        if (appointmentForm) {
+          appointmentForm.style.animation = 'fadeOut 1.5s ease-out';
+          setTimeout(() => {
+            appointmentForm.style.display = 'none';
+            props.setShowThankYouMessage(true);
+            setTimeout(() => {
+              props.setShowThankYouMessage(false);
+            }, 5000); // Adjust the time as needed
+          }, 1500);
+        }
       } else {
         console.error('Email sending failed');
       }
@@ -157,12 +176,10 @@ function RequestAppointmentForm(props) {
       console.error('Error sending email:', error);
     }
   };
-
+  
+  // Modify renderError to show errors only if touched or showAllErrors is true
   const renderError = (field) => {
-    // console.log('field', field);
-    
     if (field && state.showAllErrors) {
-      // console.log('here?');
       return (
         <div id="error-div">
           <h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
@@ -174,11 +191,12 @@ function RequestAppointmentForm(props) {
     return null;
   };
 
+  // Modify renderSendButton to control opacity based on touched state
   const renderSendButton = (values, errors, form) => {
-    // console.log('Here you are in your code');
-    // console.log('values', values);
-    // console.log('errors', errors);
-    // console.log('form', form);
+    console.log('values', values);
+    console.log('errors', errors);
+    console.log('form', form);
+
     const shouldDisable = (
       !values.fName ||
       !values.lName ||
@@ -187,41 +205,53 @@ function RequestAppointmentForm(props) {
       !values.message ||
       !state.agreeToTerms
     );
+    const hideButtonClass = shouldDisable || state.submitting ? 'hide-button' : '';
 
-    const buttonClass = shouldDisable ? 'chat-box-button' : (Object.keys(errors).length === 0 ? 'chat-box-button-ready' : 'chat-box-button-blue');
-
+    
+    // const buttonOpacity = values ? '100%' : (Object.keys(errors).length === 0 ? 'chat-box-button-ready' : 'chat-box-button-blue');
+    const buttonOpacity = shouldDisable ? '40%' : '100%';
     return (
-        <div style={{ backgroundColor: 'white', justifyContent: 'flex-end', display: 'flex', padding: "0px", margin: '0px', width: '100%', borderRadius: '0px 0px 10px 10px' }}>
-            <button
-            id="chat-box-button"
-            onClick={(e) => {
+      <div style={{ backgroundColor: 'white', justifyContent: 'flex-end', display: 'flex', padding: "0px", margin: '0px', width: '100%', borderRadius: '0px 0px 10px 10px' }}>
+        <button
+          id="chat-box-button"
+          onClick={async (e) => {
             e.preventDefault();
-            if (shouldDisable) {
-                console.log('shouldDisable true');
-                console.log('values', values);
-
-                setState({ ...state, showAllErrors: true });
+            if (shouldDisable || state.submitting) {
+              console.log('shouldDisable true');
+              console.log('values', values);
+              setState({ ...state, showAllErrors: true });
             } else {
-                console.log('onSubmit(values)', values);
+              console.log('onSubmit(values)', values);
+              const isEmpty = Object.keys(errors).length === 0;
+              if (isEmpty) {
+                // Set the 'submitting' state to true to trigger the fade-out animation
+                setState({ ...state, submitting: true });
                 onSubmit(values);
-                document.getElementById("chat-middle-component").style.opacity = '0%';
-                document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
-                document.getElementById("chatbox-div").style.opacity = '0%';
-                document.getElementById("chat-box-button-ready").style.opacity = '0%';
+                document.getElementById("chat-box-button").style.opacity = 0.3;
                 setTimeout(() => {
-                form.reset();
+                  document.getElementById("appointment-form").style.opacity = 0;
+                }, 2000);
+                setTimeout(() => {
+                  form.reset();
+                  props.toggleAppointmentForm('false');
                 }, 3000);
+              } else {
+                setState({ ...state, showAllErrors: true });
+              }
             }
-            }}
-            style={{ backgroundColor: "rgb(243,74, 2)" }}
-            type="submit"
-            className={buttonClass}
+          }}
+          className={`chat-box-button ${hideButtonClass}`}
+          type="submit"
+          style={{ backgroundColor: "rgb(243, 117, 63)", opacity: buttonOpacity }}
+
         >
-            Request Appointment <i style={{ justifySelf: 'center' }} class="fas fa-envelope"></i>
-            </button>
-        </div>
+          Request Appointment <i style={{ justifySelf: 'center', paddingLeft: '10px' }} className="fas fa-envelope"></i>
+        </button>
+      </div>
     );
   };
+  
+  
   // Date of Birth formatter
   const formatDob = (value) => {
     // console.log('formatDate', value);
@@ -241,9 +271,11 @@ function RequestAppointmentForm(props) {
     }
     return '';
   };
+  // Modify renderFieldBorder to add opacity based on touched state
   const renderFieldBorder = (error) => {
-    return !error || !state.showAllErrors ? "field-id" : "field-id-red";
+    return !error || (!state.showAllErrors && !state.touched) ? "field-id" : "field-id-red";
   };
+
   const handleCloseForm = () => {
     // console.log('handleCloseForm');
     props.toggleAppointmentForm(false);
@@ -254,7 +286,7 @@ function RequestAppointmentForm(props) {
     return (
       <div className='apt-line' style={{ fontSize: "1rem", padding: "0 0 0 5px" }}>
         <div style={{ margin: '0px 0px 0px 20px', padding: '0.2rem 0.5rem', display: 'flex', flexDirection: 'column' }}>
-          <p>Are you a new or returning patient?</p>
+          <p style={{ margin: '0 0 0.5rem 0' }}>Are you a new or returning patient?</p>
           <div className="new-returning-div">
             <label className="apt-request-radio">
               <input
@@ -280,6 +312,58 @@ function RequestAppointmentForm(props) {
         </div>
       </div>
     );
+  };
+  const handleFieldFocus = () => {
+    setState({ ...state, touched: true });
+  };
+  const renderSexRadio = (errors) => {
+    return (
+      <div className='apt-line' style={{ fontSize: "1.1rem", padding: "0 0 0 5px" }}>
+        <div style={{ margin: '20px 0px 0px 20px', padding: '0.2rem 0.5rem', display: 'flex', flexDirection: 'column' }}>
+          <p style={{ margin: '0 0 0.5rem 0' }}>Sex</p>
+          <div className="new-returning-div">
+            <label className="apt-request-radio">
+              <input
+                type="radio"
+                value="male"
+                className='radio-circle'
+                checked={selectedSex === 'male'} // Step 3: Use selectedSex state
+                onChange={() => setSelectedSex('male')} // Step 2: Handle sex change
+              />
+              Male
+            </label>
+            <label className="apt-request-radio">
+              <input
+                type="radio"
+                value="female"
+                className='radio-circle'
+                checked={selectedSex === 'female'} // Step 3: Use selectedSex state
+                onChange={() => setSelectedSex('female')} // Step 2: Handle sex change
+              />
+              Female
+            </label>
+            <label className="apt-request-radio">
+              <input
+                type="radio"
+                value="other"
+                className='radio-circle'
+                checked={selectedSex === 'other'} // Step 3: Use selectedSex state
+                onChange={() => setSelectedSex('other')} // Step 2: Handle sex change
+              />
+              Other
+            </label>
+          </div>
+        <div style={{ marginBottom: '0.3rem' }}>
+            {renderError(errors.selectedSex)}
+        </div>
+        </div>
+      </div>
+    );
+  };
+  const handleLocationChange = (location) => {
+    setSelectedLocation(location);
+    setIsLocationDropdownOpen(false); // Close the dropdown
+
   };
   return (
     <Form
@@ -310,6 +394,8 @@ function RequestAppointmentForm(props) {
 
         if (!values.phone) {
           errors.phone = "Phone is empty";
+        } else if (values.phone.length < 10) {
+          errors.phone = "Phone is incomplete"
         }
 
         if (!state.agreeToTerms) {
@@ -323,15 +409,35 @@ function RequestAppointmentForm(props) {
         }
 
         if (!values.dob) {
-          errors.dob = 'Date of birth is empty';
+          errors.dob = 'Date of birth is required';
+        } else if (values.dob.length < 8) {
+          errors.dob = 'Date of birth is missing numbers';
+        } else {
+          const month = parseInt(values.dob.substr(0, 2), 10);
+          const day = parseInt(values.dob.substr(2, 2), 10);
+          const year = parseInt(values.dob.substr(4, 4), 10);
+          const dobDate = new Date(year, month - 1, day);
+      
+          if (
+            isNaN(dobDate.getTime()) || // Invalid date
+            dobDate.getMonth() + 1 !== month || // Month mismatch
+            dobDate.getDate() !== day || // Day mismatch
+            dobDate.getFullYear() !== year // Year mismatch
+          ) {
+            errors.dob = 'Invalid date';
+          }
         }
 
-        setState({ ...state, errors });
+        if (!selectedSex) {
+          errors.selectedSex = "Please fill in the field";
+        }
+
+        // setState({ ...state, errors });
 
         return errors;
       }}
       onSubmit={onSubmit}
-      render={({ handleSubmit, values, form }) => (
+      render={({ handleSubmit, values, errors, form }) => (
         <form
           className='popout-content'
           style={{
@@ -374,26 +480,26 @@ function RequestAppointmentForm(props) {
                             <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>First Name</label>
                             <Field
                                 key="fNameKey"
-                                id={renderFieldBorder(state.errors.fName)}
+                                id={renderFieldBorder(errors.fName)}
                                 style={{ borderRadius: '10px', paddingLeft: '5px' }}
                                 name="fName"
                                 component="input"
                                 />
                             <div style={{ marginBottom: '0.3rem' }}>
-                                {renderError(state.errors.fName)}
+                                {renderError(errors.fName)}
                             </div>
                             </div>
                             <div id="chat-form-lines-request-apt">
                             <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Last Name</label>
                             <Field
                                 key="lNameKey"
-                                id={renderFieldBorder(state.errors.lName)}
+                                id={renderFieldBorder(errors.lName)}
                                 style={{ borderRadius: '10px', paddingLeft: '5px' }}
                                 name="lName"
                                 component="input"
                                 />
                             <div style={{ marginBottom: '0.3rem' }}>
-                                {renderError(state.errors.lName)}
+                                {renderError(errors.lName)}
                             </div>
                             </div>
 
@@ -401,7 +507,7 @@ function RequestAppointmentForm(props) {
                             <div id="chat-form-lines-request-apt">
                             <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Phone</label>
                             <Field
-                                id={renderFieldBorder(state.errors.phone)}
+                                id={renderFieldBorder(errors.phone)}
                                 style={{ borderRadius: '10px', paddingLeft: '5px' }}
                                 type="tel"
                                 name="phone"
@@ -412,7 +518,7 @@ function RequestAppointmentForm(props) {
                                 format={formatPhoneNumber}
                             />
                             <div style={{ marginBottom: '0.3rem' }}>
-                                {renderError(state.errors.phone)}
+                                {renderError(errors.phone)}
                             </div>
                             </div>
                         </div>
@@ -420,7 +526,7 @@ function RequestAppointmentForm(props) {
                             <div id="chat-form-lines-request-apt">
                             <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Date of Birth</label>
                             <Field
-                                id={renderFieldBorder(state.errors.dob)}
+                                id={renderFieldBorder(errors.dob)}
                                 style={{ borderRadius: '10px', paddingLeft: '5px' }}
                                 type="tel"
                                 name="dob"
@@ -430,34 +536,69 @@ function RequestAppointmentForm(props) {
                                 parse={parseDob} // Use the date of birth parser
                             />
                             <div style={{ marginBottom: '0.3rem' }}>
-                                {renderError(state.errors.dob)}
+                                {renderError(errors.dob)}
                             </div>
                             </div>
                             <div id="chat-form-lines-request-apt">
                                 <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Email</label>
                                 <Field
                                     key="emailKey"
-                                    id={renderFieldBorder(state.errors.email)}
+                                    id={renderFieldBorder(errors.email)}
                                     style={{ borderRadius: '10px', paddingLeft: '5px' }}
                                     name="email"
                                     component="input"
                                 />
                                 <div style={{ marginBottom: '0.3rem' }}>
-                                    {renderError(state.errors.email)}
+                                    {renderError(errors.email)}
                                 </div>
                                 </div>
                         </div>
 
+                        {renderSexRadio(errors)}
+                        <div className='apt-line' style={{ fontSize: "1.2rem" }}>
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
+                              <div style={{ display: 'flex', textAlign: 'left', flexDirection: 'column' }} id="chat-form-lines-request-apt">
+                                  <label style={{ fontSize: "1.1rem", padding: "0 0 0 5px" }}>Location</label>
+                                  <DropdownButton
+                                    title={
+                                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <div>
+                                          {selectedLocation || 'Location'}
+                                        </div>
+                                        <div>
+                                          <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                      </div>
+                                    }
+                                    variant="secondary"
+                                    onSelect={handleLocationChange}
+                                    id="location-dropdown"
+                                    show={isLocationDropdownOpen} // Use the state variable to control the open state
+                                    onToggle={(isOpen) => setIsLocationDropdownOpen(!isLocationDropdownOpen)} // Update the state when the dropdown is toggled                  
+                                    onHide={() => setIsLocationDropdownOpen(false)}
+                                    style={{ display: 'flex', zIndex: '20', border: 'none', alignSelf: 'flex-start', justifySelf: 'flex-start', justifyContent: 'flex-start', alignItems: 'flex-start', fontSize: '2rem !important', inset: 'none', translate: 'none' }}
+                                  >
 
-
-
+                                    {['East Los Angeles', 'Wilshire', 'Santa Fe Springs', 'Tarzana', 'Encino', 'Valencia', 'Montebello', 'Glendale'].map((location, index) => (
+                                      <Dropdown.Item style={{ display: 'flex', fontSize: "1.1rem", border: 'none', textAlign: 'center', padding: "0 0 0 0", textDecorationLine: 'none', boxShadow: '1px 1px 5px black' }} key={index} eventKey={location}>
+                                        <p id="location-block" style={{ fontSize: "1.1rem", padding: '0rem', margin: '0rem', zIndex: '15', width: '500px', textDecorationLine: 'none', border: 'none' }}>
+                                          {location}
+                                        </p>
+                                      </Dropdown.Item>
+                                    ))}
+                                  </DropdownButton>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
                        
                         <div id="chat-form-lines-request-apt">
                             <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', textAlign: "left" }}>
-                                <label style={{ fontSize: "0.9rem", padding: "0 0 0 5px" }}>Additional Information</label>
-                                <Field id={renderFieldBorder(state.errors.message)} style={{ border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '97%', paddingLeft: '5px', paddingTop: '5px' }} name="message" component="textarea" rows="5" />
-                                {renderError(state.errors.message)}
+                                <label style={{ fontSize: "0.9rem", padding: "10px 0 0 5px" }}>Additional Information</label>
+                                <Field id={renderFieldBorder(errors.message)} style={{ border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '97%', paddingLeft: '5px', paddingTop: '5px' }} name="message" component="textarea" rows="5" />
+                                {renderError(errors.message)}
                             </div>
                         </div>
                     </div>
@@ -480,7 +621,7 @@ function RequestAppointmentForm(props) {
                             </div>
                             </div>
                             <div style={{ marginBottom: '0.3rem' }}>
-                            {renderError(state.errors.agree)}
+                            {renderError(errors.agree)}
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                             <div id="terms-and-policy">
@@ -504,8 +645,8 @@ function RequestAppointmentForm(props) {
                 </div>
                 </div>
             </div>
-            {renderError(state.errors.errorMain)}
-            {renderSendButton(values, state.errors, form)}
+            {renderError(errors.errorMain)}
+            {renderSendButton(values, errors, form)}
           </div>
         </form>
       )}

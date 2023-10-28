@@ -6,6 +6,7 @@ const Navbar = () => {
     const [isMobileMenuopen, setIsMobileMenuOpen] = useState(false);
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(null);
     const [isAppointmentFormOpen, setIsAppointmentFormOpen] = useState(false); // State to manage appointment form visibility
+    const [showThankYouMessage, setShowThankYouMessage] = useState(false);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuopen);
@@ -62,7 +63,12 @@ const Navbar = () => {
                     </a>
                     {isAppointmentFormOpen && (
                         <div className="appointment-form-overlay">
-                            <RequestAppointmentForm toggleAppointmentForm={toggleAppointmentForm} />
+                            <RequestAppointmentForm toggleAppointmentForm={toggleAppointmentForm} setShowThankYouMessage={setShowThankYouMessage} />
+                        </div>
+                    )}
+                    {showThankYouMessage && (
+                        <div className="thank-you-message">
+                            Thank you for the message! We will be with you shortly.
                         </div>
                     )}
                 </div>
