@@ -13,7 +13,9 @@ function RequestAppointmentForm(props) {
   const [selectedPatientType, setSelectedPatientType] = useState('new');
   const [selectedSex, setSelectedSex] = useState(''); // Step 1: State for selected sex
   const [selectedLocation, setSelectedLocation] = useState(''); // Step 1: State for selected location
-  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(true);
+  const [isOpenLocationDropdown, setIsOpenLocationDropdown] = useState(false);
+  const [selectedProvider, setSelectedProvider] = useState(''); // Step 1: State for selected Provider
+  const [isOpenProviderDropdown, setIsOpenProviderDropdown] = useState(false);
 
   const [state, setState] = useState({
     showDropdownLocations: false,
@@ -138,11 +140,16 @@ function RequestAppointmentForm(props) {
     console.log('state.agreeToTerms', state.agreeToTerms);
     console.log('state.agreeToTermsText', state.agreeToTermsText);
     console.log('selectedSex', selectedSex);
+    console.log('selectedLocation', selectedLocation);
+    console.log('selectedProvider', selectedProvider);
+
     const formData = {
       ...values,
       agreeToTerms: state.agreeToTerms,
       selectedPatientType: selectedPatientType,
-      selectedSex: selectedSex
+      selectedSex: selectedSex,
+      selectedLocation: selectedLocation,
+      selectedProvider: selectedProvider
     };
     try {
       const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
@@ -193,17 +200,16 @@ function RequestAppointmentForm(props) {
 
   // Modify renderSendButton to control opacity based on touched state
   const renderSendButton = (values, errors, form) => {
-    console.log('values', values);
-    console.log('errors', errors);
-    console.log('form', form);
+    // console.log('values', values);
+    // console.log('errors', errors);
+    // console.log('form', form);
 
     const shouldDisable = (
       !values.fName ||
       !values.lName ||
       !values.email ||
       !values.phone ||
-      !values.message ||
-      !state.agreeToTerms
+      !values.message
     );
     const hideButtonClass = shouldDisable || state.submitting ? 'hide-button' : '';
 
@@ -217,11 +223,11 @@ function RequestAppointmentForm(props) {
           onClick={async (e) => {
             e.preventDefault();
             if (shouldDisable || state.submitting) {
-              console.log('shouldDisable true');
-              console.log('values', values);
+              // console.log('shouldDisable true');
+              // console.log('values', values);
               setState({ ...state, showAllErrors: true });
             } else {
-              console.log('onSubmit(values)', values);
+              // console.log('onSubmit(values)', values);
               const isEmpty = Object.keys(errors).length === 0;
               if (isEmpty) {
                 // Set the 'submitting' state to true to trigger the fade-out animation
@@ -362,8 +368,6 @@ function RequestAppointmentForm(props) {
   };
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
-    setIsLocationDropdownOpen(false); // Close the dropdown
-
   };
   return (
     <Form
@@ -432,6 +436,14 @@ function RequestAppointmentForm(props) {
           errors.selectedSex = "Please fill in the field";
         }
 
+        if (!selectedLocation) {
+          errors.location = "Please select a location";
+        }
+
+        if (!selectedProvider) {
+          errors.provider = "Please select a Provider";
+        }
+
         // setState({ ...state, errors });
 
         return errors;
@@ -469,7 +481,7 @@ function RequestAppointmentForm(props) {
                 </p>
                 <button className="close-button" onClick={handleCloseForm}>x</button>
             </div>
-            <div style={{ maxHeight: '100%', minWidth: '150px', alignSelf: 'center', padding: '10px 10px 0px 0px', margin: '0px', backgroundColor: 'white' }} id="chatbox-div">
+            <div style={{ maxHeight: '100%', minWidth: '150px', alignSelf: 'center', padding: '10px 10px 0px 0px', margin: '0px', backgroundColor: 'white', overflowY: 'scroll' }} id="chatbox-div">
                 <div id="chat-middle-component-request-apt">
                 <div id="middle-form-top-div">
                     <div style={{ justifyContent: 'flex-start', display: 'flex' }} id="chat-form-top-div">
@@ -555,54 +567,88 @@ function RequestAppointmentForm(props) {
                         </div>
 
                         {renderSexRadio(errors)}
-                        <div className='apt-line' style={{ fontSize: "1.2rem" }}>
-                          <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
-                              <div style={{ display: 'flex', textAlign: 'left', flexDirection: 'column' }} id="chat-form-lines-request-apt">
-                                  <label style={{ fontSize: "1.1rem", padding: "0 0 0 5px" }}>Location</label>
-                                  <DropdownButton
-                                    title={
-                                      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                        <div>
-                                          {selectedLocation || 'Location'}
-                                        </div>
-                                        <div>
-                                          <i class="fas fa-chevron-down"></i>
-                                        </div>
-                                      </div>
-                                    }
-                                    variant="secondary"
-                                    onSelect={handleLocationChange}
-                                    id="location-dropdown"
-                                    show={isLocationDropdownOpen} // Use the state variable to control the open state
-                                    onToggle={(isOpen) => setIsLocationDropdownOpen(!isLocationDropdownOpen)} // Update the state when the dropdown is toggled                  
-                                    onHide={() => setIsLocationDropdownOpen(false)}
-                                    style={{ display: 'flex', zIndex: '20', border: 'none', alignSelf: 'flex-start', justifySelf: 'flex-start', justifyContent: 'flex-start', alignItems: 'flex-start', fontSize: '2rem !important', inset: 'none', translate: 'none' }}
-                                  >
 
-                                    {['East Los Angeles', 'Wilshire', 'Santa Fe Springs', 'Tarzana', 'Encino', 'Valencia', 'Montebello', 'Glendale'].map((location, index) => (
-                                      <Dropdown.Item style={{ display: 'flex', fontSize: "1.1rem", border: 'none', textAlign: 'center', padding: "0 0 0 0", textDecorationLine: 'none', boxShadow: '1px 1px 5px black' }} key={index} eventKey={location}>
-                                        <p id="location-block" style={{ fontSize: "1.1rem", padding: '0rem', margin: '0rem', zIndex: '15', width: '500px', textDecorationLine: 'none', border: 'none' }}>
-                                          {location}
-                                        </p>
-                                      </Dropdown.Item>
-                                    ))}
-                                  </DropdownButton>
+
+                        <div className='apt-line' style={{ fontSize: "1.1rem", padding: "0 0 0 5px" }}>
+                          <div style={{ margin: '20px 0px 0px 20px', padding: '0.2rem 0.5rem', display: 'flex', flexDirection: 'column' }}>
+                            <p style={{ margin: '0 0 0.5rem 0' }}>Location</p>
+                            <div onClick={() => setIsOpenLocationDropdown(!isOpenLocationDropdown)}  className="select-location">
+                              <div className='select-location-title-and-list'>
+                                <div id="select-location-title">
+                                  {selectedLocation || 'Select a Location'}
+                                </div>
+                                <div id="select-location-icon">
+                                  {isOpenLocationDropdown ? (
+                                    <i class="fas fa-angle-down fa-rotate-180"></i>
+                                  ) : (
+                                    <i class="fas fa-angle-down"></i>
+                                  )}
+                                </div>
+                              </div>
+                              <div style={{ display: isOpenLocationDropdown ? 'flex' : 'none', flexDirection: 'column' }}>
+                                {['East Los Angeles', 'Wilshire', 'Santa Fe Springs', 'Tarzana', 'Encino', 'Valencia', 'Montebello', 'Glendale'].map((location, index) => (
+                                  <div
+                                    key={index}
+                                    onClick={() => setSelectedLocation(location)}
+                                    style={{ display: 'flex' }}
+                                  >
+                                    {location}
+                                  </div>
+                                ))}
                               </div>
                             </div>
+                          <div style={{ marginBottom: '0.3rem' }}>
+                              {renderError(errors.location)}
+                          </div>
                           </div>
                         </div>
+
+
+                        <div className='apt-line' style={{ fontSize: "1.1rem", padding: "0 0 20px 5px" }}>
+                          <div style={{ margin: '20px 0px 0px 20px', padding: '0.2rem 0.5rem', display: 'flex', flexDirection: 'column' }}>
+                            <p style={{ margin: '0 0 0.5rem 0' }}>Provider</p>
+                            <div onClick={() => setIsOpenProviderDropdown(!isOpenProviderDropdown)}  className="select-location">
+                              <div className='select-location-title-and-list'>
+                                <div id="select-location-title">
+                                  {selectedProvider || 'Select a Provider'}
+                                </div>
+                                <div id="select-location-icon">
+                                  {isOpenProviderDropdown ? (
+                                    <i class="fas fa-angle-down fa-rotate-180"></i>
+                                  ) : (
+                                    <i class="fas fa-angle-down"></i>
+                                  )}
+                                </div>
+                              </div>
+                              <div style={{ display: isOpenProviderDropdown ? 'flex' : 'none', flexDirection: 'column' }}>
+                                {["Daniel Rivas-Tejeda", "Annie Yang", "Bryan Sandoval", "David Moriel", "Dr. Perrone", "Nora Nazarian", "Natalie Hammond", "Dr. Collazo", "Dr. Jason Kaushik", "Dr. Sugi", "Dr. Daniel Acevedo", "Dr. Marcus", "Dr. Barba", "Dr. Bastian", "Dr. Cho", "Dr. Cikra", "Dr. Desai", "Dr. Dworsky", "Dr. Longacre", "Dr. Lu", "Dr. Malafa", "Dr. Pickrell", "Dr. Wang", "Dr. Yasmeh", "Felipe Nunez", "John Giannini", "Jonathan Naick", "Mark Lee", "Michelle Chang", "Whitty Li", "Matthew Lee", "Gerardo Cudich"].map((provider, index) => (
+                                  <div
+                                    key={index}
+                                    onClick={() => setSelectedProvider(provider)}
+                                    style={{ display: 'flex' }}
+                                  >
+                                    {provider}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          <div style={{ marginBottom: '0.3rem' }}>
+                              {renderError(errors.provider)}
+                          </div>
+                          </div>
+                        </div>
+
 
                        
                         <div id="chat-form-lines-request-apt">
                             <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', textAlign: "left" }}>
-                                <label style={{ fontSize: "0.9rem", padding: "10px 0 0 5px" }}>Additional Information</label>
+                                <label style={{ fontSize: "1rem", padding: "10px 0 0 5px" }}>Reason for appointment</label>
                                 <Field id={renderFieldBorder(errors.message)} style={{ border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '97%', paddingLeft: '5px', paddingTop: '5px' }} name="message" component="textarea" rows="5" />
                                 {renderError(errors.message)}
                             </div>
                         </div>
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', margin: '0px 0px 0px 0px', padding: '0.2rem 0.5rem'  }} id="chat-middle-component">
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', margin: '0px 0px 10px 0px', padding: '0.2rem 0.5rem'  }} id="chat-middle-component">
                         <div style={{ displa: 'flex', flexDirection: 'column' }}>
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                             <div id="terms-and-policy">
@@ -640,6 +686,11 @@ function RequestAppointmentForm(props) {
                             </div>
                             </div>
                         </div>
+                    </div>
+                    <div style={{ margin: '0px 0px 10px 0px', padding: '0.2rem 0.5rem' }} id="chat-form-lines-request-apt">
+                            <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', textAlign: "left" }}>
+                                <label style={{ fontSize: "0.9rem", padding: "10px 10px 10px 10px", borderTop: '1px solid var(--grey-light)', borderBottom: '1px solid var(--grey-light)',}}>For HMO patients, kindly include your authorization number in the comment box. Please be aware that appointment availability may affect our ability to schedule your preferred provider.</label>
+                            </div>
                     </div>
                     </div>
                 </div>
