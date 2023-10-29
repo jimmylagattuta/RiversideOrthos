@@ -16,7 +16,10 @@ class Api::V1::EmailController < ApplicationController
 
       def send_email_to_office(form_data)
         if form_data[:dob]
-          # texter wireup
+          if form_data[:agreeToTermsTexts]
+            # texter wireup
+            puts "Texter"
+          end
           OfficeMailer.request_appointment_email(form_data).deliver_now
         else
           OfficeMailer.contact_us_email(form_data).deliver_now

@@ -631,6 +631,7 @@ img {
 .thank-you-message {
     color: 'black';
     z-index: 20;
+    box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
 }
 #location-block:hover {
     font-weight: 800;
