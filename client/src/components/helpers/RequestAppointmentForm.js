@@ -146,6 +146,7 @@ function RequestAppointmentForm(props) {
     const formData = {
       ...values,
       agreeToTerms: state.agreeToTerms,
+      agreeToTermsText: state.agreeToTermsText,
       selectedPatientType: selectedPatientType,
       selectedSex: selectedSex,
       selectedLocation: selectedLocation,

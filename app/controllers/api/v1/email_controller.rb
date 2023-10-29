@@ -11,11 +11,15 @@ class Api::V1::EmailController < ApplicationController
       private
 
       def email_params
-        params.permit(:fName, :lName, :email, :phone, :message, :recaptcha, :agreeToTerms)
+        params.permit(:fName, :lName, :email, :phone, :message, :recaptcha, :agreeToTerms, :dob, :agreeToTermsTexts, :selectedPatientType, :selectedSex, :selectedLocation, :selectedProvider)
       end
 
       def send_email_to_office(form_data)
-        OfficeMailer.contact_us_email(form_data).deliver_now
+        if form_data[:dob]
+          OfficeMailer.request_appointment_email(form_data).deliver_now
+        else
+          OfficeMailer.contact_us_email(form_data).deliver_now
+        end
 
         true
       rescue StandardError => e
