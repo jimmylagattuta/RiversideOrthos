@@ -591,6 +591,7 @@ function RequestAppointmentForm(props) {
                                     key={index}
                                     onClick={() => setSelectedLocation(location)}
                                     style={{ display: 'flex' }}
+                                    id="provider-location"
                                   >
                                     {location}
                                   </div>
@@ -626,6 +627,7 @@ function RequestAppointmentForm(props) {
                                     key={index}
                                     onClick={() => setSelectedProvider(provider)}
                                     style={{ display: 'flex' }}
+                                    id="provider-location"
                                   >
                                     {provider}
                                   </div>
@@ -641,7 +643,7 @@ function RequestAppointmentForm(props) {
 
                        
                         <div id="chat-form-lines-request-apt">
-                            <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', textAlign: "left" }}>
+                            <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', textAlign: "left", paddingRight: '10px' }}>
                                 <label style={{ fontSize: "1rem", padding: "10px 0 0 5px" }}>Reason for appointment</label>
                                 <Field id={renderFieldBorder(errors.message)} style={{ border: 'none', borderRadius: '10px 10px 10px 10px', backgroundColor: "rgba(192,200,200, 25%)", zIndex: '10', width: '97%', paddingLeft: '5px', paddingTop: '5px' }} name="message" component="textarea" rows="5" />
                                 {renderError(errors.message)}
