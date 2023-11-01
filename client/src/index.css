@@ -2321,6 +2321,11 @@ display: none;
         background-image: url(https://i.imgur.com/V3Vfsqi.webp);
     }
 }
+@media (max-width: 1360px) {
+    .expertise-name {
+        font-size: 0.8rem;
+    }
+}
 @media (max-width: 1295px) {
     .pages-header {
         background-image: url(https://i.imgur.com/pCBq2TF.webp);
@@ -2332,6 +2337,9 @@ display: none;
     }
 }
 @media (max-width: 1160px) {
+    .expertise-name {
+        font-size: 0.7rem;
+    }
     .header-title {
         display: none;
     }
@@ -2555,6 +2563,9 @@ display: none;
       }
 }
 @media (max-width: 850px) {
+    .expertise-name {
+        font-size: 0.6rem;
+    }
     .about-container-bottom {
         flex-direction: column;
     }
