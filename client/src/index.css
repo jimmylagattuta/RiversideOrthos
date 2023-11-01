@@ -2338,7 +2338,10 @@ display: none;
 }
 @media (max-width: 1160px) {
     .expertise-name {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+    }
+    .expertise-item {
+        width: 30%;
     }
     .header-title {
         display: none;
