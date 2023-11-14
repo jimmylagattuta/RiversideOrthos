@@ -54,6 +54,7 @@ const FloatingOfficeInfo = ({
                 <button
                     className='pagination-arrow'
                     onClick={handlePrevClick}
+                    title="Scroll Offices"
                     disabled={currentPage === 0}
                 >
                     {useChevronLeft ? <i className="fas fa-chevron-left"></i> : <i className="fas fa-chevron-up"></i>}
@@ -119,7 +120,7 @@ const FloatingOfficeInfo = ({
             <div className='pagination-arrows'>
                 <button
                     className='pagination-arrow'
-                    title='Scroll Office'
+                    title='Scroll Offices'
                     onClick={handleNextClick}
                     disabled={currentPage === totalPages - 1}
                 >
