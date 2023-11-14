@@ -196,6 +196,13 @@ GEM
       rufus-scheduler (~> 3.2)
       sidekiq (>= 6, < 8)
       tilt (>= 1.4.0)
+    sprockets (4.2.1)
+      concurrent-ruby (~> 1.0)
+      rack (>= 2.2.4, < 4)
+    sprockets-rails (3.4.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      sprockets (>= 3.0.0)
     terser (1.1.19)
       execjs (>= 0.3.0, < 3)
     thor (1.2.2)
@@ -228,6 +235,7 @@ DEPENDENCIES
   rufus-scheduler
   sidekiq
   sidekiq-scheduler
+  sprockets-rails
   terser
   tzinfo-data
 

@@ -27,6 +27,7 @@ gem 'sidekiq'
 gem 'sidekiq-scheduler'
 gem 'rufus-scheduler'
 gem 'heroku-deflater', :group => :production
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
