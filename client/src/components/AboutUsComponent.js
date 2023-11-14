@@ -27,7 +27,7 @@ const AboutUsComponent = () => {
                 </p>
                 <div className='about-right-button'>
                     <NavLink className='btn header-button-white' alt="Learn More about Los Angeles Orthopedic Specialists" aria-label="Learn More Los Angeles Orthopedic Specialists" to='/about-us'>
-                        Learn More
+                        Learn More About Us
                     </NavLink>
                 </div>
 
