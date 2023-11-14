@@ -2325,6 +2325,13 @@ display: none;
     .expertise-name {
         font-size: 0.8rem;
     }
+    .sub-link {
+        padding: 15px 10px 15px 10px;
+        font-size: 0.9rem;
+    }
+    .submenu-multi-column {
+        min-width: 835px;
+    }
 }
 @media (max-width: 1295px) {
     .pages-header {
