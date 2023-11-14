@@ -82,11 +82,13 @@ GEM
     erubi (1.12.0)
     et-orbi (1.2.7)
       tzinfo
+    execjs (2.9.1)
     fugit (1.8.1)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    heroku-deflater (0.7.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -101,6 +103,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    memcachier (0.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.4)
@@ -193,6 +196,8 @@ GEM
       rufus-scheduler (~> 3.2)
       sidekiq (>= 6, < 8)
       tilt (>= 1.4.0)
+    terser (1.1.19)
+      execjs (>= 0.3.0, < 3)
     thor (1.2.2)
     tilt (2.3.0)
     timeout (0.4.0)
@@ -213,6 +218,8 @@ DEPENDENCIES
   bcrypt
   debug
   dotenv-rails
+  heroku-deflater
+  memcachier
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
@@ -221,6 +228,7 @@ DEPENDENCIES
   rufus-scheduler
   sidekiq
   sidekiq-scheduler
+  terser
   tzinfo-data
 
 RUBY VERSION
