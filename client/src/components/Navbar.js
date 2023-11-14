@@ -85,7 +85,8 @@ const Navbar = () => {
                                     onClick={resetMobileMenu}
                                     key={item.menu}
                                     to={item.link}
-                                    aria-labelledby={`Visit the ${item.menu} Page To Navigate To That Page`}
+                                    alt={`Visit the ${item.menu} Page To Navigate To That Page`}
+                                    aria-label={`Visit the ${item.menu} Page To Navigate To That Page`}
                                     className={({ isActive }) =>
                                         isActive
                                             ? 'nav-link active'
@@ -111,6 +112,8 @@ const Navbar = () => {
                                         onClick={resetMobileMenu}
                                         key={item.menu}
                                         to={item.link}
+                                        alt={`Visit the ${item.menu} Page To Navigate To That Page`}
+                                        aria-label={`Visit the ${item.menu} Page To Navigate To That Page`}
                                         className={({ isActive }) =>
                                             isActive
                                                 ? 'sub-link mobile-nav-link active'

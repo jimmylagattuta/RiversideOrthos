@@ -26,10 +26,10 @@ const TeamComponent = () => {
                     Follow Us
                 </h2>
                 <div className='team-icon-container'>
-                    <a style={{ color: 'white' }} href='https://www.facebook.com/profile.php?id=100083072153534' target='_blank' rel='noopener noreferrer'>
+                    <a style={{ color: 'white' }} href='https://www.facebook.com/profile.php?id=100083072153534' target='_blank' rel='noopener noreferrer' title="Facebook Review">
                         <i className='fab fa-facebook fa-2x'></i>
                     </a>
-                    <a style={{ color: 'white' }} href='https://www.youtube.com/@LAOrthopedics' target='_blank' rel='noopener noreferrer'>
+                    <a style={{ color: 'white' }} href='https://www.youtube.com/@LAOrthopedics' target='_blank' rel='noopener noreferrer' title="Facebook Review">
                         <i style={{ fontSize: '1.8em' }} className='fab fa-youtube fa-2x'></i>
                     </a>
                 </div>
