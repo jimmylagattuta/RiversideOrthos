@@ -1039,7 +1039,7 @@ export const aboutObj = [
             "The skilled orthopedic surgeons use the most advanced surgical approaches for knee replacement surgery, foot and ankle surgery, meniscus repairs, and other procedures, thereby giving their patients the best results.",
             "Schedule an appointment online or call any of the conveniently located Los Angeles Orthopedic Surgery Specialists’ offices to schedule now."
         ],
-        link: '/about',
+        link: '/about-us',
     },
 ];
 
