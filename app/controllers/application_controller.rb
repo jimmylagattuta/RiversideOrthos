@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery with: :exception
     include ActionController::Cookies
     before_action :authenticate_user
     before_action :cors_preflight_check
