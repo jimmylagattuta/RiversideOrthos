@@ -26,7 +26,7 @@ const AboutUsComponent = () => {
                     Recognizing that every patient is unique, Los Angeles Orthopedic Surgery Specialists takes a tailored approach to ensure that each individual fully comprehends their condition and personalized treatment plan. Additionally, we provide preventive and podiatric care to enhance patients' comfort and enable more active lifestyles.
                 </p>
                 <div className='about-right-button'>
-                    <NavLink className='btn header-button-white' alt="About us page link" aria-label="About us page link" to='/about-us'>
+                    <NavLink className='btn header-button-white' alt="Learn More" aria-label="Learn More" to='/about-us'>
                         Learn More
                     </NavLink>
                 </div>
