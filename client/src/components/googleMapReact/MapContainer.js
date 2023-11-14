@@ -119,6 +119,7 @@ const FloatingOfficeInfo = ({
             <div className='pagination-arrows'>
                 <button
                     className='pagination-arrow'
+                    title='Scroll Office'
                     onClick={handleNextClick}
                     disabled={currentPage === totalPages - 1}
                 >

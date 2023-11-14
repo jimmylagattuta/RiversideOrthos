@@ -85,7 +85,7 @@ const Navbar = () => {
                                     onClick={resetMobileMenu}
                                     key={item.menu}
                                     to={item.link}
-                                    aria-label={`Visit the ${item.menu} Page To Navigate To That Page`}
+                                    aria-labelledby={`Visit the ${item.menu} Page To Navigate To That Page`}
                                     className={({ isActive }) =>
                                         isActive
                                             ? 'nav-link active'
