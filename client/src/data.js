@@ -422,7 +422,7 @@ export const physicians = [
 
 export const services = [
     {
-        image: 'https://i.imgur.com/tINd3CV.webp',
+        image: 'https://i.imgur.com/tINd3CVl.webp',
         name: 'Foot and Ankle Surgery',
         firstTitle: 'About Foot and Ankle Surgery',
         description: [
@@ -463,7 +463,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/WN1zBdr.webp',
+        image: 'https://i.imgur.com/WN1zBdrl.webp',
         name: 'Fracture Care',
         firstTitle: 'About Fracture Care',
         description: [
@@ -501,7 +501,7 @@ export const services = [
         link: '/services'
     },
     {   
-        image: 'https://i.imgur.com/U0lwo9g.webp',
+        image: 'https://i.imgur.com/U0lwo9gl.webp',
         name: 'Diabetic Foot Care',
         firstTitle: 'About Diabetic Foot Care',
         description: [
@@ -541,7 +541,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/Rq43ZzX.webp',
+        image: 'https://i.imgur.com/Rq43ZzXl.webp',
         name: 'Hand and Wrist Surgery',
         firstTitle: 'About Hand and Wrist Surgery',
         description: [
@@ -582,7 +582,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/eJYpk8G.webp',
+        image: 'https://i.imgur.com/eJYpk8Gl.webp',
         name: 'Shoulder Surgery',
         firstTitle: 'About Shoulder Surgery',
         description: [
@@ -620,7 +620,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/AsILU53.webp',
+        image: 'https://i.imgur.com/AsILU53l.webp',
         name: 'Sports Medicine',
         firstTitle: 'About Sports Medicine',
         description: [
@@ -659,7 +659,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/AHavI6m.webp',
+        image: 'https://i.imgur.com/AHavI6ml.webp',
         name: 'Arthroscopy',
         firstTitle: 'About Arthroscopy',
         description: [
@@ -712,7 +712,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/kNfSdcm.webp',
+        image: 'https://i.imgur.com/kNfSdcml.webp',
         name: 'Knee Replacement Surgery',
         firstTitle: 'About Knee Replacement Surgery',
         description: [
@@ -742,7 +742,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/TOuhcQa.webp',
+        image: 'https://i.imgur.com/TOuhcQal.webp',
         name: 'Pain Management',
         firstTitle: 'About Pain Management',
         description: [
@@ -785,7 +785,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/oM8DFV9.webp',
+        image: 'https://i.imgur.com/oM8DFV9l.webp',
         name: 'ACL Reconstruction',
         firstTitle: 'About ACL Reconstruction',
         description: [
@@ -829,7 +829,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/H5SJHUM.webp',
+        image: 'https://i.imgur.com/H5SJHUMl.webp',
         name: 'Meniscus Repairs',
         firstTitle: 'About Meniscus Repairs',
         description: [
@@ -866,7 +866,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/3BMvTfL.webp',
+        image: 'https://i.imgur.com/3BMvTfLl.webp',
         name: 'Arthritis Care',
         firstTitle: 'About Arthritis Care',
         description: [
@@ -949,7 +949,7 @@ export const services = [
     //     link: '/services',
     // },
     {
-        image: 'https://i.imgur.com/rZaoIFC.webp',
+        image: 'https://i.imgur.com/rZaoIFCl.webp',
         name: 'Joint Injections',
         firstTitle: 'About Joint Injections',
         description: [
@@ -988,7 +988,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/vjzz2Z0.webp',
+        image: 'https://i.imgur.com/vjzz2Z0l.webp',
         name: 'PRP Injections',
         firstTitle: 'About PRP Injections',
         description: [
@@ -1161,7 +1161,7 @@ export const aboutPrivacyPolicy = [
 
 export const expertiseBlocks = [
     {
-        image: 'https://i.imgur.com/tINd3CV.webp',
+        image: 'https://i.imgur.com/tINd3CVm.webp',
         width: '267px',
         height: '200px',
         name: 'Foot and Ankle Surgery',
@@ -1202,13 +1202,13 @@ export const expertiseBlocks = [
             'After your procedure, you receive a comprehensive rehabilitation plan, including pain management and physical therapy. Los Angeles Orthopedic Surgery Specialists is here to support you throughout your foot and ankle surgery, so call the office nearest to you or book your consultation online now.'
         ],
         link: '/footAndAnkleSurgery',
-        imageTwo: 'https://i.imgur.com/tINd3CV.webp',
+        imageTwo: 'https://i.imgur.com/tINd3CVm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Foot and Ankle Surgery',
     },
     {
-        image: 'https://i.imgur.com/WN1zBdr.webp',
+        image: 'https://i.imgur.com/WN1zBdrm.webp',
         width: '267px',
         height: '200px',
         name: 'Fracture Care',
@@ -1246,13 +1246,13 @@ export const expertiseBlocks = [
             'Taking action as soon as you suffer a fracture can protect your bone health now and in the future. Call the Los Angeles Orthopedic Surgery Specialists office near you or book your appointment using the online scheduler now.'
         ],
         link: '/fractureCare',
-        imageTwo: 'https://i.imgur.com/WN1zBdr.webp',
+        imageTwo: 'https://i.imgur.com/WN1zBdrm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Fracture Care'
     },
     {   
-        image: 'https://i.imgur.com/U0lwo9g.webp',
+        image: 'https://i.imgur.com/U0lwo9gm.webp',
         width: '267px',
         height: '200px',
         name: 'Diabetic Foot Care',
@@ -1292,13 +1292,13 @@ export const expertiseBlocks = [
             "If you have new foot issues or are due for a diabetic foot checkup, call Los Angeles Orthopedic Surgery Specialists or use the online booking tool now."
         ],
         link: '/diabeticFootCare',
-        imageTwo: 'https://i.imgur.com/U0lwo9g.webp',
+        imageTwo: 'https://i.imgur.com/U0lwo9gm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Diabetic Foot Care'
     },
     {   
-        image: 'https://i.imgur.com/Rq43ZzX.webp',
+        image: 'https://i.imgur.com/Rq43ZzXm.webp',
         width: '267px',
         height: '200px',
         name: 'Hand and Wrist Surgery',
@@ -1339,13 +1339,13 @@ export const expertiseBlocks = [
             "If you have hand or wrist pain that’s making it hard to function, call Los Angeles Orthopedic Surgery Specialists or click on the online booking link now."
         ],
         link: '/handAndWristSurgery',
-        imageTwo: 'https://i.imgur.com/Rq43ZzX.webp',
+        imageTwo: 'https://i.imgur.com/Rq43ZzXm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Hand and Wrist Surgery'
     },
     {   
-        image: 'https://i.imgur.com/eJYpk8G.webp',
+        image: 'https://i.imgur.com/eJYpk8Gm.webp',
         width: '267px',
         height: '200px',
         name: 'Shoulder Surgery',
@@ -1383,13 +1383,13 @@ export const expertiseBlocks = [
             "To schedule your shoulder surgery, call Los Angeles Orthopedic Surgery Specialists or click on the online booking feature today."
         ],
         link: '/shoulderSurgery',
-        imageTwo: 'https://i.imgur.com/eJYpk8G.webp',
+        imageTwo: 'https://i.imgur.com/eJYpk8Gm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Shoulder Surgery'
     },
     {   
-        image: 'https://i.imgur.com/AsILU53.webp',
+        image: 'https://i.imgur.com/AsILU53m.webp',
         width: '267px',
         height: '200px',
         name: 'Sports Medicine',
@@ -1428,13 +1428,13 @@ export const expertiseBlocks = [
             "Schedule a sports medicine evaluation at Los Angeles Orthopedic Surgery Specialists today for expert orthopedic care. Call the office or request an appointment online."
         ],
         link: '/sportsMedicine',
-        imageTwo: 'https://i.imgur.com/AsILU53.webp',
+        imageTwo: 'https://i.imgur.com/AsILU53m.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Sports Medicine'
     },
     {   
-        image: 'https://i.imgur.com/AHavI6m.webp',
+        image: 'https://i.imgur.com/AHavI6mm.webp',
         width: '267px',
         height: '200px',
         name: 'Arthroscopy',
@@ -1487,13 +1487,13 @@ export const expertiseBlocks = [
             "Are you ready to learn more about arthroscopy? Click the online booking link or call the Los Angeles Orthopedic Surgery Specialists office near you now."
         ],
         link: '/arthroscopy',
-        imageTwo: 'https://i.imgur.com/AHavI6m.webp',
+        imageTwo: 'https://i.imgur.com/AHavI6mm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Arthroscopy'
     },
     {   
-        image: 'https://i.imgur.com/kNfSdcm.webp',
+        image: 'https://i.imgur.com/kNfSdcmm.webp',
         width: '267px',
         height: '200px',
         name: 'Knee Replacement Surgery',
@@ -1523,13 +1523,13 @@ export const expertiseBlocks = [
             "Are you ready for knee pain relief? Call the Los Angeles Orthopedic Surgery Specialists office nearest to you or book your appointment using online scheduling now."
         ],
         link: '/kneeReplacementSurgery',
-        imageTwo: 'https://i.imgur.com/kNfSdcm.webp',
+        imageTwo: 'https://i.imgur.com/kNfSdcmm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Knee Replacement Surgery'
     },
     {   
-        image: 'https://i.imgur.com/TOuhcQa.webp',
+        image: 'https://i.imgur.com/TOuhcQam.webp',
         width: '267px',
         height: '200px',
         name: 'Pain Management',
@@ -1572,13 +1572,13 @@ export const expertiseBlocks = [
             "If you have pain that’s interfering with your life, it’s time to talk about a stronger solution. Call the Los Angeles Orthopedic Surgery Specialists office nearest to you or click on the online booking tool to make your appointment now."
         ],
         link: '/painManagement',
-        imageTwo: 'https://i.imgur.com/TOuhcQa.webp',
+        imageTwo: 'https://i.imgur.com/TOuhcQam.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Pain Management'
     },
     {   
-        image: 'https://i.imgur.com/oM8DFV9.webp',
+        image: 'https://i.imgur.com/oM8DFV9m.webp',
         width: '267px',
         height: '200px',
         name: 'ACL Reconstruction',
@@ -1622,13 +1622,13 @@ export const expertiseBlocks = [
             "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today for personalized care designed to improve your mobility and orthopedic health. Call the office or request an appointment using their secure online service."
         ],
         link: '/aclReconstruction',
-        imageTwo: 'https://i.imgur.com/oM8DFV9.webp',
+        imageTwo: 'https://i.imgur.com/oM8DFV9m.webp',
         component: 'Services',
         link: '/services',
         spanString: 'ACL Reconstruction'
     },
     {   
-        image: 'https://i.imgur.com/H5SJHUM.webp',
+        image: 'https://i.imgur.com/H5SJHUMm.webp',
         width: '267px',
         height: '200px',
         name: 'Meniscus Repairs',
@@ -1665,13 +1665,13 @@ export const expertiseBlocks = [
             "Schedule your evaluation today. Call the office or request an appointment online."
         ],
         link: '/meniscusRepairs',
-        imageTwo: 'https://i.imgur.com/H5SJHUM.webp',
+        imageTwo: 'https://i.imgur.com/H5SJHUMm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Meniscus Repairs'
     },
     {   
-        image: 'https://i.imgur.com/3BMvTfL.webp',
+        image: 'https://i.imgur.com/3BMvTfLm.webp',
         width: '267px',
         height: '200px',
         name: 'Arthritis Care',
@@ -1716,7 +1716,7 @@ export const expertiseBlocks = [
             "For more information about arthritis care, schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today. Call the office or request an appointment online."
         ],
         link: '/arthritisCare',
-        imageTwo: 'https://i.imgur.com/3BMvTfL.webp',
+        imageTwo: 'https://i.imgur.com/3BMvTfLm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Arthritis Care'
@@ -1766,7 +1766,7 @@ export const expertiseBlocks = [
     //     spanString: 'Ligament Reconstruction'
     // },
     {   
-        image: 'https://i.imgur.com/rZaoIFC.webp',
+        image: 'https://i.imgur.com/rZaoIFCm.webp',
         width: '267px',
         height: '200px',
         name: 'Joint Injections',
@@ -1805,13 +1805,13 @@ export const expertiseBlocks = [
             "Schedule your evaluation at Los Angeles Orthopedic Surgery Specialists today by calling the office or requesting an appointment using their online service."
         ],
         link: '/jointInjections',
-        imageTwo: 'https://i.imgur.com/rZaoIFC.webp',
+        imageTwo: 'https://i.imgur.com/rZaoIFCm.webp',
         component: 'Services',
         link: '/services',
         spanString: 'Joint Injections'
     },
     {   
-        image: 'https://i.imgur.com/vjzz2Z0.webp',
+        image: 'https://i.imgur.com/vjzz2Z0m.webp',
         width: '267px',
         height: '200px',
         name: 'PRP Injections',
@@ -1848,7 +1848,7 @@ export const expertiseBlocks = [
             "Schedule an evaluation at Los Angeles Orthopedic Surgery Specialists today to learn more about PRP injections. Call the office or request an appointment online."
         ],
         link: '/prpInjections',
-        imageTwo: 'https://i.imgur.com/vjzz2Z0.webp',
+        imageTwo: 'https://i.imgur.com/vjzz2Z0m.webp',
         component: 'Services',
         link: '/services',
         spanString: 'PRP Injections'
