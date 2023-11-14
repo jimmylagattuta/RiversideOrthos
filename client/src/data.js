@@ -2138,7 +2138,7 @@ export const locations = [
 export const navMenu = [
     { menu: 'Home', link: '/' },
     {
-        menu: 'About',
+        menu: 'About Us',
         link: '/about'
     },
     {
