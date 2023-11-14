@@ -29,7 +29,7 @@ function App() {
             <Routes>
                 <Route index element={<Home />} />
 
-                <Route path='about' element={<AboutLayout />}>
+                <Route path='about-us' element={<AboutLayout />}>
                     <Route index element={<About />} />
                     <Route path=':aboutId' element={<SingleAbout />} />
                 </Route>

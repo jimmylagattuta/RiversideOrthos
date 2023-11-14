@@ -2138,8 +2138,8 @@ export const locations = [
 export const navMenu = [
     { menu: 'Home', link: '/' },
     {
-        menu: 'About LAOSS & Details',
-        link: '/about'
+        menu: 'About Us',
+        link: '/about-us'
     },
     {
         menu: 'Physicians',
