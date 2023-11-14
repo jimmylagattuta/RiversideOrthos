@@ -33,10 +33,6 @@ function App() {
                     <Route index element={<About />} />
                     <Route path=':aboutId' element={<SingleAbout />} />
                 </Route>
-                <Route path='learn-more' element={<AboutLayout />}>
-                    <Route index element={<About />} />
-                    <Route path=':aboutId' element={<SingleAbout />} />
-                </Route>
                 <Route path='physicians' element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
                     <Route path=':physicianId' element={<SinglePhysician />} />
