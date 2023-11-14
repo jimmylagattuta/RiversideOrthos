@@ -92,7 +92,7 @@ const Navbar = () => {
                                             ? 'nav-link active'
                                             : 'nav-link'
                                     }>
-                                    {item.menu}
+                                    {item.menu}<span style={{ display: 'none' }}>Visit the {item.menu} page</span>
                                 </NavLink>
                                 {item.subMenuItems && (
                                     <button
