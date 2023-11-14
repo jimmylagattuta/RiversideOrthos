@@ -55,12 +55,12 @@ const Navbar = () => {
                     <NavLink className='btn header-button-dark' to='/locations'>
                         Call Us
                     </NavLink>
-                    <a
+                    <div
                         className='btn header-button-yellow'
                         onClick={toggleAppointmentForm}
                     >
                         Request Appointment
-                    </a>
+                    </div>
                     {isAppointmentFormOpen && (
                         <div className="appointment-form-overlay">
                             <RequestAppointmentForm toggleAppointmentForm={toggleAppointmentForm} setShowThankYouMessage={setShowThankYouMessage} />
@@ -85,7 +85,7 @@ const Navbar = () => {
                                     onClick={resetMobileMenu}
                                     key={item.menu}
                                     to={item.link}
-                                    aria-label={`Visit the ${item.menu} Page`}
+                                    aria-label={`Visit the ${item.menu} Page To Navigate To That Page`}
                                     className={({ isActive }) =>
                                         isActive
                                             ? 'nav-link active'
