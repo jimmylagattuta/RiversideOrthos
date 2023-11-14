@@ -2330,7 +2330,7 @@ display: none;
         font-size: 0.9rem;
     }
     .submenu-multi-column {
-        min-width: 835px;
+        min-width: 820px;
     }
 }
 @media (max-width: 1295px) {
