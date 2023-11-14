@@ -114,25 +114,6 @@ function ChatBox(props) {
         console.error(err);
       });
   };
-  
-
-  const loadRecaptchaScript = () => {
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
-    script.async = true;
-    script.defer = true;
-    script.onload = initializeRecaptcha;
-    document.head.appendChild(script);
-  };
-
-  const initializeRecaptcha = () => {
-    // Initialize reCAPTCHA with your site key
-    window.grecaptcha.enterprise.ready(() => {
-      window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
-        setState({ ...state, recaptchaToken: token });
-      });
-    });
-  };
 
   const handleSubmitRecaptcha = (values) => {
     if (values) {
@@ -245,28 +226,6 @@ function ChatBox(props) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorLocations = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
-						{error}
-					</h8>
-				</div>
-			)
-		}
-	}
-	const renderErrorNewOrReturning = (error) => {
-		if (error && state.showAllErrors) {
-			return (
-				<div id="error-div">
-					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
