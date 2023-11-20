@@ -26,7 +26,6 @@ RUN bundle install
 
 # Copy the Rails application files
 COPY . .
-
 # Copy the built React app from the client-builder stage
 COPY --from=client-builder /usr/src/app/client/build /usr/src/app/public
 
