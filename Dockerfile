@@ -1,5 +1,5 @@
 # Stage 1: Build the React client
-FROM node:14.x as client-builder
+FROM node:14 as client-builder
 
 WORKDIR /usr/src/app/client
 
@@ -24,8 +24,13 @@ WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
+# Install Node.js (includes a JavaScript runtime)
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get install -y nodejs
+
 # Copy the Rails application files
 COPY . .
+
 # Copy the built React app from the client-builder stage
 COPY --from=client-builder /usr/src/app/client/build /usr/src/app/public
 
