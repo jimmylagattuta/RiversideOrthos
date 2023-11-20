@@ -1,5 +1,5 @@
 # Stage 1: Build the React client
-FROM node:18.12.1 as client-builder
+FROM node:14.x as client-builder
 
 WORKDIR /usr/src/app/client
 
