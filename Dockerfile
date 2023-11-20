@@ -20,7 +20,6 @@ RUN bundle install
 # Install Node.js using nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 18.17.0"
-
 COPY . .
 
 # Copy the built React app from the client-builder stage
