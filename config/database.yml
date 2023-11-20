@@ -35,6 +35,8 @@ test:
 
 production:
   <<: *default
-  database: la_orthos_production
-  username: postgres
+  database: laoss-webapp
+  username: postgresloass
   password: <%= ENV["LA_ORTHOS_DATABASE_PASSWORD"] %>
+  host: loass-webapp.postgres.database.azure.com
+  port: 5432
