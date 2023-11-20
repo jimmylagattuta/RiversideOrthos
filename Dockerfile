@@ -16,9 +16,9 @@ WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
-# Install Node.js (includes a JavaScript runtime)
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs
+# Install Node.js using nvm
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+RUN /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 14"
 
 COPY . .
 
