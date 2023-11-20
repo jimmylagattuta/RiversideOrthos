@@ -24,7 +24,6 @@ COPY . .
 
 # Copy the built React app from the client-builder stage
 COPY --from=client-builder /usr/src/app/client/build /usr/src/app/public
-
 EXPOSE 3000
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
