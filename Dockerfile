@@ -2,7 +2,6 @@
 FROM node:18.17.0 as client-builder
 
 WORKDIR /usr/src/app/client
-
 COPY client/package*.json ./
 RUN npm install
 COPY client .
