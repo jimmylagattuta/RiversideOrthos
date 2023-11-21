@@ -19,7 +19,6 @@ RUN apt-get update && apt-get install -y nodejs
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 18.17.0"
 COPY . .
-
 # Copy the built React app from the client-builder stage
 COPY --from=client-builder /usr/src/app/client/build /usr/src/app/public
 EXPOSE 3000
