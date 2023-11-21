@@ -15,7 +15,6 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle install
 # Install Node.js
 RUN apt-get update && apt-get install -y nodejs
-
 # Install Node.js using nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 18.17.0"
