@@ -7,7 +7,6 @@ COPY client/package*.json ./
 RUN npm install
 COPY client .
 RUN npm run build
-
 # Stage 2: Build the Rails app
 FROM ruby:3.2.2
 
