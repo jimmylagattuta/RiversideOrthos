@@ -9,7 +9,6 @@ COPY client .
 RUN npm run build
 # Stage 2: Build the Rails app
 FROM ruby:3.2.2
-
 WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
