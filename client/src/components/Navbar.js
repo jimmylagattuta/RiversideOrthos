@@ -56,13 +56,14 @@ const Navbar = () => {
                         Call Us
                     </NavLink>
                     <div
-                        className='btn header-button-yellow'
                         // onClick={toggleAppointmentForm}
                         href='https://patientportal.oa-pa.com/phxportal/'
                         target='_blank'
                         rel='noopener noreferrer'
-                    >
-                        Request Appointment
+                        >
+                        <a className='btn header-button-yellow'>
+                            Request Appointment
+                        </a>
                     </div>
                     {/* {isAppointmentFormOpen && (
                         <div className="appointment-form-overlay">
