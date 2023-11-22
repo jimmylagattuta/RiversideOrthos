@@ -10,7 +10,7 @@ const AboutUsComponent = () => {
                 </p>
             </div>
             <div className='about-container-bottom'>
-                <img alt="About Bottom Left" className='about-container-bottom-left'
+                <img className='about-container-bottom-left'
                 />
                 <div className='about-container-bottom-right'>
                 <h2 className='about-title-right'>
