@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className='footer-item'>
                         <Link
                             className='footer-link'
-                            to='/about/privacy-policy'
+                            to='/about-us/privacy-policy'
                         >
                             PRIVACY
                         </Link>
@@ -20,7 +20,7 @@ const Footer = () => {
                     <div className='footer-item'>
                         <Link
                             className='footer-link'
-                            to='/about/privacy-policy'
+                            to='/about-us/privacy-policy'
                         >
                             TERMS & CONDITIONS
                         </Link>
