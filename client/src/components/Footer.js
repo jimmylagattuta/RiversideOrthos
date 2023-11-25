@@ -36,7 +36,7 @@ const Footer = () => {
                     <div className='footer-item'>
                         <Link
                             className='footer-link'
-                            to='/'
+                            to='/locations'
                         >
                             CONTACT US
                         </Link>
