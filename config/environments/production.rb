@@ -58,7 +58,9 @@ Rails.application.configure do
   Sidekiq.configure_client do |config|
     config.redis = { url: ENV['REDIS_URL'] }
   end
-
+  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+    r301 %r{.*}, 'https://www.laorthos.com$&', conditions: -> { !/^www\.laorthos\.com/i.match?(ENV['HTTP_HOST']) }
+  end
   # config.cache_store = :mem_cache_store
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
