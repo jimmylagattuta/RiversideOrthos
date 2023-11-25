@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require 'rack/rewrite'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -28,9 +29,15 @@ Rails.application.configure do
   config.public_file_server.headers = {
     'Cache-Control' => 'public, max-age=31536000'
   }
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.asset_host = "http://laorthos.com"
+  config.asset_host = "http://www.laorthos.com"
   config.assets.compile = false
+
+  # Redirect non-www requests to www
+  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+    r301 %r{.*}, 'https://www.laorthos.com$&', conditions: -> { !/^www\.laorthos\.com/i.match?(ENV['HTTP_HOST']) }
+  end
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
