@@ -54,7 +54,7 @@ function RequestAppointmentForm(props) {
     
     const url =
       process.env.NODE_ENV === 'production'
-        ? 'https://la-orthos-bdc751615c67.herokuapp.com/api/v1/pull_google_places_cache'
+        ? 'https://laorthos.com/api/v1/pull_google_places_cache'
         : 'http://localhost:3000/api/v1/pull_google_places_cache';
 
     const headers = {
@@ -135,7 +135,7 @@ function RequestAppointmentForm(props) {
       selectedProvider: selectedProvider
     };
     try {
-      const response = await fetch('https://la-orthos-bdc751615c67.herokuapp.com/api/v1/send-email', {
+      const response = await fetch('https://laorthos.com/api/v1/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
