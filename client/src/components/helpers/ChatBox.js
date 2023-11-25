@@ -71,7 +71,7 @@ function ChatBox(props) {
           
     const url =
       process.env.NODE_ENV === 'production'
-        ? 'https://laorthos.com/api/v1/pull_google_places_cache'
+        ? 'https://www.laorthos.com/api/v1/pull_google_places_cache'
         : 'http://localhost:3000/api/v1/pull_google_places_cache';
   
     // Include the CSRF token in the headers of your fetch request
@@ -163,7 +163,7 @@ function ChatBox(props) {
       agreeToTerms: state.agreeToTerms,
     };
     try {
-      const response = await fetch('https://laorthos.com/api/v1/send-email', {
+      const response = await fetch('https://www.laorthos.com/api/v1/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
