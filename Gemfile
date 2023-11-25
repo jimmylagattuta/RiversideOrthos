@@ -15,13 +15,16 @@ gem "puma", "~> 5.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-
+config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+  r301 %r{.*}, 'https://www.laorthos.com$&', conditions: -> { !/^www\.laorthos\.com/i.match?(ENV['HTTP_HOST']) }
+end
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 gem "rack-cors", :require => 'rack/cors'
 gem 'redis-rails'
 gem "memcachier"
 gem 'terser'
+gem 'rack-rewrite', require: 'rack/rewrite'
 
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
