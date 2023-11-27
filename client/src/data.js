@@ -2178,7 +2178,7 @@ export const officesData = [
         city: 'East Los Angeles',
         addressOne: '1700 E Cesar E Chavez Ave, 2200',
         addressTwo: 'Los Angeles, CA 90033',
-        phone: '323-672-4521',
+        phone: '323-264-7600',
         fax: '323-261-8027',
         image: 'https://i.imgur.com/PxwWPM1.webp',
         coordinates: {
@@ -2192,7 +2192,7 @@ export const officesData = [
         city: 'Wilshire',
         addressOne: '1127 Wilshire Blvd, 408',
         addressTwo: 'Los Angeles, CA 90017',
-        phone: '323-765-3581',
+        phone: '323-271-4173',
         fax: '213-621-9584',
         image: 'https://i.imgur.com/eXiSJ6S.webp',
         coordinates: {
@@ -2206,7 +2206,7 @@ export const officesData = [
         city: 'Santa Fe Springs',
         addressOne: '12215 Telegraph Road, 112',
         addressTwo: 'Santa Fe Springs, CA 90670',
-        phone: '562-539-4665',
+        phone: '562-548-2230',
         fax: '562-273-0088',
         image: 'https://i.imgur.com/0el4VgZ.webp',
         coordinates: {
@@ -2220,7 +2220,7 @@ export const officesData = [
         city: 'Tarzana',
         addressOne: '18840 Ventura Blvd, 208',
         addressTwo: 'Tarzana, CA 91356',
-        phone: '707-516-6633',
+        phone: '818-708-3333',
         fax: '818-708-9643',
         image: 'https://i.imgur.com/nG0Sgpr.webp',
         coordinates: {
@@ -2234,7 +2234,7 @@ export const officesData = [
         city: 'Encino',
         addressOne: '16530 Ventura Blvd, 100',
         addressTwo: 'Encino, CA 91436',
-        phone: '530-287-6906',
+        phone: '818-788-0101',
         fax: '818-855-2493',
         image: 'https://i.imgur.com/FEDIkJ4.webp',
         coordinates: {
@@ -2248,7 +2248,7 @@ export const officesData = [
         city: 'Valencia',
         addressOne: '23502 Lyons Avenue, 202A',
         addressTwo: 'Newhall, CA 91321',
-        phone: '661-964-4273',
+        phone: '818-928-0002',
         fax: '818-855-2493',
         image: 'https://i.imgur.com/kgwxna5.webp',
         coordinates: {
@@ -2262,7 +2262,7 @@ export const officesData = [
         city: 'Montebello',
         addressOne: '101 Beverly Boulevard, 205',
         addressTwo: 'Montebello, CA 90640',
-        phone: '323-310-4851',
+        phone: '323-724-6663',
         fax: '323-724-5816',
         image: 'https://i.imgur.com/Wo9ZCSa.webp',
         coordinates: {
