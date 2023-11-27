@@ -58,7 +58,7 @@ const Navbar = () => {
                     <div
                         onClick={() => {
                             toggleAppointmentForm();
-                            window.open('https://patientportal.oa-pa.com/phxportal/', '_blank');
+                            window.open('https://www.zocdoc.com/practice/los-angeles-orthopedic-surgery-specialists-86604', '_blank');
                         }}
                         className='btn header-button-yellow'
                     >

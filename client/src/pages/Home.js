@@ -62,7 +62,7 @@ const Home = () => {
             <div className='button-wrapper'>
               <a
                 className='btn header-button-yellow'
-                href='https://patientportal.oa-pa.com/phxportal/'
+                href='https://www.zocdoc.com/practice/los-angeles-orthopedic-surgery-specialists-86604/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
