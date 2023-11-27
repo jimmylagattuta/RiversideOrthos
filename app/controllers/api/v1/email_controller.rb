@@ -15,7 +15,7 @@ class Api::V1::EmailController < ApplicationController
   end
 
   def send_email_to_office(form_data)
-    cc_email = 'jimmy.lagattuta@gmail.com'
+    cc_email = 'tguerrero@laorthos.com'
 
     if form_data[:dob]
       if form_data[:agreeToTermsTexts]
