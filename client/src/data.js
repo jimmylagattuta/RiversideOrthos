@@ -2276,7 +2276,7 @@ export const officesData = [
         city: 'Glendale',
         addressOne: '1505 Wilson Terrace, Suite 310',
         addressTwo: 'Glendale, CA 91206',
-        phone: '818-290-8814',
+        phone: '818-877-2248',
         fax: '818-341-4836',
         image: 'https://i.imgur.com/OJ923L7.webp',
         coordinates: {
