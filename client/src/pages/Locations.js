@@ -1,6 +1,6 @@
 import PagesHeader from '../components/PagesHeader';
 import { Link } from 'react-router-dom';
-import MapContainer from '../components/googleMapReact/MapContainer';
+import OfficeCard from '../components/googleMapReact/OfficeCard';
 import ChatBox from './../components/helpers/ChatBox';
 const Locations = () => {
     return (
@@ -16,7 +16,7 @@ const Locations = () => {
                 </div>
             </div>
             <div className='location-map-section'>
-                <MapContainer />
+                <OfficeCard />
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', padding: "110px 0px 45px 0px" }}>
                 <ChatBox />

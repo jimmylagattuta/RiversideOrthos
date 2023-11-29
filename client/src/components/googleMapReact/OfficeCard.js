@@ -6,50 +6,56 @@ import { officesData } from '../../data';
 const InfoWindow = ({ place, handleInfoWindowClose }) => {
     return (
         <div className='location-info-window'>
-            <h2 style={{ fontSize: 16, marginBottom: 5 }}>{place.city}</h2>
-            <div className='info-window-text'>{place.addressOne}</div>
-            <div className='info-window-text'>{place.addressTwo}</div>
-            <div className='info-window-text' style={{ marginTop: 5 }}>
-                <span style={{ fontStyle: 'bold' }}>Phone:</span> {place.phone}
-            </div>
-            <div className='info-window-text'>
-                <span style={{ fontStyle: 'bold' }}>Fax:</span> {place.fax}
-            </div>
-            <div className='mobile-show'>
-                <h2 style={{ fontSize: 14, marginBottom: 3, marginTop: 3 }}>
-                    Hours of Operation
-                </h2>
-                <div className='info-window-text'>
-                    {place.city === 'Montebello' ? 'Mon, Tue, Thu, Fri' : (place.city === 'Glendale' ? 'Mon, Tue, Wed, Fri' : 'Monday - Friday')}
+            <div className="location-card-info">
+                <div className='location-card-words'>
+                    <h2 style={{ fontSize: 18, marginBottom: 5 }}>{place.city}</h2>
+                    <div className='info-window-text-cards'>{place.addressOne}</div>
+                    <div className='info-window-text-cards'>{place.addressTwo}</div>
+                    <div className='info-window-text-cards' style={{ marginTop: 5 }}>
+                        <span style={{ fontStyle: 'bold' }}>Phone:</span> {place.phone}
+                    </div>
+                    <div className='info-window-text-cards'>
+                        <span style={{ fontStyle: 'bold' }}>Fax:</span> {place.fax}
+                    </div>
+
+                        
+                    <h2 style={{ fontSize: 14, marginBottom: 3, marginTop: 3 }}>
+                        Hours of Operation
+                    </h2>
+                    <div className='info-window-text-cards'>
+                        {place.city === 'Montebello' ? 'Mon, Tue, Thu, Fri' : (place.city === 'Glendale' ? 'Mon, Tue, Wed, Fri' : 'Monday - Friday')}
+                    </div>
+                    <div className='info-window-text-cards'>8AM-5PM</div>
+                    <div className='info-window-icons-cards'>
+                        <a
+                            className='info-window-icon'
+                            href={`https://maps.google.com/?q=${place.addressOne
+                            .split(' ')
+                            .join('+')}${place.addressTwo.split(' ').join('+')}`}>
+                            <i
+                                style={{
+                                    fontSize: 25,
+                                    margin: '10px 20px 0 0',
+                                }}
+                                className='fas fa-map-marked-alt fa-1x'></i>
+                        </a>
+                        <div className='mobile-show'>
+                            <a
+                                className='info-window-icon'
+                                href={`tel:+1${place.phone.split('-').join('')}`}
+                                title='Phone clickable'>
+                                <i style={{ fontSize: 28, marginTop: '10px' }} className='fas fa-mobile-alt fa-2x'></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div className='info-window-text'>8AM-5PM</div>
-            </div>
-            <div className='info-window-icons'>
-                <a
-                    className='info-window-icon'
-                    href={`https://maps.google.com/?q=${place.addressOne
-                        .split(' ')
-                        .join('+')}${place.addressTwo.split(' ').join('+')}`}>
-                    <i
-                        style={{
-                            fontSize: 25,
-                            margin: '10px 20px 0 0',
-                        }}
-                        className='fas fa-map-marked-alt fa-1x'></i>
-                </a>
-                <a
-                    className='info-window-icon'
-                    href={`tel:+1${place.phone.split('-').join('')}`}
-                    title='Phone clickable'>
-                    <i className='fas fa-mobile-alt fa-2x'></i>
-                </a>
-            </div>
-            <div className='info-window-image-container'>
-                <img
-                    src={place.image}
-                    alt={place.city}
-                    className='info-window-image'
-                />
+                <div className='info-window-image-container-cards'>
+                    <img
+                        src={place.image}
+                        alt={place.city}
+                        className='info-window-image-cards'
+                        />
+                </div>
             </div>
         </div>
     );
@@ -94,9 +100,9 @@ const OfficeCard = () => {
     return (
       <div className='office-card'>
         {offices.map((place) => (
-          <div key={place.id} style={{ height: '90vh', width: '90vw', padding: '100px', display: 'flex' }} className='map-container'>
+          <div key={place.id} className='map-container-cards'>
             <GoogleMapReact
-              defaultZoom={14}
+              defaultZoom={15}
               defaultCenter={{
                 lat: place.coordinates.lat,
                 lng: place.coordinates.lng,

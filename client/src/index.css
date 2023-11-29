@@ -120,9 +120,15 @@ img {
     margin: 0 auto;
 }
 
-.home-map,
-.location-map-section {
+.home-map {
     height: 600px;
+}
+
+.location-map-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa-map-marker-alt {
@@ -141,6 +147,15 @@ img {
     z-index: 101;
     top: 0;
     left: 0;
+}
+.location-info-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+.location-card-words {
+    padding: 5px;
 }
 .pagination-arrows {
     display: flex;
@@ -207,6 +222,18 @@ img {
     width: 100%;
 }
 
+.map-container-cards {
+    position: relative;
+    margin-bottom: 100px;
+    display: flex;
+    height: 75vh;
+    width: 90vw;
+    border-radius: 1px;
+    box-shadow: 0.5px 0.5px 40px rgba(0,0,0,.1);
+
+    padding: 10px 20px;
+}
+
 .map-float-menu-info {
     flex: 1 1 auto;
     padding: 7px 10px;
@@ -254,8 +281,30 @@ img {
     width: 165px;
 }
 
+.info-window-text-cards {
+    font-size: 12px;
+    width: 200px;
+}
+
+.location-card-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
 .info-window-image {
     border-radius: 0 0 2x 2px;
+}
+
+.info-window-image-container-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-window-image-cards {
+    max-height: 45vh;
+    max-width: 428px;
 }
 
 .close-info-window {
@@ -271,7 +320,10 @@ img {
 .info-window-image-container {
     margin: 10px -10px 0 -10px;
 }
-
+.info-window-icons-cards {
+    display: flex;
+    align-items: center;
+}
 /*CAROUSEL STYLES */
 
 .home-hero {
@@ -2370,10 +2422,6 @@ display: none;
         margin: 45px 0 15px 0;
     }
 
-    .mobile-show {
-        display: block;
-    }
-
     .expertise-header-description {
         width: auto;
     }
@@ -2624,6 +2672,9 @@ display: none;
     }
 }
 @media (max-width: 768px) {
+    .mobile-show {
+        display: block;
+    }
     .expertise-item {
         width: 100%;
         align-items: normal;
@@ -2790,6 +2841,33 @@ display: none;
 }
 
 @media (max-width: 576px) {
+    .map-container-cards {
+        position: relative;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        width: 90vw;
+        border-radius: 1px;
+        box-shadow: 0.5px 0.5px 40px rgba(0,0,0,.1);
+        padding: 10px 20px;
+    }
+    .location-info-window {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        justify-content: space-between;
+    }
+    .location-card-info {
+        flex-direction: row;
+    }
+    .info-window-image-cards {
+        height: 165px;
+        align-self: center;
+    }
+    .location-card-words {
+        padding: 15px;
+    }
     #chat-form-lines-request-apt {
         width: 91%;
         padding-right: 20px;
