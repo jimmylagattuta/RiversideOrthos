@@ -2398,7 +2398,6 @@ display: none;
 @media (max-width: 1160px) {
     .home-locations {
         background-size: contain;
-        background-repeat: no-repeat;
     }
     .expertise-name {
         font-size: 0.8rem;
