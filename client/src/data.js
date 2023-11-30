@@ -1094,12 +1094,6 @@ export const aboutTerms = [
         ],
     },
     {
-        subtitle: 'Copyright and Trademark Notices',
-        body: [
-            'All contents of this website are Copyright © 2021 PatientPop Inc. All Rights Reserved. All logos are trademarks and service marks of PatientPop Inc. All other trademarks, service marks and logos used in this website are the property of their respective owners.',
-        ],
-    },
-    {
         subtitle: 'Trademarks',
         body: [
             'The names of actual companies and products mentioned herein may be the trademarks of their respective owners.',
