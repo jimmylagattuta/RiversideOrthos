@@ -2830,7 +2830,9 @@ display: none;
         background-repeat: repeat;
         background-position: right;
     }
-
+    .home-expertise {
+        background-size: contain;
+    }
     .single-review-container {
         padding: 15px;
     }
