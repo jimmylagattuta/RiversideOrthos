@@ -48,7 +48,7 @@ const Navbar = () => {
 
                     </Link>
                     <div className="header-title-div">
-                        <h1 className="header-title">Los Angeles Orthopedic Surgury Specialists & Advanced Orthopedics</h1>
+                        <h1 className="header-title">Los Angeles Orthopedic Surgery Specialists & Advanced Orthopedics</h1>
                     </div>
                 </div>
                 <div className='header-buttons-container'>
