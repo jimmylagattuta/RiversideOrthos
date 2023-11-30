@@ -11,6 +11,7 @@ import MapContainer from '../components/googleMapReact/MapContainer';
 const Home = () => {
   const [firstImageLoaded, setFirstImageLoaded] = useState(false);
   const [showMap, setShowMap] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const firstImage = new Image();
@@ -30,6 +31,18 @@ const Home = () => {
     }, 1500);
 
     return () => clearTimeout(mapTimeout);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const renderMapContainer = () => {
@@ -78,30 +91,38 @@ const Home = () => {
             alt='Compassionate Orthopedic Care'
             className={`carousel-img ${firstImageLoaded ? 'loaded' : ''}`}
           />
-            <img
-                src='https://i.imgur.com/8dBCcKS.webp'
-                alt='Compassionate Orthopedic Care'
-                className='carousel-img'
-                loading='lazy'
-            />
-            <img
-                src='https://i.imgur.com/46JeJHq.webp'
-                alt='Compassionate Orthopedic Care'
-                className='carousel-img'
-                loading="lazy"
-            />
-            <img
-                src='https://i.imgur.com/u6WbgWF.webp'
-                alt='Compassionate Orthopedic Care'
-                className='carousel-img'
-                loading='lazy'
-            />
-            <img
-                src='https://i.imgur.com/yVpGfMF.webp'
-                alt='Compassionate Orthopedic Care'
-                className='carousel-img'
-                loading='lazy'
-            />
+          <img
+            src='https://i.imgur.com/8dBCcKS.webp'
+            alt='Compassionate Orthopedic Care'
+            className='carousel-img'
+            loading='lazy'
+          />
+          <img
+            src={
+              screenWidth <= 576
+                ? 'https://i.imgur.com/rmAtIpr.webp'
+                : 'https://i.imgur.com/46JeJHq.webp'
+            }
+            alt='Compassionate Orthopedic Care'
+            className='carousel-img'
+            loading='lazy'
+          />
+          <img
+            src={
+              screenWidth <= 576
+                ? 'https://i.imgur.com/Mdo73o9.webp'
+                : 'https://i.imgur.com/u6WbgWF.webp'
+            }
+            alt='Compassionate Orthopedic Care'
+            className='carousel-img'
+            loading='lazy'
+          />
+          <img
+            src='https://i.imgur.com/yVpGfMF.webp'
+            alt='Compassionate Orthopedic Care'
+            className='carousel-img'
+            loading='lazy'
+          />
         </ReactBackgroundCarousel>
       </div>
       <AboutUsComponent />
@@ -112,9 +133,7 @@ const Home = () => {
       </div>
       <TeamComponent />
       <LocationComponent />
-      <div className='home-map'>
-        {renderMapContainer()}
-      </div>
+      <div className='home-map'>{renderMapContainer()}</div>
       <div className='home-reviews'>
         <CompanyReviewsPage />
       </div>
