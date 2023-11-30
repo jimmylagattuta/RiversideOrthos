@@ -2826,6 +2826,7 @@ display: none;
 
     .home-reviews {
         padding: 0 35px 35px 35px;
+        background-size: auto;
     }
 
     .single-review-container {
