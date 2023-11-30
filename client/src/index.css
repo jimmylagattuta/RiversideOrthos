@@ -2827,6 +2827,8 @@ display: none;
     .home-reviews {
         padding: 0 35px 35px 35px;
         background-size: auto;
+        background-repeat: repeat;
+        background-position: right;
     }
 
     .single-review-container {
