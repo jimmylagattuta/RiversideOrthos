@@ -42,7 +42,7 @@ function App() {
                     <Route path=':serviceId' element={<SingleService />} />
                 </Route>
                 <Route path='locations' element={<Locations />} />
-                <Route path='*' element={<Error />} />
+                <Route path='*' element={<Home />} />
             </Routes>
             <Footer />
         </>
