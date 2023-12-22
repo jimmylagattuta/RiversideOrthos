@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 import { useCsrfToken } from '../CsrfTokenContext';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
 import { Form, Field } from 'react-final-form';
+import { Link } from 'react-router-dom';
 
 function RequestAppointmentForm(props) {
   const { csrfToken, setCsrfToken } = useCsrfToken();
@@ -54,7 +58,7 @@ function RequestAppointmentForm(props) {
     
     const url =
       process.env.NODE_ENV === 'production'
-        ? 'https://www.laorthos.com/api/v1/pull_google_places_cache'
+        ? 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache'
         : 'http://localhost:3000/api/v1/pull_google_places_cache';
 
     const headers = {
@@ -83,6 +87,20 @@ function RequestAppointmentForm(props) {
       .catch((err) => {
         console.error(err);
       });
+  };
+
+  const initializeRecaptcha = () => {
+    window.grecaptcha.enterprise.ready(() => {
+      window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
+        setState({ ...state, recaptchaToken: token });
+      });
+    });
+  };
+
+  const handleSubmitRecaptcha = (values) => {
+    if (values) {
+      setState({ ...state, recaptchaChecked: true, errors: { ...state.errors, recaptcha: '' } });
+    }
   };
 
   const handleAgreeChange = () => {
@@ -135,7 +153,7 @@ function RequestAppointmentForm(props) {
       selectedProvider: selectedProvider
     };
     try {
-      const response = await fetch('https://www.laorthos.com/api/v1/send-email', {
+      const response = await fetch('https://riversideorthos.azurewebsites.net/api/v1/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -302,6 +320,9 @@ function RequestAppointmentForm(props) {
       </div>
     );
   };
+  const handleFieldFocus = () => {
+    setState({ ...state, touched: true });
+  };
   const renderSexRadio = (errors) => {
     return (
       <div className='apt-line' style={{ fontSize: "1.1rem", padding: "0 0 0 5px" }}>
@@ -345,6 +366,9 @@ function RequestAppointmentForm(props) {
         </div>
       </div>
     );
+  };
+  const handleLocationChange = (location) => {
+    setSelectedLocation(location);
   };
   return (
     <Form

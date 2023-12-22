@@ -34,7 +34,7 @@ const ExpertiseBlocks = () => {
                                     <img
                                         src={block.image}
                                         alt={block.name}
-                                        style={{ minHeight: '236px', height: '236px', width: '100%' }}
+                                        style={{ minHeight: '236px', width: '100%' }}
                                         className='expertise-image'
                                         loading="lazy"
                                     />

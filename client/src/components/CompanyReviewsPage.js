@@ -62,8 +62,8 @@ const CompanyReviewsPage = () => {
           
             const url =
               process.env.NODE_ENV === 'production'
-                ? 'https://www.laorthos.com/api/v1/pull_google_places_cache'
-                : 'http://localhost:3000/api/v1/pull_google_places_cache';
+                ? 'https://riversideorthos.azurewebsites.net/api/v1/pull_yelp_cache'
+                : 'http://localhost:3000/api/v1/pull_yelp_cache';
           
             // Include the CSRF token in the headers of your fetch request
             const headers = {
@@ -81,9 +81,10 @@ const CompanyReviewsPage = () => {
               })
               .then((data) => {
                 // Check if data.reviews is a string
+                console.log('data', data);
                 if (typeof data.reviews === 'string') {
                   // Parse the JSON string into an array
-                  const reviewsArray = JSON.parse(data.reviews);
+                  const reviewsArray = JSON.parse(data);
                     console.log('reviewsArray', reviewsArray);
                   // Set the CSRF token in the context (if needed)
                   console.log('data', data);
@@ -172,7 +173,7 @@ const CompanyReviewsPage = () => {
                                 <p className='review-paragraph'>{item.text}</p>
                             </div>
                             <div className='google-link'>
-                                <a href={item.author_url} target="_blank" rel="noopener noreferrer" title="Facebook Review">
+                                <a href={item.author_url} target="_blank" rel="noopener noreferrer">
                                     <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
                                 </a>
                             </div>

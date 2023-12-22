@@ -54,7 +54,6 @@ const FloatingOfficeInfo = ({
                 <button
                     className='pagination-arrow'
                     onClick={handlePrevClick}
-                    title="Scroll Offices"
                     disabled={currentPage === 0}
                 >
                     {useChevronLeft ? <i className="fas fa-chevron-left"></i> : <i className="fas fa-chevron-up"></i>}
@@ -120,7 +119,6 @@ const FloatingOfficeInfo = ({
             <div className='pagination-arrows'>
                 <button
                     className='pagination-arrow'
-                    title='Scroll Offices'
                     onClick={handleNextClick}
                     disabled={currentPage === totalPages - 1}
                 >
@@ -240,7 +238,7 @@ const MapContainer = () => {
     const [zoomed, setZoomed] = useState(null);
     const [offices, setOffices] = useState(officesData);
     const [markerSelected, setMarkerSelected] = useState(null);
-    const [zoomLevel, setZoomLevel] = useState(10);
+    const [zoomLevel, setZoomLevel] = useState(11);
 
     // const head = document.getElementsByTagName('head')[0];
     // const insertBefore = head.insertBefore;
@@ -280,7 +278,7 @@ const MapContainer = () => {
 
         return selectedOffice.coordinates;
     };
-
+    console.log('process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY', process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY);
     const handleMarkerClick = (key) => {
         console.log('handleMarkerClicked');
         const coordinates = showInfo(key);
@@ -311,7 +309,7 @@ const MapContainer = () => {
     const resetSelection = () => {
         console.log('resetSelection setZoomed(zoomLevel)');
         setZoomed(zoomLevel);
-        setCentered({ lat: 34.09223, lng: -118.29368 });
+        setCentered({ lat: 41.794820, lng: -87.790060 });
         setMarkerSelected(null);
         handleInfoWindowClose();
     };
@@ -326,8 +324,8 @@ const MapContainer = () => {
             />
             {offices.length > 0 && (
                 <GoogleMapReact
-                    defaultZoom={10}
-                    defaultCenter={{ lat: 34.09223, lng: -118.29368 }}
+                    defaultZoom={11}
+                    defaultCenter={{ lat: 41.794820, lng: -87.790060 }}
                     center={centered}
                     zoom={zoomed}
                     bootstrapURLKeys={{

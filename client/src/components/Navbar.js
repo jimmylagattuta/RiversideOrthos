@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
+
 import { navMenu } from '../data';
 import { useState } from 'react';
 import RequestAppointmentForm from './helpers/RequestAppointmentForm';
@@ -30,7 +31,10 @@ const Navbar = () => {
             <div className='header-top'>
                 <button
                     className='mobile-menu-button'
-                    onClick={toggleMobileMenu}>
+                    onClick={toggleMobileMenu}
+                    style={{ color: 'white' }}
+                    >
+                    
                     <i
                         className={
                             isMobileMenuopen ? 'fa fa-times' : 'fa fa-bars'
@@ -40,36 +44,63 @@ const Navbar = () => {
                 <div className='header-image-container'>
                     <Link to='/' className='logo-link'>
                         <img
-                            src='https://i.imgur.com/3FM3KUI.webp'
+                            src='https://i.imgur.com/1M8ZlnK.webp'
                             alt='LA Ortho Associates'
                             className='header-image'
-                            style={{ width: '300px', height: '120px' }}
+                            style={{ width: '200px' }}
                         />
 
                     </Link>
-                    <div className="header-title-div">
-                        <h1 className="header-title">Los Angeles Orthopedic Surgery Specialists & Advanced Orthopedics</h1>
-                    </div>
                 </div>
                 <div className='header-buttons-container'>
-                    <NavLink className='btn header-button-dark' to='/locations'>
-                        Call Us
-                    </NavLink>
-                    <div
-                        onClick={() => {
-                            toggleAppointmentForm();
-                            window.open('https://www.zocdoc.com/practice/los-angeles-orthopedic-surgery-specialists-86604', '_blank');
-                        }}
-                        className='btn header-button-yellow'
-                    >
-                        Request Appointment
+                    <div className="navbar-oar-buttons">
+                        <NavLink className='btn header-button-dark' to='/locations'>
+                            Call Us
+                        </NavLink>
+                        <a
+                            className='btn header-button-yellow'
+                            onClick={toggleAppointmentForm}
+                            >
+                            Request Appointment
+                        </a>
+                    </div>
+                    <div className="navbar-special-buttons">
+                        <a href="https://www.facebook.com/orthoriverside" target="_blank">
+                            <i style={{ padding: '10px', fontSize: '1.5rem', color: 'white' }} className="fab fa-facebook"></i>
+                        </a>
+                        <div
+                            onClick={() => console.log('Translate To English')}
+                            style={{ cursor: "pointer", padding: '10px', fontSize: '2rem', alignSelf: 'center' }}
+                            >
+                            <img src="https://i.imgur.com/2TvF7x4.webp" alt="English Flag" />
+                        </div>
+                        <div
+                            onClick={() => console.log('Translate To Polish')}
+                            style={{ cursor: "pointer", padding: '10px', fontSize: '2rem', alignSelf: 'center' }}
+                            >
+                            <img src="https://i.imgur.com/95gzZ96.webp" alt="Polish Flag" />
+                        </div>
+
+                        <div
+                            onClick={() => console.log('Translate To Spanish')}
+                            style={{ cursor: "pointer", padding: '10px', fontSize: '2rem', alignSelf: 'center' }}
+                            >
+                            <img src="https://i.imgur.com/p8KxvS7.webp" alt="Spanish Flag" />
+                        </div>
+                        <div
+                            onClick={() => console.log('Search Button')}
+                            style={{ cursor: "pointer", padding: '10px', fontSize: '1.5rem' }}
+                            >
+                            <i style={{ color: 'white' }} class="fas fa-search"></i>
+                        </div>
                     </div>
 
-                    {/* {isAppointmentFormOpen && (
+
+                    {isAppointmentFormOpen && (
                         <div className="appointment-form-overlay">
                             <RequestAppointmentForm toggleAppointmentForm={toggleAppointmentForm} setShowThankYouMessage={setShowThankYouMessage} />
                         </div>
-                    )} */}
+                    )}
                     {showThankYouMessage && (
                         <div className="thank-you-message">
                             Thank you for the message! We will be with you shortly.
@@ -89,14 +120,12 @@ const Navbar = () => {
                                     onClick={resetMobileMenu}
                                     key={item.menu}
                                     to={item.link}
-                                    alt={`Visit the ${item.menu} Page To Navigate To That Page`}
-                                    aria-label={`Visit the ${item.menu} Page To Navigate To That Page`}
                                     className={({ isActive }) =>
                                         isActive
                                             ? 'nav-link active'
                                             : 'nav-link'
                                     }>
-                                    {item.menu}<span style={{ display: 'none' }}>Visit the {item.menu} page</span>
+                                    {item.menu}
                                 </NavLink>
                                 {item.subMenuItems && (
                                     <button
@@ -116,8 +145,6 @@ const Navbar = () => {
                                         onClick={resetMobileMenu}
                                         key={item.menu}
                                         to={item.link}
-                                        alt={`Visit the ${item.menu} Page To Navigate To That Page`}
-                                        aria-label={`Visit the ${item.menu} Page To Navigate To That Page`}
                                         className={({ isActive }) =>
                                             isActive
                                                 ? 'sub-link mobile-nav-link active'

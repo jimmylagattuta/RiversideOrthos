@@ -45,23 +45,38 @@ function ChatBox(props) {
 
   useEffect(() => {
     // Load and initialize reCAPTCHA
-    const loadRecaptchaScript = () => {
-      const script = document.createElement('script');
-      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
-        // Initialize reCAPTCHA with your site key
-        window.grecaptcha.enterprise.ready(() => {
-          window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
-            setState({ ...state, recaptchaToken: token });
-          });
-        });
-      };
-      document.head.appendChild(script);
-    };
+    // const loadRecaptchaScript = () => {
+    //   console.log('process.env.REACT_APP_RECAPTCHA', process.env.REACT_APP_RECAPTCHA);
+    //   const script = document.createElement('script');
+    //   script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
+    //   script.async = true;
+    //   script.defer = true;
+    //   script.onload = () => {
+    //     // Initialize reCAPTCHA with your site key
+    //     window.grecaptcha.enterprise.ready(async () => {
+    //       const token = await window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'action_name' });
+    //       const response = await fetch('/verify-recaptcha', {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ token }),
+    //       });
+    //       const data = await response.json();
+    //       if (data.score < 0.5) {
+    //         console.log('Less than 0.5');
+    //         // Handle suspicious activity (e.g., show a CAPTCHA challenge)
+    //       } else {
+    //         console.log('Above 0.5');
+    //         // Proceed with the user's request
+    //       }
+    //     });
+        
+    //   };
+    //   document.head.appendChild(script);
+    // };
 
-    loadRecaptchaScript();
+    // loadRecaptchaScript();
 
     if (!csrfToken) {
       fetchReviews();
@@ -71,8 +86,8 @@ function ChatBox(props) {
           
     const url =
       process.env.NODE_ENV === 'production'
-        ? 'https://www.laorthos.com/api/v1/pull_google_places_cache'
-        : 'http://localhost:3000/api/v1/pull_google_places_cache';
+        ? 'https://riversideorthos.azurewebsites.net/api/v1/pull_yelp_cache'
+        : 'http://localhost:3000/api/v1/pull_yelp_cache';
   
     // Include the CSRF token in the headers of your fetch request
     const headers = {
@@ -113,6 +128,26 @@ function ChatBox(props) {
       .catch((err) => {
         console.error(err);
       });
+  };
+  
+
+  const loadRecaptchaScript = () => {
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
+    script.async = true;
+    script.defer = true;
+    script.onload = initializeRecaptcha;
+    document.head.appendChild(script);
+  };
+
+  const initializeRecaptcha = () => {
+    // Initialize reCAPTCHA with your site key
+    window.grecaptcha.enterprise.ready(() => {
+      window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
+        console.log('initializeRecaptcha', token);
+        setState({ ...state, recaptchaToken: token });
+      });
+    });
   };
 
   const handleSubmitRecaptcha = (values) => {
@@ -163,7 +198,7 @@ function ChatBox(props) {
       agreeToTerms: state.agreeToTerms,
     };
     try {
-      const response = await fetch('https://www.laorthos.com/api/v1/send-email', {
+      const response = await fetch('https://riversideorthos.azurewebsites.net/api/v1/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -226,6 +261,28 @@ function ChatBox(props) {
 			return (
 				<div id="error-div">
 					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.8rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorLocations = (error) => {
+		if (error && state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
+						{error}
+					</h8>
+				</div>
+			)
+		}
+	}
+	const renderErrorNewOrReturning = (error) => {
+		if (error && state.showAllErrors) {
+			return (
+				<div id="error-div">
+					<h8 style={{ display: 'flex', color: 'red', fontSize: '0.9rem', padding: '0rem', margin: '0rem' }}>
 						{error}
 					</h8>
 				</div>
@@ -540,6 +597,9 @@ function ChatBox(props) {
                 className='g-recaptcha'
                 sitekey={process.env.REACT_APP_RECAPTCHA} // Use the environment variable
                 onChange={handleSubmitRecaptcha}
+                asyncScriptOnLoad={(response) => {
+                  console.log('response', response);
+                }}
               />
               <div style={{ marginBottom: '0.3rem' }}>
                 {renderErrorRecaptcha(errors.recaptcha)}
