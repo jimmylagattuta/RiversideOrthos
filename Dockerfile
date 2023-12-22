@@ -1,3 +1,12 @@
+# az webapp log tail --name RiversideOrthos --resource-group Riverside_Resource_Group
+# docker build -t riverside-orthopaedics .
+# docker tag riverside-orthopaedics:latest jimmylagattuta/riverside-orthopaedics:latest
+# docker push jimmylagattuta/riverside-orthopaedics:latest
+
+# myapp-postgres-server
+# postgres
+# long usual password
+
 # Stage 1: Build the React client
 FROM node:18.17.0 as client-builder
 WORKDIR /usr/src/app/client
