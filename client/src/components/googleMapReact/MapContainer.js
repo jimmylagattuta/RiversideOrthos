@@ -278,7 +278,8 @@ const MapContainer = () => {
 
         return selectedOffice.coordinates;
     };
-    console.log('process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY', process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY);
+    const riversideGoogleMaps = process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY;
+    console.log('riversideGoogleMaps', riversideGoogleMaps);
     const handleMarkerClick = (key) => {
         console.log('handleMarkerClicked');
         const coordinates = showInfo(key);
@@ -306,6 +307,7 @@ const MapContainer = () => {
         };
     }, []);
 
+
     const resetSelection = () => {
         console.log('resetSelection setZoomed(zoomLevel)');
         setZoomed(zoomLevel);
@@ -329,7 +331,7 @@ const MapContainer = () => {
                     center={centered}
                     zoom={zoomed}
                     bootstrapURLKeys={{
-                        key: process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY,
+                        key: riversideGoogleMaps,
                         v: 'weekly',
                     }}
                     onChildClick={

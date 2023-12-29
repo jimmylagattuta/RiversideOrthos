@@ -59,7 +59,8 @@ function RequestAppointmentForm(props) {
     const url =
       process.env.NODE_ENV === 'production'
         ? 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache'
-        : 'http://localhost:3000/api/v1/pull_google_places_cache';
+        : 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache';
+
 
     const headers = {
       'Content-Type': 'application/json',

@@ -19,6 +19,8 @@ FROM ruby:3.2.2
 WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
+# Run the database migration
+RUN bundle exec rails db:migrate RAILS_ENV=development
 # Install Node.js
 RUN apt-get update && apt-get install -y nodejs
 # Install Node.js using nvm

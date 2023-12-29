@@ -34,7 +34,7 @@ RUN cp -R /app/client/build/. .
 # Move back to the Rails app directory
 WORKDIR /app
 
-# Expose port 3000 to the Docker host, so it can be accessed from the outside
+# Expose port three thousand to the Docker host, so it can be accessed from the outside
 # Expose port 80 to the Docker host
 EXPOSE 80
 

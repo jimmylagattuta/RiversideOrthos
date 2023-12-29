@@ -59,11 +59,14 @@ const CompanyReviewsPage = () => {
         };
 
         const fetchReviews = () => {
-            console.log(process.env.RIVERSIDE_DATABASE_PASSWORD);
+            const riversideDatabase = process.env.REACT_APP_DATABASE_PASSWORD;
+            console.log('riversideDatabase', riversideDatabase);
+
             const url =
               process.env.NODE_ENV === 'production'
                 ? 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache'
-                : 'http://localhost:3000/api/v1/pull_google_places_cache';
+                : 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache';
+
           
             // Include the CSRF token in the headers of your fetch request
             const headers = {

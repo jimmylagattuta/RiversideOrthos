@@ -4,9 +4,11 @@ class Api::V1::JobsController < ApplicationController
   end
 
   def pull_google_places_cache
+    puts "Reached pull_google_places_cache action" # Add this line for debugging
     csrf_token = form_authenticity_token
-    puts "here " * 100
+    puts "CSRF token: #{csrf_token}" # Add this line for debugging
     reviews = GooglePlacesCached.cached_google_places_reviews
+    puts "Retrieved reviews: #{reviews}" # Add this line for debugging
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
 end
