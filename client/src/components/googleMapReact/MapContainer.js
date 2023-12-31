@@ -279,7 +279,6 @@ const MapContainer = () => {
         return selectedOffice.coordinates;
     };
     const riversideGoogleMaps = process.env.REACT_APP_GOOGLE_MAPS_REACT_KEY;
-    console.log('riversideGoogleMaps', riversideGoogleMaps);
     const handleMarkerClick = (key) => {
         console.log('handleMarkerClicked');
         const coordinates = showInfo(key);

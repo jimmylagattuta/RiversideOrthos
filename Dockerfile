@@ -20,7 +20,8 @@ WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 # Run the database migration
-RUN bundle exec rails db:migrate RAILS_ENV=development
+RUN bundle exec rails db:create RAILS_ENV=production
+RUN bundle exec rails db:migrate RAILS_ENV=production
 # Install Node.js
 RUN apt-get update && apt-get install -y nodejs
 # Install Node.js using nvm

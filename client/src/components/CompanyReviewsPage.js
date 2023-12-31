@@ -59,8 +59,7 @@ const CompanyReviewsPage = () => {
         };
 
         const fetchReviews = () => {
-            const riversideDatabase = process.env.REACT_APP_DATABASE_PASSWORD;
-            console.log('riversideDatabase', riversideDatabase);
+
 
             const url =
               process.env.NODE_ENV === 'production'
