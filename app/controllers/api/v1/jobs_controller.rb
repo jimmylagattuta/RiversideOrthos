@@ -24,21 +24,27 @@ class GooglePlacesCached
     
 
   def self.cached_google_places_reviews
-    user = User.create(email: "mail@test.com", password: "1234test", password_confirmation: "1234test")
+    # user = User.create(email: "mail@test.com", password: "1234test", password_confirmation: "1234test")
+    # users = User.all
+    # users.each do |user|
+      # puts "user"
+      # puts user.inspect
+    # end
+    user = User.last
     puts "*" * 100
-    puts "user"
+    puts "user.last"
     puts user.inspect
     puts "*" * 100
     redis = Redis.new(url: ENV['REDIS_URL'], timeout: 0.7)
     puts "Connected to Redis: #{redis.inspect}"
   
     # Set a test key-value pair
-    redis.set('test_key', 'test_value')
-    puts "Set test_key to test_value"
+    # redis.set('test_key', 'test_value')
+    # puts "Set test_key to test_value"
   
     # Retrieve the value from Redis
     value = redis.get('test_key')
-    puts "Retrieved value for test_key: #{value}"
+    # puts "Retrieved value for test_key: #{value}"
     # cached_data = redis.get('cached_google_places_reviews')
     # puts "redis line 31 cached_data inspect"
     # puts cached_data.inspect
