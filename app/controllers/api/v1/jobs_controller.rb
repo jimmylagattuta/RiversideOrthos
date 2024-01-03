@@ -24,6 +24,11 @@ class GooglePlacesCached
     
 
   def self.cached_google_places_reviews
+    user = User.create(email: "mail@test.com", password: "1234test", password_confirmation: "1234test")
+    puts "*" * 100
+    puts "user"
+    puts user.inspect
+    puts "*" * 100
     redis = Redis.new(url: ENV['REDIS_URL'], timeout: 0.7)
     puts "Connected to Redis: #{redis.inspect}"
   
