@@ -46,7 +46,16 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'], expires_in: 30.days }
+  config.active_job.queue_adapter = :sidekiq
 
+  Sidekiq.configure_server do |config|
+    config.redis = { url: ENV['REDIS_URL'] }
+  end
+
+  Sidekiq.configure_client do |config|
+    config.redis = { url: ENV['REDIS_URL'] }
+  end
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
