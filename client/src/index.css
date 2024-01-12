@@ -419,6 +419,7 @@ img {
 
 .header-title {
     font-size: 1.6rem;
+    font-family: sans-serif;
     max-width: 300px;
     margin: 0px;
     color: white;
