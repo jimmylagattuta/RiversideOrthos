@@ -378,7 +378,7 @@ img {
     margin-bottom: 10px;
     font-style: normal;
     line-height: 1em;
-    padding: 25px;
+    padding: 5px;
     text-transform: none;
 }
 
@@ -418,9 +418,11 @@ img {
 }
 
 .header-title {
-    font-size: 1.4rem;
-    max-width: 480px;
+    font-size: 1.6rem;
+    max-width: 300px;
     margin: 0px;
+    color: white;
+    text-shadow: black 1px 1px 6px;
 }
 
 .header-button-yellow {

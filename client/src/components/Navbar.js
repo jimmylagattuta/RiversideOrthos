@@ -51,6 +51,9 @@ const Navbar = () => {
                         />
 
                     </Link>
+                    <div className="header-title-div">
+                        <h1 className="header-title">Orthopaedic Associates Of Riverside</h1>
+                    </div>
                 </div>
                 <div className='header-buttons-container'>
                     <div className="navbar-oar-buttons">
@@ -64,7 +67,7 @@ const Navbar = () => {
                             Request Appointment
                         </a>
                     </div>
-                    <div className="navbar-special-buttons">
+                    {/* <div className="navbar-special-buttons">
                         <a href="https://www.facebook.com/orthoriverside" target="_blank">
                             <i style={{ padding: '10px', fontSize: '1.5rem', color: 'white' }} className="fab fa-facebook"></i>
                         </a>
@@ -80,7 +83,6 @@ const Navbar = () => {
                             >
                             <img src="https://i.imgur.com/95gzZ96.webp" alt="Polish Flag" />
                         </div>
-
                         <div
                             onClick={() => console.log('Translate To Spanish')}
                             style={{ cursor: "pointer", padding: '10px', fontSize: '2rem', alignSelf: 'center' }}
@@ -93,7 +95,7 @@ const Navbar = () => {
                             >
                             <i style={{ color: 'white' }} class="fas fa-search"></i>
                         </div>
-                    </div>
+                    </div> */}
 
 
                     {isAppointmentFormOpen && (

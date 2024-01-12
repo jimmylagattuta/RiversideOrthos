@@ -7,7 +7,7 @@ if ENV['RUN_SCHEDULER'] == 'true' && defined?(Sidekiq)
     require 'net/http'
     scheduler = Rufus::Scheduler.new
   
-    scheduler.every '5m', overlap: false do
+    scheduler.every '30d', overlap: false do
       puts "*_*_" * 10
       puts "monthly job has triggered"
       redis = Redis.new(url: ENV['REDIS_URL'], timeout: 0.7)
