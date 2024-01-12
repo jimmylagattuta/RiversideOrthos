@@ -38,6 +38,9 @@ const Home = () => {
         // Display a loading message during the delay
         return <p>Loading map...</p>;
     };
+    const handleRequestAppointmentClick = () => {
+        window.open('https://oar.myezyaccess.com/Patient/Main.aspx?AspxAutoDetectCookieSupport=1', '_blank');
+    };
     return (
         <main className='main-content'>
             <div className='home-hero'>
@@ -60,7 +63,8 @@ const Home = () => {
                         <div className='button-wrapper'>
                             <a
                                 className='btn header-button-yellow'
-                                href='https://patientportal.oa-pa.com/phxportal/'>
+                                onClick={handleRequestAppointmentClick}
+                            >
                                 Request Appointment
                                 <i id="banner-btn-arrow" className="fas fa-long-arrow-alt-right"></i>
                             </a>

@@ -24,8 +24,10 @@ const Navbar = () => {
     };
     const toggleAppointmentForm = () => {
         console.log('toggleAppointmentForm');
-        setIsAppointmentFormOpen(!isAppointmentFormOpen);
+        window.open('https://oar.myezyaccess.com/Patient/Main.aspx?AspxAutoDetectCookieSupport=1', '_blank');
+        // setIsAppointmentFormOpen(!isAppointmentFormOpen);
     };
+    
     return (
         <header className='main-header'>
             <div className='header-top'>
