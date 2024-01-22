@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useCsrfToken } from '../CsrfTokenContext'; // Import the hook
+import { useCsrfToken } from '../CsrfTokenContext';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import 'react-dropdown/style.css'
@@ -8,8 +8,32 @@ import { Form, Field } from 'react-final-form';
 import { Link } from 'react-router-dom';
 
 function ChatBox(props) {
-  const { csrfToken,setCsrfToken } = useCsrfToken();
+  const { csrfToken, setCsrfToken } = useCsrfToken();
+  const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const cacheKey = 'cached_yelp_reviews';
 
+  const defaultProfilePhotoUrls = [
+    'https://lh3.googleusercontent.com/a/ACg8ocLIudbeWrIiWWZp7p9ibYtGWt7_t2sZhu3GhVETjeORZQ=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocKWoslacgKVxr6_0nu2yNq78qvJS_JmSt-o-sm0Poz1=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocIkg86HfAMs_wSjeyDfK_T6jI0hsOa7uwPSHrvQkzxz=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocJF-8tCmJylLukUi86imkat5gT8nG4xHJuweKX0g7-T6A=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocJrHYSdRq54r0T0kNF60xZGqm58qhXVIB3ogEUkGa_e=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocKWj653OujAca153BqwYSRX18G0URD-9DV89ZYyArIET1U=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocKqelNaTWLy28Vdol7ewcw8EYyT2muaWVSjckEAamoy=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocI-UUmoZ36qdH-xNh8xlrTXv3Jx6H7QGBwXeaIa8rjT=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocKPAe4Ik_kZrxRvPsJmKD3YthHHK8mHe2VDb10mPSKP=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocKZ2tCDEg6Ehy8TRlFwuuVvvdpdRnSFfeGYRNUTq1U=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocLu8PkNc-7f1HUTNd94JtS73eJhUka5AIZucTp3Hlbw=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocLfObJkOnSt9CV8D8v_u6kTqfhrE-yQPAYjosZdlzvZ=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocLUv0B3n3yJCFDAuL2h3UzH2kExs6WQRooe_A662cMB=s128-c0x00000000-cc-rp-mo-ba2',
+    'https://lh3.googleusercontent.com/a/ACg8ocJicBeMj3c-YfZSzCYTrkKfT8Z3tXIMXSNKxGwU8qim=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocLKrlJ0NBUgNt_mA6fqHxuYrVbHfYy48bb-CaVg3YQC=s128-c0x00000000-cc-rp-mo-ba3',
+    'https://lh3.googleusercontent.com/a/ACg8ocKww_NJw1NmlQPCb0AodayToyOTvLxgGtcfIOPuromk=s128-c0x00000000-cc-rp-mo',
+    'https://lh3.googleusercontent.com/a/ACg8ocIFg5G-JO49VMdkvA4N5IwxQ9XKjHP3HHTytStrVCI=s128-c0x00000000-cc-rp-mo'
+
+];
   const [state, setState] = useState({
     showDropdownLocations: false,
     showDropdownNewOrReturning: false,
@@ -44,60 +68,23 @@ function ChatBox(props) {
   });
 
   useEffect(() => {
-    // Load and initialize reCAPTCHA
-    // const loadRecaptchaScript = () => {
-    //   console.log('process.env.REACT_APP_RECAPTCHA', process.env.REACT_APP_RECAPTCHA);
-    //   const script = document.createElement('script');
-    //   script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
-    //   script.async = true;
-    //   script.defer = true;
-    //   script.onload = () => {
-    //     // Initialize reCAPTCHA with your site key
-    //     window.grecaptcha.enterprise.ready(async () => {
-    //       const token = await window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'action_name' });
-    //       const response = await fetch('/verify-recaptcha', {
-    //         method: 'POST',
-    //         headers: {
-    //           'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ token }),
-    //       });
-    //       const data = await response.json();
-    //       if (data.score < 0.5) {
-    //         console.log('Less than 0.5');
-    //         // Handle suspicious activity (e.g., show a CAPTCHA challenge)
-    //       } else {
-    //         console.log('Above 0.5');
-    //         // Proceed with the user's request
-    //       }
-    //     });
-        
-    //   };
-    //   document.head.appendChild(script);
-    // };
-
-    // loadRecaptchaScript();
-
     if (!csrfToken) {
       fetchReviews();
     }
   }, []);
+
   const fetchReviews = () => {
-          
     const url =
       process.env.NODE_ENV === 'production'
         ? 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache'
         : 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache';
 
-  
-    // Include the CSRF token in the headers of your fetch request
     const headers = {
       'Content-Type': 'application/json',
       'X-CSRF-Token': csrfToken,
     };
-  
-    fetch(url, { headers })
 
+    fetch(url, { headers })
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -106,46 +93,71 @@ function ChatBox(props) {
         }
       })
       .then((data) => {
-        // Check if data.reviews is a string
-        if (typeof data.reviews === 'string') {
-          // Parse the JSON string into an array
-          const reviewsArray = JSON.parse(data.reviews);
-          // Set the CSRF token in the context (if needed)
+        if (Array.isArray(data.reviews)) {
           if (data.csrf_token) {
             setCsrfToken(data.csrf_token);
           }
-  
-          // Filter reviews with the default profile photo URLs
 
-          // Shuffle the filteredReviews array
-  
-          // Take the first three reviews
-  
+          const filteredReviews = data.reviews.filter(
+            (item) => !defaultProfilePhotoUrls.includes(item.profile_photo_url)
+          );
 
+          const shuffledReviews = shuffleArray(filteredReviews);
+          const randomReviews = shuffledReviews.slice(0, 3);
+
+          saveToCache(data);
+          setReviews(randomReviews);
+          setLoading(false);
         } else {
-          throw new Error('Data.reviews is not a string');
+          throw new Error('Data.reviews is not an array');
         }
       })
       .catch((err) => {
         console.error(err);
+        setError(err.message);
+        setLoading(false);
       });
   };
-  
-
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+const saveToCache = (data) => {
+  const expiry = Date.now() + 7 * 24 * 60 * 60 * 1000; // Cache for 7 days
+  const cacheData = JSON.stringify(data);
+  localStorage.setItem(cacheKey, cacheData);
+};
+useEffect(() => {
+  // Load and initialize reCAPTCHA
   const loadRecaptchaScript = () => {
     const script = document.createElement('script');
     script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
     script.async = true;
     script.defer = true;
-    script.onload = initializeRecaptcha;
+    script.onload = () => {
+      // Initialize reCAPTCHA with your site key
+      window.grecaptcha.enterprise.ready(() => {
+        window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
+          setState({ ...state, recaptchaToken: token });
+        });
+      });
+    };
     document.head.appendChild(script);
   };
 
+  loadRecaptchaScript();
+
+  if (!csrfToken) {
+    fetchReviews();
+  }
+}, []);
+
   const initializeRecaptcha = () => {
-    // Initialize reCAPTCHA with your site key
     window.grecaptcha.enterprise.ready(() => {
       window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
-        console.log('initializeRecaptcha', token);
         setState({ ...state, recaptchaToken: token });
       });
     });
@@ -155,46 +167,34 @@ function ChatBox(props) {
     if (values) {
       setState({ ...state, recaptchaChecked: true, errorRecaptcha: '' });
     }
-    // Here, you can use state.recaptchaToken in your form submission
-    // to validate the reCAPTCHA response.
-
-    // Perform your form submission logic
-    // ...
   };
 
   const handleAgreeChange = () => {
     setState((prevState) => ({
       ...state,
-      agreeToTerms: !prevState.agreeToTerms, // Toggle the value
+      agreeToTerms: !prevState.agreeToTerms,
     }));
   };
 
   const formatPhoneNumber = (value) => {
     if (value) {
-      // Remove all non-numeric characters from the input
       const phoneNumber = value.replace(/\D/g, '');
-
-      // Format the phone number as (XXX) XXX-XXXX
       const formattedPhoneNumber = `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
-
       return formattedPhoneNumber;
     }
-
-    return ''; // Return an empty string for undefined or null values
+    return '';
   };
 
   const parsePhoneNumber = (value) => {
     if (value) {
-      // Remove all non-numeric characters from the input
       return value.replace(/\D/g, '');
     }
-
-    return ''; // Return an empty string for undefined or null values
+    return '';
   };
 
   const onSubmit = async (values) => {
     const formData = {
-      ...values, // Include the form values
+      ...values,
       recaptcha: state.recaptchaChecked,
       agreeToTerms: state.agreeToTerms,
     };
@@ -209,19 +209,18 @@ function ChatBox(props) {
       });
 
       if (response.ok) {
-        // Email sent successfully
         console.log('Email sent successfully');
-        // You can also reset the form or perform any other actions here
       } else {
-        // Email sending failed
         console.error('Email sending failed');
-        // Handle the error or display a message to the user
       }
     } catch (error) {
       console.error('Error sending email:', error);
-      // Handle the error
     }
   };
+
+
+
+
 	const renderErrorEmail = (error) => {
 		if (error && state.showAllErrors) {
 			return (
@@ -334,68 +333,6 @@ function ChatBox(props) {
 			)
 		}
 	}
-  const renderSendButton = (values, errors, form) => {
-    if (
-      values.fName ||
-      values.lName ||
-      values.email ||
-      values.phone ||
-      values.message ||
-      state.recaptchaChecked ||
-      state.agreeToTerms
-    ) {
-      if (Object.keys(errors).length === 0) {
-        return (
-          <button
-            id="chat-box-button-ready"
-            onClick={(e) => {
-              e.preventDefault();
-              onSubmit(values);
-              document.getElementById("chat-middle-component").style.opacity = '0%';
-              document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
-              document.getElementById("chatbox-div").style.opacity = '0%';
-			        document.getElementById("chat-box-button-ready").style.opacity = '0%';
-              setTimeout(() => {
-                form.reset();
-              }, 3000);
-
-              // !!!!!
-              // document.getElementById("giant icon guy")
-              // !!!!!
-            }}
-            type="submit"
-          >
-            SEND
-          </button>
-        );
-      } else {
-        return (
-          <button
-            id="chat-box-button-blue"
-            onClick={(e) => {
-              setState({ ...state, showAllErrors: true });
-              e.preventDefault();
-            }}
-            type="submit"
-          >
-            SEND
-          </button>
-        );
-      }
-    } else {
-      return (
-        <button
-          id="chat-box-button"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
-          type="submit"
-        >
-          SEND
-        </button>
-      );
-    }
-  };
 
   const renderBorderFName = (errors) => {
     if (!errors.fName || !state.showAllErrors) {
@@ -436,6 +373,32 @@ function ChatBox(props) {
       return "field-id-red";
     }
   };
+
+
+  const renderSendButton = (values, form) => {
+    if (values.email && values.phone && values.firstName && values.lastName && state.agreeToTerms && state.recaptchaChecked) {
+      return (
+        <button
+          type="submit"
+          className="btn btn-primary btn-lg btn-block mt-4 mb-3"
+          disabled={form.submitting}
+        >
+          Send
+        </button>
+      );
+    }
+    return (
+      <button
+        type="submit"
+        className="btn btn-primary btn-lg btn-block mt-4 mb-3"
+        disabled
+      >
+        Send
+      </button>
+    );
+  };
+
+  // ... (other render functions)
 
   return (
     <Form
@@ -501,8 +464,8 @@ function ChatBox(props) {
           }}
           onSubmit={handleSubmit}>
           <p style={{ fontWeight: '400', letterSpacing: '0.05rem', alignSelf: 'center', fontSize: '0.8rem', fontFamily: 'sans-serif', paddingTop: '10px' }}>CONTACT US</p>
-          <h2 style={{ fontWeight: '400', letterSpacing: '0.01rem', alignSelf: 'center', fontFamily: 'sans-serif', padding: '10px 5px 0px 5px', marginBottom: '0px' }}>Send A Message To Los Angeles Orthopedic Surgery Specialists</h2>
-          <p style={{ fontWeight: '400', alignSelf: 'center', fontSize: '0.9rem', padding: '10px 10px 0px 10px', maxWidth: '90%' }}>If you have any questions, concerns, or comments regarding Los Angeles Orthopedic Surgery Specialists, please fill out the short contact form below.</p>
+          <h2 style={{ fontWeight: '400', letterSpacing: '0.01rem', alignSelf: 'center', fontFamily: 'sans-serif', padding: '10px 5px 0px 5px', marginBottom: '0px' }}>Send A Message To Orthopaedic Associates Of Riverside</h2>
+          <p style={{ fontWeight: '400', alignSelf: 'center', fontSize: '0.9rem', padding: '10px 10px 0px 10px', maxWidth: '90%' }}>If you have any questions, concerns, or comments regarding Orthopaedic Associates Of Riverside, please fill out the short contact form below.</p>
 
           <div style={{ maxWidth: '90%', alignSelf: 'center', padding: '10px 10px 0px 10px' }} id="chatbox-div">
             <div id="chat-middle-component">
@@ -612,5 +575,6 @@ function ChatBox(props) {
       )}
     />
   );
-};
-export default ChatBox;
+}
+
+export default ChatBox;  

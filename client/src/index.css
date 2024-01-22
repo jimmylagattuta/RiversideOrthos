@@ -826,9 +826,9 @@ img {
 
 /* PAGES STYLES */
 .pages-header {
-    background-image: url(https://i.imgur.com/IvKGHXY.webp);
+    background-image: url(https://i.imgur.com/Cb9CEbY.webp);
     background-size: contain;
-    background-position: top;
+    background-position: right;
     background-attachment: fixed;
     border-bottom: 5px solid rgb(143, 0, 72);
     color: #fff;

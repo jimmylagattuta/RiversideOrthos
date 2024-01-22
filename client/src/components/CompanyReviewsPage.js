@@ -59,7 +59,8 @@ const CompanyReviewsPage = () => {
         };
 
         const fetchReviews = () => {
-
+            console.log('process.env', process.env.REACT_APP_RECAPTCHA);
+            console.log('process.env.REACT_APP_RECAPTCHA', process.env.REACT_APP_RECAPTCHA);
 
             const url =
               process.env.NODE_ENV === 'production'
@@ -74,51 +75,44 @@ const CompanyReviewsPage = () => {
             };
           
             fetch(url, { headers })
-              .then((response) => {
-                if (response.ok) {
-                  return response.json();
-                } else {
-                  throw new Error('Failed to fetch reviews');
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error('Failed to fetch reviews');
+              }
+            })
+            .then((data) => {
+              // Check if data.reviews is an array
+              if (Array.isArray(data.reviews)) {
+                // Set the CSRF token in the context (if needed)
+                if (data.csrf_token) {
+                  setCsrfToken(data.csrf_token);
                 }
-              })
-              .then((data) => {
-                // Check if data.reviews is a string
-                console.log('data', data);
-                if (typeof data.reviews === 'string') {
-                  // Parse the JSON string into an array
-                  const reviewsArray = JSON.parse(data);
-                    console.log('reviewsArray', reviewsArray);
-                  // Set the CSRF token in the context (if needed)
-                  console.log('data', data);
-                  if (data.csrf_token) {
-                    console.log('token present');
-                    setCsrfToken(data.csrf_token);
-                  }
-          
-                  // Filter reviews with the default profile photo URLs
-                  const filteredReviews = reviewsArray.filter(
-                    (item) =>
-                      !defaultProfilePhotoUrls.includes(item.profile_photo_url)
-                  );
-          
-                  // Shuffle the filteredReviews array
-                  const shuffledReviews = shuffleArray(filteredReviews);
-          
-                  // Take the first three reviews
-                  const randomReviews = shuffledReviews.slice(0, 3);
-          
-                  saveToCache(data);
-                  setReviews(randomReviews);
-                  setLoading(false);
-                } else {
-                  throw new Error('Data.reviews is not a string');
-                }
-              })
-              .catch((err) => {
-                console.error(err);
-                setError(err.message);
+        
+                // Filter reviews with the default profile photo URLs
+                const filteredReviews = data.reviews.filter(
+                  (item) => !defaultProfilePhotoUrls.includes(item.profile_photo_url)
+                );
+        
+                // Shuffle the filteredReviews array
+                const shuffledReviews = shuffleArray(filteredReviews);
+        
+                // Take the first three reviews
+                const randomReviews = shuffledReviews.slice(0, 3);
+        
+                saveToCache(data);
+                setReviews(randomReviews);
                 setLoading(false);
-              });
+              } else {
+                throw new Error('Data.reviews is not an array');
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+              setError(err.message);
+              setLoading(false);
+            });
           };
           
           

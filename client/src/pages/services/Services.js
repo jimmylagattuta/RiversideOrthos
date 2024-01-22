@@ -7,7 +7,7 @@ const Services = () => {
                 Explore Our Services
             </h1>
             <p className='expertise-header-description'>
-                Services in East Los Angeles and Downtown Los Angeles, Los Angeles, San Gabriel Valley, Santa Fe Springs, San Fernando Valley, Tarzana, San Fernando Valley, Encino, Santa Clarita, Newhall, San Gabriel Valley, Montebello and Glendale, CA
+                Services in Riverside, La Grange, and Chicago
             </p>
             <ExpertiseBlocks />
         </div>

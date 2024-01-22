@@ -6,6 +6,9 @@ const Locations = () => {
     return (
         <>
             <PagesHeader title='Locations' />;
+            <div style={{ display: 'flex', justifyContent: 'center', padding: "110px 0px 45px 0px" }}>
+                <ChatBox />
+            </div>
             <div className='page-container'>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }} className='page-info'>
                     <h3 style={{ alignSelf: 'baseline' }}>
@@ -17,9 +20,6 @@ const Locations = () => {
             </div>
             <div className='location-map-section'>
                 <MapContainer />
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', padding: "110px 0px 45px 0px" }}>
-                <ChatBox />
             </div>
         </>
     );

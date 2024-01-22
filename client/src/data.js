@@ -621,7 +621,7 @@ export const officesData = [
         addressTwo: 'Riverside, IL 60546',
         phone: '708-442-0221',
         fax: '708-442-5670',
-        image: 'https://i.imgur.com/r6Cclyu.webp',
+        image: 'https://i.imgur.com/A30o3rv.webp',
         coordinates: {
             lat: 41.8312612,
             lng: -87.804197,
@@ -635,7 +635,7 @@ export const officesData = [
         addressTwo: 'La Grange, IL 60525',
         phone: '708-442-0221',
         fax: '708-442-5670',
-        image: 'https://i.imgur.com/r6Cclyu.webp',
+        image: 'https://i.imgur.com/fWvKgfQ.webp',
         coordinates: {
             lat: 41.7956315,
             lng: -87.8867671,
@@ -649,7 +649,7 @@ export const officesData = [
         addressTwo: 'Chicago, IL 60638',
         phone: '708-442-0221',
         fax: '708-442-5670',
-        image: 'https://i.imgur.com/r6Cclyu.webp',
+        image: 'https://i.imgur.com/1vuk4cj.webp',
         coordinates: {
             lat: 41.79482,
             lng: -87.7699979,
