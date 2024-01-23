@@ -59,8 +59,6 @@ const CompanyReviewsPage = () => {
         };
 
         const fetchReviews = () => {
-            console.log('process.env', process.env.REACT_APP_RECAPTCHA);
-            console.log('process.env.REACT_APP_RECAPTCHA', process.env.REACT_APP_RECAPTCHA);
 
             const url =
               process.env.NODE_ENV === 'production'

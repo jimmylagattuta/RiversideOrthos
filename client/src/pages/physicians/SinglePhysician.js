@@ -60,11 +60,13 @@ const SinglePhysician = () => {
     const getCachedReviews = () => {
         const cachedDataBeforeJson = localStorage.getItem(cacheKey);
         if (cachedDataBeforeJson) {
-            const cachedDataOne = JSON.parse(cachedDataBeforeJson);
-            const reviewsArray = JSON.parse(cachedDataOne.reviews); // Parse the reviews string into an array  
+            // const cachedDataOne = JSON.parse(cachedDataBeforeJson);
+            // console.log('cachedDataOne', cachedDataOne);
+            const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
             // const cachedData = JSON.parse(cachedDataOne);
             // console.log('cachedData', cachedData);
-            return reviewsArray.map((review, index) => {
+            return reviews.map((review, index) => {
+                console.log('review', review);
                 const filteredName = name
                     .split(/[,.]\s*/)
                     .filter(
@@ -82,9 +84,10 @@ const SinglePhysician = () => {
 
                 const regex = new RegExp(regexPattern, 'i');
 
-                const matchedNames = review.text.match(regex);
+                // const matchedNames = review.text.match(regex);
+                const matchedNames = review.text.match(regex)?.filter(name => name.length > 1);
 
-                if (matchedNames) {
+                if (matchedNames && matchedNames.length > 0) {
                     if (review.author_name === "Pdub ..") {
                     } else {          
                         return (

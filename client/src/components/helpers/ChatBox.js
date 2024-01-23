@@ -375,29 +375,68 @@ useEffect(() => {
   };
 
 
-  const renderSendButton = (values, form) => {
-    if (values.email && values.phone && values.firstName && values.lastName && state.agreeToTerms && state.recaptchaChecked) {
+  const renderSendButton = (values, errors, form) => {
+    if (
+      values.fName ||
+      values.lName ||
+      values.email ||
+      values.phone ||
+      values.message ||
+      state.recaptchaChecked ||
+      state.agreeToTerms
+    ) {
+      if (Object.keys(errors).length === 0) {
+        return (
+          <button
+            id="chat-box-button-ready"
+            onClick={(e) => {
+              e.preventDefault();
+              onSubmit(values);
+              document.getElementById("chat-middle-component").style.opacity = '0%';
+              document.getElementById("chatbox-div").style.backgroundColor = 'rgba(105,116,146, 40%)';
+              document.getElementById("chatbox-div").style.opacity = '0%';
+			        document.getElementById("chat-box-button-ready").style.opacity = '0%';
+              setTimeout(() => {
+                form.reset();
+              }, 3000);
+
+              // !!!!!
+              // document.getElementById("giant icon guy")
+              // !!!!!
+            }}
+            type="submit"
+          >
+            SEND
+          </button>
+        );
+      } else {
+        return (
+          <button
+            id="chat-box-button-blue"
+            onClick={(e) => {
+              setState({ ...state, showAllErrors: true });
+              e.preventDefault();
+            }}
+            type="submit"
+          >
+            SEND
+          </button>
+        );
+      }
+    } else {
       return (
         <button
+          id="chat-box-button"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
           type="submit"
-          className="btn btn-primary btn-lg btn-block mt-4 mb-3"
-          disabled={form.submitting}
         >
-          Send
+          SEND
         </button>
       );
     }
-    return (
-      <button
-        type="submit"
-        className="btn btn-primary btn-lg btn-block mt-4 mb-3"
-        disabled
-      >
-        Send
-      </button>
-    );
   };
-
   // ... (other render functions)
 
   return (

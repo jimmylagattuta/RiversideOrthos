@@ -57,17 +57,17 @@ const Home = () => {
                         </h1>
                     </div>
                     <p style={{ color: 'white', textShadow: '1px 1px 6px black' }} className='banner-description'>
-                        Experienced Medical Professionals With A Personal Touch
+                        QUALITY ORTHOPAEDIC CARE
                     </p>
                     <div className='banner-buttons'>
                         <div className='button-wrapper'>
-                            <a
+                            <Link
                                 className='btn header-button-yellow'
-                                onClick={handleRequestAppointmentClick}
+                                to={{ pathname: '/locations', hash: '#chatbox' }}
                             >
                                 Request Appointment
                                 <i id="banner-btn-arrow" className="fas fa-long-arrow-alt-right"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

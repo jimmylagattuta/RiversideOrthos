@@ -14,7 +14,6 @@ const SingleAbout = () => {
     if (!about) {
         return <Error />;
     }
-    
     return (
         <div className='about-content'>
             {about.title && <h2>{about.title}</h2>}

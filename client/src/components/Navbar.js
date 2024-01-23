@@ -1,14 +1,19 @@
-import { NavLink, Link } from 'react-router-dom';
-
+import React, { useState, useEffect, Suspense } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { navMenu } from '../data';
-import { useState } from 'react';
 import RequestAppointmentForm from './helpers/RequestAppointmentForm';
 const Navbar = () => {
     const [isMobileMenuopen, setIsMobileMenuOpen] = useState(false);
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(null);
     const [isAppointmentFormOpen, setIsAppointmentFormOpen] = useState(false); // State to manage appointment form visibility
     const [showThankYouMessage, setShowThankYouMessage] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const location = useLocation(); // Use useLocation hook to get the current location
 
+    const togglePopup = () => {
+      console.log('togglePopup');
+      setIsPopupOpen(!isPopupOpen);
+    };
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuopen);
     };
@@ -23,11 +28,41 @@ const Navbar = () => {
         setIsSubmenuOpen(null);
     };
     const toggleAppointmentForm = () => {
-        console.log('toggleAppointmentForm');
-        window.open('https://oar.myezyaccess.com/Patient/Main.aspx?AspxAutoDetectCookieSupport=1', '_blank');
-        // setIsAppointmentFormOpen(!isAppointmentFormOpen);
-    };
-    
+        if (location.pathname === '/locations') {
+          const scrollToHeight = document.body.scrollHeight * 0.8;
+          const start = window.scrollY;
+          const end = scrollToHeight;
+          const duration = 1000; // Duration of the scroll animation in milliseconds
+      
+          let startTime;
+      
+          const scrollAnimation = (timestamp) => {
+            if (!startTime) {
+              startTime = timestamp;
+            }
+      
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / duration, 1); // Ensure progress doesn't exceed 1
+      
+            const easedProgress = easeInOutCubic(progress); // Apply easing function
+      
+            window.scrollTo(0, start + (end - start) * easedProgress);
+      
+            if (elapsed < duration) {
+              // Continue the animation
+              window.requestAnimationFrame(scrollAnimation);
+            }
+          };
+      
+          // Easing function for smooth scroll animation
+          const easeInOutCubic = (t) =>
+            t < 0.5 ? 4 * t ** 3 : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      
+          // Start the animation
+          window.requestAnimationFrame(scrollAnimation);
+        }
+      };
+      
     return (
         <header className='main-header'>
             <div className='header-top'>
@@ -43,31 +78,36 @@ const Navbar = () => {
                         }
                         aria-hidden='true'></i>
                 </button>
-                <div className='header-image-container'>
-                    <Link to='/' className='logo-link'>
+                <Link to='/' className='logo-link' style={{ textDecorationLine: 'none' }}>
+                    <div className='header-image-container'>
                         <img
                             src='https://i.imgur.com/1M8ZlnK.webp'
-                            alt='LA Ortho Associates'
+                            alt='Riverside Orthopaedics Associates'
                             className='header-image'
                             style={{ width: '200px' }}
                         />
 
-                    </Link>
-                    <div className="header-title-div">
-                        <h1 className="header-title">Orthopaedic Associates Of Riverside</h1>
+                        <div className="header-title-div">
+                            <h1 className="header-title">Orthopaedic Associates Of Riverside</h1>
+                        </div>
                     </div>
-                </div>
-                <div className='header-buttons-container'>
-                    <div className="navbar-oar-buttons">
-                        <NavLink className='btn header-button-dark' to='/locations'>
+                </Link>
+            
+
+
+                <div className='header-buttons-container' style={{ display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', flexDirection: 'row'}}>
+                        <NavLink className='btn header-button-dark'
+                            onClick={toggleAppointmentForm}
+                            to={{ pathname: '/locations', hash: '#chatbox' }}
+                        >
                             Call Us
                         </NavLink>
-                        <a
-                            className='btn header-button-yellow'
-                            onClick={toggleAppointmentForm}
+                        <div className='btn header-button-yellow'
+                            onClick={togglePopup}
                             >
-                            Request Appointment
-                        </a>
+                            Download Forms
+                        </div>
                     </div>
                     {/* <div className="navbar-special-buttons">
                         <a href="https://www.facebook.com/orthoriverside" target="_blank">
@@ -98,11 +138,133 @@ const Navbar = () => {
                             <i style={{ color: 'white' }} class="fas fa-search"></i>
                         </div>
                     </div> */}
+                    {isPopupOpen && (
+                        <div id="form-divs" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', position: 'absolute', marginTop: '50px', width: 'max-content', right: '0', backgroundColor: 'var(--violet)', zIndex: '2', padding: '15px' }}>
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', marginTop: '12px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/Registration.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                New Patient Registration Form
+                            </a>
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/RegistrationSpanish.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Formulario de Registro de Pacientes Nuevos
+                            </a>
 
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/DAR.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Designated Authorized Representative
+                            </a>
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/DARSpanish.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Representante Autorizado Designado
+                            </a>
 
-                    {isAppointmentFormOpen && (
-                        <div className="appointment-form-overlay">
-                            <RequestAppointmentForm toggleAppointmentForm={toggleAppointmentForm} setShowThankYouMessage={setShowThankYouMessage} />
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/authorization.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                HIPAA Authorization and Release
+                            </a>
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/authorizationSpanish.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Autorización y Liberación de HIPAA
+                            </a>
+
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/MedHistory.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Medical History
+                            </a>
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/MedHistorySpanish.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Historial Médico
+                            </a>
+
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/PrivacyNotice.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Privacy Notice {"(HIPAA)"}
+                            </a>
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/PrivacyNoticeSpanish.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Aviso de Privacidad {"(HIPAA)"}
+                            </a>
+
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/FinancialPolicy.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Financial Policy
+                            </a>
+                            <a
+                                className='btn header-button-yellow'
+                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                href={process.env.PUBLIC_URL + '/FinancialPolicySpanish.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                                download
+                            >
+                                Política Financiera
+                            </a>    
                         </div>
                     )}
                     {showThankYouMessage && (

@@ -15,7 +15,7 @@ class Api::V1::JobsController < ApplicationController
       if place_id
         place_reviews = fetch_place_reviews(place_id)
         five_star_reviews = filter_reviews_by_rating(place_reviews, 5) # Filter by perfect rating (5 stars)
-        filtered_reviews = filter_reviews_by_text(five_star_reviews, 'negative reviews') # Filter out reviews containing "negative reviews" in their text
+        filtered_reviews = filter_reviews_by_text(five_star_reviews, 'negative reviews') # Filter out sentences containing "negative reviews" in their text
         reviews.concat(filtered_reviews)
       else
         puts "Place ID not found for '#{place_name}'"
@@ -71,7 +71,12 @@ class Api::V1::JobsController < ApplicationController
     reviews.select { |review| review['rating'] == rating }
   end
 
-  def filter_reviews_by_text(reviews, text)
-    reviews.reject { |review| review['text'].include?(text) }
+  def filter_reviews_by_text(reviews, text_to_remove)
+    reviews.map do |review|
+      sentences = review['text'].split(/(?<=[.!?])\s+(?=[a-zA-Z])/)
+      filtered_sentences = sentences.reject { |sentence| sentence.include?(text_to_remove) }
+      review['text'] = filtered_sentences.join(' ')
+      review
+    end
   end
 end

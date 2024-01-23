@@ -46,6 +46,19 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  config.action_mailer.asset_host = "https://riversideorthos.azurewebsites.net"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'riversideorthos.azurewebsites.net',
+    user_name: 'unitymskwebsites@gmail.com',
+    password: ENV["REACT_APP_GMAIL_PASSWORD"],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
   config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'], expires_in: 30.days }
   config.active_job.queue_adapter = :sidekiq
 

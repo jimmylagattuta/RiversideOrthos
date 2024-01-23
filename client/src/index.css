@@ -433,8 +433,14 @@ img {
     border-width: 2px;
 }
 
+.header-button-yellow:hover {
+    font-weight: bold;
+    transform: translateY(-2px) scale(1.05);
+}
+
 .header-button-yellow:active {
     color: var(--black);
+    transform: translateY(4px) scale(0.97);
 }
 .navbar-oar-buttons {
     display: flex;
@@ -579,7 +585,7 @@ img {
     width: 60%;
     height: 90%;
     /* animation: fadeOut 1.5s ease-out; */
-    transition: opacity 0.5s; /* Add a transition for opacity */
+    transform: opacity 0.5s; /* Add a transform for opacity */
 }
 .form-title {
     border-bottom: 1px solid var(--grey-light);
@@ -629,7 +635,7 @@ img {
     bottom: 0;
     width: 100%;
     min-width: 60%;
-    transition: opacity 2s;
+    transform: opacity 2s;
 }
 #chat-form-lines-request-apt {
     width: 100%;
@@ -748,10 +754,10 @@ img {
 .about-container-bottom-left {
     display: flex;
     flex: 1;
-    /* background-image: url(https://i.imgur.com/thiV4LE.webp); */
+    background-image: url(https://i.imgur.com/AzYkCf0.webp);
     background-size: cover;
 
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -1004,7 +1010,7 @@ img {
     opacity: 10%;
     content: "";
     z-index: -4;
-    transition: 0.3s ease-in-out;
+    transform: 0.3s ease-in-out;
     position: fixed;
   }
   #chat-comp-div-two::after {
@@ -1019,7 +1025,7 @@ img {
     opacity: 10%;
     content: "";
     z-index: -4;
-    transition: 0.3s ease-in-out;
+    transform: 0.3s ease-in-out;
     align-items: center;
   }
   #chat-comp-div-three::after {
@@ -1703,7 +1709,7 @@ display: none;
   border-radius: 8rem;
   border: none;
   background-color: rgba(143, 0, 72, 100%);
-  color: black;
+  color: white;
   align-self: center;
   font-size: 0.9rem;
   opacity: 80%;
@@ -2368,6 +2374,11 @@ display: none;
     align-self: center;
 }
 
+@media (max-height: 600px) {
+    .about-description-right {
+        font-size: 0.8rem;
+    }
+}
 
 @media (min-width: 1025px) {
     .nav-link-container:hover > .submenu {
@@ -2378,7 +2389,7 @@ display: none;
 }
 @media (max-width: 1650px) {
     .pages-header {
-        background-image: url(https://i.imgur.com/V3Vfsqi.webp);
+        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
     }
 }
 @media (max-width: 1360px) {
@@ -2825,6 +2836,16 @@ display: none;
 }
 
 @media (max-width: 576px) {
+    #form-divs {
+        width: 90vw !important;
+        position: unset !important;
+        margin-top: 0px !important;
+        align-items: center !important;
+        
+    }
+    .header-button-yellow {
+        text-decoration-line: none !important;
+    }
     #chat-form-lines-request-apt {
         width: 91%;
         padding-right: 20px;
