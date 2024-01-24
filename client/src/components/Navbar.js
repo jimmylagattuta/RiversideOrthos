@@ -139,10 +139,12 @@ const Navbar = () => {
                         </div>
                     </div> */}
                     {isPopupOpen && (
-                        <div id="form-divs" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', position: 'absolute', marginTop: '50px', width: 'max-content', right: '0', backgroundColor: 'var(--violet)', zIndex: '2', padding: '15px' }}>
+                        <div id="form-divs" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', position: 'absolute', marginTop: '60px', width: 'max-content', right: '0', backgroundColor: 'var(--violet)', zIndex: '2', padding: '15px', borderStyle: 'solid', borderColor: 'var(--white)', borderWidth: '1px' }}>
+                            <h4 style={{ padding: '0px 10px 0px 10px', width: '80%', color: 'white', textTransform: 'none', textShadow: 'black 1px 1px 6px' }}>* You need to bring these forms finished on first visit.</h4>
+                            <h4 style={{ margin: '5px 0px 0px 0px', padding: '0px 10px 0px 10px', width: '80%', color: 'white', textTransform: 'none' }}>Registration Form</h4>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', marginTop: '12px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', marginTop: '12px'}}
                                 href={process.env.PUBLIC_URL + '/Registration.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -152,7 +154,7 @@ const Navbar = () => {
                             </a>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/RegistrationSpanish.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -160,10 +162,10 @@ const Navbar = () => {
                             >
                                 Formulario de Registro de Pacientes Nuevos
                             </a>
-
+                            <h4 style={{ margin: '5px 0px 0px 0px', padding: '0px 10px 0px 10px', width: '80%', color: 'white', textTransform: 'none' }}>Authorization Form</h4>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/DAR.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -173,7 +175,7 @@ const Navbar = () => {
                             </a>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/DARSpanish.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -181,10 +183,10 @@ const Navbar = () => {
                             >
                                 Representante Autorizado Designado
                             </a>
-
+                            <h4 style={{ margin: '5px 0px 0px 0px', padding: '0px 10px 0px 10px', width: '80%', color: 'white', textTransform: 'none' }}>Release Form</h4>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/authorization.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -194,7 +196,7 @@ const Navbar = () => {
                             </a>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/authorizationSpanish.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -202,10 +204,10 @@ const Navbar = () => {
                             >
                                 Autorización y Liberación de HIPAA
                             </a>
-
+                            <h4 style={{ margin: '5px 0px 0px 0px', padding: '0px 10px 0px 10px', width: '80%', color: 'white', textTransform: 'none' }}>Medical Histroy</h4>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/MedHistory.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -215,7 +217,7 @@ const Navbar = () => {
                             </a>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/MedHistorySpanish.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -223,10 +225,10 @@ const Navbar = () => {
                             >
                                 Historial Médico
                             </a>
-
+                            <h4 style={{ margin: '5px 0px 0px 0px', padding: '0px 10px 0px 10px', width: '80%', color: 'white', textTransform: 'none' }}>Privacy Form</h4>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/PrivacyNotice.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -236,7 +238,7 @@ const Navbar = () => {
                             </a>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/PrivacyNoticeSpanish.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -244,10 +246,10 @@ const Navbar = () => {
                             >
                                 Aviso de Privacidad {"(HIPAA)"}
                             </a>
-
+                            <h4 style={{ margin: '5px 0px 0px 0px', padding: '0px 10px 0px 10px', width: '80%', color: 'white', textTransform: 'none' }}>Financial Form</h4>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', marginTop: '10px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/FinancialPolicy.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
@@ -257,7 +259,7 @@ const Navbar = () => {
                             </a>
                             <a
                                 className='btn header-button-yellow'
-                                style={{ fontSize: '1rem', fontFamily: 'sans-serif', textDecorationLine: 'underline', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px', width: '100%' }}
+                                style={{ fontSize: '0.9rem', fontFamily: 'sans-serif', zIndex: '10', boxShadow: '0.5px 0.5px 2px white', borderRadius: '0px', margin: '2px', padding: '0px 24px 0px 24px' }}
                                 href={process.env.PUBLIC_URL + '/FinancialPolicySpanish.pdf'}
                                 target="_blank" // This opens the PDF in a new tab
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"

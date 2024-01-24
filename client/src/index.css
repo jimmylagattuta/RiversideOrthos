@@ -442,6 +442,10 @@ img {
     color: var(--black);
     transform: translateY(4px) scale(0.97);
 }
+#form-divs {
+    margin: 15px;
+}
+
 .navbar-oar-buttons {
     display: flex;
 }

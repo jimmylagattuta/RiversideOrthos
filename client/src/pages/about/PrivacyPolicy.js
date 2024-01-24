@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { aboutExtra, aboutTerms } from '../../data';
 
 const PrivacyPolicy = () => {
-  const documentUrl = 'https://riversideorthos.azurewebsites.net/UnityMSK External Privacy Policy July 2023.docx';
+  const documentUrl = 'https://riversideorthos.azurewebsites.net/UnityMSKPrivacyPolicy.docx';
     const tocRef = useRef(null);
     
   return (
