@@ -28,7 +28,6 @@ export const products = [
         image: 'https://dl.airtable.com/.attachmentThumbnails/a6119fabf7256049cc0e8dbcdf536c9c/b0153f66',
     },
 ];
-
 export const physicians = [
     {
         name: 'Michael J. Hejna',
@@ -75,7 +74,6 @@ export const physicians = [
 
     }
 ];
-
 export const services = [
     {
         image: 'https://i.imgur.com/2Q4xrFD.webp',
@@ -294,18 +292,48 @@ export const services = [
 ];
 export const aboutObj = [
     {
-        nameOne: "About Orthopaedic Associates of Riverside",
+        nameOne: "Insurance Information",
         descriptionOne: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis placerat odio, id tincidunt justo dictum eget. Nunc tincidunt, quam id volutpat dictum, purus odio laoreet tellus, quis tristique odio nisi eget ex. Sed luctus vel ipsum sit amet bibendum. Nullam lacinia tellus a est tincidunt, vel bibendum purus gravida. Fusce feugiat dui nec justo mattis, ut placerat urna gravida. Morbi et nunc eu urna volutpat suscipit. Aenean efficitur eros vel nisi malesuada venenatis. Donec et volutpat libero. Suspendisse feugiat justo non erat bibendum, eget viverra dolor pharetra."
+            "We Accept most major insurance plans."
         ],
-        descriptionTwo: [
-            "Praesent eget efficitur lectus. Aliquam erat volutpat. Nulla facilisi. Integer vel lacus auctor, sodales ex id, vestibulum risus. Proin congue tortor sed viverra efficitur. Sed efficitur, risus eu congue laoreet, arcu lorem malesuada tellus, in hendrerit libero dui id orci. Nulla facilisi. Vivamus auctor purus a quam varius, at rhoncus arcu suscipit. Sed ac sapien dui. Maecenas ac eros eu turpis mattis dictum. Suspendisse potenti. Vivamus nec ullamcorper ante."
+        descriptionOneBullettedList: [
+            "Aetna",
+            "Beech Street",
+            "Blue Cross Blue Shield",
+            "Cigna",
+            "Cigna",
+            "Coventree",
+            "Health Link",
+            "Humana",
+            "Medicare",
+            "Multiplan",
+            "United Health Care",
+            "And More! ..."
+        ],
+        link: '/about',
+    },
+    {
+        nameOne: "Other",
+        descriptionOne: [
+            "We Accept most major insurance plans."
+        ],
+        descriptionOneBullettedList: [
+            "Aetna",
+            "Beech Street",
+            "Blue Cross Blue Shield",
+            "Cigna",
+            "Cigna",
+            "Coventree",
+            "Health Link",
+            "Humana",
+            "Medicare",
+            "Multiplan",
+            "United Health Care",
+            "And More! ..."
         ],
         link: '/about',
     },
 ];
-
-
 export const aboutTerms = [
     {
         subtitle: null,
@@ -352,7 +380,7 @@ export const aboutTerms = [
     {
         subtitle: 'Liability Disclaimer',
         body: [
-            'THE INFORMATION, SOFTWARE, PRODUCTS, AND SERVICES INCLUDED IN OR AVAILABLE THROUGH THIS PRACTICE WEB SITE MAY INCLUDE INACCURACIES OR TYPOGRAPHICAL ERRORS. CHANGES ARE PERIODICALLY ADDED TO THE INFORMATION HEREIN. THIS PRACTICE AND/OR ITS SUPPLIERS MAY MAKE IMPROVEMENTS AND/OR CHANGES IN THIS PRACTICE WEB SITE AT ANY TIME. ADVICE RECEIVED VIA THIS PRACTICE WEB SITE SHOULD NOT BE RELIED UPON FOR PERSONAL, MEDICAL, LEGAL OR FINANCIAL DECISIONS AND YOU SHOULD CONSULT AN APPROPRIATE PROFESSIONAL FOR SPECIFIC ADVICE TAILORED TO YOUR SITUATION.THIS PRACTICE AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, AVAILABILITY, TIMELINESS, AND ACCURACY OF THE INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS CONTAINED ON This Practice WEB SITE FOR ANY PURPOSE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ALL SUCH INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS ARE PROVIDED "AS IS" WITHOUT WARRANTY OR CONDITION OF ANY KIND. THIS PRACTICE AND/OR ITS SUPPLIERS HEREBY DISCLAIM ALL WARRANTIES AND CONDITIONS WITH REGARD TO THIS INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS, INCLUDING ALL IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THIS PRACTICE AND/OR ITS SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF USE, DATA OR PROFITS, ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OR PERFORMANCE OF THIS PRACTICE WEB SITE, WITH THE DELAY OR INABILITY TO USE THIS PRACTICE WEB SITE OR RELATED SERVICES, THE PROVISION OF OR FAILURE TO PROVIDE SERVICES, OR FOR ANY INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS OBTAINED THROUGH THIS PRACTICE WEB SITE, OR OTHERWISE ARISING OUT OF THE USE OF THIS PRACTICE WEB SITE, WHETHER BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE, EVEN IF THIS PRACTICE OR ANY OF ITS SUPPLIERS HAS BEEN ADVISED OF THE POSSIBILITY OF DAMAGES. BECAUSE SOME STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IF YOU ARE DISSATISFIED WITH ANY PORTION OF THIS PRACTICE WEB SITE, OR WITH ANY OF THESE TERMS OF USE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THIS PRACTICE WEB SITE.',
+            "THE INFORMATION, SOFTWARE, PRODUCTS, AND SERVICES INCLUDED IN OR AVAILABLE THROUGH THIS PRACTICE WEB SITE MAY INCLUDE INACCURACIES OR TYPOGRAPHICAL ERRORS. CHANGES ARE PERIODICALLY ADDED TO THE INFORMATION HEREIN. THIS PRACTICE AND/OR ITS SUPPLIERS MAY MAKE IMPROVEMENTS AND/OR CHANGES IN THIS PRACTICE WEB SITE AT ANY TIME. ADVICE RECEIVED VIA THIS PRACTICE WEB SITE SHOULD NOT BE RELIED UPON FOR PERSONAL, MEDICAL, LEGAL OR FINANCIAL DECISIONS AND YOU SHOULD CONSULT AN APPROPRIATE PROFESSIONAL FOR SPECIFIC ADVICE TAILORED TO YOUR SITUATION.THIS PRACTICE AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, AVAILABILITY, TIMELINESS, AND ACCURACY OF THE INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS CONTAINED ON This Practice WEB SITE FOR ANY PURPOSE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ALL SUCH INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS ARE PROVIDED 'AS IS' WITHOUT WARRANTY OR CONDITION OF ANY KIND. THIS PRACTICE AND/OR ITS SUPPLIERS HEREBY DISCLAIM ALL WARRANTIES AND CONDITIONS WITH REGARD TO THIS INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS, INCLUDING ALL IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THIS PRACTICE AND/OR ITS SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF USE, DATA OR PROFITS, ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OR PERFORMANCE OF THIS PRACTICE WEB SITE, WITH THE DELAY OR INABILITY TO USE THIS PRACTICE WEB SITE OR RELATED SERVICES, THE PROVISION OF OR FAILURE TO PROVIDE SERVICES, OR FOR ANY INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS OBTAINED THROUGH THIS PRACTICE WEB SITE, OR OTHERWISE ARISING OUT OF THE USE OF THIS PRACTICE WEB SITE, WHETHER BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE, EVEN IF THIS PRACTICE OR ANY OF ITS SUPPLIERS HAS BEEN ADVISED OF THE POSSIBILITY OF DAMAGES. BECAUSE SOME STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IF YOU ARE DISSATISFIED WITH ANY PORTION OF THIS PRACTICE WEB SITE, OR WITH ANY OF THESE TERMS OF USE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THIS PRACTICE WEB SITE.",
         ],
     },
     {
@@ -370,7 +398,6 @@ export const aboutTerms = [
         ],
     },
 ];
-
 export const aboutPrivacyPolicy = [
     {
         subtitle: 'Privacy Statement',
@@ -414,7 +441,6 @@ export const aboutPrivacyPolicy = [
         body: ['Please contact us by phone at 323-672-4521.'],
     },
 ];
-
 export const expertiseBlocks = [
     {
         image: 'https://i.imgur.com/2Q4xrFD.webp',
@@ -621,8 +647,6 @@ export const expertiseBlocks = [
         spanString: 'Hip'
     }
 ];
-
-
 export const aboutExtra = [
     {
         name: 'FAQs',
@@ -876,12 +900,11 @@ export const locations = [
         link: '/locations',
     }
 ];
-
 export const navMenu = [
     { menu: 'Home', link: '/' },
     {
         menu: 'About',
-        link: '/about'
+        link: '/about-us'
     },
     {
         menu: 'Physicians',
@@ -908,7 +931,6 @@ export const navMenu = [
     },
     { menu: 'Locations', link: '/locations' }
 ];
-
 export const officesData = [
     {
         id: 1,

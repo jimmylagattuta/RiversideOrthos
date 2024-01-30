@@ -45,7 +45,7 @@ const AboutUsComponent = () => {
                 </p>
                 
                 <div className='about-right-button'>
-                    <NavLink className='btn header-button-white' to='/about'>
+                    <NavLink className='btn header-button-white' to='/about-us'>
                         Learn More
                     </NavLink>
                 </div>

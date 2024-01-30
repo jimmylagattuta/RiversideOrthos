@@ -3,7 +3,7 @@ import PagesHeader from '../../components/PagesHeader';
 const Home = () => {
     return (
         <>
-            <PagesHeader title='About Us' />
+            <PagesHeader title='About OAR' />
             <Outlet />
         </>
     );

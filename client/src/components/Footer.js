@@ -7,7 +7,11 @@ const Footer = () => {
             <div className='container'>
                 <div className='footer-grid'>
                     <div className='footer-item word-wrap-container'>
-                        <div className='footer-word-wrap'>Orthopaedic Associates of Riverside</div>
+                        <Link
+                            to='/'
+                        >
+                            <div className='footer-word-wrap'>Orthopaedic Associates of Riverside</div>
+                        </Link>
                     </div>
                     <div className='footer-item'>
                         <Link

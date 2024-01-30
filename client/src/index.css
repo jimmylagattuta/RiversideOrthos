@@ -370,7 +370,6 @@ img {
     background-color: var(--violet);
     padding: 25px 0 0 0;
 }
-
 .header-title-div {
     display: flex;
     flex-direction: column;
@@ -705,7 +704,43 @@ img {
 
 }
 /* END REQUESTAPPOINTMENTFORM STYLES */
+/* OAR About Responsive styles */
 
+/* CSS */
+
+
+.oar-about-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+    /* padding: 0 20px; Add some padding to the sides */
+}
+
+.oar-about-info {
+    margin: 20px;
+    margin-bottom: 20px; /* Add some space between items */
+    padding: 0px 10px 6px 6px;
+    box-shadow: rgb(221, 221, 221) 0px 2px 2px 7px;
+}
+
+.oar-about-text {
+    margin-left: 60px; /* Add margin to the right of the text */
+    
+}
+
+.oar-about-image-container {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    flex: 0 0 auto; /* Reset the flex properties for the image container */
+    position: relative; /* Set position to relative for absolute positioning */
+}
+
+.oar-about-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: 50% solid black;
+}
 /* AboutUsComponent styles */
 .about-container {
     display: flex;
@@ -786,7 +821,7 @@ img {
     padding: 20px 0px 0px 0px;
     font-weight: 400;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 75%;
 
 }
@@ -837,7 +872,7 @@ img {
 /* PAGES STYLES */
 .pages-header {
     background-image: url(https://i.imgur.com/Cb9CEbY.webp);
-    background-size: contain;
+    background-size: cover;
     background-position: right;
     background-attachment: fixed;
     border-bottom: 5px solid rgb(143, 0, 72);
@@ -2107,9 +2142,9 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://i.imgur.com/tV7inxB.webp);
+    background-image: url(https://i.imgur.com/B2vJbaF.webp);
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
     background-attachment: fixed;
 }
 
@@ -2293,6 +2328,7 @@ display: none;
     line-height: 1.25;
     align-self: center;
     font-weight: 700;
+    color: white;
 }
 
 .mobile-menu-button {
@@ -2377,11 +2413,23 @@ display: none;
     padding: 0px 0px 0px 20px;
     align-self: center;
 }
-
+@media (max-height: 850px) {
+}
 @media (max-height: 600px) {
+    .oar-about-container {
+       height: 850px;
+    }   
     .about-description-right {
         font-size: 0.8rem;
     }
+    .about-title-right {
+        padding-top: 20px;
+        font-size: 2.2rem;
+    }
+    /* .header-button-white {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    } */
 }
 
 @media (min-width: 1025px) {
@@ -2402,16 +2450,38 @@ display: none;
     }
 }
 @media (max-width: 1295px) {
+    .oar-about-container {
+
+    }
     .pages-header {
-        background-image: url(https://i.imgur.com/pCBq2TF.webp);
-        background-size: inherit;
+        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
     
     }
     .single-review-container {
         width: calc(88% / 2);
     }
 }
+@media (max-width: 1191px) {
+    .oar-about-info {
+        justify-content: flex-start !important;
+    }
+
+    .oar-about-text {
+        font-size: 0.9rem;
+        align-self: center;
+    }
+
+    .oar-about-image-container {
+        max-width: 60% !important;
+        justify-self: flex-start;
+    }
+    .oar-about-image {
+        max-width: 100% !important;
+    }
+
+}
 @media (max-width: 1160px) {
+    
     .expertise-name {
         font-size: 0.8rem;
     }
@@ -2425,8 +2495,13 @@ display: none;
         font-size: 2rem;
         width: 80%;
     }
+    .about-description {
+        width: 90%;
+    }
     .about-description-right {
         width: 80%;
+        font-size: 0.8rem;
+        padding: 10px 0 0 0;
     }
     .about-right-button {
         width: 80%;
@@ -2611,6 +2686,23 @@ display: none;
 
 }
 @media (max-width: 1015px) {
+    .oar-about-info {
+        justify-content: flex-start !important;
+        height: 50% !important;
+    }
+
+    .oar-about-text {
+        font-size: 0.8rem;
+        align-self: center;
+    }
+
+    .oar-about-image-container {
+        max-width: 60% !important;
+        justify-self: flex-start;
+    }
+    .oar-about-image {
+        max-width: 100% !important;
+    }
     .grid-item {
         width: calc(90% / 2);
     }
@@ -2626,7 +2718,8 @@ display: none;
         line-height: 50px;
     }
     .about-description-right {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        padding: 8px 0 0 0;
     }
     #chatbox-div {
         padding: 10px 10px 0px 10px;
@@ -2647,6 +2740,23 @@ display: none;
       }
 }
 @media (max-width: 850px) {
+    .oar-about-info {
+        justify-content: flex-start !important;
+        height: 40% !important;
+    }
+
+    .oar-about-text {
+        font-size: 0.6rem;
+        align-self: center;
+    }
+
+    .oar-about-image-container {
+        max-width: 60% !important;
+        justify-self: flex-start;
+    }
+    .oar-about-image {
+        max-width: 100% !important;
+    }
     .expertise-name {
         font-size: 0.8rem;
     }
@@ -2690,7 +2800,7 @@ display: none;
         padding-right: 20px;
     }
     .pages-header {
-        background-image: url(https://i.imgur.com/MdQsFeE.webp);
+        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
         background-size: cover;
         background-position: center;
     }
@@ -2838,6 +2948,34 @@ display: none;
         left: -185px;
     }
 }
+@media (max-width: 640px) {
+    .oar-about-info {
+        display: flex;
+        position: relative;
+        height: 32% !important;
+    }
+
+    .oar-about-text {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        font-size: 0.5rem;
+    }
+
+    .oar-about-image-container {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+    }
+
+    .oar-doctor-image {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px; /* Adjust as needed */
+    }
+}
+
 
 @media (max-width: 576px) {
     #form-divs {
