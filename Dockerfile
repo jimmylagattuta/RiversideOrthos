@@ -7,6 +7,8 @@
 # postgres
 # long usual password
 
+# iphone 14 dimensions 393x852 smallest still in use 320x480 and 240x320(but do you need it?)
+
 # Stage 1: Build the React client
 FROM node:18.17.0 as client-builder
 WORKDIR /usr/src/app/client

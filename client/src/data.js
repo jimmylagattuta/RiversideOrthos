@@ -308,31 +308,28 @@ export const aboutObj = [
             "Medicare",
             "Multiplan",
             "United Health Care",
-            "And More! ..."
+            "And More!"
         ],
         link: '/about',
-    },
+    }
+];
+export const aboutObjOther = [
     {
-        nameOne: "Other",
+        nameOne: "FOR YOUR APPOINTMENT",
         descriptionOne: [
-            "We Accept most major insurance plans."
+            "All patients must bring the following to every appointment:"
         ],
         descriptionOneBullettedList: [
-            "Aetna",
-            "Beech Street",
-            "Blue Cross Blue Shield",
-            "Cigna",
-            "Cigna",
-            "Coventree",
-            "Health Link",
-            "Humana",
-            "Medicare",
-            "Multiplan",
-            "United Health Care",
-            "And More! ..."
+            "Photo ID",
+            "Insurance Cards",
+            "Copayment",
+            "Copies of X-Rays or MRI’s (discs are preferable)",
+            "Copies of X-Ray, MRI, EMG, Bone Scan, or other medical reports",
+            "A list of current medications and any known allergies",
+            "Attending Physician Statements or any other forms to be completed by the doctor"
         ],
         link: '/about',
-    },
+    }
 ];
 export const aboutTerms = [
     {
