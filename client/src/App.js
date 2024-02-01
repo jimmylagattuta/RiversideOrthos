@@ -25,7 +25,7 @@ function App() {
     }, [pathname]);
     return (
         <>
-            <Navbar />
+            <Navbar style={{ overflowX: 'hidden', maxWidth: '100%' }}/>
             <Routes>
                 <Route index element={<Home />} />
 

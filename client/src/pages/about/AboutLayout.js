@@ -3,8 +3,8 @@ import PagesHeader from '../../components/PagesHeader';
 const Home = () => {
     return (
         <>
-            <PagesHeader title='About OAR' />
-            <Outlet />
+            <PagesHeader  style={{ overflowX: 'hidden', maxWidth: '100%' }} title='About OAR' />
+            <Outlet  style={{ overflowX: 'hidden', maxWidth: '100%' }} />
         </>
     );
 };
