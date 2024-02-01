@@ -3030,12 +3030,12 @@ margin-bottom: 20px;
     }
 }
 
-@media (max-width: 900px) and (min-height: 700px) and (max-width: 800px) {
+@media (max-width: 900px) and (min-height: 700px) and (min-width: 359px) and (max-width: ) {
     .imageWrapperOARAbout #aboutBackgroundForDoctor {
-        bottom: 85px;
+        bottom: 105px;
     }
     .imageWrapperOARAbout #aboutDoctor {
-        bottom: 100px;
+        bottom: 120px;
     }
 }
 
