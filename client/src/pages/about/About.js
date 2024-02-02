@@ -32,7 +32,7 @@ const About = () => {
                 id="aboutDoctor"
               />
             </div>
-            <div>
+            <div id="bullet-list-div">
               <h2>{item.nameOne}</h2>
               <p>{item.descriptionOne}</p>
               {item.descriptionOneBullettedList && Array.isArray(item.descriptionOneBullettedList) && (
