@@ -31,8 +31,21 @@ const About = () => {
                 className="altImageOARDoctor"
                 id="aboutDoctor"
               />
+              <div id="bullet-list-div">
+              <h2>{item.nameOne}</h2>
+              <p>{item.descriptionOne}</p>
+              {item.descriptionOneBullettedList && Array.isArray(item.descriptionOneBullettedList) && (
+                <ul className='bullet-list-about'>
+                  {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
+                    <li key={bulletIndex}>
+                      {bulletItem === 'And More!' ? <h3>{bulletItem}</h3> : bulletItem}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-            <div id="bullet-list-div">
+            </div>
+            <div id="bullet-list-div-mobile">
               <h2>{item.nameOne}</h2>
               <p>{item.descriptionOne}</p>
               {item.descriptionOneBullettedList && Array.isArray(item.descriptionOneBullettedList) && (
