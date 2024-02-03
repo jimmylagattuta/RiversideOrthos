@@ -1,0 +1,111 @@
+/* Navbar CSS */
+
+/* Main header */
+.main-header {
+    /* Add your styles for the header */
+  }
+  
+  /* Header top section */
+  .header-top {
+    /* Add your styles for the top section */
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-button {
+    /* Add your styles for the mobile menu button */
+  }
+  
+  /* Logo link */
+  .logo-link {
+    /* Add your styles for the logo link */
+  }
+  
+  /* Header image container */
+  .header-image-container {
+    /* Add your styles for the header image container */
+  }
+  
+  /* Header image */
+  .header-image {
+    /* Add your styles for the header image */
+  }
+  
+  /* Header title div */
+  .header-title-div {
+    /* Add your styles for the header title div */
+  }
+  
+  /* Header title */
+  .header-title {
+    /* Add your styles for the header title */
+  }
+  
+  /* Header buttons container */
+  .header-buttons-container {
+    /* Add your styles for the header buttons container */
+  }
+  
+  /* Nav buttons div */
+  .nav-buttons-div {
+    /* Add your styles for the nav buttons div */
+  }
+  
+  /* Navbar */
+  .navbar {
+    /* Add your styles for the navbar */
+  }
+  
+  /* Nav link container */
+  .nav-link-container {
+    /* Add your styles for the nav link container */
+  }
+  
+  /* Link items */
+  .link-items {
+    /* Add your styles for the link items */
+  }
+  
+  /* Nav link */
+  .nav-link {
+    /* Add your styles for the nav link */
+  }
+  
+  /* Active nav link */
+  .nav-link.active {
+    /* Add your styles for the active nav link */
+  }
+  
+  /* Mobile toggle submenu */
+  .mobile-toggle-submenu {
+    /* Add your styles for the mobile toggle submenu */
+  }
+  
+  /* Submenu */
+  .submenu {
+    /* Add your styles for the submenu */
+  }
+  
+  /* Sub link */
+  .sub-link {
+    /* Add your styles for the sub link */
+  }
+  
+  /* Active sub link */
+  .sub-link.active {
+    /* Add your styles for the active sub link */
+  }
+  
+  /* Mobile nav link */
+  .mobile-nav-link {
+    /* Add your styles for the mobile nav link */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    /* Add your styles for smaller screens */
+  }
+  
+  /* Add your theme color */
+  :root {
+    --theme-color: rgb
+  
