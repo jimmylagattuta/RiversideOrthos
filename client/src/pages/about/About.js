@@ -32,13 +32,13 @@ const About = () => {
                 id="aboutDoctor"
               />
               <div id="bullet-list-div">
-              <h2>{item.nameOne}</h2>
-              <p>{item.descriptionOne}</p>
+          
+              <p className="large rise">{item.descriptionOne}</p>
               {item.descriptionOneBullettedList && Array.isArray(item.descriptionOneBullettedList) && (
                 <ul className='bullet-list-about'>
                   {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
                     <li key={bulletIndex}>
-                      {bulletItem === 'And More!' ? <h3>{bulletItem}</h3> : bulletItem}
+                      {bulletItem === 'And More!' ? <h3>{bulletItem}</h3> : <img src={bulletItem} alt={bulletItem} />}
                     </li>
                   ))}
                 </ul>
@@ -46,13 +46,13 @@ const About = () => {
             </div>
             </div>
             <div id="bullet-list-div-mobile">
-              <h2>{item.nameOne}</h2>
-              <p>{item.descriptionOne}</p>
+
+              <p className="large rise">{item.descriptionOne}</p>
               {item.descriptionOneBullettedList && Array.isArray(item.descriptionOneBullettedList) && (
                 <ul className='bullet-list-about'>
                   {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
                     <li key={bulletIndex}>
-                      {bulletItem === 'And More!' ? <h3>{bulletItem}</h3> : bulletItem}
+                      {bulletItem === 'And More!' ? <h3>{bulletItem}</h3> : <img src={bulletItem} alt={bulletItem} />}
                     </li>
                   ))}
                 </ul>
