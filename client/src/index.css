@@ -421,6 +421,8 @@ img {
     height: auto; /* This allows the image to be responsive */
     background-size: cover; /* Adjust the background size as needed */
     background-repeat: no-repeat;
+    margin: 10px 0 20px 10px;
+    width: 100%;
 }
 
 .header-title {
@@ -2216,7 +2218,13 @@ display: none;
     color: var(--grey-dark);
     background: none;
     border: none;
-    right: 10px;
+    right: 30px;
+    top: 30px;
+}
+.nav-buttons-div {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }
 .mobile-toggle-submenu {
     display: none;
@@ -2371,7 +2379,41 @@ display: none;
     /*Mobile Menu */
     .mobile-menu-button {
         display: flex;
-        top: 35px;
+        /* position: static; */
+        text-align: center;
+        float: right;
+        /* top: 35px; */
+    }
+
+    .main-header {
+        /* height: 23vh; */
+        padding: 0px;
+    }
+    .nav-buttons-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-button-dark, .header-button-dark:active {
+        margin: 0px 0px 5px 0px;
+        padding: 0px 0px 0px 0px;
+        width: 60%;
+    }
+    .header-button-yellow, .header-button-yellow:active {
+        margin: 5px 0px 10px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+    .header-buttons-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        width: 100%;
+        margin: 0 25px 0 0;
+
+    }
+    .header-top {
+        /* height: 18vh; */
+        display: flex;
+        padding: 0px;
     }
 
     .navbar {
@@ -2384,11 +2426,7 @@ display: none;
     }
 
     .header-buttons-container {
-        margin: 0 40px 0 0;
-    }
-
-    .main-header {
-        padding: 35px 0;
+        /* margin: 0 40px 0 0; */
     }
 
     .mobile-toggle-submenu {
@@ -2566,6 +2604,7 @@ display: none;
     }
 }
 @media (max-width: 850px) {
+    
     .expertise-name {
         font-size: 0.8rem;
     }
@@ -2592,7 +2631,7 @@ display: none;
         width: calc(90% / 3)
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-height: 700px) {
     .expertise-item {
         width: 100%;
     }
@@ -2637,7 +2676,8 @@ display: none;
         display: block;
     }
     .header-image {
-        margin: 0 auto 20px auto;
+        margin: 10px 0px 0px 10px;
+        width: 70%;
     }
 
     .page-container,
@@ -2758,6 +2798,7 @@ display: none;
     }
 }
 @media (max-width: 576px) {
+    
     #form-divs {
         width: 90vw !important;
         position: unset !important;
@@ -2765,8 +2806,13 @@ display: none;
         align-items: center !important;
         
     }
+    .header-button-dark {
+        text-decoration-line: none !important;
+        font-size: 0.4rem;
+    }
     .header-button-yellow {
         text-decoration-line: none !important;
+        font-size: 0.3rem;
     }
     #chat-form-lines-request-apt {
         width: 91%;
@@ -3039,20 +3085,31 @@ display: none;
 	font-size: 3rem;
 }
 
-.rise {
-	text-shadow: -0.01em -0.01em 0.01em #000;
-	animation: rise 2s ease-in-out 0.5s forwards;
 
+.rise {
+    text-shadow:  1px 1px 0px rgba(9, 2, 6, 0.4);
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 2s ease-in-out forwards; /* Apply the fading-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
 }
 
 @keyframes rise {
-	to {
-		text-shadow: 0em 0.01em white, 0em 0.02em white, 0em 0.02em 0.03em white,
-			-0.01em 0.01em #333, -0.02em 0.02em #333, -0.03em 0.03em #333,
-			-0.04em 0.04em #333, -0.01em -0.01em 0.03em #000, -0.02em -0.02em 0.03em #000,
-			-0.03em -0.03em 0.03em #000;
-		transform: translateY(-0.025em) translateX(0.04em);
-	}
+    0% {
+        text-shadow: 0 0 10px rgba(143, 0, 72, 0.8);
+        transform: translateY(0);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(143, 0, 72, 0.8);
+        transform: translateY(-100%);
+    }
 }
 
 .outline {
@@ -3074,7 +3131,7 @@ display: none;
 
 /* Organized Media  */
 /* About.js */
-@media (min-height: 930px) and (min-width: 1900px) {
+@media (min-height: 780px) and (min-width: 1200px) {
     .aboutImageWrapper img {
             /* position: absolute; */
             height: auto;
@@ -3095,12 +3152,20 @@ display: none;
     #aboutDoctor {
         width: 35%;
     }
+    .nav-buttons-div {
+        margin-right: calc(50vw - 50%);
+        margin-top: 10px;
+    }
 }
 @media (min-width: 1150px) and (max-height: 850px) and (max-width: 1300px) {
     * {
 
         /* width: 100vw; */
         /* overflow-y: hidden; */
+
+    }
+    .header-image {
+        width: 100%;
     }
     .aboutImageWrapper img {
         /* position: absolute; */
@@ -3170,12 +3235,14 @@ display: none;
     .imageWrapperOARAbout img {
         top: 14px;
     }
+    .mobile-menu-button {
+        top: 20px;
+    }
 }
 @media (min-width: 1300px) and (max-height: 700px) and (min-width: 795px) {
     #aboutDoctor {
         width: 40%;
     }
-   
     /* .aboutImageWrapper {
         top: 100px;
     }
@@ -3194,7 +3261,6 @@ display: none;
     } */
 }
 @media (min-height: 700px) and (max-width: 1300px) and (min-width: 1050px){
-    
     .aboutImageWrapper {
         top: 140px;
     }
@@ -3210,13 +3276,48 @@ display: none;
         width: 90%;
     }
 }
-
 @media (max-width: 1100px) {
+    .mobile-menu-button {
+        /* align-self: flex-end; */
+        
+    }
     .main-header {
         /* height: 23vh; */
+        padding: 0px;
     }
-    .pages-header {
+    .rise {
+        padding: 0px;
+        margin: 0px;
+    }
+    .header-image {
+        width: 79%;
+        margin: 19px 0px 18px 10px;
+    }
+    .nav-buttons-div {
+        flex-direction: column;
+        align-items: center;
+        margin-right: calc(50vw - 50%);
+        margin-top: 10px;
+    }
+    .header-button-dark, .header-button-dark:active {
+        margin: 0px 0px 5px 0px;
+        padding: 0px 0px 0px 0px;
+        width: 60%;
+        /* font-size: 0.8rem; */
+    }
+    .header-button-yellow, .header-button-yellow:active {
+        margin: 5px 0px 10px 0px;
+        padding: 0px 10px 0px 10px;
+        /* font-size: 0.6rem; */
+    }
+    .header-buttons-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+    .header-top {
         /* height: 18vh; */
+        padding: 0px;
     }
     #bullet-list-div {
         display:none;
@@ -3280,14 +3381,17 @@ display: none;
         flex-direction: column;
     }
 }
+@media (max-height: 850px) and (min-width: 1000px) {
+
+}
 @media (max-width: 760px) and (max-width: 595px) {
+
     .main-header {
         /* height: 23vh; */
     }
     .pages-header {
         /* height: 18vh; */
     }
-    
     .aboutImageWrapper {
         position: relative;
         width: 100vw;
@@ -3332,6 +3436,14 @@ display: none;
     .imageWrapperOARAbout img {
         bottom: 0; 
     }
+    .header-button-dark {
+        text-decoration-line: none !important;
+        font-size: 0.6rem;
+    }
+    .header-button-yellow {
+        text-decoration-line: none !important;
+        font-size: 0.5rem;
+    }
 }
 @media (min-height: 970px) and (max-width: 615px) {
     .imageWrapperOARAbout #aboutBackgroundForDoctor {
@@ -3349,7 +3461,25 @@ display: none;
         bottom: 120px;
     }
 }
+@media (max-width: 450px) {
+    .mobile-menu-button {
+        right: 15px;
+    }
+    .header-img {
+        margin: 25px;
+        width: 120%;
+    }
+}
+
 @media (max-width: 320px) {
+    .header-title-div {
+        padding: 0px;
+        margin: 0px;
+    }
+    .header-img {
+        margin: 25px;
+        width: 10S0%;
+    }
     .main-header {
         height: unset;
     }

@@ -84,7 +84,7 @@ const Navbar = () => {
                             src='https://i.imgur.com/1M8ZlnK.webp'
                             alt='Riverside Orthopaedics Associates'
                             className='header-image'
-                            style={{ width: '200px' }}
+
                         />
 
                         <div className="header-title-div">
@@ -96,17 +96,21 @@ const Navbar = () => {
 
 
                 <div className='header-buttons-container' style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', flexDirection: 'row'}}>
+                    <div className='nav-buttons-div'>
                         <NavLink className='btn header-button-dark'
                             onClick={toggleAppointmentForm}
                             to={{ pathname: '/locations', hash: '#chatbox' }}
                         >
-                            Call Us
+                            <span className="rise">
+                                Call Us
+                            </span>
                         </NavLink>
                         <div className='btn header-button-yellow'
                             onClick={togglePopup}
                             >
-                            Download Forms
+                            <span className="rise">
+                                Download Forms
+                            </span>
                         </div>
                     </div>
                     {/* <div className="navbar-special-buttons">
