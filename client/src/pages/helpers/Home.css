@@ -1,0 +1,173 @@
+.banner-description {
+    width: 450px;
+    font-size: 1.2em;
+    z-index: 10;
+}
+
+@media (max-width: 975px) {
+    .home-banner {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+        min-height: inherit;
+        padding: 55px;
+        position: relative;
+        z-index: 1;
+    }
+    .banner-title-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 850px) {
+    .home-hero {
+        min-height: 580px;
+    }
+    .home-banner {
+        padding: 10px 10px 10px 5px;
+        margin: 0px 0px 0px 30px;
+        align-items: flex-start;
+        justify-content: center;
+        width: 70%;
+    }
+    .home-banner:after {
+        background: rgba(143, 0, 72, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.5px);
+        -webkit-backdrop-filter: blur(0.1px);
+        content: '';
+        display: inline-block;
+        height: 100%;
+        left: -120px;
+        position: absolute;
+        top: 0;
+        transform: skew(-18deg);
+        width: calc(64% - 148px);
+        min-width: 480px;
+        z-index: -1;
+    }
+    .banner-title {
+        font-size: 2.8rem;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        width: 100%;
+    }
+    .banner-description {
+        display: flex;
+        width: 100%;
+        font-size: 1.2rem;
+
+        padding: 2px 30px 2px 0px;
+        margin: 40px 0px 40px 0px;
+    }
+    .home-banner .btn {
+        padding: 2px 10px 2px 10px;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        background-color: var(--white);
+        border: none;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .home-hero {
+        min-height: 400px;
+    }
+    .banner-title-container {
+        
+    }
+    .banner-title {
+        font-size: 1.8rem;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        width: 100%;
+    }
+    .banner-description {
+        display: flex;
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 2px 0px 2px 0px;
+        justify-content: unset;
+        margin: 30px 0px 30px 0px;
+    }
+    .home-banner .btn {
+        padding: 2px 10px 2px 10px;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        background-color: var(--white);
+        border: none;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+    .home-banner {
+        padding: 50px 10px 10px 5px;
+        margin: 0px 0px 0px 25px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 65%;
+    }
+    .home-banner:after {
+        background: rgba(143, 0, 72, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.5px);
+        -webkit-backdrop-filter: blur(0.1px);
+        content: '';
+        display: inline-block;
+        height: 100%;
+        left: -100px;
+        position: absolute;
+        top: 0;
+        transform: skew(-18deg);
+        width: calc(64% - 148px);
+        min-width: 340px;
+        z-index: -1;
+    }
+    #banner-btn-arrow {
+        padding: 0px 0px 0px 10px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 290px) or (max-height: 350px) {
+    .home-banner {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 67%;
+    }
+    .home-banner::after {
+        min-width: 280px;
+    }
+    .home-hero {
+        max-height: 250px;
+        left: 0px;
+    }
+    .banner-title-container {
+        margin: 25px 0px 0px 25px;
+        padding: 0px 0px 0px 0px;
+    }
+    .banner-title {
+        font-size: 1.3rem;
+    }
+    .banner-description {
+        padding: 0px 0px 0px 0px;
+        margin: 20px 0px 20px 25px;
+        font-size: 0.6rem;
+    }
+    .home-banner .btn {
+        padding: 1px 5px 1px 5px;
+        margin: 0px 0px 0px 25px;
+        text-align: center;
+        background-color: var(--white);
+        border: none;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+    }
+}

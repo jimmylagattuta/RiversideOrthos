@@ -1,0 +1,228 @@
+.about-div-responsive {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    width: 70%;
+    height: 100%;
+    margin: 30px; /* Add margin around the whole div */
+    box-shadow: 0 0 0 2px rgba(218, 102, 123, 1), 8px 8px 0 0 rgba(218, 102, 123, 1);
+    position: sticky;
+    top: 0;
+    margin-bottom: 300px;
+}
+
+.about-div-two-responsive {
+    display: flex;
+    width: 100%;
+    position: relative; /* Add position relative */
+    height: 100%; /* Ensure the container has a height */
+}
+
+.unordered-list-about {
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 0px 30px;
+}
+
+.unordered-list-about li {
+    padding: 10px 0px 10px 0px;
+    font-size: 0.5rem;
+}
+.unordered-list-about li img {
+    max-width: 100px;
+}
+
+#about-div-image-responsive {
+    display: flex;
+    width: 100%;
+}
+
+#about-div-doctor-responsive {
+    display: flex;
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the parent container */
+    width: 52%; /* Occupy the full width of the parent container */
+    align-self: flex-start; /* Align to the top of its flex container */
+}
+
+
+@media (max-width: 1795px) {
+    #about-div-doctor-responsive {
+        width: 52%;    
+    }
+}
+
+@media (max-width: 1676px) {
+    .about-div-responsive {
+        width: 70%;
+        margin: 30px 30px 300px 30px; /* Add margin around the whole div */
+    }
+    #about-div-doctor-responsive {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .about-div-responsive {
+        width: 70%;
+        margin: 30px; /* Add margin around the whole div */
+    }
+    #about-div-doctor-responsive {
+        width: 48%;    
+    }
+    #about-div-image-responsive {
+        display: flex;
+        width: 70%;
+    }
+}
+
+@media (max-width: 1220px) {
+    .about-div-responsive {
+        width: 70%;
+        margin: 30px; /* Add margin around the whole div */
+    }
+    #about-div-doctor-responsive {
+        width: 50%;    
+    }
+}
+
+
+@media (max-width: 1120px) {
+    .about-div-responsive {
+        width: 70%;
+        margin: 30px 30px 300px 30px; /* Add margin around the whole div */
+    }
+    #about-div-doctor-responsive {
+        width: 50%;    
+    }
+    #about-div-image-responsive {
+        display: flex;
+        width: 74%;
+    }
+    .unordered-list-about li {
+        padding: 0px;
+    }
+    .unordered-list-about {
+        height: 80%;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 1015px) {
+    .about-div-responsive {
+        width: 85%;
+        box-shadow: none;
+    }
+    .about-div-two-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align items to the center horizontally */
+        text-align: center; /* Align text to the center */
+    }
+    #about-div-image-responsive {
+        box-shadow: 0 0 0 2px rgba(218, 102, 123, 1), 8px 8px 0 0 rgba(218, 102, 123, 1);
+        width: 100%; /* Set the width to 100% for full width */
+        order: -1; /* Move the image above the text */
+        margin-bottom: 20px; /* Add margin to separate the image from the text */
+        overflow: hidden;    
+        margin-top: 53px;
+    }
+    
+    #about-div-doctor-responsive {
+        width: 70%; /* Set width to 100% */
+        align-self: flex-end; /* Align to the bottom of the parent container */
+        position: absolute; /* Change position to relative */
+        bottom: auto; /* Reset bottom position */
+        margin-top: auto; /* Set top margin to auto to push to bottom */
+        order: -1; /* Move the doctor image above the other image */
+        top: -105px;
+        left: 0;    
+    }
+    .about-div-bulleted {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-div-bulleted p {
+        width: 100%;
+    }
+    .unordered-list-about {
+        margin-top: 20px; /* Add margin to separate the text from the images */
+        flex-direction: column;
+        list-style-type: none;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        height: 90%;
+        width: 90VW;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+        gap: 30px 30px;
+        justify-content: center; /* Center items vertically */
+        justify-items: center; /* Center items horizontally */
+    }
+    
+    #bullet-list-div-mobile h2 p {
+        font-size: 1.2rem;
+        /* align-self: center; */
+        text-align: center;
+        max-width: 70vw;
+        padding: 10px 10px 0px 10px;
+        margin: 0px;
+        line-height: 1.3;
+    }
+    .unordered-list-about li img {
+        max-width: 150px;
+        min-width: 80px;
+    }
+    
+}
+
+@media (max-width: 950px) {
+    #about-div-doctor-responsive {
+        top: -121px;
+    }
+    .about-div-bulleted p {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 815px) {
+    #about-div-doctor-responsive {
+        top: -97px;
+    }
+}
+@media screen and (max-width: 501px) {
+    #about-div-doctor-responsive {
+        width: 70%; /* Set width to 100% */
+        align-self: flex-end; /* Align to the bottom of the parent container */
+        position: absolute; /* Change position to relative */
+        bottom: auto; /* Reset bottom position */
+        margin-top: auto; /* Set top margin to auto to push to bottom */
+        order: -1; /* Move the doctor image above the other image */
+        top: -28px;
+        left: 0;    
+    }
+    .about-div-bulleted p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    #about-div-doctor-responsive {
+        top: -7px;
+    }
+    .about-div-bulleted p {
+        font-size: 1rem;
+    }
+}

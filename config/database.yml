@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: orthosriversidedatabase
+  username: riversideadmin@orthosriversideserver
+  password: <%= ENV["REACT_APP_DATABASE_PASSWORD"] %>
+  host: orthosriversideserver.postgres.database.azure.com
+  port: 5432
+  sslmode: require
+
+test:
+  <<: *default
+  database: orthosriversidedatabase
+  username: riversideadmin@orthosriversideserver
+  password: <%= ENV["REACT_APP_DATABASE_PASSWORD"] %>
+  host: orthosriversideserver.postgres.database.azure.com
+  port: 5432
+  sslmode: require
+
+production:
+  <<: *default
+  database: orthosriversidedatabase
+  username: riversideadmin@orthosriversideserver
+  password: <%= ENV["REACT_APP_DATABASE_PASSWORD"] %>
+  host: orthosriversideserver.postgres.database.azure.com
+  port: 5432
+  sslmode: require
