@@ -6,7 +6,7 @@ body {
 
 #container {
     position: relative;
-    margin: auto;
+    /* margin: auto; */
 
     height: 40px;
 }
@@ -44,4 +44,28 @@ body {
 #text2.fade-out {
     animation-name: fadeOut;
     animation-delay: 0.2s;
+}
+
+@media (max-width: 400px) {
+    #container {
+        height: 15px;
+    }
+    #text1,
+    #text2 {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        font-size: 0.4rem;
+        letter-spacing: 1px;
+        text-shadow: 2px 7px 5px rgba(0,0,0,0.7), 
+        0px -4px 10px rgba(255,255,255,0.7);
+
+        user-select: none;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    #text2 {
+        letter-spacing: 1px;
+    }
 }

@@ -12,11 +12,16 @@ const ForesightSquare = ({ togglePopup }) => {
                                     </button>
                                     <h4 className="alert-form-foresight">* You need to bring these forms finished on first visit.</h4>
                                     <div className="form-group-foresight">
-                                        <div>
-                                            <h4 className="foresight-subheader">Download</h4>
+
+                                        <div className='mobile-change-to-row'>
+                                            <div>
+                                                <h4 className="foresight-subheader">Download</h4>
+                                            </div>
                                             {/* <h3 className='foresight-subheader'>Registration Form</h3> */}
                                             <MorphingFont texts={["Registration Form", "Formulario de Registro de Pacientes"]} />
-                                        </div>                                        
+                                        </div>                  
+
+
                                         <div className='glass-buttons-foresight'>
                                             <a
                                                 className='btn header-button-yellow-form-foresight'
@@ -39,8 +44,10 @@ const ForesightSquare = ({ togglePopup }) => {
                                         </div>
                                     </div>
                                     <div className="form-group-foresight">
-                                        <div>
-                                            <h4 className="foresight-subheader">Download</h4>
+                                        <div className='mobile-change-to-row'>
+                                            <div>
+                                                <h4 className="foresight-subheader">Download</h4>
+                                            </div>
                                             <MorphingFont texts={["Authorization Form", "Formulario de Autorización"]} />
                                         </div>
                                         <div className='glass-buttons-foresight'>
@@ -65,10 +72,11 @@ const ForesightSquare = ({ togglePopup }) => {
                                         </div>
                                     </div>
                                     <div className="form-group-foresight">
-                                        <div>
-                                            <h4 className="foresight-subheader">Download</h4>
+                                        <div className='mobile-change-to-row'>
+                                            <div>
+                                                <h4 className="foresight-subheader">Download</h4>
+                                            </div>
                                             <MorphingFont texts={["Release Form", "Formulario de Exención"]} />
-                                            <h3 className="foresight-subheader"></h3>
                                         </div>
                                         <div className='glass-buttons-foresight'>
                                             <a
@@ -92,8 +100,10 @@ const ForesightSquare = ({ togglePopup }) => {
                                         </div>
                                     </div>
                                     <div className="form-group-foresight">
-                                        <div>
-                                            <h4 className="foresight-subheader">Download</h4>
+                                        <div className='mobile-change-to-row'>
+                                            <div>
+                                                <h4 className="foresight-subheader">Download</h4>
+                                            </div>
                                             <MorphingFont texts={["Medical History", "Historial Médico"]} />
                                         </div>
                                         <div className='glass-buttons-foresight'>
@@ -118,8 +128,10 @@ const ForesightSquare = ({ togglePopup }) => {
                                         </div>
                                     </div>
                                     <div className="form-group-foresight">
-                                        <div>
-                                            <h4 className="foresight-subheader">Download</h4>
+                                        <div className='mobile-change-to-row'>
+                                            <div>
+                                                <h4 className="foresight-subheader">Download</h4>
+                                            </div>
                                             <MorphingFont texts={["Privacy Form", "Formulario de Privacidad"]} />
                                         </div>
                                         <div className='glass-buttons-foresight'>
@@ -144,8 +156,10 @@ const ForesightSquare = ({ togglePopup }) => {
                                         </div>
                                     </div>
                                     <div className="form-group-foresight">
-                                        <div>
-                                            <h4 className="foresight-subheader">Download</h4>
+                                        <div className='mobile-change-to-row'>
+                                            <div>
+                                                <h4 className="foresight-subheader">Download</h4>
+                                            </div>
                                             <MorphingFont texts={["Financial Form", "Forma Financiera"]} />
                                         </div>                                 
                                         <div className='glass-buttons-foresight'>
