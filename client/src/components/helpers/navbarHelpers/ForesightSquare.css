@@ -1,0 +1,152 @@
+*, ::before {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+
+@media (max-width: 360px) {
+    html {
+        font-size: 1em;
+    }
+}
+@media (max-width: 240px) {
+    html {
+        font-size: 0.75em;
+    }
+}
+#form-div a {
+    margin: 6px 0px 6px 0px;
+    padding: 0px 10px 0px 10px;
+}
+.alert-form-foresight {
+    display: flex;
+    text-align: start;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+.foresight-square {
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 1.25em;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    
+    padding: 0.5em;
+    
+    
+}
+.form-group-foresight {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+}
+.foresight-subheader {
+    width: 170px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+h4.foresight-subheader {
+    font-size: 1rem;
+}
+h3.foresight-subheader {
+    font-size: 0.8rem;
+}
+.header-button-yellow-form-foresight {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    z-index: 10;
+    box-shadow: 0.5px 0.5px 2px white;
+    border-radius: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: white;
+
+    border-style: solid;
+    border-color: var(--violet);
+    border-width: 2px;
+}
+
+.glass-buttons-foresight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 37.8125em) {
+      body {
+          --ang: 85deg ;
+    }
+  }
+  
+  article {
+      --c: rgba(143, 0, 72, 0.7);
+      --s0: calc(1.25em + 6px);
+      --s1: calc(1.25em + 6px + 0.5em);
+    place-self: center;
+    position: relative;
+    width: 28em;
+    height: 32em;
+    border: solid 0 transparent;
+    border-width: 0 var(--s0) var(--s0) 0;
+    padding: var(--s1) 0.5em 0.5em var(--s1);
+    background: var(--c) padding-box;
+
+}
+article:nth-child(2) {
+    --c: #b4ff7d;
+    filter: invert(1);
+}
+article::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: inherit;
+    border-width: 1.25em 0 0 1.25em;
+    width: 28em;
+    height: 32em;
+
+
+    box-shadow: inset 0 0 0 6px var(--c);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    content: "";
+    
+    
+    
+    
+  }
+  article::after {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+
+    width: 26em;
+    height: 30em;
+
+
+    box-shadow: inset 0 0 0 6px var(--c);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(25px);
+	backdrop-filter: blur(25px);
+    z-index: 2;
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+
+  }
+
+  .foresight-form {
+    position: relative;
+    padding: 0px 0px 0px 20px;
+    z-index: 10;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 1.75;
+  }

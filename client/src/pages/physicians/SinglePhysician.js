@@ -8,7 +8,7 @@ const SinglePhysician = () => {
         const fullName = `${firstName}-${lastName}`.toLowerCase();
         return fullName === physicianId;
     });
-    
+    console.log('physician', physician);
     const { bio, image, name, practiceEmphasis, specialProcedures } = physician;
     const cacheKey = 'cached_yelp_reviews';
     const formatDate = (dateString) => {

@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Home from './pages/Home';
 import Locations from './pages/Locations';
@@ -14,6 +14,14 @@ import Physicians from './pages/physicians/Physicians';
 import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
+
+const validPhysicianIds = [
+    "Michael J. Hejna",
+    "Scott A. Seymour",
+    "Erling Ho",
+    "Nicolas S. Anderson"
+];
+
 function App() {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -23,31 +31,57 @@ function App() {
             behavior: 'instant',
         });
     }, [pathname]);
+
+    const isValidPhysicianId = (physicianId) => {
+        return validPhysicianIds.includes(physicianId);
+    };
+
     return (
         <>
-            <Navbar style={{ overflowX: 'hidden', maxWidth: '100%' }}/>
+            <Navbar />
             <Routes>
-                <Route index element={<Home />} />
-
-                <Route path='about-us' element={<AboutLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="about-us/*" element={<AboutLayout />}>
                     <Route index element={<About />} />
-                    <Route path=':aboutId' element={<SingleAbout />} />
+                    <Route path=":aboutId" element={<SingleAbout />} />
                 </Route>
-                <Route path='physicians' element={<PhysiciansLayout />}>
+
+
+
+                {/* Physician not there */}
+                <Route path="physicians" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    <Route path=':physicianId' element={<SinglePhysician />} />
+                    {validPhysicianIds.map(id => (
+                        <Route key={id} path={id} element={<SinglePhysician />} />
+                    ))}
+                    <Route path="*" element={<Navigate to="/physicians" replace />} />
                 </Route>
-                <Route path='services' element={<ServicesLayout />}>
+
+
+
+                {/* Physician there */}
+                {/* <Route path="physicians/*" element={<PhysiciansLayout />}>
+                    <Route index element={<Physicians />} />
+                    <Route path=":physicianId" element={<SinglePhysician />} match={isValidPhysicianId} />
+                    <Route path='*' element={<Navigate to="/physicians" replace />} />
+
+                </Route> */}
+
+
+
+
+                <Route path="services/*" element={<ServicesLayout />}>
                     <Route index element={<Services />} />
-                    <Route path=':serviceId' element={<SingleService />} />
+                    <Route path=":serviceId" element={<SingleService />} />
                 </Route>
-                <Route path='locations' element={<Locations />} />
-                <Route path='about' element={<AboutLayout />} />
-                <Route path='providers' element={<PhysiciansLayout />} />
-                <Route path='*' element={<Home />} />
+                <Route path="locations" element={<Locations />} />
+                <Route path="about" element={<AboutLayout />} />
+                <Route path="providers/*" element={<Navigate to="/physicians" replace />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <Footer />
         </>
     );
 }
+
 export default App;

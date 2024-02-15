@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+body {
+    margin: 0px;
+}
+
+#container {
+    position: relative;
+    margin: auto;
+
+    height: 40px;
+}
+
+#text1,
+#text2 {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.7), 
+      0px -4px 10px rgba(255,255,255,0.7);
+
+    user-select: none;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#text1.fade-in {
+    animation-name: fadeIn;
+}
+
+#text2.fade-out {
+    animation-name: fadeOut;
+    animation-delay: 0.2s;
+}
