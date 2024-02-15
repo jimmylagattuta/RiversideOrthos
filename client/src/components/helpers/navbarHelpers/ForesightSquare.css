@@ -155,7 +155,117 @@ article::before {
     display: flex;
     flex-direction: column;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
+    .mobile-change-to-row {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }
+    #form-div {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+    }
+    #form-div a {
+        margin: 0px 5px 5px 5px;
+        padding: 0px 2px 0px 2px;
+        font-size: 0.4rem;
+        width: 50%;
+    }
+    .foresight-square {
+        grid-template-columns: 1fr; /* Set the column to occupy the full width */
+        padding: 5px 0px 0px 5px;
+        width: 60%; /* Make it take full width */
+        height: 287px; /* Make it take full height of the viewport */
+        margin: 0; /* Remove any margin */
+        align-self: flex-start;
+    }
+
+    .foresight-form {
+        position: relative;
+        padding: 20px 0px 0px 20px;
+        z-index: 10;
+    }
+    .form-group-foresight {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    h4.foresight-subheader {
+        font-size: 0.4rem;
+        margin-right: 5px;
+    }
+    h3.foresight-subheader {
+        font-size: 0.3rem;
+    }
+    .foresight-subheader {
+        width: 100%;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+    .alert-form-foresight {
+        display: flex;
+        text-align: start;
+        font-size: 0.35rem;
+        margin: 4px 4px 4px 4px;
+        padding: 0px 5px 0px 0px;
+    }
+    .glass-buttons-foresight {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+
+    }
+    .close-button {
+        position: absolute;
+        top: 15px;
+        right: -10px;
+        cursor: pointer;
+        color: white;
+        z-index: 10;
+        font-size: 0.8rem;
+        opacity: 70%;
+    }
+    article {
+        width: 294px;
+        height: 160px;
+        border-width: 0;
+        padding: 0;
+        top: 25px;
+        left: 8px;
+    }
+
+    article::before, article::after {
+        width: 289px;
+        height: 154px;
+        top: unset;
+        left: unset;
+        top: 13px;
+        left: 12px;
+    }
+    article::before {
+        position: fixed;
+        left: 20px;
+        /* bottom: 0px; */
+        top: 75px;
+        border: inherit;
+        border-width: 0.5em 0 0 0.5em;
+        width: 296px;
+        height: 162px;
+        z-index: 10;
+        box-shadow: inset 0 0 0 2px var(--c);
+        mix-blend-mode: difference;
+        pointer-events: none;
+        content: "";
+    }
+}
+@media (max-width: 275px) {
     .mobile-change-to-row {
         display: flex;
         flex-direction: row;
@@ -177,7 +287,7 @@ article::before {
         grid-template-columns: 1fr; /* Set the column to occupy the full width */
         padding: 5px 0px 0px 5px;
         width: 60%; /* Make it take full width */
-        height: 90vh; /* Make it take full height of the viewport */
+        height: 287px; /* Make it take full height of the viewport */
         margin: 0; /* Remove any margin */
         align-self: flex-start;
     }
