@@ -45,7 +45,7 @@ body {
     animation-name: fadeOut;
     animation-delay: 0.2s;
 }
-
+/* 
 @media (max-width: 420px) {
     #container {
         height: 20px;
@@ -68,9 +68,58 @@ body {
     #text2 {
         letter-spacing: 1px;
     }
-}
+} */
 
-@media (max-width: 275px) {
+@media (max-width: 950px) {
+    #container {
+        height: 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    #text1,
+    #text2 {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        font-size: 0.45rem;
+        letter-spacing: 1px;
+        text-shadow: 2px 7px 5px rgba(0,0,0,0.7), 
+        0px -4px 10px rgba(255,255,255,0.7);
+        text-align: center;
+        user-select: none;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    #text2 {
+        /* letter-spacing: 1px; */
+    }
+}
+@media (max-width: 350px) {
+    #container {
+        height: 15px;
+    }
+    #text1,
+    #text2 {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        font-size: 0.3rem;
+        letter-spacing: 1px;
+        text-shadow: 2px 7px 5px rgba(0,0,0,0.7), 
+        0px -4px 10px rgba(255,255,255,0.7);
+
+        user-select: none;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    #text2 {
+        letter-spacing: 1px;
+    }
+}
+@media (max-width: 240px) {
     #container {
         height: 15px;
     }
