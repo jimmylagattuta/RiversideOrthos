@@ -69,44 +69,19 @@ body {
         letter-spacing: 1px;
     }
 } */
-
-@media (max-width: 950px) {
-    #container {
-        height: 20px;
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-    #text1,
-    #text2 {
-        position: relative;
-        width: 100%;
-        display: inline-block;
-        font-size: 0.45rem;
-        letter-spacing: 1px;
-        text-shadow: 2px 7px 5px rgba(0,0,0,0.7), 
-        0px -4px 10px rgba(255,255,255,0.7);
-        text-align: center;
-        user-select: none;
-        opacity: 0;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-    }
-    #text2 {
-        /* letter-spacing: 1px; */
-    }
-}
-@media (max-width: 350px) {
+@media (max-height: 650px) {   
     #container {
         height: 15px;
+        display: flex;
+        align-items: center;
     }
     #text1,
     #text2 {
         position: relative;
         width: 100%;
         display: inline-block;
-        font-size: 0.3rem;
-        letter-spacing: 1px;
+        font-size: 0.5rem;
+        letter-spacing: 1.5px;
         text-shadow: 2px 7px 5px rgba(0,0,0,0.7), 
         0px -4px 10px rgba(255,255,255,0.7);
 
@@ -115,9 +90,15 @@ body {
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
+}
+@media (max-height: 650px) {   
+    #text1,
     #text2 {
-        letter-spacing: 1px;
+        font-size: 0.4rem;
+        letter-spacing: 1.5px;
+
     }
+
 }
 @media (max-width: 240px) {
     #container {
