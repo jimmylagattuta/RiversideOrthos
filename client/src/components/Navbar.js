@@ -11,7 +11,7 @@ const Navbar = () => {
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(null);
     const [isAppointmentFormOpen, setIsAppointmentFormOpen] = useState(false);
     const [showThankYouMessage, setShowThankYouMessage] = useState(false);
-    const [isPopupOpen, setIsPopupOpen] = useState(true);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
     const location = useLocation();
 
     const togglePopup = () => {

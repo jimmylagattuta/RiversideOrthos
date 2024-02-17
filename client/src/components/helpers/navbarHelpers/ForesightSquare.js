@@ -7,10 +7,12 @@ const ForesightSquare = ({ togglePopup }) => {
         <div className="foresight-square">
             <article>
             <div className="foresight-form">
-                                <button onClick={togglePopup} className='close-button'>
+                                    <div className='text-and-close'>
+                                    <button onClick={togglePopup} className='close-button'>
                                         <i className='fas fa-times'></i> {/* Close icon */}
                                     </button>
                                     <h4 className="alert-form-foresight">* You need to bring these forms finished on first visit.</h4>
+                                    </div>
                                     <div className="form-group-foresight">
 
                                         <div className='mobile-change-to-row'>
