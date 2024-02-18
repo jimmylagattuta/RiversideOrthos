@@ -369,7 +369,7 @@
         margin: 0px 0px 0px 0px;
     }
     .home-banner:after {
-        min-width: 410px;
+        min-width: 420px;
         min-height: 70vh;
     } 
     .Carousel-container {
@@ -382,7 +382,7 @@
     }
     .banner-description {
         font-size: 0.7rem;
-        width: 41%;
+        width: 48%;
         margin: 15px 0px 15px 15px;
     }
     .home-banner .btn {
