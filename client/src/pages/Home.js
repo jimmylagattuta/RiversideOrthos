@@ -7,6 +7,7 @@ import AboutUsComponent from '../components/AboutUsComponent';
 import TeamComponent from './lazyHome/TeamComponent';
 import LocationComponent from './lazyHome/LocationComponent';
 import MapContainer from '../components/googleMapReact/MapContainer';
+import './helpers/Home.css';
 
 const Home = () => {
     const [firstImageLoaded, setFirstImageLoaded] = useState(false);
@@ -47,17 +48,17 @@ const Home = () => {
                 <div className='home-banner'>
                     <div className="banner-title-container">
                         <h1 style={{ color: 'white', textShadow: '1px 1px 6px black' }} className='banner-title'>
-                            {" "}Orthopaedic{" "}
+                            {" "}Compassionate{" "}
                         </h1>
                         <h1 style={{ color: 'white', textShadow: '1px 1px 6px black' }} className='banner-title'>
-                            {" "}Associates{" "}
+                            {" "}Orthopedic{" "}
                         </h1>
                         <h1 style={{ color: 'white', textShadow: '1px 1px 6px black' }} className='banner-title'>
-                            {" "}of Riverside{" "}
+                            {" "}Care{" "}
                         </h1>
                     </div>
                     <p style={{ color: 'white', textShadow: '1px 1px 6px black' }} className='banner-description'>
-                        QUALITY ORTHOPAEDIC CARE
+                        Experienced Medical Professionals With A Personal Touch
                     </p>
                     <div className='banner-buttons'>
                         <div className='button-wrapper'>

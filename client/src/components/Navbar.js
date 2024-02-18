@@ -76,7 +76,7 @@ const Navbar = () => {
       
     return (
         <header className='navbar-div'>
-            <div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
                 <div className="navbar-container">
                     <Link to='/' className='logo-link-navbar' style={{ textDecorationLine: 'none' }}>
                         <div className='logo-and-title'>
