@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { expertiseBlocks } from '../data';
+import './helpers/ExpertiseBlocks.css';
 
 const ExpertiseBlocks = () => {
     const [showComponent, setShowComponent] = useState(false);
@@ -34,7 +35,6 @@ const ExpertiseBlocks = () => {
                                     <img
                                         src={block.image}
                                         alt={block.name}
-                                        style={{ minHeight: '236px', width: '100%' }}
                                         className='expertise-image'
                                         loading="lazy"
                                     />
@@ -48,7 +48,7 @@ const ExpertiseBlocks = () => {
                                 .split(' ')
                                 .join('-')}`}>
                             {block.name}
-                            <i style={{ fontSize: "0.8rem", alignSelf: "center", paddingLeft: "10px", marginBottom: "-5px" }} class="fas fa-angle-double-right"></i>
+                            <i class="fas fa-angle-double-right"></i>
                         </Link>
                     </div>
                 );
