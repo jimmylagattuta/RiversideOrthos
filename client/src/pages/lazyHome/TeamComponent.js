@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './helpers/TeamComponent.css';
 
 const TeamComponent = () => {
     const [isLoading, setIsLoading] = useState(true);

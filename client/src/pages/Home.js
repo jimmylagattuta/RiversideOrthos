@@ -8,6 +8,7 @@ import TeamComponent from './lazyHome/TeamComponent';
 import LocationComponent from './lazyHome/LocationComponent';
 import MapContainer from '../components/googleMapReact/MapContainer';
 import './helpers/Home.css';
+// import '../components/helpers/Carousel.css';
 
 const Home = () => {
     const [firstImageLoaded, setFirstImageLoaded] = useState(false);
@@ -86,7 +87,7 @@ const Home = () => {
                         loading='lazy'
                     />
                     <img
-                        src='https://i.imgur.com/oqCqJux.webp'
+                        src='https://i.imgur.com/qeHdPfp.webp'
                         alt='img3'
                         className='carousel-img'
                         loading='lazy'
@@ -98,7 +99,7 @@ const Home = () => {
                         loading='lazy'
                     />
                     <img
-                        src='https://i.imgur.com/Hu9EIX9.webp'
+                        src='https://i.imgur.com/ECpdKat.webp'
                         alt='img5'
                         className='carousel-img'
                         loading='lazy'

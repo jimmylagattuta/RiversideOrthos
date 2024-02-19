@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './helpers/Carousel.css';
 
 const ReactBackgroundCarousel = ({ children }) => {
     const [counter, setCounter] = useState(1);

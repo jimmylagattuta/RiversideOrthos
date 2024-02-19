@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './helpers/LocationComponent.css';
 
 const LocationComponent = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +26,7 @@ const LocationComponent = () => {
                 <div className='location-icon-container'>
                     <i className='fas fa-map-marked-alt fa-3x'></i>
                 </div>
-                <h2 className='section-title'>
+                <h2 className='section-title-location-component'>
                     Offices Located Across
                     The Greater Chicago and Riverside Area
                 </h2>

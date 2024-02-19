@@ -286,23 +286,6 @@ img {
 
 
 
-.slide {
-    height: 100%;
-    width: 100%;
-}
-
-.slide:not(.first-slide) .show {
-    animation: fade 1.5s ease-in-out;
-}
-
-.show {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 /* Define the fade-in animation */
 
   
@@ -317,16 +300,7 @@ img {
   }
   
   /* Apply the initial animation to the element */
-  .carousel-img {
-    /* Apply the animation named 'fadeIn' */
-    animation: fadeIn 1s ease-in forwards;
-    /* Set the initial opacity to 0 to start with a fully transparent element */
-    /* opacity: 0; */
-    /* Set the dimensions to fill the parent container */
-    height: 100%;
-    width: 100%;
-    background-color: var(--violet);
-  }
+
   
   /* Define the keyframes for the fadeIn animation */
   @keyframes fadeIn {
@@ -1841,91 +1815,7 @@ display: none;
 }
 
 
-.follow-us-title {
-    margin: 30px auto;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 3rem;
-    font-family: sans-serif;
-    max-width: 840px;
-    color: white;
-}
 
-.home-team {
-    align-items: center;
-    /* background: url(https://i.imgur.com/77LJQ2y.webp) 0 0 no-repeat; */
-    background: rgb(143, 0, 72);
-    background-position: 50%;
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    padding: 60px;
-    position: relative;
-    max-height: 300px;
-}
-.home-locations {
-    align-items: center;
-    /* background: url(https://i.imgur.com/77LJQ2y.webp) 0 0 no-repeat; */
-    background-image: url('/public/CaliBackground.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    padding: 60px;
-    position: relative;
-    min-height: 500px;
-}
-
-.home-locations {
-    /* background: url(https://i.imgur.com/pP2cSdc.webp) 0 0 no-repeat; */
-    border-bottom: solid 5px rgb(143, 0, 72);
-}
-
-.location-icon-container {
-    /* padding: 40px 0 0 0; */
-    color: rgb(143, 0, 72);
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.team-icon-container {
-    padding: 0 0 50px 0;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.team-icon-container a {
-    display: inline-block;
-    margin: 0 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.team-icon-container a:hover {
-    opacity: 60%;
-    transform: translateY(-5px) scale(1.1);
-}
-
-.team-icon-container a:active {
-    transform: translateY(2px) scale(0.95);
-}
-
-.location-icon-container .fas {
-    padding: 6px;
-
-    
-}
 
 /* REVIEWS */
 .home-reviews {
