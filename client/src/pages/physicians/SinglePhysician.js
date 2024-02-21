@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { physicians } from '../../data';
+import '../../components/helpers/ReviewsHelpers.css';
 const SinglePhysician = () => {
     const { physicianId } = useParams();
     const physician = physicians.find((item) => {

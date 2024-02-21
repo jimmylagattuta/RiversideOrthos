@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useCsrfToken } from './CsrfTokenContext'; // Import the hook
+import './helpers/ReviewsHelpers.css';
 
 
 const CompanyReviewsPage = () => {
