@@ -9,6 +9,7 @@
     box-shadow: 0px 0px 6px rgba(143, 0, 72, 50%);
     border-radius: 4px;
     background-color: #696969	;
+    height: max-content;
 }
 
 .reviews-container {
@@ -72,9 +73,9 @@
     font-size: 1rem;
 }
 
-@media (max-width: 1295px) {
+@media (max-width: 1400px) {
     .single-review-container {
-        width: calc(88% / 2);
+        width: 46.33333%;
     }
 }
 
@@ -93,8 +94,11 @@
     }
 }
 
+@media (max-width: 815px) {
 
-@media (max-width: 350px) {
+}
+
+@media (max-width: 815px) {
     .reviews-container {
         display: flex;
         flex-wrap: wrap;
@@ -108,7 +112,7 @@
 
     .review-info {
         position: relative;
-        padding: 0 35px;
+        padding: 0 20px;
     }
     .review-info .fa {
         position: absolute;
@@ -148,6 +152,6 @@
     
     .review-paragraph {
         font-style: italic;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }

@@ -237,18 +237,7 @@ img {
     display: none;
 }
 
-.info-window-container {
-    background-color: var(--white);
-    border-radius: 2px;
-    box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
-    font-size: 14px;
-    padding: 10px 10px 0;
-    position: relative;
-    width: 220px;
-    z-index: 100;
-    bottom: 255px;
-    left: -235px;
-}
+
 
 .chicago-office {
     bottom: 210px;
@@ -259,10 +248,6 @@ img {
     left: -185px;
 }
 
-.info-window-text {
-    font-size: 13px;
-    width: 165px;
-}
 
 .info-window-image {
     border-radius: 0 0 2x 2px;
@@ -2008,6 +1993,7 @@ display: none;
     }
     .footer-item {
         width: 100%;
+        padding: 4px 0px 4px 0px;
     }
     .footer-title {
         margin: 50px 0 20px 0;

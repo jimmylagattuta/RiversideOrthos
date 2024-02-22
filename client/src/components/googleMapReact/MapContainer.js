@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { officesData } from '../../data';
+import './helpers/MapContainer.css';
 
 const FloatingOfficeInfo = ({
     offices,
