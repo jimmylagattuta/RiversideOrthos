@@ -327,24 +327,26 @@ export const aboutObjOther = [
             "Attending Physician Statements or any other forms to be completed by the doctor",
         ],
         link: '/appointments', // Assuming you might want a link here
-    },
-    // {
-    //     nameOne: "OAR Patient Portal",
-    //     descriptionOne: [
-    //         "Orthopaedic Associates of Riverside is pleased to introduce the OAR Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.",
-    //         "To join the Patient Portal, call the office and provide our staff with your email address then click on the button link above."
-    //     ],
-    //     descriptionOneBullettedList: [
-    //         "Expedite your check-in process by completing New Patient Forms online",
-    //         "Tired of waiting on hold? Schedule your appointments, order medical records, and request prescription refills electronically",
-    //         "Update your medical history and pay bills from the privacy of your home",
-    //         "Verify your insurance eligibility and review your benefits prior to your appointment",
-    //     ],
-    //     link: '/patient-portal', // Assuming a link to the patient portal
-    // }
+    }
 ];
   
-
+export const aboutObjPortal = [
+    {
+        nameOne: "OAR Patient Portal",
+        descriptionOne: [
+            "Orthopaedic Associates of Riverside is pleased to introduce the OAR Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.",
+            "To join the Patient Portal, call the office and provide our staff with your email address then click on the button link above."
+        ],
+        descriptionOneBullettedList: [
+            "Expedite your check-in process by completing New Patient Forms online",
+            "Tired of waiting on hold? Schedule your appointments, order medical records, and request prescription refills electronically",
+            "Update your medical history and pay bills from the privacy of your home",
+            "Verify your insurance eligibility and review your benefits prior to your appointment",
+        ],
+        link: '/patient-portal', // Assuming a link to the patient portal
+    }
+];
+  
 export const aboutTerms = [
     {
         subtitle: null,

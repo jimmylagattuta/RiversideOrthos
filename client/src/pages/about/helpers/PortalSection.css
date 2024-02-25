@@ -1,0 +1,154 @@
+ .portal-section   {
+    
+    margin: 0;
+
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+    gap: 30px;
+    background: pink;
+    position: relative;
+    width: 65%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.57);
+    transition: all 0.3s ease 0s;
+    z-index: 10;
+    margin: 10px 0px 120px 70px;
+    padding: 0px 0px 0px 0px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0.2rem;
+
+    color: #fff;
+    --g: 4px;     /* the gap */
+    --b: 4px;    /* border thickness*/
+    --c: #5f39393f; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+    width: 65%;
+    text-align: center;
+}
+
+.portal-section:hover h2 {
+    /* Set the color and create a linear gradient for the underline effect */
+    color: rgba(161, 2, 42, 0.7);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.5s ease;
+  }
+  
+  .portal-section h2 {
+    /* Other styles for h2 elements... */
+    position: relative; /* Needed for absolute positioning of ::after pseudo-element */
+    display: inline-block; /* Ensure the underline covers the entire width of the text */
+  }
+  
+  .portal-section h2::after {
+    /* Create the underline using absolute positioning */
+    content: '';
+    position: absolute;
+    right: 0; /* Start from the middle */
+    bottom: -2px; /* Adjust this value based on your preference */
+    width: 0; /* Initially, the width is 0 */
+    height: 2px; /* Adjust the height of the underline */
+    background-color: rgba(161, 2, 42, 0.7);
+    transition: width 0.5s ease, left 0.5s ease; /* Transition the width and left position */
+    transform: translateX(0%); /* Center the underline */
+  }
+  
+  .portal-section:hover h2::after {
+    /* Adjust the width and left position to reveal the underline from the middle */
+    width: 100%; /* Adjust the width to fully reveal the underline */
+    left: 0; /* Adjust the left position based on your preference */
+  }
+  
+@keyframes growAndShrink {
+    0%, 100% {
+      transform: scale(0.8); /* Original size */
+    }
+    10%, 90% { /* Adjusted for quick growth and longer stay at grown size */
+      transform: scale(1.05); /* Grow slightly more than original size */
+    }
+}
+
+.animate-grow-portal {
+    display: inline-block; /* Required for transform to work on inline elements like span */
+    animation: growAndShrink 6s infinite; /* Apply the animation */
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: rgb(240, 112, 176);
+    margin-left: 3px;
+}
+.portal-section:hover a  {
+    animation: grow 0.3s ease infinite;
+    transform: scale(1.1);
+  }
+  
+.portal-section:hover {
+    --_p: 75%;
+    --c: rgba(218, 102, 123, 0.7);
+  
+  filter: grayscale(0%);
+}
+
+.portal-unordered-list-about {
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+
+    margin: 10px;
+    padding: 10px;
+
+
+
+}
+
+.portal-unordered-list-about li {
+    text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(143, 0, 72,0.8);
+    padding: 4px 0px 4px 0px;
+    font-size: 01rem;
+    
+	color: #333;
+	opacity: 0.4;
+    /* font-family: math; */
+
+    color: black;
+   
+    letter-spacing: 0.1rem;
+   
+    text-shadow: 
+   
+
+   
+                   3px 2px 0px rgba(136, 136, 136, 0.6);
+}
+.portal-unordered-list-about li img {
+    max-width: 100px;
+}
+
+.portal-unordered-list-about a {
+    font-size: 1.8rem;
+    transition: font-size 0.3s ease 0s; /* Adding transition for smoother hover effect */
+
+}
+.portal-unordered-list-about a:active {
+    transform: translateY(3px);
+}
+.portal-section p {
+    font-size: 1.2rem;
+    color: black;
+}
