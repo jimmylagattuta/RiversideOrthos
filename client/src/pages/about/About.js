@@ -1,9 +1,38 @@
-import React from 'react';
-import { aboutObj, aboutObjOther , aboutObjPortal} from '../../data';
+import React, { useEffect, useRef, useState } from 'react';
+import { aboutObj, aboutObjOther, aboutObjPortal } from '../../data';
 import './helpers/About.css';
 import './helpers/PortalSection.css';
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const portalSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Update the state to reflect the visibility of the portal section
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Disconnect the observer once the portal section is visible
+        }
+      },
+      {
+        threshold: 0.5, // Trigger when at least 50% of the portal section is visible
+      }
+    );
+
+    if (portalSectionRef.current) {
+      observer.observe(portalSectionRef.current);
+    }
+
+    // Clean up by disconnecting the observer when the component unmounts
+    return () => {
+      if (portalSectionRef.current) {
+        observer.unobserve(portalSectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div>
       <div className='about-parent-div'>
@@ -11,28 +40,28 @@ const About = () => {
           {aboutObj.map((item, index) => {
             return (
               <div className='about-div-two-responsive' key={index}>
-                  <img
-                    src="https://i.imgur.com/EBJUAgp.webp"
-                    alt={item.nameOne}
-                    id='about-div-image-responsive'
-                  />
-                  <img
-                    src="https://i.imgur.com/V1JENY4h.webp"
-                    alt="Doctor"
-                    id='about-div-doctor-responsive'
-                  />
-                  <div className='about-div-bulleted'>
-                    <p>{item.descriptionOne}</p>
-                    {item.descriptionOneBullettedList && Array.isArray(item.descriptionOneBullettedList) && (
-                      <ul className='unordered-list-about'>
-                        {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
-                          <li key={bulletIndex}>
-                            {bulletItem === 'And More!' ? <h3>And More!</h3> : <h3>{bulletItem}</h3>}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                <img
+                  src="https://i.imgur.com/EBJUAgp.webp"
+                  alt={item.nameOne}
+                  id='about-div-image-responsive'
+                />
+                <img
+                  src="https://i.imgur.com/V1JENY4h.webp"
+                  alt="Doctor"
+                  id='about-div-doctor-responsive'
+                />
+                <div className='about-div-bulleted'>
+                  <p>{item.descriptionOne}</p>
+                  {item.descriptionOneBullettedList && Array.isArray(item.descriptionOneBullettedList) && (
+                    <ul className='unordered-list-about'>
+                      {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
+                        <li key={bulletIndex}>
+                          {bulletItem === 'And More!' ? <h3>And More!</h3> : <h3>{bulletItem}</h3>}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             );
           })}
@@ -85,26 +114,26 @@ const About = () => {
             </div>
           ))}
         </div>
-    </div>
-      <div className='portal-section'>
-      {aboutObjPortal.map((item, index) => (
-        <div key={index} className='portal-about-div-bulleted-bring'>
-          <h2 style={{ color: 'black' }}>{item.nameOne}</h2>
-          <div>
-            {item.descriptionOne.map((description, idx) => (
-              <p key={idx}>{description}</p>
-            ))}
+      </div>
+      <div ref={portalSectionRef} className={`portal-section ${isVisible ? 'border-animation' : ''}`}>
+        {aboutObjPortal.map((item, index) => (
+          <div key={index} className='portal-about-div-bulleted-bring'>
+            <h2 style={{ color: 'black' }}>{item.nameOne}</h2>
+            <div>
+              {item.descriptionOne.map((description, idx) => (
+                <p key={idx}>{description}</p>
+              ))}
+            </div>
+            <ul className='portal-unordered-list-about'>
+              {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
+                <li key={bulletIndex}>{bulletItem}</li>
+              ))}
+            </ul>
+            <ul className='portal-unordered-list-about'>
+              <a style={{ color: 'black' }} className="animate-grow-portal" href={item.link} target="_blank" rel="noopener noreferrer">Go To Portal!</a>
+            </ul>
           </div>
-          <ul className='portal-unordered-list-about'>
-            {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
-              <li key={bulletIndex}>{bulletItem}</li>
-            ))}
-          </ul>
-          <ul className='portal-unordered-list-about'>
-            <a style={{ color: 'black' }} className="animate-grow-portal" href={item.link} target="_blank" rel="noopener noreferrer">Go To Portal!</a>
-          </ul>
-        </div>
-      ))}
+        ))}
       </div>
     </div>
   );
