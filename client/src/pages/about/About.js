@@ -74,12 +74,12 @@ const About = () => {
             </ul>
             {/* Button to go to the portal */}
             <ul className='unordered-list-about-bring'>
-              <button
+              {/* <button
                 className="portal-button"
                 onClick={() => window.open("https://oar.myezyaccess.com/Patient/Main.aspx", "_blank")}
               >
                 Go to Portal
-              </button>
+              </button> */}
             </ul>
           </div>
         ))}

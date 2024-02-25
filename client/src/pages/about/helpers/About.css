@@ -335,15 +335,126 @@
     .unordered-list-about {
         flex-direction: column; /* Ensure vertical stacking on smaller screens */
     }
+    .about-parent-div {
+        flex-direction: column;
+    }
+
+    .about-div-bulleted-bring p {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .about-div-responsive {
+        margin: 30px 30px 30px 30px;
+        position: relative;
+    }
+    .appointment-section {
+        right: unset;
+        top: unset;
+        width: 92vw;
+        position: relative;
+        padding: 0.5rem;
+        margin: 0px 0px 0px 0px;
+        align-self: center;
+    }
+    .about-div-bulleted-bring h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .unordered-list-about-bring {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line */
+        justify-content: space-between; /* Distribute items evenly across the row */
+        flex-direction: row;
+    }
+    .unordered-list-about-bring li {
+        font-size: 1.4rem;
+        padding: 0px 10px 0px 10px;
+        width: max-content; /* Adjust width to fit three items per row */
+
+    }
 }
 @media (max-width: 740px) {
     #about-div-doctor-responsive {
         top: -85px;
     }
+    .about-parent-div {
+        flex-direction: column;
+    }
+
+    .about-div-bulleted-bring p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .about-div-responsive {
+        margin: 30px 30px 30px 30px;
+        position: relative;
+    }
+    .appointment-section {
+        right: unset;
+        top: unset;
+        width: 92vw;
+        position: relative;
+        padding: 0.5rem;
+        margin: 0px 0px 0px 0px;
+        align-self: center;
+    }
+    .about-div-bulleted-bring h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .unordered-list-about-bring {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line */
+        justify-content: space-between; /* Distribute items evenly across the row */
+        flex-direction: row;
+    }
+    .unordered-list-about-bring li {
+        font-size: 1.1rem;
+        padding: 0px 10px 0px 10px;
+        width: max-content; /* Adjust width to fit three items per row */
+
+    }
 }
 @media (max-width: 690px) {
     #about-div-doctor-responsive {
         top: -75px;
+    }
+    .about-parent-div {
+        flex-direction: column;
+    }
+
+    .about-div-bulleted-bring p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .about-div-responsive {
+        margin: 30px 30px 30px 30px;
+        position: relative;
+    }
+    .appointment-section {
+        right: unset;
+        top: unset;
+        width: 92vw;
+        position: relative;
+        padding: 0.5rem;
+        margin: 0px 0px 0px 0px;
+        align-self: center;
+    }
+    .about-div-bulleted-bring h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .unordered-list-about-bring {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line */
+        justify-content: space-between; /* Distribute items evenly across the row */
+        flex-direction: row;
+    }
+    .unordered-list-about-bring li {
+        font-size: 1.1rem;
+        padding: 0px 10px 0px 10px;
+        width: max-content; /* Adjust width to fit three items per row */
+
     }
 }
 @media screen and (max-width: 501px) {
@@ -357,19 +468,126 @@
         top: -28px;
         left: 0;    
     }
-    .about-div-bulleted p {
+    .about-div-bulleted-bring p {
         font-size: 1.2rem;
+        text-align: left;
+    }
+    .about-parent-div {
+        flex-direction: column;
+    }
+
+    .about-div-bulleted p {
+        font-size: 1rem;
+    }
+    .about-div-responsive {
+        margin: 30px 30px 30px 30px;
+        position: relative;
+    }
+    .appointment-section {
+        right: unset;
+        top: unset;
+        width: 92vw;
+        position: relative;
+        padding: 0.5rem;
+        margin: 0px 0px 0px 0px;
+        align-self: center;
+    }
+    .about-div-bulleted-bring h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .unordered-list-about-bring {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line */
+        justify-content: space-between; /* Distribute items evenly across the row */
+        flex-direction: row;
+    }
+    .unordered-list-about-bring li {
+        font-size: 0.9rem;
+        padding: 0px 10px 0px 10px;
+        width: max-content; /* Adjust width to fit three items per row */
+
     }
 }
 @media (max-width: 420px) {
+    .about-parent-div {
+        flex-direction: column;
+    }
     #about-div-doctor-responsive {
         top: -25px;
+    }
+    .about-div-bulleted-bring p {
+        font-size: 1rem;
+    }
+    .about-div-responsive {
+        margin: 30px 30px 30px 30px;
+        position: relative;
+    }
+    .appointment-section {
+        right: unset;
+        top: unset;
+        width: 92vw;
+        position: relative;
+        padding: 0.5rem;
+        margin: 0px 0px 0px 0px;
+        align-self: center;
+    }
+    .about-div-bulleted-bring h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .unordered-list-about-bring {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line */
+        justify-content: space-between; /* Distribute items evenly across the row */
+        flex-direction: row;
+    }
+    .unordered-list-about-bring li {
+        font-size: 0.8rem;
+        padding: 0px 10px 0px 10px;
+        width: max-content; /* Adjust width to fit three items per row */
+
     }
 }
 
 @media (max-width: 380px) {
+    .about-parent-div {
+        flex-direction: column;
+    }
     #about-div-doctor-responsive {
         top: -18px;
+    }
+    .about-div-bulleted p {
+        font-size: 1rem;
+    }
+    .about-div-responsive {
+        margin: 30px 30px 30px 30px;
+        position: relative;
+    }
+    .appointment-section {
+        right: unset;
+        top: unset;
+        width: 92vw;
+        position: relative;
+        padding: 0.5rem;
+        margin: 0px 0px 0px 0px;
+        align-self: center;
+    }
+    .about-div-bulleted-bring h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .unordered-list-about-bring {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line */
+        justify-content: space-between; /* Distribute items evenly across the row */
+        flex-direction: row;
+    }
+    .unordered-list-about-bring li {
+        font-size: 0.8rem;
+        padding: 0px 10px 0px 10px;
+        width: max-content; /* Adjust width to fit three items per row */
+
     }
 }
 
@@ -390,15 +608,25 @@
     .appointment-section {
         right: unset;
         top: unset;
-        width: 90vw;
+        width: 92vw;
         position: relative;
         padding: 0.5rem;
         margin: 0px 0px 0px 0px;
+        align-self: center;
     }
     .about-div-bulleted-bring h2 {
         font-size: 1.3rem;
     }
+    .unordered-list-about-bring {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line */
+        justify-content: space-between; /* Distribute items evenly across the row */
+        flex-direction: row;
+    }
     .unordered-list-about-bring li {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
+        padding: 0px 8px 0px 8px;
+        width: max-content; /* Adjust width to fit three items per row */
+
     }
 }
