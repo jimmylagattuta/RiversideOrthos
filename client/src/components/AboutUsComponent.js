@@ -2,6 +2,11 @@ import { Link, NavLink } from 'react-router-dom';
 import './helpers/AboutUsComponent.css'
 
 const AboutUsComponent = () => {
+    const handleLearnMoreClick = () => {
+        // Replace 'your-url-here' with the actual URL you want to open
+        window.open('your-url-here', '_blank');
+    };
+
     return (
         <div className='about-container'>
             <div className='about-container-top'>
@@ -18,10 +23,10 @@ const AboutUsComponent = () => {
                     OAR Patient Portal
                 </h2>
                 <p className='about-description-right'>
-                    Orthopaedic Associates of Riverside is pleased to introduce the OAR Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.
-                </p>
+                    Orthopaedic Associates of Riverside is pleased to introduce the <a className="animate-grow" href="https://oar.myezyaccess.com/Patient/Main.aspx" target="_blank" rel="noopener noreferrer">OAR Patient Portal!</a> The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and provide
                 <p className='about-description-right'>
                     To join the Patient Portal, call the office and provide our staff with your email address. Then, log on to OAR’s Patient Portal to access our patient features.
+                </p>
                 </p>
 
                 <p className='about-description-right'>
@@ -46,9 +51,10 @@ const AboutUsComponent = () => {
                 </p>
                 
                 <div className='about-right-button'>
-                    <NavLink className='btn header-button-white' to='/about-us'>
+                    {/* Add onClick event */}
+                    <button className='btn header-button-white' onClick={handleLearnMoreClick}>
                         Learn More
-                    </NavLink>
+                    </button>
                 </div>
 
                 </div>

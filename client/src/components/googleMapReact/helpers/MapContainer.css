@@ -24,15 +24,55 @@
         font-size: 14px;
         padding: 10px 10px 0;
         position: relative;
-        width: 220px;
+        width: 146px;
         z-index: 100;
         bottom: 329px;
-        left: -64px;
+        left: -170px;
     }   
     .info-window-text {
-        font-size: 11px;
+        font-size: 9px;
         width: 165px;
     }
     
 
+}
+
+@media (max-width: 350px) {
+    .info-window-container {
+        background-color: var(--white);
+        border-radius: 2px;
+        box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
+        font-size: 14px;
+        padding: 10px 10px 0;
+        position: relative;
+        width: 112px;
+        z-index: 100;
+        bottom: 329px;
+        left: -156px;
+    }   
+    .info-window-text {
+        font-size: 8px;
+        width: 165px;
+    }
+    
+}
+
+@media (max-width: 275px) {
+    .info-window-container {
+        background-color: var(--white);
+        border-radius: 2px;
+        box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
+        font-size: 14px;
+        padding: 10px 10px 0;
+        position: relative;
+        width: 112px;
+        z-index: 100;
+        bottom: 329px;
+        left: -100px;
+    }   
+    .info-window-text {
+        font-size: 8px;
+        width: 165px;
+    }
+    
 }

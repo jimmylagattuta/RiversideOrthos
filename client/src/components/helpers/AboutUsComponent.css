@@ -79,7 +79,7 @@
     font-weight: 400;
     color: white;
     font-size: 1.2rem;
-    width: 75%;
+    width: 77%;
 
 }
 .about-description {
@@ -99,7 +99,32 @@
     background-color: var(--white);
     color: var(--black);
     align-self: flex-start;
+    font-size: 1.2rem;
 }
+@keyframes growAndShrink {
+    0%, 100% {
+      transform: scale(0.8); /* Original size */
+    }
+    10%, 90% { /* Adjusted for quick growth and longer stay at grown size */
+      transform: scale(1.05); /* Grow slightly more than original size */
+    }
+}
+
+.animate-grow {
+    display: inline-block; /* Required for transform to work on inline elements like span */
+    animation: growAndShrink 6s infinite; /* Apply the animation */
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: rgb(240, 112, 176);
+    margin-left: 3px;
+}
+.animate-grow:hover {
+    border: 1px solid rgb(143, 0, 72);
+}
+.animate-grow:active {
+    transform: scale(0.95); /* Original size */
+}
+
 @media (max-width: 1030px) {
     .about-container {
 
