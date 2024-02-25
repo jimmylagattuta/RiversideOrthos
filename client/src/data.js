@@ -297,11 +297,11 @@ export const aboutObj = [
             "We Accept most major insurance plans."
         ],
         descriptionOneBullettedList: [
-            "https://i.imgur.com/bZih7l3m.webp",
+            "Aetna",
             "Beech Street",
-            "https://i.imgur.com/X0WLFbUm.webp",
+            "Blue Shield",
             "Care Plan of Illinois",
-            "https://i.imgur.com/hORMNvf.webp",
+            "Cigna",
             "Coventree",
             "Healthlink",
             "Humana",

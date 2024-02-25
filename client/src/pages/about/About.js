@@ -25,7 +25,7 @@ const About = () => {
                     <ul className='unordered-list-about'>
                       {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
                         <li key={bulletIndex}>
-                          {bulletItem === 'And More!' ? <h3>{bulletItem}</h3> : <img src={bulletItem} alt={bulletItem} />}
+                          {bulletItem === 'And More!' ? <h3>And More!</h3> : <h3>{bulletItem}</h3>}
                         </li>
                       ))}
                     </ul>
