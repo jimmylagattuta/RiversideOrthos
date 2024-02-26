@@ -76,8 +76,8 @@ function ChatBox(props) {
   const fetchReviews = () => {
     const url =
       process.env.NODE_ENV === 'production'
-        ? 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache'
-        : 'https://riversideorthos.azurewebsites.net/api/v1/pull_google_places_cache';
+        ? 'https://ortho-associates-of-riverside-12d6d06d6fbb.herokuapp.com/api/v1/pull_google_places_cache'
+        : 'https://ortho-associates-of-riverside-12d6d06d6fbb.herokuapp.com/api/v1/pull_google_places_cache';
 
     const headers = {
       'Content-Type': 'application/json',
@@ -199,7 +199,7 @@ useEffect(() => {
       agreeToTerms: state.agreeToTerms,
     };
     try {
-      const response = await fetch('https://riversideorthos.azurewebsites.net/api/v1/send-email', {
+      const response = await fetch('https://ortho-associates-of-riverside-12d6d06d6fbb.herokuapp.com/api/v1/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

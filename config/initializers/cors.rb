@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'riversideorthos.azurewebsites.net', 'http://localhost:3001', 'ortho-associates-of-riverside' # Add localhost:3001 to the allowed origins
+    origins 'ortho-associates-of-riverside-12d6d06d6fbb.herokuapp.com', 'http://localhost:3001', 'ortho-associates-of-riverside' # Add localhost:3001 to the allowed origins
     resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete, :options, :head], credentials: true
   end
 end

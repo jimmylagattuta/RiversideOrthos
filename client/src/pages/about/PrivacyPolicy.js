@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { aboutExtra, aboutTerms } from '../../data';
 
 const PrivacyPolicy = () => {
-  const documentUrl = 'https://riversideorthos.azurewebsites.net/UnityMSKPrivacyPolicy.docx';
+  const documentUrl = 'https://ortho-associates-of-riverside-12d6d06d6fbb.herokuapp.com/UnityMSKPrivacyPolicy.docx';
     const tocRef = useRef(null);
     
   return (
