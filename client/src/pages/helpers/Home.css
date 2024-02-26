@@ -129,6 +129,11 @@
         display: flex;
     }
 }
+@media (max-width: 950px) {
+    .Carousel-container {
+        height: 122vh;
+    }
+}
 @media (max-width: 815px) {
     .home-hero {
         min-height: 60vh;
