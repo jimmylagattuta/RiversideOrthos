@@ -262,7 +262,7 @@ export const services = [
         link: '/services',
     },
     {
-        image: 'https://i.imgur.com/csNmaeJ.webp',
+        image: 'https://i.imgur.com/csNmaeJl.webp',
         width: '267px',
         height: '200px',
         name: 'Hip',
@@ -532,7 +532,7 @@ export const aboutPrivacyPolicy = [
 ];
 export const expertiseBlocks = [
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
         width: '267px',
         height: '200px',
         name: 'Physical Therapy',
@@ -549,7 +549,7 @@ export const expertiseBlocks = [
         spanString: 'Physical Therapy'
     },
     {
-        image: 'https://i.imgur.com/H5SJHUM.webp',
+        image: 'https://i.imgur.com/H5SJHUMl.webp',
         width: '267px',
         height: '200px',
         name: 'Sports Medicine',
@@ -565,7 +565,7 @@ export const expertiseBlocks = [
         spanString: 'Sports Medicine'
     },
     {
-        image: 'https://i.imgur.com/HOI4xoX.webp',
+        image: 'https://i.imgur.com/HOI4xoXl.webp',
         width: '267px',
         height: '200px',
         name: 'Joint Replacement',
@@ -588,7 +588,7 @@ export const expertiseBlocks = [
         spanString: 'Joint Replacement'
     },
     {
-        image: 'https://i.imgur.com/GW7GxIh.webp',
+        image: 'https://i.imgur.com/GW7GxIhl.webp',
         width: '267px',
         height: '200px',
         name: 'Foot and Ankle',
@@ -611,7 +611,7 @@ export const expertiseBlocks = [
         spanString: 'Foot and Ankle'
     },
     {
-        image: "https://i.imgur.com/2aSQ0mV.webp",
+        image: "https://i.imgur.com/2aSQ0mVl.webp",
         width: "267px",
         height: "200px",
         name: "Elbow and Shoulder",
@@ -633,7 +633,7 @@ export const expertiseBlocks = [
         spanString: "Elbow and Shoulder"
     },
     {
-        image: "https://i.imgur.com/qgU33O2.webp",
+        image: "https://i.imgur.com/qgU33O2l.webp",
         width: "267px",
         height: "200px",
         name: "Hand and Wrist",
@@ -659,7 +659,7 @@ export const expertiseBlocks = [
         spanString: "Hand and Wrist"
     },    
     {
-        image: "https://i.imgur.com/zk2djf3.webp",
+        image: "https://i.imgur.com/zk2djf3l.webp",
         width: "267px",
         height: "200px",
         name: "Spine",
@@ -687,7 +687,7 @@ export const expertiseBlocks = [
         spanString: "Spine"
     },
     {
-        image: 'https://i.imgur.com/kNfSdcm.webp',
+        image: 'https://i.imgur.com/kNfSdcml.webp',
         name: 'Knee',
         firstTitle: 'Comprehensive Knee Care',
         description: [
@@ -715,7 +715,7 @@ export const expertiseBlocks = [
         spanString: 'Knee'
     },
     {
-        image: 'https://i.imgur.com/csNmaeJ.webp',
+        image: 'https://i.imgur.com/csNmaeJl.webp',
         width: '267px',
         height: '200px',
         name: 'Hip',
