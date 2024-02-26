@@ -55,7 +55,7 @@ const About = () => {
   }, []);
 
   return (
-    <div style={{ width: '100vw' }}>
+    <div className="top-div-about" style={{ width: '100vw' }}>
       <div className='about-parent-div'>
         <div className='about-div-responsive'>
           {aboutObj.map((item, index) => {
