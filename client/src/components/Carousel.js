@@ -68,25 +68,24 @@ const ReactBackgroundCarousel = ({ children }) => {
                     <div
                         className={counter - 1 === index ? 'show' : 'not-show'}
                         key={index}>
-                        {loadedImages.includes(item.props.src) ? (
-                            <img
-                                src={
-                                    (windowWidth <= 1050 && windowWidth > 850 && item.props.src.endsWith('.webp'))
-                                        ? `${item.props.src.replace('.webp', 'l.webp')}`
-                                        : (windowWidth <= 850 && windowWidth > 450 && item.props.src.endsWith('.webp'))
-                                            ? `${item.props.src.replace('.webp', 'm.webp')}`
-                                            : (windowWidth <= 450 && windowWidth > 350 && item.props.src.endsWith('.webp'))
-                                                ? `${item.props.src.replace('.webp', 's.webp')}`
-                                                : (windowWidth <= 350 && item.props.src.endsWith('.webp'))
-                                                    ? `${item.props.src.replace('.webp', 's.webp')}`
-                                                    : item.props.src
-                                }
-                                alt={item.props.alt}
-                                className='carousel-img'
-                            />
-                        ) : (
-                            item
-                        )}
+                       {loadedImages.includes(item.props.src) ? (
+                    <img
+                        src={
+                            (windowWidth <= 1050)
+                                ? `${item.props.src.replace('.webp', 'l.webp')}`
+                                : (windowWidth <= 850)
+                                    ? `${item.props.src.replace('.webp', 'm.webp')}`
+                                    : (windowWidth)
+                                        ? `${item.props.src.replace('.webp', 's.webp')}`
+                                        : item.props.src
+                        }
+                        alt={item.props.alt}
+                        className='carousel-img'
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                    />
+                ) : (
+                    item
+                )}
 
 
 
