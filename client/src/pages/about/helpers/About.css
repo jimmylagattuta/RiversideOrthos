@@ -91,6 +91,34 @@
     padding: 0px 0px 10px 10px;
     line-height: 25px;
 }
+.about-div-bulleted-insurance {
+    padding: 0px 0px 0px 0px;
+    color: white;
+}
+.about-div-bulleted-insurance h2 {
+    font-size: 1.4rem;
+    padding: 0px 0px 0px 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+
+}
+.about-div-bulleted-insurance p {
+    font-size: 1rem;
+    padding: 0px 0px 0px 10px;
+    line-height: 25px;
+}
+.insurance-columns {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px; /* Adjust based on your design needs */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 15px; /* Optional: Adds some space inside the container */
+    margin-top: 20px; /* Optional: Adds some space above the list */
+    border-radius: 5px; /* Optional: Adds rounded corners to the container */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow around the container */
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: #b3b3b3 #f0f0f0; /* Sets the thumb and track colors */
+  
+}
 .unordered-list-about-bring {
     list-style-type: none; /* Removes default list styling */
     padding: 10px 10px 0px 10px; /* Removes default padding */
@@ -135,6 +163,55 @@
     border: 1px solid rgb(0, 0, 0);
 }
 .unordered-list-about-bring li img {
+    width: 100%; /* Ensures images fit within the list item */
+    max-width: 100px; /* Max width for images */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 2px; /* Rounded corners for images */
+}
+.unordered-list-about-insurance {
+    list-style-type: none; /* Removes default list styling */
+    padding: 10px 10px 0px 10px; /* Removes default padding */
+
+    display: flex; /* Utilizes flexbox for layout */
+    flex-direction: column; /* Stacks list items vertically */
+    gap: 5px; /* Space between list items */
+    flex-wrap: wrap; /* Allow list items to wrap to the next line */
+    justify-content: space-between; /* Distribute items evenly across the row */
+    flex-direction: row;
+}
+.unordered-list-about-insurance li {
+    background-color: #e0e0e0; /* Slightly different bg color for list items */
+    padding: 4px 8px 4px 8px; /* Padding inside list items */
+    border-radius: 20px; /* Rounded corners for list items */
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Text shadow */
+    
+
+    color: black;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgb(0, 0, 0);
+    width: max-content; /* Adjust width to fit three items per row */
+
+}
+.unordered-list-about-insurance button {
+    background-color: #e0e0e0; /* Slightly different bg color for list items */
+    padding: 4px 8px 4px 8px; /* Padding inside list items */
+    border-radius: 20px; /* Rounded corners for list items */
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Text shadow */
+    align-self: center;
+    width: fit-content;
+    color: black;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgb(0, 0, 0);
+}
+.unordered-list-about-insurance li img {
     width: 100%; /* Ensures images fit within the list item */
     max-width: 100px; /* Max width for images */
     height: auto; /* Maintains aspect ratio */

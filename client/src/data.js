@@ -346,6 +346,82 @@ export const aboutObjPortal = [
         link: '/patient-portal', // Assuming a link to the patient portal
     }
 ];
+
+export const insuranceInformation = [
+    { name: "Aetna" },
+    { name: "Beech Street" },
+    { name: "Blue Cross Blue Shield", plans: [
+        "Blue Card PPO",
+        "Blue PPO Gold",
+        "Blue PPO Silver",
+        "Blue PPO Bronze",
+        "Blue Options",
+        "Blue Choice Options",
+        "Blue Edge",
+        "Community MMAI Medicare-Medicaid Plan",
+        "Medicare Advantage PPO",
+        "Blue Advantage HMO",
+        "HMO Illinois",
+        "Blue Precision",
+        "Blue Medicare Advantage HMO",
+        "*Network Affiliation: Chicago Health Systems"
+      ]
+    },
+    { name: "Cigna/Great West", plans: [
+        "PPO",
+        "HMO",
+        "POS",
+        "EPO",
+        "Local Plus"
+      ]
+    },
+    { name: "Cigna/Healthspring", plans: [
+        "Medicare Advantage HMO",
+        "Preferred HMO-POS",
+        "Primary HMO",
+        "Totalcare HMO-SNP",
+        "Care Plan of Illinois",
+        "Special Care Plan of Illinois"
+      ]
+    },
+    { name: "Coventry" },
+    { name: "First Health" },
+    { name: "Healthlink" },
+    { name: "HFN" },
+    { name: "Humana", plans: [
+        "PPO",
+        "PPO/ASO",
+        "POS",
+        "Choice POS",
+        "Medicare Advantage",
+        "Humana Gold Plus Integrated Medicare-Medicaid Plan (MMAI)",
+        "Humana Integrated Care Program of Illinois",
+        "Humana HMO",
+        "Humana Illinois Platinum",
+        "Humana Gold Plus",
+        "Humana Medicare Employer",
+        "Humana HMO X"
+      ]
+    },
+    { name: "Interplan" },
+    { name: "Land of Lincoln", plans: [
+        "Select plans – please call the office for more information"
+      ]
+    },
+    { name: "Medicare" },
+    { name: "Railroad Medicare" },
+    { name: "Multiplan" },
+    { name: "PHCS" },
+    { name: "PHCS Savility" },
+    { name: "Preferred Network Access" },
+    { name: "United Health Care", plans: [
+        "Our doctors are UHC designated providers"
+      ]
+    },
+    { name: "UFCW Local 1546 Health and Welfare Fund" },
+    { name: "Unicare" }
+  ];
+  
   
 export const aboutTerms = [
     {

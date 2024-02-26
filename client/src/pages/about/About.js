@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { aboutObj, aboutObjOther, aboutObjPortal } from '../../data';
+import { aboutObj, aboutObjOther, aboutObjPortal, insuranceInformation } from '../../data';
 import './helpers/About.css';
 import './helpers/PortalSection.css';
 
@@ -134,6 +134,23 @@ const About = () => {
               </ul>
             </div>
           ))}
+          <h2>Insurances We Cover</h2>
+          <div className='insurance-columns'>
+            {insuranceInformation.map((insurance, index) => (
+              <div key={index} className='about-div-bulleted-insurance'>
+                <p>{insurance.name}</p>
+                <ul className='unordered-list-about-insurance'>
+                  {insurance.plans && (
+                    <li>
+                      {insurance.plans.map((plan, planIndex) => (
+                        <p key={planIndex}>{plan}</p>
+                      ))}
+                    </li>
+                  )}
+                </ul>              
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div ref={portalSectionRef} className={`portal-section ${isVisible ? 'border-animation' : ''} ${(isJioPhone || isAndroid || isOldiOS) ? 'no-animation' : ''}`}>
