@@ -33,6 +33,7 @@ function App() {
     }, [pathname]);
 
     const isValidPhysicianId = (physicianId) => {
+        console.log('physicianId', physicianId);
         return validPhysicianIds.includes(physicianId);
     };
 
