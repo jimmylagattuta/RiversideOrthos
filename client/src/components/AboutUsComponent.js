@@ -30,24 +30,32 @@ const AboutUsComponent = () => {
                 </p>
 
                 <p className='about-description-right'>
-                    <li>
-                        Expedite your check-in process by completing New Patient Forms online
-                    </li>
+                    <ul>
+                        <li>
+                            Expedite your check-in process by completing New Patient Forms online
+                        </li>
+                    </ul>
                 </p>
                 <p className='about-description-right'>
-                    <li>
-                        Tired of waiting on hold? Schedule your appointments, order medical records, and request prescription refills electronically
-                    </li>
+                    <ul>
+                        <li>
+                            Tired of waiting on hold? Schedule your appointments, order medical records, and request prescription refills electronically
+                        </li>
+                    </ul>
                 </p>
                 <p className='about-description-right'>
-                    <li>
-                        Update your medical history and pay bills from the privacy of your home
-                    </li>
+                    <ul>
+                        <li>
+                            Update your medical history and pay bills from the privacy of your home
+                        </li>
+                    </ul>
                 </p>
                 <p className='about-description-right'>
-                    <li>
-                        Verify your insurance eligibility and review your benefits prior to your appointment
-                    </li>
+                    <ul>
+                        <li>
+                            Verify your insurance eligibility and review your benefits prior to your appointment
+                        </li>
+                    </ul>
                 </p>
                 
                 <div className='about-right-button'>
