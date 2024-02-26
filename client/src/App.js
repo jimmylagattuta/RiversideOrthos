@@ -52,9 +52,8 @@ function App() {
                 {/* Physician not there */}
                 <Route path="physicians" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    {validPhysicianIds.map(id => (
-                        <Route key={id} path={id} element={<SinglePhysician />} />
-                    ))}
+
+                    <Route path=":physicianId" element={<SinglePhysician />} match={isValidPhysicianId} />
                     <Route path="*" element={<Navigate to="/physicians" replace />} />
                 </Route>
 
@@ -63,7 +62,6 @@ function App() {
                 {/* Physician there */}
                 {/* <Route path="physicians/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    <Route path=":physicianId" element={<SinglePhysician />} match={isValidPhysicianId} />
                     <Route path='*' element={<Navigate to="/physicians" replace />} />
 
                 </Route> */}
