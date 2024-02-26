@@ -118,6 +118,7 @@ const Navbar = () => {
                         )}
                     </div>
                     <button
+                        aria-label="Mobile navbar button"
                         className='mobile-menu-button-navbar'
                         onClick={toggleMobileMenu}
                     >
