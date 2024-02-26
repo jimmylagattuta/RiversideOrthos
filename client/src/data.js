@@ -633,7 +633,7 @@ export const expertiseBlocks = [
         spanString: "Elbow and Shoulder"
     },
     {
-        image: "https://i.imgur.com/qgU33O2.jpg",
+        image: "https://i.imgur.com/qgU33O2.webp",
         width: "267px",
         height: "200px",
         name: "Hand and Wrist",
@@ -653,7 +653,7 @@ export const expertiseBlocks = [
         descriptionFour: [
             "Preventing hand and wrist injuries involves adopting proactive measures to maintain joint health. This includes practicing proper ergonomics, using protective gear during activities that pose a risk, and incorporating exercises to enhance strength and flexibility. Patient education is a crucial component, raising awareness about injury prevention and promoting overall hand and wrist well-being. By prioritizing these preventive measures, individuals can take active steps to safeguard the health and function of their hands and wrists, ensuring a more active and pain-free lifestyle."
         ],
-        imageTwo: "https://i.imgur.com/qgU33O2.jpg",
+        imageTwo: "https://i.imgur.com/qgU33O2.webp",
         component: "Services",
         link: "/services",
         spanString: "Hand and Wrist"
@@ -681,7 +681,7 @@ export const expertiseBlocks = [
             "Preventing spinal injuries involves adopting proactive measures to maintain spinal health. This includes practicing proper ergonomics, incorporating exercises that strengthen the core and back muscles, and avoiding activities that put excessive strain on the spine. Patient education is a key component of our approach, providing individuals with the knowledge and tools to make lifestyle choices that support a healthy spine and overall well-being.",
         ],
         link: "/services",
-        imageTwo: "https://i.imgur.com/zk2djf3.png",
+        imageTwo: "https://i.imgur.com/zk2djf3.webp",
         component: "Services",
         link: "/services",
         spanString: "Spine"
