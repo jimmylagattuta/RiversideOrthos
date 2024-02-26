@@ -77,7 +77,7 @@ h3.foresight-subheader {
     }
   }
   
-  article {
+  #foresight-article {
       --c: rgba(143, 0, 72, 0.7);
       --s0: calc(1.25em + 6px);
       --s1: calc(1.25em + 6px + 0.5em);
@@ -91,11 +91,11 @@ h3.foresight-subheader {
     background: var(--c) padding-box;
 
 }
-article:nth-child(2) {
+#foresight-article:nth-child(2) {
     --c: #b4ff7d;
     filter: invert(1);
 }
-article::before {
+#foresight-article::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,7 +114,7 @@ article::before {
     
     
   }
-  article::after {
+  #foresight-article::after {
     position: absolute;
     top: 26px;
     left: 26px;
@@ -178,7 +178,7 @@ article::before {
         align-items: center;
         margin-bottom: 6px;
     }
-  article {
+  #foresight-article {
     --c: rgba(143, 0, 72, 0.7);
     --s0: calc(1.25em + 6px);
     --s1: calc(1.25em + 6px + 0.5em);
@@ -192,7 +192,7 @@ article::before {
     background: var(--c) padding-box;
     top: 102px;
     }
-    article::before {
+    #foresight-article::before {
         position: absolute;
         top: 0;
         left: 0;
@@ -211,7 +211,7 @@ article::before {
         
         
       }
-      article::after {
+      #foresight-article::after {
         position: absolute;
         top: 26px;
         left: 26px;
@@ -277,15 +277,15 @@ article::before {
         display: flex;
         flex-direction: row;
     }
-    article {
+    #foresight-article {
         width: 95vw;
         height: 540px;
     }
-    article::before {
+    #foresight-article::before {
         width: 95vw;
         height: 540px;
     }
-    article::after {
+    #foresight-article::after {
         left: 16px;
         width: 89vw;
         height: 518px;
@@ -459,7 +459,7 @@ article::before {
         font-size: 1rem;
         opacity: 70%;
     }
-    article {
+    #foresight-article {
         width: 203px;
         height: 205px;
         border-width: 0;
@@ -468,7 +468,7 @@ article::before {
         left: 8px;
     }
 
-    article::before, article::after {
+    #foresight-article::before, #foresight-article::after {
         width: 200px;
         height: 201px;
         top: unset;
@@ -476,7 +476,7 @@ article::before {
         top: 14px;
         left: 12px;
     }
-    article::before {
+    #foresight-article::before {
         position: fixed;
         left: 20px;
         /* bottom: 0px; */

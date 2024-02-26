@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { aboutObj, aboutObjOther, aboutObjPortal, insuranceInformation } from '../../data';
+import AppointmentInfo from './AppointmentInfo';
 import './helpers/About.css';
 import './helpers/PortalSection.css';
 
@@ -173,6 +174,7 @@ const About = () => {
           </div>
         ))}
       </div>
+      <AppointmentInfo />
     </div>
   );
 };

@@ -5,7 +5,7 @@ const ForesightSquare = ({ togglePopup }) => {
 
     return (
         <div className="foresight-square">
-            <article>
+            <article id="foresight-article">
             <div className="foresight-form">
                                     <div className='text-and-close'>
                                     <button onClick={togglePopup} className='close-button'>
