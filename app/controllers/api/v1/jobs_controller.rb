@@ -28,7 +28,10 @@ class Api::V1::JobsController < ApplicationController
 
 
   private
-
+  require 'redis'
+  require 'json'
+  require 'uri'
+  require 'net/http'
   def find_place_id(name)
     url = URI("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{URI.encode_www_form_component(name)}&inputtype=textquery&fields=place_id&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
     response = Net::HTTP.get_response(url)
