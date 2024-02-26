@@ -165,9 +165,9 @@
     }
     .about-description {
         padding: 15px 0px 25px 0px;
-        font-size: 01rem;
+        font-size: 1.2rem;
         width: 90%;
-        line-height: 16px;
+        line-height: 25px;
     }
     .about-description-right {
         text-align: left;
