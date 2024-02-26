@@ -83,7 +83,7 @@ const ReactBackgroundCarousel = ({ children }) => {
                                 }
                                 alt={item.props.alt}
                                 className='carousel-img'
-                                loading={index === 0 ? 'eager' : 'lazy'}
+                                loading={index === 0 ? 'auto' : 'lazy'}
                             />
                         ) : (
                             item
