@@ -175,8 +175,8 @@
         padding: 10px 0px 0px 0px;
         font-weight: 400;
         color: white;
-        font-size: 0.8rem;
-        width: 75%;
+        font-size: 1rem;
+        width: 95%;
     }
     .about-title-right {
         text-align: center;
@@ -206,6 +206,41 @@
     .header-button-white,
     .header-button-white:active {
 
+    }
+}
+@media (max-width: 1030px) and (min-height: 1300px) {
+    .about-container-bottom-left {
+        display: flex;
+        flex: 1;
+        background-image: url(https://i.imgur.com/AzYkCf0.webp);
+        background-size: cover;
+        border-bottom: 4px solid rgb(74, 1, 37);
+    
+        height: 50vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-container-bottom-right {
+        display: flex;
+        flex: 1;
+        background-color: #232323;
+        height: 50vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 940px) {
+    .about-description-right {
+        text-align: left;
+        margin: 0px;
+        padding: 10px 0px 0px 0px;
+        font-weight: 400;
+        color: white;
+        font-size: 0.6rem;
+        width: 95%;
     }
 }
 @media (max-width: 815px) {
@@ -331,7 +366,7 @@
     }
     .about-description {
         padding: 15px 0px 25px 0px;
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         width: 90%;
         line-height: 16px;
     }
@@ -341,8 +376,8 @@
         padding: 10px 0px 0px 0px;
         font-weight: 400;
         color: white;
-        font-size: 0.4rem;
-        width: 75%;
+        font-size: 0.6rem;
+        width: 95%;
     }
     .about-title-right {
         text-align: center;
@@ -372,6 +407,18 @@
     .header-button-white,
     .header-button-white:active {
 
+    }
+}
+
+@media (max-width: 740px) {
+    .about-description-right {
+        text-align: left;
+        margin: 0px;
+        padding: 10px 0px 0px 0px;
+        font-weight: 400;
+        color: white;
+        font-size: 0.5rem;
+        width: 95%;
     }
 }
 
@@ -415,7 +462,7 @@
     }
     .about-description {
         padding: 15px 0px 25px 0px;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         width: 90%;
         line-height: 16px;
     }
@@ -425,8 +472,8 @@
         padding: 10px 0px 0px 0px;
         font-weight: 400;
         color: white;
-        font-size: 0.4rem;
-        width: 75%;
+        font-size: 0.5rem;
+        width: 95%;
     }
     .about-title-right {
         text-align: center;
@@ -459,6 +506,18 @@
     }
 }
 
+@media (max-width: 380px) {
+    .about-description-right {
+        text-align: left;
+        margin: 0px;
+        padding: 10px 0px 0px 0px;
+        font-weight: 400;
+        color: white;
+        font-size: 0.4rem;
+        width: 90%;
+    }
+    
+}
 @media (max-width: 350px) {
     .about-container {
         display: flex;
@@ -524,7 +583,7 @@
         padding: 2px 0px 5px 0px;
         font-weight: 400;
         color: black;
-        font-size: 0.6rem;
+        font-size: 0.4rem;
         width: 100%;
         border-bottom: 0.1px solid black;
         line-height: 8px;
