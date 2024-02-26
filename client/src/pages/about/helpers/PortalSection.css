@@ -1,4 +1,60 @@
+@keyframes portalEntranceFallback {
+    0% {
+        filter: grayscale(100%);
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        filter: none;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes portalEntrance {
+    0% {
+        filter: grayscale(100%); /* Start with full grayscale */
+        --_p: 65%; /* Start at 75% */
+        --c: rgba(218, 102, 123, 0.5); /* Start with specified color */
+    }
+
+    25% {
+        filter: grayscale(50%); /* Further reducing grayscale */
+        --_p: 67.5%; /* Maintained */
+        --c: rgba(218, 102, 123, 0.55); /* Maintained */
+    }
+
+    50% {
+        filter: grayscale(50%); /* Further reducing grayscale */
+        --_p: 70%; /* Maintained */
+        --c: rgba(218, 102, 123, 0.6); /* Maintained */
+    }
+
+    75% {
+        filter: grayscale(25%); /* Further reducing grayscale */
+        --_p: 72.5%; /* Maintained */
+        --c: rgba(218, 102, 123, 0.65); /* Maintained */
+    }
+
+    100% {
+        filter: grayscale(0%); /* No grayscale */
+        --_p: 75%; /* Maintained */
+        --c: rgba(218, 102, 123, 0.7); /* Maintained */
+    }
+}
+
+.no-animation {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
 .portal-section   {
+    animation: portalEntrance 0.2s forwards;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; /* Start slow, accelerate, then decelerate */
+
     margin: 0;
     display: grid;
     place-content: center;
@@ -35,7 +91,7 @@
     transition: .3s;
     width: 65%;
     text-align: center;
-    opacity: 0; /* Initial opacity set to 0 */
+    opacity: 1; /* Initial opacity set to 0 */
     transform: translateY(20px); /* Initial position offscreen */
 }
 
@@ -102,9 +158,9 @@
 }
 
 .portal-section:hover {
-    --_p: 75%;
-    --c: rgba(218, 102, 123, 0.7);
-    filter: grayscale(0%);
+    --c: rgb(241, 104, 129);
+    /* filter: grayscale(0%); */
+
 }
 
 .portal-unordered-list-about {

@@ -6,7 +6,28 @@ import './helpers/PortalSection.css';
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const portalSectionRef = useRef(null);
+  const [isJioPhone, setIsJioPhone] = useState(false);
+  const [isPixel2, setIsPixel2] = useState(false);
+  const [isAndroid, setIsAndroid] = useState(false);
+  const [isOldiOS, setIsOldiOS] = useState(false);
 
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    console.log("Browser's User Agent:", userAgent);
+  
+    // Detecting older iOS versions
+    const iosVersionMatch = userAgent.match(/OS (\d+)_/); // Matches 'OS X_' where X is the version number
+    if (iosVersionMatch && iosVersionMatch.length > 1) {
+      const iosVersion = parseInt(iosVersionMatch[1], 10); // Extract the iOS version number
+      setIsOldiOS(iosVersion < 9); // Consider iOS versions older than 11 as "old"
+    }
+
+    setIsJioPhone(userAgent.includes("KAIOS"));
+    setIsAndroid(userAgent.includes("Android"));
+  }, []);
+  
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -115,7 +136,7 @@ const About = () => {
           ))}
         </div>
       </div>
-      <div ref={portalSectionRef} className={`portal-section ${isVisible ? 'border-animation' : ''}`}>
+      <div ref={portalSectionRef} className={`portal-section ${isVisible ? 'border-animation' : ''} ${(isJioPhone || isAndroid || isOldiOS) ? 'no-animation' : ''}`}>
         {aboutObjPortal.map((item, index) => (
           <div key={index} className='portal-about-div-bulleted-bring'>
             <h2 style={{ color: 'black' }}>{item.nameOne}</h2>
