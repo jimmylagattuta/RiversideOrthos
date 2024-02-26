@@ -7,7 +7,10 @@ const ReactBackgroundCarousel = ({ children }) => {
     const [loadedImages, setLoadedImages] = useState([]);
     const [isFirstSlide, setIsFirstSlide] = useState('first-slide');
     const [carouselInterval, setCarouselInterval] = useState(2500);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Track window width
+
     const content = children;
+
     // Function to preload an image
     const preloadImage = (url) => {
         const image = new Image();
@@ -18,11 +21,8 @@ const ReactBackgroundCarousel = ({ children }) => {
     };
 
     useEffect(() => {
-        // Eager load the first image
-        if (content.length > 0) {
-            const firstImageSrc = content[0].props.src;
-            preloadImage(firstImageSrc);
-        }
+        // Eager load all images
+        content.forEach((item) => preloadImage(item.props.src));
     }, [content]);
 
     const handleNext = () => {
@@ -48,16 +48,37 @@ const ReactBackgroundCarousel = ({ children }) => {
         return () => clearInterval(interval);
     });
 
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth); // Update window width on resize
+        };
+
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <div className='Carousel-container'>
             <div className={`slide ${isFirstSlide}`}>
-                {children.map((item, index) => (
+                {content.map((item, index) => (
                     <div
                         className={counter - 1 === index ? 'show' : 'not-show'}
                         key={index}>
-                        {loadedImages.includes(item.props.src) ? (
+                       {loadedImages.includes(item.props.src) ? (
                             <img
-                                src={item.props.src}
+                                src={
+                                    (windowWidth <= 1050 && windowWidth > 850 && item.props.src.endsWith('.webp'))
+                                        ? `${item.props.src.replace('.webp', 'h.webp')}`
+                                        : (windowWidth <= 850 && windowWidth > 450 && item.props.src.endsWith('.webp'))
+                                            ? `${item.props.src.replace('.webp', 'm.webp')}`
+                                            : (windowWidth <= 450 && item.props.src.endsWith('.webp'))
+                                                ? `${item.props.src.replace('.webp', 'l.webp')}`
+                                                : item.props.src
+                                }
                                 alt={item.props.alt}
                                 className='carousel-img'
                                 loading={index === 0 ? 'eager' : 'lazy'}
@@ -65,6 +86,9 @@ const ReactBackgroundCarousel = ({ children }) => {
                         ) : (
                             item
                         )}
+
+
+
                     </div>
                 ))}
             </div>
