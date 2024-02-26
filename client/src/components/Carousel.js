@@ -72,9 +72,9 @@ const ReactBackgroundCarousel = ({ children }) => {
                     <img
                         src={
                             (windowWidth <= 1050)
-                                ? `${item.props.src.replace('.webp', 'l.webp')}`
+                                ? `${item.props.src.replace('.webp', 'm.webp')}`
                                 : (windowWidth <= 850)
-                                    ? `${item.props.src.replace('.webp', 'm.webp')}`
+                                    ? `${item.props.src.replace('.webp', 's.webp')}`
                                     : (windowWidth <= 450)
                                         ? `${item.props.src.replace('.webp', 's.webp')}`
                                         : item.props.src
