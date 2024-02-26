@@ -27,7 +27,7 @@ const TeamComponent = () => {
                     Follow Us
                 </h2>
                 <div className='team-icon-container'>
-                    <a style={{ color: 'white' }} href='https://www.facebook.com/orthoriverside' target='_blank' rel='noopener noreferrer'>
+                    <a aria-label="Link to go to Orthopaedic Associates of Riverside's Facebook page." style={{ color: 'white' }} href='https://www.facebook.com/orthoriverside' target='_blank' rel='noopener noreferrer'>
                         <i className='fab fa-facebook fa-3x'></i>
                     </a>
                 </div>

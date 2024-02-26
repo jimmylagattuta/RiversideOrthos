@@ -54,6 +54,7 @@ const FloatingOfficeInfo = ({
             <div className='pagination-arrows'>
                 <button
                     className='pagination-arrow'
+                    aria-label="up and left"
                     onClick={handlePrevClick}
                     disabled={currentPage === 0}
                 >
@@ -120,6 +121,7 @@ const FloatingOfficeInfo = ({
             <div className='pagination-arrows'>
                 <button
                     className='pagination-arrow'
+                    aria-label="down and right"
                     onClick={handleNextClick}
                     disabled={currentPage === totalPages - 1}
                 >

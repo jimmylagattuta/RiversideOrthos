@@ -162,11 +162,11 @@ const About = () => {
                 <p key={idx}>{description}</p>
               ))}
             </div>
-            <ul className='portal-unordered-list-about'>
               {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
-                <li key={bulletIndex}>{bulletItem}</li>
+                <ul className='portal-unordered-list-about'>
+                  <li key={bulletIndex}>{bulletItem}</li>
+                </ul>
               ))}
-            </ul>
             <ul className='portal-unordered-list-about'>
               <a style={{ color: 'black' }} className="animate-grow-portal" href={item.link} target="_blank" rel="noopener noreferrer">Go To Portal!</a>
             </ul>
