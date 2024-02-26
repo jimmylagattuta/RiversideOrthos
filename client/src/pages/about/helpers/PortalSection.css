@@ -51,7 +51,7 @@
   
 .portal-section   {
     animation: portalEntrance 0.2s forwards;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out; /* Start slow, accelerate, then decelerate */
 
@@ -202,11 +202,6 @@
 }
 @media (max-width: 1400px) {
     .portal-section   {
-        animation: portalEntrance 0.2s forwards;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out; /* Start slow, accelerate, then decelerate */
-    
         margin: 0;
         display: grid;
         place-content: center;
@@ -237,7 +232,7 @@
         background:
           var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
           var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
-        background-size: 200% var(--b),var(--b) 200%;
+          background-size: 200% var(--b),var(--b) 200%;
         cursor: pointer;
         filter: grayscale(50%);
         transition: .3s;
@@ -245,6 +240,9 @@
         text-align: center;
         opacity: 1; /* Initial opacity set to 0 */
         transform: translateY(20px); /* Initial position offscreen */
+        filter: grayscale(0%); /* No grayscale */
+        --_p: 75%; /* Maintained */
+        --c: rgba(218, 102, 123, 0.7); /* Maintained */
     }
     
     .portal-section h2 {
