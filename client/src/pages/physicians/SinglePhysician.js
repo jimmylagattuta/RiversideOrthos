@@ -135,7 +135,7 @@ const SinglePhysician = () => {
     return (
         <>
             <div style={{ padding: '50px', margin: '0 auto', display: 'flex' }}>
-                <div className='page-grid'>
+                <div className='page-grid-single-physician'>
                     <div className='physician-left'>
                         <div className='physician-image'>
                             <img src={image} alt={name} />

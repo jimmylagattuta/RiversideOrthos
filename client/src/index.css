@@ -873,7 +873,11 @@ img {
     flex-wrap: wrap;
     margin: 0 -15px;
 }
+.page-grid-single-physician {
+    display: flex;
 
+    margin: 0 -15px;
+}
 .grid-item {
     padding: 22px;
     margin: 10px;
