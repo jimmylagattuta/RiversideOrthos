@@ -78,7 +78,7 @@ const ReactBackgroundCarousel = ({ children }) => {
                                             : (windowWidth <= 450 && windowWidth > 350 && item.props.src.endsWith('.webp'))
                                                 ? `${item.props.src.replace('.webp', 's.webp')}`
                                                 : (windowWidth <= 350 && item.props.src.endsWith('.webp'))
-                                                    ? `${item.props.src.replace('.webp', 'xs.webp')}`
+                                                    ? `${item.props.src.replace('.webp', 's.webp')}`
                                                     : item.props.src
                                 }
                                 alt={item.props.alt}
