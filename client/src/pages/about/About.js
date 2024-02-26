@@ -117,13 +117,13 @@ const About = () => {
                   </React.Fragment>
                 )}
               </p>
-              <ul className='unordered-list-about-bring'>
                 {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
-                  <li key={bulletIndex}>
-                    {bulletItem.startsWith('http') ? <img src={bulletItem} alt="List Item" /> : bulletItem}
-                  </li>
+                  <ul className='unordered-list-about-bring'>
+                    <li key={bulletIndex}>
+                      {bulletItem.startsWith('http') ? <img src={bulletItem} alt="List Item" /> : bulletItem}
+                    </li>
+                  </ul>
                 ))}
-              </ul>
 
               <ul className='unordered-list-about-bring'>
                 <a href="tel:17084420221">
