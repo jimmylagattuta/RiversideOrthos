@@ -137,12 +137,6 @@ function RequestAppointmentForm(props) {
   };
 
   const onSubmit = async (values) => {
-    console.log('onSubmit', values);
-    console.log('state.agreeToTerms', state.agreeToTerms);
-    console.log('state.agreeToTermsText', state.agreeToTermsText);
-    console.log('selectedSex', selectedSex);
-    console.log('selectedLocation', selectedLocation);
-    console.log('selectedProvider', selectedProvider);
 
     const formData = {
       ...values,

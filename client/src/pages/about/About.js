@@ -15,7 +15,7 @@ const About = () => {
 
   useEffect(() => {
     const userAgent = navigator.userAgent;
-    console.log("Browser's User Agent:", userAgent);
+    // console.log("Browser's User Agent:", userAgent);
   
     // Detecting older iOS versions
     const iosVersionMatch = userAgent.match(/OS (\d+)_/); // Matches 'OS X_' where X is the version number

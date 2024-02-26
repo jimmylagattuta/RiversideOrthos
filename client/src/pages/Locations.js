@@ -14,7 +14,6 @@ const Locations = () => {
         }
     }, []);
     
-    console.log('window', window);
     return (
         <>
             <PagesHeader title='Locations' />;

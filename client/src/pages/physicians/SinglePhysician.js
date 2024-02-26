@@ -9,7 +9,7 @@ const SinglePhysician = () => {
         const fullName = `${firstName}-${lastName}`.toLowerCase();
         return fullName === physicianId;
     });
-    console.log('physician', physician);
+    // console.log('physician', physician);
     const { bio, image, name, practiceEmphasis, specialProcedures } = physician;
     const cacheKey = 'cached_yelp_reviews';
     const formatDate = (dateString) => {
@@ -67,7 +67,7 @@ const SinglePhysician = () => {
             // const cachedData = JSON.parse(cachedDataOne);
             // console.log('cachedData', cachedData);
             return reviews.map((review, index) => {
-                console.log('review', review);
+                // console.log('review', review);
                 const filteredName = name
                     .split(/[,.]\s*/)
                     .filter(
