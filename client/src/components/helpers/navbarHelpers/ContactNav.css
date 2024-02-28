@@ -1,0 +1,173 @@
+.downloads-call-us {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-phone-and-seperater {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-phone {
+    margin: 0px 10px 0px 5px;
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+.nav-seperater {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+}
+#nav-map {
+    margin: 0px 10px 0px 5px;
+    font-size: 1.5rem;
+}
+
+
+#nav-phone-call {
+    margin: 0px 30px 0px 0px;
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+
+#nav-map-go {
+    margin: 0px 0px 0px 30px;
+    font-size: 1.5rem;
+}
+
+.contact-nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-open #nav-phone,
+.menu-open #nav-map {
+  display: none;
+}
+.menu-open .nav-seperater {
+    display: flex;
+    margin: 0px 4px 0px 2px;
+  }
+
+.menu-open .nav-phone-and-seperater {
+    margin: 0px 30px 0px 30px;
+}
+
+.menu-open #nav-map {
+    margin: 0px 30px 0px 10px;
+}
+
+.riverside-call-directions {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 10px 0px;
+}
+
+.menu {
+    position: relative;
+  }
+  
+  .menu-item {
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .menu-item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .sub-menu-item {
+    padding: 8px 16px;
+  }
+  
+  .menu:hover .sub-menu {
+    display: block;
+  }
+  .change-call-us {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+@media (max-width: 350px) {
+  .menu-open .words-appear {
+    display: flex;
+  }
+  .menu-open .nav-seperater {
+    margin: 0px 4px 0px 2px;
+  }
+  .menu-open .nav-phone-and-seperater {
+    margin: 0px 0px 0px 20px;
+  }
+  .navbar-container {
+    max-height: 60px;
+  }
+  .nav-button {
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+  }
+  .nav-phone-and-seperater {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    z-index: 8;
+}
+  #nav-phone {
+    margin: 0px 5px 0px 2px;
+    font-size: 0.8rem;
+    align-self: flex-start;
+    z-index: 8;
+
+  }
+  #nav-map-go {
+    margin: 0px 10px 0px 15px;
+    font-size: 1rem;
+  }
+  #nav-phone-call {
+    margin: 0px 15px 0px 10px;
+    font-size: 1rem;
+  }
+  .nav-seperater {
+      display: none;
+      padding: 0px 0px 0px 0px;
+  }
+  #nav-map {
+      margin: 0px 2px 0px 5px;
+      padding: 0px 0px 0px 0px;
+      font-size: 0.8rem;
+      z-index: 8;
+  }
+  .words-appear {
+    display: none;
+  }
+  .contact-nav-menu {
+    position: absolute;
+    z-index: 8;
+    background-color: rgb(143, 0, 72);
+
+  }
+  .riverside-call-directions {
+    min-width: 105px;
+    justify-content: space-between;
+  }
+  .change-call-us {
+    
+  }
+}

@@ -17,6 +17,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 35px 35px 35px 35px;
+  max-height: 130px;
 }
 .navbar-container-logo {
   padding: 10px;
@@ -50,7 +51,7 @@
 .navbar-logo {
   width: 100%;
   max-width: 230px;
-  min-width: 60px;
+  min-width: 70px;
   height: 100%;
 }
 .navbar-buttons-nav {
@@ -59,7 +60,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
   /* to offset the .mobile-menu-button-navbar's padding-right: 10px */
   margin-right: -10px;

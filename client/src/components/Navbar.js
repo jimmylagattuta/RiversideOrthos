@@ -5,6 +5,8 @@ import RequestAppointmentForm from './helpers/RequestAppointmentForm';
 import './helpers/navbarHelpers/Navbar.css';
 import './helpers/navbarHelpers/FormDiv.css';
 import ForesightSquare from './helpers/navbarHelpers/ForesightSquare';
+import ContactNav from './helpers/navbarHelpers/ContactNav';
+import './helpers/navbarHelpers/ContactNav.css';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -91,21 +93,32 @@ const Navbar = () => {
                         </div>
                     </Link>
                     <div className='navbar-buttons-nav'>
-                        <NavLink
-                            onClick={toggleAppointmentForm}
-                            to={{ pathname: '/locations', hash: '#chatbox' }}
-                        >
-                            <span className='nav-button'>
-                                Call Us
-                            </span>
-                        </NavLink>
-                        <div
-                            onClick={togglePopup}
+
+                        <div className="call-contact-download">
+
+                            <NavLink
+                                onClick={toggleAppointmentForm}
+                                to={{ pathname: '/locations', hash: '#chatbox' }}
                             >
-                            <span className='nav-button'>
-                                Download Forms
-                            </span>
+                                <span className='nav-button'>
+                                    Contact Us
+                                </span>
+                            </NavLink>
+                            <div className="downloads-call-us">
+                                <div
+                                    onClick={togglePopup}
+                                    >
+                                    <span className='nav-button'>
+                                        Download Forms
+                                    </span>
+                                </div>
+                                <span className='nav-button'>
+                                    <ContactNav />
+                                </span>
+                            </div>    
+                                
                         </div>
+
                         {isPopupOpen && (
                             <div id="form-div">
                                 <ForesightSquare togglePopup={togglePopup} />
