@@ -931,6 +931,8 @@ img {
 .physician-left {
     width: 40%;
     padding: 50px 50px 50px 15px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .physician-right {
