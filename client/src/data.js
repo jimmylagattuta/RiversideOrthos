@@ -72,7 +72,32 @@ export const physicians = [
         image: 'https://i.imgur.com/iaQhSIs.webp',
         imageMedium: 'https://i.imgur.com/iaQhSIs.webp'
 
+    },
+    {
+        name: 'Samantha Adamczyk',
+        bio: [
+            "Samantha Adamczyk, PA-C, is a certified physician assistant who earned her Bachelor of Science degree in Kinesiology at the University of Illinois Champaign-Urbana in 2008. She then attended Midwestern University in Downers Grove, Illinois, where she obtained a Master of Medical Science in Physician Assistant Studies in 2010.",
+            "Samantha is NCCPA Board Certified and has been working with Dr. Scott Seymour since the fall of 2010. She loves working with patients, finding it a wonderful feeling to be able to make people feel better and get them back to the activities they love.",
+            "Samantha and her husband welcomed a baby girl in 2014.",
+            "In her spare time, Samantha enjoys yoga, gardening, and exploring new hiking trails with her family. She is passionate about promoting wellness and often volunteers at local health fairs to provide education on preventive care.",
+            "Samantha's compassionate approach to patient care and her dedication to staying current with medical advancements make her a valued member of the healthcare team. Her ability to connect with patients and provide personalized care sets her apart in the field of orthopedics."
+        ],
+        image: 'https://i.imgur.com/HaWFXTA.jpg',
+        imageMedium: 'https://i.imgur.com/HaWFXTA.jpg'
+    },    
+    {
+        name: 'Jennifer Boyer',
+        bio: [
+            "Jennifer Boyer, PA-C, is a certified physician assistant who graduated Summa Cum Laude from Benedictine University in Lisle, Illinois, with a Bachelor of Science degree in Biology in 2011. She then attended Midwestern University in Downers Grove, Illinois, where she earned a Master of Medical Science in Physician Assistant Studies in 2013.",
+            "Jennifer is NCCPA Board Certified and began working with Dr. Erling Ho in the summer of 2014. She is described as caring, dedicated, and extremely hardworking, committed to providing exceptional care to all patients. Dr. Ho has expressed that it is a pleasure to have her on the team.",
+            "In her free time, Jennifer enjoys hiking, reading, and volunteering at local community events. She is passionate about promoting health education and often participates in outreach programs to raise awareness about preventive care.",
+            "Jennifer's patients appreciate her warm demeanor and thorough approach to patient care. She is known for her attention to detail and ability to communicate complex medical information in an easily understandable manner.",
+            "With a strong background in biology and a passion for helping others, Jennifer is a valuable asset to the orthopedic team. Her dedication to patient well-being and professional growth make her a respected member of the medical community."
+        ],
+        image: 'https://i.imgur.com/LcRcBs1.jpg',
+        imageMedium: 'https://i.imgur.com/LcRcBs1.jpg'
     }
+    
 ];
 export const services = [
     {

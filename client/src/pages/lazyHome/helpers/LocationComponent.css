@@ -87,6 +87,7 @@
     .home-locations {
         padding: 30px;
         min-height: 250px;
+        background-size: contain;
     }
     .section-title-location-component {
         font-size: 2.5rem;

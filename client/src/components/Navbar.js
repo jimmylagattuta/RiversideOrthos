@@ -23,14 +23,19 @@ const Navbar = () => {
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
-
+    
     const submenuOpen = (menuName) => {
-        isSubmenuOpen === menuName
-            ? setIsSubmenuOpen(null)
-            : setIsSubmenuOpen(menuName);
+        console.log('submenuOpen');
+        setIsSubmenuOpen(isSubmenuOpen === menuName ? null : menuName);
     };
+    
+    const closeSubmenu = () => {
+        setIsSubmenuOpen(null);
+    };
+    
 
     const resetMobileMenu = () => {
+        console.log('resetMobileMenu');
         setIsMobileMenuOpen(false);
         setIsSubmenuOpen(null);
     };
@@ -154,17 +159,15 @@ const Navbar = () => {
                     return (
                         <div key={index} className={`nav-link-container ${item.menu}-nav`}>
                             <div className='link-items'>
-                                <NavLink
-                                    onClick={resetMobileMenu}
-                                    key={item.menu}
-                                    to={item.link}
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? 'nav-link-nav active'
-                                            : 'nav-link-nav'
-                                    }>
-                                    {item.menu}
-                                </NavLink>
+                            <NavLink
+                                onClick={closeSubmenu}
+                                key={item.menu}
+                                to={item.link}
+                                className={({ isActive }) =>
+                                    isActive ? 'nav-link-nav active' : 'nav-link-nav'
+                                }>
+                                {item.menu}
+                            </NavLink>
                                 {item.subMenuItems && (
                                     <button
                                         className='mobile-toggle-submenu'

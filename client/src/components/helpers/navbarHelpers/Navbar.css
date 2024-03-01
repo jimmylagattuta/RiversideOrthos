@@ -176,7 +176,7 @@
     margin: 0px;
   }
   .navbar-logo {
-    height: 80%;
+    height: 100%;
     align-self: center;
   }
   .nav-button {
@@ -187,6 +187,13 @@
   .nav-button:hover {
     transform: scale(1.1); /* Increase size on hover */
     box-shadow: -1px 1px 0 0 rgba(192, 192, 192,1), -2px 2px 0 0 rgba(192, 192, 192,0.6), -4px 4px 0 0 rgba(192, 192, 192,0.4), -6px 6px 0 0 rgba(192, 192, 192,0.2); /* Adjusted box shadow on hover */
+  }
+  .submenu-two-column {
+    max-width: 50vw;
+    margin: 0px;
+  }
+  .submenu-two-column .sub-link {
+    width: 50vw;
   }
 }
 
@@ -199,6 +206,7 @@
   }
   .navbar-container {
     padding: 0px 0px 0px 5px;
+
   }
   .mobile-menu-button-navbar {
     display: flex;
@@ -222,8 +230,12 @@
     justify-content: space-around;
   }
   .navbar-logo {
-    height: 75%;
+    height: 100%;
     align-self: center;
+    padding: 10px;
+    max-width: 80px;
+    min-width: 62px;
+    max-height: 45px;
   }
   .submenu {
     align-items: center;
@@ -244,9 +256,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    grid-gap: 0px 10px; /* Adjust the gap between items */
+    grid-gap: 0px 0px; /* Adjust the gap between items */
     padding: 0px;
-    margin: 10px;
+    margin: 0px;
     grid-template-columns: repeat(0, minmax(0, 1fr)); /* Initial three columns */
   }
   .sub-link {

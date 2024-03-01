@@ -451,7 +451,7 @@
         background-size: cover;
         padding: 0px 0px 0px 0px;
         height: 54vh;
-        width: 100%;
+        width: 50%;
         justify-content: center;
         align-items: center;
     }
@@ -470,11 +470,14 @@
     .about-description-right {
         text-align: left;
         margin: 0px;
-        padding: 10px 0px 0px 0px;
+        padding: 10px 10px 0px 10px;
         font-weight: 400;
         color: white;
         font-size: 0.5rem;
-        width: 95%;
+        width: 92%;
+    }
+    .about-description-right ul {
+        padding: 0px 0px 0px 10px;
     }
     .about-title-right {
         text-align: center;

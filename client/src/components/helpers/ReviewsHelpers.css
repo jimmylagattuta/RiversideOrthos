@@ -106,6 +106,9 @@
         gap: 10px;
         padding: 25px 0px 25px 0px;
     }
+    .home-reviews {
+        background-size: contain;
+    }
     .single-review-container {
         width: calc(88%);
     }

@@ -16,14 +16,18 @@ const AboutUsComponent = () => {
                 </p>
             </div>
             <div className='about-container-bottom'>
-                <img alt="bottom left container" className='about-container-bottom-left'
+                <img aria-label="bottom left container" className='about-container-bottom-left'
                 />
                 <div className='about-container-bottom-right'>
                 <h2 className='about-title-right'>
                     OAR Patient Portal
                 </h2>
                 <p className='about-description-right'>
-                    Orthopaedic Associates of Riverside is pleased to introduce the <a className="animate-grow" href="https://oar.myezyaccess.com/Patient/Main.aspx" target="_blank" rel="noopener noreferrer">OAR Patient Portal!</a> The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and provide
+                    Orthopaedic Associates of Riverside is pleased to introduce the
+                    <a className="animate-grow" href="https://oar.myezyaccess.com/Patient/Main.aspx" target="_blank" rel="noopener noreferrer">
+                        OAR Patient Portal!
+                    </a>
+                    The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and provide
                 <p className='about-description-right'>
                     To join the Patient Portal, call the office and provide our staff with your email address. Then, log on to OAR’s Patient Portal to access our patient features.
                 </p>

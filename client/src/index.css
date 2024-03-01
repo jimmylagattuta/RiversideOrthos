@@ -2249,6 +2249,16 @@ display: none;
       align-items: center;
       justify-content: center;
     }
+    .pages-header {
+        background-size: contain;
+    }
+    .page-top-header {
+        flex-direction: column;
+    }
+    .page-image-container {
+        width: 75%;
+        align-self: center;
+    }
 }
 @media (max-width: 850px) {
     
@@ -2267,6 +2277,16 @@ display: none;
     .about-right-button {
         padding: 30px 0px 40px 0px;
         width: 80%;
+    }
+    .pages-header {
+        background-size: auto;
+        background-position: center;
+    }
+    .grid-item {
+        width: calc(80%/2)
+    }
+    .page-grid-single-physician {
+        flex-direction: column;
     }
 }
 @media (max-width: 768px) and (min-height: 700px) {
@@ -2580,6 +2600,20 @@ display: none;
     #terms-and-policy {
       font-size: 0.6rem;
       margin-bottom: -0.8rem;
+    }
+    .physician-left {
+        width: 90%;
+        margin: 10px auto;
+        padding: 50px 0px 0px 0px;
+    }
+    .physician-right {
+        width: 80%;
+        margin: 10px auto;
+        padding: 0px 0px 0px 0px;
+    }
+    .page-image-container {
+        padding: 0px 0px 25px 0px;
+        width: 100%;    
     }
 }
 
