@@ -896,7 +896,9 @@ img {
     font-size: 2rem;
     margin: 35px 0;
 }
-
+.physician-image {
+    width: 80%;
+}
 .page-description {
     font-size: 1rem;
 }
