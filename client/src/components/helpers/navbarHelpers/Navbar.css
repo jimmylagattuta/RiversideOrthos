@@ -232,10 +232,10 @@
   .navbar-logo {
     height: 100%;
     align-self: center;
-    padding: 10px;
+    padding: 0px;
     max-width: 80px;
     min-width: 62px;
-    max-height: 45px;
+    max-height: 40px;
   }
   .submenu {
     align-items: center;
@@ -343,5 +343,11 @@
 @keyframes textclip {
   to {
     background-position: 200% center;
+  }
+}
+
+@media (max-width: 275px) {
+  .navbar-logo {
+    max-height: 30px;
   }
 }
