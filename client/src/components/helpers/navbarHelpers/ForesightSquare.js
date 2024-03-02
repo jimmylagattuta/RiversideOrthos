@@ -30,7 +30,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/Registration.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 English
                                             </a>
@@ -39,7 +38,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/RegistrationSpanish.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 Español
                                             </a>
@@ -58,7 +56,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/DAR.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 English
                                             </a>
@@ -67,7 +64,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/DARSpanish.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 Español
                                             </a>
@@ -86,7 +82,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/authorization.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 English (Release)
                                             </a>
@@ -95,7 +90,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/authorizationSpanish.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 Español (Lanzamiento)
                                             </a>
@@ -114,7 +108,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/MedHistory.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 English
                                             </a>
@@ -123,7 +116,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/MedHistorySpanish.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 Español
                                             </a>
@@ -142,7 +134,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/PrivacyNotice.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 English {"(HIPAA)"}
                                             </a>
@@ -151,7 +142,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/PrivacyNoticeSpanish.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 Español {"(HIPAA)"}
                                             </a>
@@ -170,7 +160,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/FinancialPolicy.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 English
                                             </a>
@@ -179,7 +168,6 @@ const ForesightSquare = ({ togglePopup }) => {
                                                 href={process.env.PUBLIC_URL + '/FinancialPolicySpanish.pdf'}
                                                 target="_blank" // This opens the PDF in a new tab
                                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
-                                                download
                                             >
                                                 Español
                                             </a>
