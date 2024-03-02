@@ -4,6 +4,14 @@ import { physicians } from '../../data';
 const Physicians = () => {
     return (
         <div className='page-container'>
+                        <a
+                className='print-staff'
+                href={process.env.PUBLIC_URL + '/PrintFriendlyStaff.pdf'}
+                target="_blank" // This opens the PDF in a new tab
+                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+            >
+                Printer Friendly Staff Overview
+            </a>
             <div className='physician-header'>
                 <h1 className='main-page-title'>Meet Our Physicians</h1>
                 <p className='main-page-description'>

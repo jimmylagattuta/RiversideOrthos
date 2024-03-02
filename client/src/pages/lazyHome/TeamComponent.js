@@ -22,16 +22,35 @@ const TeamComponent = () => {
 
     return (
         <div className='home-team'>
-            <div className='section-content'>
-                <h2 className='follow-us-title'>
-                    Follow Us
-                </h2>
-                <div className='team-icon-container'>
-                    <a aria-label="Link to go to Orthopaedic Associates of Riverside's Facebook page." style={{ color: 'white' }} href='https://www.facebook.com/orthoriverside' target='_blank' rel='noopener noreferrer'>
-                        <i className='fab fa-facebook fa-3x'></i>
-                    </a>
+
+                <div className="team-inner-div">
+                    <div className="team-second-inner-div">
+                        <h2 className='follow-us-title'>
+                            Follow Us
+                        </h2>
+                        <div className='team-icon-container'>
+                            <a aria-label="Link to go to Orthopaedic Associates of Riverside's Facebook page." style={{ color: 'white' }} href='https://www.facebook.com/orthoriverside' target='_blank' rel='noopener noreferrer'>
+                                <i className='fab fa-facebook fa-3x'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="team-second-inner-div">
+                        <h2 className='follow-us-title'>
+                            Meet Our Team
+                        </h2>
+                        <div className='team-icon-container'>
+                            <a
+                                className='team-print-staff'
+                                href={process.env.PUBLIC_URL + '/PrintFriendlyStaff.pdf'}
+                                target="_blank" // This opens the PDF in a new tab
+                                rel="noopener noreferrer" // Recommended for security when using target="_blank"
+                            >
+                                Printer Friendly Staff Overview
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
         </div>
     );
 };
