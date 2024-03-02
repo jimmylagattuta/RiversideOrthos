@@ -97,7 +97,9 @@
 
 /* Adjustments for smaller screens */
 @media (max-width: 450px) {
-
+    .appointment-info:after {
+        mix-blend-mode: multiply;
+    }
     #appointment-form-article section {
         font-size: 0.9rem;
 

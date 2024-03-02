@@ -21,13 +21,24 @@ const Navbar = () => {
     };
 
     const toggleMobileMenu = () => {
+        console.log('toggleMobileMenu');
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
     
     const submenuOpen = (menuName) => {
         console.log('submenuOpen');
-        setIsSubmenuOpen(isSubmenuOpen === menuName ? null : menuName);
+        if (isSubmenuOpen === menuName) {
+            // If the submenu is already open, close it
+            setIsSubmenuOpen(null);
+        } else {
+            // If a different submenu is open, close it and open the clicked submenu
+            setTimeout(() => {
+                setIsSubmenuOpen(menuName);
+            }, 250);
+        }
     };
+    
+
     
     const closeSubmenu = () => {
         setIsSubmenuOpen(null);
@@ -37,7 +48,9 @@ const Navbar = () => {
     const resetMobileMenu = () => {
         console.log('resetMobileMenu');
         setIsMobileMenuOpen(false);
-        setIsSubmenuOpen(null);
+        setTimeout(() => {
+            setIsSubmenuOpen(null);
+        }, 0.25);
     };
 
     const toggleAppointmentForm = () => {
@@ -160,7 +173,7 @@ const Navbar = () => {
                         <div key={index} className={`nav-link-container ${item.menu}-nav`}>
                             <div className='link-items'>
                             <NavLink
-                                onClick={closeSubmenu}
+                                    onClick={resetMobileMenu}
                                 key={item.menu}
                                 to={item.link}
                                 className={({ isActive }) =>
@@ -168,10 +181,12 @@ const Navbar = () => {
                                 }>
                                 {item.menu}
                             </NavLink>
+                            {/* ---------------------------------------------------------------------------------- */}
                                 {item.subMenuItems && (
                                     <button
+                                        onClick={() => submenuOpen(item.menu)} 
                                         className='mobile-toggle-submenu'
-                                        onClick={() => submenuOpen(item.menu)}>
+                                        >
                                         {isSubmenuOpen === item.menu ? (
                                             <i className='fas fa-minus'></i>
                                         ) : (
@@ -179,36 +194,37 @@ const Navbar = () => {
                                         )}
                                     </button>
                                 )}
+                            {/* ---------------------------------------------------------------------------------- */}
                             </div>
                             {item.subMenuItems && (
                                 <div className='submenu'>
-                                    <NavLink
-                                        onClick={resetMobileMenu}
-                                        key={item.menu}
-                                        to={item.link}
-                                        className={({ isActive }) =>
-                                            isActive
-                                                ? 'sub-link mobile-nav-link active'
-                                                : 'sub-link mobile-nav-link'
-                                        }
-                                        end>
-                                        All {item.menu}
-                                    </NavLink>
+                                    {isSubmenuOpen !== null && (
+                                        <NavLink
+                                            onClick={resetMobileMenu}
+                                            key={item.menu}
+                                            to={item.link}
+                                            className={({ isActive }) =>
+                                                isActive ? 'sub-link mobile-nav-link active' : 'sub-link mobile-nav-link'
+                                            }
+                                            end>
+                                            All {item.menu}
+                                        </NavLink>
+                                    )}
+                                    {/* ---------------------------------------------------------------------------------- */}
                                     <div className={`submenu-list ${item.subMenuItems.length > 16 ? 'submenu-multi-column' : item.subMenuItems.length > 6 ? 'submenu-two-column' : ''}`}>
-                                        {item.subMenuItems.map((subItem) => {
-                                            return (
-                                                <NavLink
-                                                    onClick={resetMobileMenu}
-                                                    key={subItem}
-                                                    to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
-                                                    className={({ isActive }) =>
-                                                        isActive ? 'sub-link active' : 'sub-link'
-                                                    }>
-                                                    {subItem}
-                                                </NavLink>
-                                            );
-                                        })}
+                                    {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => (
+                                        <NavLink
+                                            onClick={resetMobileMenu}
+                                            key={subItem}
+                                            to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
+                                            className={({ isActive }) =>
+                                                isActive ? 'sub-link active' : 'sub-link'
+                                            }>
+                                            {subItem}
+                                        </NavLink>
+                                    ))}
                                     </div>
+                                    {/* ---------------------------------------------------------------------------------- */}
                                 </div>
                             )}
                         </div>
