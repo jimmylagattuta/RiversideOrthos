@@ -51,11 +51,11 @@ function App() {
 
 
                 {/* Physician not there */}
-                <Route path="physicians" element={<PhysiciansLayout />}>
+                <Route path="providers" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
 
                     <Route path=":physicianId" element={<SinglePhysician />} match={isValidPhysicianId} />
-                    <Route path="*" element={<Navigate to="/physicians" replace />} />
+                    <Route path="*" element={<Navigate to="/providers" replace />} />
                 </Route>
 
 
@@ -63,7 +63,7 @@ function App() {
                 {/* Physician there */}
                 {/* <Route path="physicians/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    <Route path='*' element={<Navigate to="/physicians" replace />} />
+                    <Route path='*' element={<Navigate to="/providers" replace />} />
 
                 </Route> */}
 
@@ -76,7 +76,7 @@ function App() {
                 </Route>
                 <Route path="locations" element={<Locations />} />
                 <Route path="about" element={<AboutLayout />} />
-                <Route path="providers/*" element={<Navigate to="/physicians" replace />} />
+                <Route path="providers/*" element={<Navigate to="/providers" replace />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <Footer />

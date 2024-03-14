@@ -25,7 +25,7 @@ const Physicians = () => {
                             <div className='image-container'>
                                 <Link
                                     className='physician-link'
-                                    to={`/physicians/${
+                                    to={`/providers/${
                                         physician.name
                                             .toLowerCase()
                                             .split(' ')
@@ -41,7 +41,7 @@ const Physicians = () => {
                             </div>
                             <Link
                                 className='physician-link'
-                                to={`/physicians/${
+                                to={`/providers/${
                                     physician.name
                                         .toLowerCase()
                                         .split(' ')
@@ -52,7 +52,7 @@ const Physicians = () => {
                             </Link>
                             <Link
                                 className='physician-link'
-                                to={`/physicians/${
+                                to={`/providers/${
                                     physician.name
                                         .toLowerCase()
                                         .split(' ')

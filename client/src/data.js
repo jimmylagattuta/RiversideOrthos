@@ -1021,8 +1021,8 @@ export const navMenu = [
         link: '/about-us'
     },
     {
-        menu: 'Physicians',
-        link: '/physicians',
+        menu: 'Providers',
+        link: '/providers',
         subMenuItems: physicians.map((item) => {
             // console.log('item', item);
             return item.name;

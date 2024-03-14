@@ -612,8 +612,10 @@ img {
     padding: 10px 10px 10px 10px;
     color: white;
     text-decoration-line: none;
-    background-color: rgba(221, 228, 237, 0.6);
+    background-color: rgba(221, 228, 237, 0.4);
     cursor: pointer;
+    text-shadow: 2px 2px 1px black;
+
     transition: transform 0.3s;
 }
 
