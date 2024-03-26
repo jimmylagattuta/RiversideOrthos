@@ -1043,7 +1043,9 @@ export const navMenu = [
             'Hip'
         ],
     },
-    { menu: 'Locations', link: '/locations' }
+    { menu: 'Locations', link: '/locations' },
+    { menu: 'Career', link: 'https://ats.rippling.com/orthopedic-associates-of-riverside/jobs' }
+
 ];
 export const officesData = [
     {
