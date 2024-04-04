@@ -13,7 +13,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-  config.hosts << "orthoriverside.com"
+  config.hosts << "www.orthoriverside.com"
 
   # Enable server timing
   config.server_timing = true
@@ -46,13 +46,13 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
-  config.action_mailer.asset_host = "https://orthoriverside.com"
+  config.action_mailer.asset_host = "https://www.orthoriverside.com"
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
-    domain: 'orthoriverside.com',
+    domain: 'www.orthoriverside.com',
     user_name: 'unitymskwebsites@gmail.com',
     password: ENV["REACT_APP_GMAIL_PASSWORD"],
     authentication: 'plain',

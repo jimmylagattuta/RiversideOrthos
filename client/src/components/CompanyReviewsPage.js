@@ -63,8 +63,8 @@ const CompanyReviewsPage = () => {
 
             const url =
               process.env.NODE_ENV === 'production'
-                ? 'https://orthoriverside.com/api/v1/pull_google_places_cache'
-                : 'https://orthoriverside.com/api/v1/pull_google_places_cache';
+                ? 'https://www.orthoriverside.com/api/v1/pull_google_places_cache'
+                : 'https://www.orthoriverside.com/api/v1/pull_google_places_cache';
 
           
             // Include the CSRF token in the headers of your fetch request
