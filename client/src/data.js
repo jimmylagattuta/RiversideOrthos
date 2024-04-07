@@ -793,7 +793,7 @@ export const aboutExtra = [
             {
                 subtitle: 'Do you have parking available?',
                 body: [
-                    "Yes, all of Orthopaedic Associates of Riverside's offices have easily accessible free parking available.',
+                    "Yes, all of Orthopaedic Associates of Riverside's offices have easily accessible free parking available.",
                 ],
             },
             {
