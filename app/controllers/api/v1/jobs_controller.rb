@@ -5,7 +5,7 @@ class Api::V1::JobsController < ApplicationController
   require 'net/http'
 
   def index
-    render json: "Los Angeles Orthopedic Group " * 1000
+    render json: "OAR " * 1000
   end
 
   def pull_google_places_cache
@@ -45,8 +45,11 @@ class Api::V1::JobsController < ApplicationController
       return cached_id
     end
 
+    http = Net::HTTP.new("maps.googleapis.com", 443)
+    http.use_ssl = true
     url = URI("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{URI.encode_www_form_component(name)}&inputtype=textquery&fields=place_id&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
-    response = Net::HTTP.get_response(url)
+    request = Net::HTTP::Get.new(url)
+    response = http.request(request)
     if response.is_a?(Net::HTTPSuccess)
       data = JSON.parse(response.body)
       if data['candidates'] && !data['candidates'].empty?
@@ -70,8 +73,11 @@ class Api::V1::JobsController < ApplicationController
 
     puts "Calling Google Places API for place ID: #{place_id}"
 
+    http = Net::HTTP.new("maps.googleapis.com", 443)
+    http.use_ssl = true
     url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{place_id}&fields=reviews&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
-    response = Net::HTTP.get_response(url)
+    request = Net::HTTP::Get.new(url)
+    response = http.request(request)
     if response.is_a?(Net::HTTPSuccess)
       data = JSON.parse(response.body)
       if data['result'] && data['result']['reviews']
