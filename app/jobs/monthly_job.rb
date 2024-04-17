@@ -1,7 +1,7 @@
 class MonthlyJob
   include Sidekiq::Worker
 
-  def perform
+  def perform_async
     require 'uri'
     require 'net/http'
     require 'json'
