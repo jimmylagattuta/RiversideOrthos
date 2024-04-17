@@ -37,8 +37,13 @@ class Api::V1::JobsController < ApplicationController
 
   def fetch_place_id_with_caching(name)
     redis = Redis.new(url: ENV['REDIS_URL'])
+    puts "Connected to Redis: #{redis.inspect}"
+
     cache_key = "place_id_#{name}"
+    puts "Cache_key: #{cache_key}"
+
     cached_id = redis.get(cache_key)
+    puts "Cached_id: #{cached_id}"
 
     if cached_id
       puts "Place ID pulled from cache for '#{name}'"
@@ -46,13 +51,20 @@ class Api::V1::JobsController < ApplicationController
     end
 
     http = Net::HTTP.new("maps.googleapis.com", 443)
+    puts "1"
     http.use_ssl = true
+    puts "2"
     url = URI("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{URI.encode_www_form_component(name)}&inputtype=textquery&fields=place_id&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
+    puts "3"
     request = Net::HTTP::Get.new(url)
+    puts "4"
     response = http.request(request)
+    puts "5"
     if response.is_a?(Net::HTTPSuccess)
+      puts "6"
       data = JSON.parse(response.body)
       if data['candidates'] && !data['candidates'].empty?
+        puts "7"
         place_id = data['candidates'][0]['place_id']
         redis.set(cache_key, place_id, ex: 86400) # Cache for 1 day
         return place_id
