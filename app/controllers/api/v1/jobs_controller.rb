@@ -92,7 +92,6 @@ class Api::V1::JobsController < ApplicationController
       puts "Cache expiration set successfully."
 
       render json: { reviews: reviews, csrf_token: csrf_token }
-    end
   end
 
   private
