@@ -32,7 +32,6 @@ Rails.application.configure do
   config.asset_host = "http://orthoriverside.com"
   config.assets.compile = false
 
-
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
@@ -49,20 +48,13 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
-  config.cache_store = :redis_cache_store, {
-    url: ENV['REDIS_URL'],
-    expires_in: 30.days,
-    ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE }, # Disabling SSL certificate verification
-    timeout: 10  
-  }
-
-  
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_TLS_URL'], expires_in: 30.days }
   config.active_job.queue_adapter = :sidekiq
-  
+
   Sidekiq.configure_server do |config|
     config.redis = { url: ENV['REDIS_URL'] }
   end
-  
+
   Sidekiq.configure_client do |config|
     config.redis = { url: ENV['REDIS_URL'] }
   end
@@ -88,7 +80,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
-    domain: 'www.orthoriverside.com',
+    domain: 'gmail.com',
     user_name: 'unitymskwebsites@gmail.com',
     password: ENV["REACT_APP_GMAIL_PASSWORD"],
     authentication: 'plain',

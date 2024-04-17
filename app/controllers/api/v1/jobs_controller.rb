@@ -13,7 +13,22 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-    redis = Redis.new(url: ENV['REDIS_URL'], timeout: 10) # Timeout set to 10 seconds
+
+    # Set the path to your CA certificate file
+    ca_path = Rails.root.join('config', 'cacert.pem').to_s
+    
+    # Configure Redis to use the CA bundle for SSL connections
+    redis = Redis.new(url: ENV['REDIS_URL'], ssl_params: { ca_file: ca_path, verify_mode: OpenSSL::SSL::VERIFY_PEER })
+    
+    # Try pinging Redis to test the connection
+    begin
+      response = redis.ping
+      puts "Redis Connection Successful: #{response}"  # Should output "PONG" if successful
+    rescue => e
+      puts "Failed to connect to Redis: #{e.message}"
+    end
+    
+    
     puts "redis"
     puts redis.inspect
 
@@ -112,7 +127,22 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-    redis = Redis.new(url: ENV['REDIS_URL'])
+
+
+    # Set the path to your CA certificate file
+    ca_path = Rails.root.join('config', 'cacert.pem').to_s
+    
+    # Configure Redis to use the CA bundle for SSL connections
+    redis = Redis.new(url: ENV['REDIS_URL'], ssl_params: { ca_file: ca_path, verify_mode: OpenSSL::SSL::VERIFY_PEER })
+    
+    # Try pinging Redis to test the connection
+    begin
+      response = redis.ping
+      puts "Redis Connection Successful: #{response}"  # Should output "PONG" if successful
+    rescue => e
+      puts "Failed to connect to Redis: #{e.message}"
+    end
+    
     puts "Connected to Redis: #{redis.inspect}"
 
     cache_key = "cached_google_places_reviews"
