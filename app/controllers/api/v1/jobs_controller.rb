@@ -54,7 +54,7 @@ class Api::V1::JobsController < ApplicationController
     puts "cached_google_places_reviews"
 
     cached_id = nil
-    if redis.get(cache_key)
+    if redis
       puts "this ran"
       cached_id = redis.get(cache_key)
     end
