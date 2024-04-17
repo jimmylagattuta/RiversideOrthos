@@ -57,6 +57,8 @@ class Api::V1::JobsController < ApplicationController
     if redis
       puts "this ran"
       cached_id = redis.get(cache_key)
+      puts "cached_id"
+      puts cached_id.inspect
     end
 
     if cached_id
