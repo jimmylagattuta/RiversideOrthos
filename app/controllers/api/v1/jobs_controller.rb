@@ -83,10 +83,10 @@ class Api::V1::JobsController < ApplicationController
     cache_key = "google_places_reviews_#{place_id}"
     # cached_reviews = redis.get(cache_key)
 
-    if cached_reviews
-      puts "Google Places reviews pulled from cache for place ID: #{place_id}"
-      return JSON.parse(cached_reviews)
-    end
+    # if cached_reviews
+    #   puts "Google Places reviews pulled from cache for place ID: #{place_id}"
+    #   return JSON.parse(cached_reviews)
+    # end
 
     puts "Calling Google Places API for place ID: #{place_id}"
 
