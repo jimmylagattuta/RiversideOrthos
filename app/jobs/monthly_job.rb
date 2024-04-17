@@ -127,3 +127,5 @@ class MonthlyJob
     puts "Error in monthly_job fetch_google_places_reviews: #{e.message}"
   end
 end
+
+

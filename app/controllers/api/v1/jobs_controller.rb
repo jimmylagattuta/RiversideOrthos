@@ -38,22 +38,22 @@ class Api::V1::JobsController < ApplicationController
   private
 
   def fetch_place_id_with_caching(name)
-    redis = Redis.new(url: ENV['REDIS_URL'])
-    puts "Connected to Redis: #{redis.inspect}"
+    # redis = Redis.new(url: ENV['REDIS_URL'])
+    # puts "Connected to Redis: #{redis.inspect}"
 
     cache_key = "place_id_#{name}"
     puts "Cache_key: #{cache_key}"
 
     cached_id = nil
-    if redis.get(cache_key)
-      puts "this ran"
-      cached_id = redis.get(cache_key)
-    end
+    # if redis.get(cache_key)
+      # puts "this ran"
+      # cached_id = redis.get(cache_key)
+    # end
 
-    if cached_id
-      puts "Place ID pulled from cache for '#{name}'"
-      return cached_id
-    end
+    # if cached_id
+      # puts "Place ID pulled from cache for '#{name}'"
+      # return cached_id
+    # end
 
     http = Net::HTTP.new("maps.googleapis.com", 443)
     puts "1"
@@ -71,7 +71,7 @@ class Api::V1::JobsController < ApplicationController
       if data['candidates'] && !data['candidates'].empty?
         puts "7"
         place_id = data['candidates'][0]['place_id']
-        redis.set(cache_key, place_id, ex: 86400) # Cache for 1 day
+        # redis.set(cache_key, place_id, ex: 86400 * 30) # Cache for 30 days
         return place_id
       end
     end
@@ -79,9 +79,9 @@ class Api::V1::JobsController < ApplicationController
   end
 
   def fetch_reviews_with_caching(place_id)
-    redis = Redis.new(url: ENV['REDIS_URL'])
+    # redis = Redis.new(url: ENV['REDIS_URL'])
     cache_key = "google_places_reviews_#{place_id}"
-    cached_reviews = redis.get(cache_key)
+    # cached_reviews = redis.get(cache_key)
 
     if cached_reviews
       puts "Google Places reviews pulled from cache for place ID: #{place_id}"
@@ -99,7 +99,7 @@ class Api::V1::JobsController < ApplicationController
       data = JSON.parse(response.body)
       if data['result'] && data['result']['reviews']
         reviews = data['result']['reviews']
-        redis.set(cache_key, reviews.to_json, ex: 86400 * 30) # Cache for 1 day
+        # redis.set(cache_key, reviews.to_json, ex: 86400 * 30) # Cache for 30 day
         return reviews
       end
     end
