@@ -68,6 +68,8 @@ class Api::V1::JobsController < ApplicationController
     if response.is_a?(Net::HTTPSuccess)
       puts "6"
       data = JSON.parse(response.body)
+      puts "data @__@"
+      puts data.inspect
       if data['candidates'] && !data['candidates'].empty?
         puts "7"
         place_id = data['candidates'][0]['place_id']
