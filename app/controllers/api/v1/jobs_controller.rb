@@ -79,15 +79,19 @@ class Api::V1::JobsController < ApplicationController
     if response.is_a?(Net::HTTPSuccess)
       puts "6"
       data = JSON.parse(response.body)
-      puts "data @__@"
-      puts data.inspect
-      if data['candidates'] && !data['candidates'].empty?
-        puts "7"
-        place_id = data['candidates'][0]['place_id']
-        redis.set(cache_key, place_id, ex: 86400 * 30) # Cache for 30 days
-        return place_id
+      puts "Parsed JSON data: #{data.inspect}" # Added logging statement
+      if data['candidates'].nil? || data['candidates'].empty?
+        puts "No candidates found in the response." # Added logging statement
+        return # No candidates found, exit the method
       end
-    end
+      
+      puts "Candidates found in the response: #{data['candidates'].inspect}" # Added logging statement
+      place_id = data['candidates'][0]['place_id']
+      puts "Selected place_id: #{place_id}" # Added logging statement
+      redis.set(cache_key, place_id, ex: 86400 * 30) # Cache for 30 days
+      puts "Place_id cached successfully." # Added logging statement
+      return place_id
+      
     nil
   end
 
