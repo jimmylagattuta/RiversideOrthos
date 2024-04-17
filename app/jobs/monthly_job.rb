@@ -56,7 +56,20 @@ class MonthlyJob
         filtered_reviews << review
       end
     end
-    redis = Redis.new(url: ENV['REDIS_URL'])
+
+
+    require 'redis'
+
+    ca_path = "/app/config/cacert.pem"
+    
+    redis = Redis.new(
+      url: ENV['REDIS_URL'],
+      ssl_params: {
+        ca_file: ca_path,
+        verify_mode: OpenSSL::SSL::VERIFY_PEER
+      }
+    )
+    
     if redis.exists('cached_google_places_reviews')
       puts "Cached reviews found. Clearing previous cache..."
       redis.del('cached_google_places_reviews')
