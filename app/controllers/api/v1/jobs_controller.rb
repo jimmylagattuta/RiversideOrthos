@@ -15,6 +15,8 @@ class Api::V1::JobsController < ApplicationController
     place_ids = []  # Array to store place IDs
 
     place_names.each do |place_name|
+      puts "place_name"
+      puts place_name
       place_id = fetch_place_id_with_caching(place_name)
       if place_id
         place_reviews = fetch_reviews_with_caching(place_id)
@@ -42,8 +44,14 @@ class Api::V1::JobsController < ApplicationController
     cache_key = "place_id_#{name}"
     puts "Cache_key: #{cache_key}"
 
-    cached_id = redis.get(cache_key)
-    puts "Cached_id: #{cached_id}"
+    cached_id = nil
+    if redis.get(cached_key)
+      redis.get(cache_key)
+      puts "Cached_id: #{cached_id}"
+
+    else
+
+    end
 
     if cached_id
       puts "Place ID pulled from cache for '#{name}'"
