@@ -43,6 +43,10 @@ class Api::V1::JobsController < ApplicationController
   private
 
   def fetch_place_id_with_caching(name)
+    require 'redis'
+    require 'json'
+    require 'uri'
+    require 'net/http'
     redis = Redis.new(url: ENV['REDIS_URL'])
     puts "Connected to Redis: #{redis.inspect}"
 
@@ -86,6 +90,10 @@ class Api::V1::JobsController < ApplicationController
   end
 
   def fetch_reviews_with_caching(place_id)
+    require 'redis'
+    require 'json'
+    require 'uri'
+    require 'net/http'
     redis = Redis.new(url: ENV['REDIS_URL'])
     cache_key = "cached_google_places_reviews"
     cached_reviews = redis.get(cache_key)
