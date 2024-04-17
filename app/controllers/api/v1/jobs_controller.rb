@@ -13,6 +13,7 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
+    redis = Redis.new(url: ENV['REDIS_URL'])
   
     csrf_token = form_authenticity_token
 
@@ -74,7 +75,6 @@ class Api::V1::JobsController < ApplicationController
       puts "@___@ reviews"
       puts reviews.inspect
     end
-    redis = Redis.new(url: ENV['REDIS_URL'])
     if redis.exists('cached_google_places_reviews')
       puts "Cached reviews found. Clearing previous cache..."
       redis.del('cached_google_places_reviews')
