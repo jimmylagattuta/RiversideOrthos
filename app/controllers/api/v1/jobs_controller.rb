@@ -25,36 +25,40 @@ class Api::V1::JobsController < ApplicationController
     http = Net::HTTP.new("maps.googleapis.com", 443)
     http.use_ssl = true
     reviews = []
+    count = 0
 
     places.each do |place|
-      place_id = place
+      if count < 1
+        place_id = place
 
-      # Fetch place details from Google Places API
-      encoded_place_id = URI.encode_www_form_component(place_id)
-      url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
-      request = Net::HTTP::Get.new(url)
-      response = http.request(request)
-      body = response.read_body
-      parsed_response = JSON.parse(body)
-      if parsed_response['status'] == 'OK'
-        puts "Successfully fetched place details for place ID: #{place_id}"
-        puts "Parsed response:"
-        puts parsed_response.inspect
-        place_details = parsed_response['result']
-        puts "Place details:"
-        puts place_details.inspect
-        place_reviews = place_details.present? ? place_details['reviews'] || [] : []
-        puts "Place reviews:"
-        puts place_reviews.inspect
-        puts "Merging reviews..."
-        puts "Reviews before merging:"
-        puts reviews.inspect
-        reviews.concat(place_reviews)
-        puts "Reviews after merging:"
-        puts reviews.inspect
-      else
-        puts "Failed to retrieve place details for place ID: #{place_id}"
+        # Fetch place details from Google Places API
+        encoded_place_id = URI.encode_www_form_component(place_id)
+        url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
+        request = Net::HTTP::Get.new(url)
+        response = http.request(request)
+        body = response.read_body
+        parsed_response = JSON.parse(body)
+        if parsed_response['status'] == 'OK'
+          puts "Successfully fetched place details for place ID: #{place_id}"
+          puts "Parsed response:"
+          puts parsed_response.inspect
+          place_details = parsed_response['result']
+          puts "Place details:"
+          puts place_details.inspect
+          place_reviews = place_details.present? ? place_details['reviews'] || [] : []
+          puts "Place reviews:"
+          puts place_reviews.inspect
+          puts "Merging reviews..."
+          puts "Reviews before merging:"
+          puts reviews.inspect
+          reviews.concat(place_reviews)
+          puts "Reviews after merging:"
+          puts reviews.inspect
+        else
+          puts "Failed to retrieve place details for place ID: #{place_id}"
+        end
       end
+      count = count + 1
     end
 
     # Filter and process the reviews as needed
