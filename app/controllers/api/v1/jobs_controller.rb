@@ -65,8 +65,8 @@ class Api::V1::JobsController < ApplicationController
       if review['rating'] == 5
         filtered_reviews << review
       end
-      puts "@___@ filtered_reveiws"
-      puts filtered_reveiws.inspect
+      puts "@___@ filtered_reviews"
+      puts filtered_reviews.inspect
       puts "@___@ reviews"
       puts reviews.inspect
     end
