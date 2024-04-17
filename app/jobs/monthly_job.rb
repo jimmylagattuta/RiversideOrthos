@@ -63,7 +63,19 @@ class MonthlyJob
       puts "Previous cache cleared."
     end
     puts "Caching filtered reviews..."
-    redis.set('cached_google_places_reviews', JSON.generate(filtered_reviews))
+    
+
+
+    
+    
+    begin
+      redis.set('cached_google_places_reviews', JSON.generate(filtered_reviews))
+      puts "cached_google_places_reviews successful." # Added logging statement
+    rescue => e
+      puts "Error caching: #{e.message}" # Log the error message
+      # Optionally, you can re-raise the exception to propagate it further
+      # raise e
+    end
     puts "Filtered reviews cached successfully."
     puts "Setting expiration for cache..."
     redis.expire('cached_google_places_reviews', 30.days.to_i)
