@@ -13,7 +13,8 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-    redis = Redis.new(url: ENV['REDIS_URL'])
+    redis = Redis.new(url: ENV['REDIS_URL'], timeout: 10) # Timeout set to 10 seconds
+
   
     csrf_token = form_authenticity_token
 
