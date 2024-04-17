@@ -60,7 +60,7 @@ class MonthlyJob
 
     require 'redis'
 
-    ca_path = "/app/config/cacert.pem"
+    ca_path = "/config/cacert.pem"
     
     redis = Redis.new(
       url: ENV['REDIS_URL'],

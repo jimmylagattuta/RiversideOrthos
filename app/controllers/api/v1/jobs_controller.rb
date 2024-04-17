@@ -130,9 +130,9 @@ class Api::V1::JobsController < ApplicationController
     require 'net/http'
 
 
-    require 'redis'
 
-    ca_path = "/app/config/cacert.pem"
+
+    ca_path = "/config/cacert.pem"
     
     redis = Redis.new(
       url: ENV['REDIS_URL'],
@@ -209,7 +209,24 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-    redis = Redis.new(url: ENV['REDIS_URL'])
+
+
+    ca_path = "/config/cacert.pem"
+    
+    redis = Redis.new(
+      url: ENV['REDIS_URL'],
+      ssl_params: {
+        ca_file: ca_path,
+        verify_mode: OpenSSL::SSL::VERIFY_PEER
+      }
+    )
+    
+    begin
+      puts "Redis connection test with SSL verification: #{redis.ping}"  # Should output "PONG" if successful
+    rescue => e
+      puts "Failed to connect to Redis with SSL verification: #{e.message}"
+    end
+    
     cache_key = "cached_google_places_reviews"
     cached_reviews = redis.get(cache_key)
 
