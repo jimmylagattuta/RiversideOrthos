@@ -130,8 +130,9 @@ class Api::V1::JobsController < ApplicationController
 
 
     # Set the path to your CA certificate file
-    ca_path = Rails.root.join('config', 'cacert.pem').to_s
-    
+    ca_path = Rails.root.join('config', 'config/cacert.pem').to_s
+    puts "@_@ ca_path"
+    puts ca_path.inspect
     # Configure Redis to use the CA bundle for SSL connections
     redis = Redis.new(url: ENV['REDIS_URL'], ssl_params: { ca_file: ca_path, verify_mode: OpenSSL::SSL::VERIFY_PEER })
     
