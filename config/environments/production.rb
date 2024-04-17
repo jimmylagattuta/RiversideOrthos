@@ -50,7 +50,7 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   config.cache_store = :redis_cache_store, {
-    url: ENV['REDIS_URL'],
+    url: ENV['REDIS_TLS_URL'],
     expires_in: 30.days,
     ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE } # Disabling SSL certificate verification
   }
@@ -58,11 +58,11 @@ Rails.application.configure do
   config.active_job.queue_adapter = :sidekiq
 
   Sidekiq.configure_server do |config|
-    config.redis = { url: ENV['REDIS_URL'] }
+    config.redis = { url: ENV['REDIS_TLS_URL'] }
   end
 
   Sidekiq.configure_client do |config|
-    config.redis = { url: ENV['REDIS_URL'] }
+    config.redis = { url: ENV['REDIS_TLS_URL'] }
   end
 
   # config.cache_store = :mem_cache_store
