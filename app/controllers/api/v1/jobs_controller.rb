@@ -94,7 +94,7 @@ class Api::V1::JobsController < ApplicationController
       data = JSON.parse(response.body)
       if data['result'] && data['result']['reviews']
         reviews = data['result']['reviews']
-        redis.set(cache_key, reviews.to_json, ex: 86400) # Cache for 1 day
+        redis.set(cache_key, reviews.to_json, ex: 86400 * 30) # Cache for 1 day
         return reviews
       end
     end
