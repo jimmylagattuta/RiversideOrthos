@@ -12,6 +12,70 @@ class MonthlyJob
     user = User.last
     puts user.inspect
     user = User.create(email: "monthlyjob@test.com", password: "1234test", password_confirmation: "1234test")
+
+
+
+
+
+
+
+
+    # if ENV['RUN_SCHEDULER'] == 'true' && defined?(Sidekiq)
+    #   require 'rufus-scheduler'
+    #   require 'sidekiq-scheduler'
+    #   require 'redis'
+    #   require 'json'
+    #   require 'uri'
+    #   require 'net/http'
+    #   scheduler = Rufus::Scheduler.new
+    
+    #   scheduler.every '3m', overlap: false do
+    #     puts "*_*_" * 1000
+    #     puts "monthly job has triggered"
+    #     redis = Redis.new(url: ENV['REDIS_URL'])
+    #     puts "Connected to Redis: #{redis.inspect}"
+    
+    #     # Clear the cache for each place name
+    #     place_names = ["Orthopaedic Associates of Riverside", "Orthopaedic Associates of Riverside - La Grange", "Orthopaedic Associates of Riverside - Chicago"]
+    #     place_names.each do |place_name|
+    #       place_id = find_place_id(place_name)
+    #       if place_id
+    #         cache_key = "google_places_reviews_#{place_id}"
+    #         redis.del(cache_key)
+    #         puts "Cleared cache for #{place_name}"
+    #       else
+    #         puts "Place ID not found for '#{place_name}'"
+    #       end
+    #     end
+    
+    #     # Retrieve and cache the five-star reviews for each place
+    #     place_names.each do |place_name|
+    #       place_id = find_place_id(place_name)
+    #       if place_id
+    #         place_reviews = fetch_place_reviews(place_id)
+    #         five_star_reviews = filter_reviews_by_rating(place_reviews, 5)
+    #         cache_key = "google_places_reviews_#{place_id}"
+    #         redis.set(cache_key, five_star_reviews.to_json, ex: 86400) # Cache for 1 day (86400 seconds)
+    #         puts "Cached five-star reviews for #{place_name}"
+    #       else
+    #         puts "Place ID not found for '#{place_name}'"
+    #       end
+    #     end
+    
+    #     puts "*_*_" * 10
+    #   end
+    # end
+
+
+
+
+
+
+
+
+
+
+
   #   places = [
   #     'ChIJ6wjoflfGwoARIQ4pYyXJCN8',
   #     'ChIJo34riQ3GwoARLZD9o-uqI8Y',
