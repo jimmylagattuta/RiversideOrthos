@@ -17,8 +17,11 @@ class MonthlyJob
     http = Net::HTTP.new("maps.googleapis.com", 443)
     http.use_ssl = true
     reviews = []
-
+    puts "a"
     places.each do |place_id|
+      puts "b"
+      puts   "place_id"
+      puts place_id
       # Fetch place details from Google Places API
       encoded_place_id = URI.encode_www_form_component(place_id)
       url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
