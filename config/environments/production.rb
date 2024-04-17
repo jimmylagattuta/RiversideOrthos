@@ -49,7 +49,11 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
-  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'], expires_in: 30.days }
+  config.cache_store = :redis_cache_store, {
+    url: ENV['REDIS_URL'],
+    expires_in: 30.days,
+    ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE } # Disabling SSL certificate verification
+  }
 
   
   config.active_job.queue_adapter = :sidekiq
