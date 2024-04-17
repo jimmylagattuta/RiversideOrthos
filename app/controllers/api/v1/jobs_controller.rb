@@ -45,12 +45,8 @@ class Api::V1::JobsController < ApplicationController
     puts "Cache_key: #{cache_key}"
 
     cached_id = nil
-    if redis.get(cached_key)
-      redis.get(cache_key)
-      puts "Cached_id: #{cached_id}"
-
-    else
-
+    if redis.get(cache_key)
+      cached_id = redis.get(cache_key)
     end
 
     if cached_id
