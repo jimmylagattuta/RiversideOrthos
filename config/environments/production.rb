@@ -29,7 +29,7 @@ Rails.application.configure do
     'Cache-Control' => 'public, max-age=31536000'
   }
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.asset_host = "http://laorthos.com"
+  config.asset_host = "http://orthoriverside.com"
   config.assets.compile = false
   config.hosts << "www.orthoriverside.com"
 
