@@ -91,7 +91,7 @@ class Api::V1::JobsController < ApplicationController
       redis.set(cache_key, place_id, ex: 86400 * 30) # Cache for 30 days
       puts "Place_id cached successfully." # Added logging statement
       return place_id
-      
+    end      
     nil
   end
 
