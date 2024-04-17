@@ -56,7 +56,7 @@ class MonthlyJob
         filtered_reviews << review
       end
     end
-    redis = Redis.new(url: ENV['REDIS_TLS_URL'])
+    redis = Redis.new(url: ENV['REDIS_URL'])
     if redis.exists('cached_google_places_reviews')
       puts "Cached reviews found. Clearing previous cache..."
       redis.del('cached_google_places_reviews')

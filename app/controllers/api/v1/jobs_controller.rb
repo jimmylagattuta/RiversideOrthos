@@ -13,7 +13,7 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-    redis = Redis.new(url: ENV['REDIS_TLS_URL'], timeout: 10) # Timeout set to 10 seconds
+    redis = Redis.new(url: ENV['REDIS_URL'], timeout: 10) # Timeout set to 10 seconds
 
   
     csrf_token = form_authenticity_token
@@ -110,7 +110,7 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-    redis = Redis.new(url: ENV['REDIS_TLS_URL'])
+    redis = Redis.new(url: ENV['REDIS_URL'])
     puts "Connected to Redis: #{redis.inspect}"
 
     cache_key = "cached_google_places_reviews"
@@ -171,7 +171,7 @@ class Api::V1::JobsController < ApplicationController
     require 'json'
     require 'uri'
     require 'net/http'
-    redis = Redis.new(url: ENV['REDIS_TLS_URL'])
+    redis = Redis.new(url: ENV['REDIS_URL'])
     cache_key = "cached_google_places_reviews"
     cached_reviews = redis.get(cache_key)
 
