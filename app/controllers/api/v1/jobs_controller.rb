@@ -12,6 +12,7 @@ class Api::V1::JobsController < ApplicationController
     csrf_token = form_authenticity_token
     place_names = ["Orthopaedic Associates of Riverside", "Orthopaedic Associates of Riverside - La Grange", "Orthopaedic Associates of Riverside - Chicago"]
     reviews = []
+    place_ids = []  # Array to store place IDs
 
     place_names.each do |place_name|
       place_id = fetch_place_id_with_caching(place_name)
@@ -20,10 +21,14 @@ class Api::V1::JobsController < ApplicationController
         five_star_reviews = filter_reviews_by_rating(place_reviews, 5)
         filtered_reviews = filter_reviews_by_text(five_star_reviews, 'negative reviews')
         reviews.concat(filtered_reviews)
+        place_ids << place_id  # Add place ID to the array
       else
         puts "Place ID not found for '#{place_name}'"
       end
     end
+
+    # Output collected place IDs
+    puts "Collected Place IDs: #{place_ids.join(', ')}"
 
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
