@@ -41,14 +41,14 @@ class Api::V1::JobsController < ApplicationController
     # redis = Redis.new(url: ENV['REDIS_URL'])
     # puts "Connected to Redis: #{redis.inspect}"
 
-    cache_key = "place_id_#{name}"
-    puts "Cache_key: #{cache_key}"
+    cache_key = "cached_google_places_reviews"
+    puts "cached_google_places_reviews"
 
     cached_id = nil
-    # if redis.get(cache_key)
-      # puts "this ran"
-      # cached_id = redis.get(cache_key)
-    # end
+    if redis.get(cache_key)
+      puts "this ran"
+      cached_id = redis.get(cache_key)
+    end
 
     # if cached_id
       # puts "Place ID pulled from cache for '#{name}'"
@@ -80,7 +80,7 @@ class Api::V1::JobsController < ApplicationController
 
   def fetch_reviews_with_caching(place_id)
     # redis = Redis.new(url: ENV['REDIS_URL'])
-    cache_key = "google_places_reviews_#{place_id}"
+    cache_key = "cached_google_places_reviews"
     # cached_reviews = redis.get(cache_key)
 
     # if cached_reviews
