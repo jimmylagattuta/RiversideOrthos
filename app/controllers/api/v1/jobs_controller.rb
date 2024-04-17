@@ -88,7 +88,15 @@ class Api::V1::JobsController < ApplicationController
       puts "Candidates found in the response: #{data['candidates'].inspect}" # Added logging statement
       place_id = data['candidates'][0]['place_id']
       puts "Selected place_id: #{place_id}" # Added logging statement
-      redis.set(cache_key, place_id, ex: 86400 * 30) # Cache for 30 days
+      begin
+        redis.set(cache_key, place_id, ex: 86400 * 30) # Cache for 30 days
+        puts "Place_id cached successfully." # Added logging statement
+      rescue => e
+        puts "Error caching place_id: #{e.message}" # Log the error message
+        # Optionally, you can re-raise the exception to propagate it further
+        # raise e
+      end
+      
       puts "Place_id cached successfully." # Added logging statement
       return place_id
     end      
