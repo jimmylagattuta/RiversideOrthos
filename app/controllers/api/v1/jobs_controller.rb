@@ -62,9 +62,13 @@ class Api::V1::JobsController < ApplicationController
     reviews.each do |review|
       puts "Applying review filtering logic..."
       # You can apply filtering or processing logic here
-      if review['rating'] == 5 && review['author_name'] != 'Pdub ..'
+      if review['rating'] == 5
         filtered_reviews << review
       end
+      puts "@___@ filtered_reveiws"
+      puts filtered_reveiws.inspect
+      puts "@___@ reviews"
+      puts reviews.inspect
     end
     redis = Redis.new(url: ENV['REDIS_URL'])
     if redis.exists('cached_google_places_reviews')
