@@ -4,7 +4,8 @@ if ENV['RUN_SCHEDULER'] == 'true' && defined?(Sidekiq)
   
   scheduler = Rufus::Scheduler.new
 
-  scheduler.every '30d', overlap: false do
+  # scheduler.every '30d', overlap: false do
+  scheduler.every '3m', overlap: false do
     puts "*" * 1000
     MonthlyJob.perform_async
   end
