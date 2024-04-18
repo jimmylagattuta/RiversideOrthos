@@ -60,14 +60,7 @@ class MonthlyJob
 
     require 'redis'
 
-    redis = Redis.new(
-      url: ENV['REDIS_URL'],
-      ssl_params: {
-        ca_file: "/app/config/cacert.pem",
-        verify_mode: OpenSSL::SSL::VERIFY_PEER,
-        ssl_version: :TLSv1_2  # Specify the TLS version if needed
-      }
-    )
+    redis = Redis.new(url: ENV['REDIS_URL'])
     
     begin
       puts redis.ping  # Test the connection
