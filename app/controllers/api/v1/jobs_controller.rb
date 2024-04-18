@@ -131,7 +131,6 @@ class Api::V1::JobsController < ApplicationController
 
 
 
-
     ca_path = "/config/cacert.pem"
     
     require 'redis'
