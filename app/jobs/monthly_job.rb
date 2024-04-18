@@ -60,15 +60,21 @@ class MonthlyJob
 
     require 'redis'
 
-    ca_path = "/config/cacert.pem"
-    
     redis = Redis.new(
       url: ENV['REDIS_URL'],
       ssl_params: {
-        ca_file: ca_path,
-        verify_mode: OpenSSL::SSL::VERIFY_PEER
+        ca_file: "/app/config/cacert.pem",
+        verify_mode: OpenSSL::SSL::VERIFY_PEER,
+        ssl_version: :TLSv1_2  # Specify the TLS version if needed
       }
     )
+    
+    begin
+      puts redis.ping  # Test the connection
+    rescue => e
+      puts "Failed to connect to Redis: #{e.message}"
+    end
+    
     
     if redis.exists('cached_google_places_reviews')
       puts "Cached reviews found. Clearing previous cache..."

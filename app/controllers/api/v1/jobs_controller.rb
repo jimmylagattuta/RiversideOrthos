@@ -19,12 +19,19 @@ class Api::V1::JobsController < ApplicationController
     puts "@_@ ca_path"
     puts ca_path.inspect
     # Configure Redis to use the CA bundle for SSL connections
-    redis = Redis.new(url: ENV['REDIS_URL'], ssl_params: { ca_file: ca_path, verify_mode: OpenSSL::SSL::VERIFY_PEER })
+    require 'redis'
+
+    redis = Redis.new(
+      url: ENV['REDIS_URL'],
+      ssl_params: {
+        ca_file: "/app/config/cacert.pem",
+        verify_mode: OpenSSL::SSL::VERIFY_PEER,
+        ssl_version: :TLSv1_2  # Specify the TLS version if needed
+      }
+    )
     
-    # Try pinging Redis to test the connection
     begin
-      response = redis.ping
-      puts "Redis Connection Successful: #{response}"  # Should output "PONG" if successful
+      puts redis.ping  # Test the connection
     rescue => e
       puts "Failed to connect to Redis: #{e.message}"
     end
@@ -134,20 +141,22 @@ class Api::V1::JobsController < ApplicationController
 
     ca_path = "/config/cacert.pem"
     
+    require 'redis'
+
     redis = Redis.new(
       url: ENV['REDIS_URL'],
       ssl_params: {
-        ca_file: ca_path,
-        verify_mode: OpenSSL::SSL::VERIFY_PEER
+        ca_file: "/app/config/cacert.pem",
+        verify_mode: OpenSSL::SSL::VERIFY_PEER,
+        ssl_version: :TLSv1_2  # Specify the TLS version if needed
       }
     )
     
     begin
-      puts "Redis connection test with SSL verification: #{redis.ping}"  # Should output "PONG" if successful
+      puts redis.ping  # Test the connection
     rescue => e
-      puts "Failed to connect to Redis with SSL verification: #{e.message}"
+      puts "Failed to connect to Redis: #{e.message}"
     end
-    
     
     puts "Connected to Redis: #{redis.inspect}"
 
