@@ -125,7 +125,11 @@
 .animate-grow:active {
     transform: scale(0.95); /* Original size */
 }
-
+@media (max-width: 1700px) {
+    .about-description-right {
+        font-size: 1rem;
+    }
+}
 @media (max-width: 1030px) {
     .about-container {
 
