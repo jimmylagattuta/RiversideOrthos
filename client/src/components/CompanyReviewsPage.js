@@ -60,61 +60,55 @@ const CompanyReviewsPage = () => {
         };
 
         const fetchReviews = () => {
-
-            const url =
-              process.env.NODE_ENV === 'production'
-                ? 'https://www.orthoriverside.com/api/v1/pull_google_places_cache'
-                : 'https://www.orthoriverside.com/api/v1/pull_google_places_cache';
-
-          
-            // Include the CSRF token in the headers of your fetch request
-            const headers = {
+          const url = process.env.NODE_ENV === 'production'
+              ? 'https://www.orthoriverside.com/api/v1/pull_google_places_cache'
+              : 'https://www.orthoriverside.com/api/v1/pull_google_places_cache';
+      
+          const headers = {
               'Content-Type': 'application/json',
               'X-CSRF-Token': csrfToken,
-            };
-          
-            fetch(url, { headers })
-            .then((response) => {
+          };
+      
+          fetch(url, { headers })
+          .then((response) => {
               if (response.ok) {
-                return response.json();
+                  return response.json();
               } else {
-                throw new Error('Failed to fetch reviews');
+                  throw new Error('Failed to fetch reviews');
               }
-            })
-            .then((data) => {
-              // Check if data.reviews is an array
+          })
+          .then((data) => {
               if (Array.isArray(data.reviews)) {
-                // Set the CSRF token in the context (if needed)
-                if (data.csrf_token) {
-                  setCsrfToken(data.csrf_token);
-                }
-        
-                // Filter reviews with the default profile photo URLs
-                const filteredReviews = data.reviews.filter(
-                  (item) => !defaultProfilePhotoUrls.includes(item.profile_photo_url)
-                );
-        
-                // Shuffle the filteredReviews array
-                const shuffledReviews = shuffleArray(filteredReviews);
-        
-                // Take the first three reviews
-                const randomReviews = shuffledReviews.slice(0, 3);
-        
-                saveToCache(data);
-                setReviews(randomReviews);
-                setLoading(false);
+                  if (data.csrf_token) {
+                      setCsrfToken(data.csrf_token);
+                  }
+      
+                  // Filter out reviews starting with "Absolutely Horrendous"
+                  const filteredReviews = data.reviews.filter(item => {
+                      return !item.text.startsWith("Absolutely Horrendous") && 
+                             !defaultProfilePhotoUrls.includes(item.profile_photo_url);
+                  });
+      
+                  // Shuffle the filteredReviews array
+                  const shuffledReviews = shuffleArray(filteredReviews);
+      
+                  // Take the first three reviews
+                  const randomReviews = shuffledReviews.slice(0, 3);
+      
+                  saveToCache(data);
+                  setReviews(randomReviews);
+                  setLoading(false);
               } else {
-                throw new Error('Data.reviews is not an array');
+                  throw new Error('Data.reviews is not an array');
               }
-            })
-            .catch((err) => {
+          })
+          .catch((err) => {
               console.error(err);
               setError(err.message);
               setLoading(false);
-            });
-          };
-          
-          
+          });
+      };
+      
           
         
         // Function to shuffle an array using the Fisher-Yates algorithm
