@@ -10,6 +10,17 @@ const SinglePhysician = () => {
         return fullName === physicianId;
     });
     // console.log('physician', physician);
+    const doctors = [
+        'Michael J. Hejna',
+        'Scott A. Seymour',
+        'Erling Ho',
+        'Nicolas S. Anderson',
+        'Samantha Adamczyk',
+        'Jennifer Boyer',
+        ' OAR ',
+        'OAR.',
+        ' OAR.'
+    ];
     const { bio, image, name, practiceEmphasis, specialProcedures } = physician;
     const cacheKey = 'cached_yelp_reviews';
     const formatDate = (dateString) => {
@@ -61,38 +72,20 @@ const SinglePhysician = () => {
     const getCachedReviews = () => {
         const cachedDataBeforeJson = localStorage.getItem(cacheKey);
         if (cachedDataBeforeJson) {
-            // const cachedDataOne = JSON.parse(cachedDataBeforeJson);
-            // console.log('cachedDataOne', cachedDataOne);
             const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
-            // const cachedData = JSON.parse(cachedDataOne);
-            // console.log('cachedData', cachedData);
             return reviews.map((review, index) => {
-                // console.log('review', review);
-                const filteredName = name
-                    .split(/[,.]\s*/)
-                    .filter(
-                        (word) => !word.includes('.') && !word.includes(',')
-                    )
-                    .join(' ');
-
-                const namesToSearch = filteredName.split(/\s+/);
-
-                const regexPattern = namesToSearch
-                    .map(
-                        (name) => `\\b${name.replace('.', '\\.')}(?![\\w.,])\\b`
-                    )
-                    .join('|');
-
-                const regex = new RegExp(regexPattern, 'i');
-
-                // const matchedNames = review.text.match(regex);
-                const matchedNames = review.text.match(regex)?.filter(name => name.length > 1);
-
-                if (matchedNames && matchedNames.length > 0) {
+                const matchedDoctor = doctors.find(doctor => {
+                    const regex = new RegExp(`\\b${doctor.replace('.', '\\.')}(?![\\w.,])\\b`, 'i');
+                    return regex.test(review.text);
+                });
+    
+                if (matchedDoctor) {
                     if (review.author_name === "Pdub ..") {
-                    } else {          
-                        return (
-                            <div key={index} className='single-review-container'>
+                        // Exclude reviews by "Pdub .."
+                        return null;
+                    }
+                    return (
+                        <div key={index} className='single-review-container'>
                             <div className='review-top-info'>
                                 <div
                                     className='user-icon'
@@ -125,13 +118,15 @@ const SinglePhysician = () => {
                                 </a>
                             </div>
                         </div>
-                        );
-                    }
+                    );
                 }
+                return null; // Exclude reviews not matching any doctor's name
             });
         }
         return null;
     };
+    
+
     return (
         <>
             <div style={{ padding: '50px', margin: '0 auto', display: 'flex' }}>

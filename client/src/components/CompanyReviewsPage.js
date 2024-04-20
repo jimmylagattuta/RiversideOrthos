@@ -7,6 +7,25 @@ const CompanyReviewsPage = () => {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const doctors = [
+      'Michael J. Hejna',
+      'Scott A. Seymour',
+      'Erling Ho',
+      'Nicolas S. Anderson',
+      'Samantha Adamczyk',
+      'Jennifer Boyer',
+      ' OAR ',
+      'OAR.',
+      ' OAR.'
+  ];
+  const isDoctor = (name, doctors) => {
+    const normalizedInput = name.toLowerCase();
+    return doctors.some(doctor => {
+        const normalizedDoctor = doctor.toLowerCase();
+        return normalizedDoctor.includes(normalizedInput) || normalizedInput.includes(normalizedDoctor);
+    });
+};
+
     const defaultProfilePhotoUrls = [
         'https://lh3.googleusercontent.com/a/ACg8ocLIudbeWrIiWWZp7p9ibYtGWt7_t2sZhu3GhVETjeORZQ=s128-c0x00000000-cc-rp-mo',
         'https://lh3.googleusercontent.com/a/ACg8ocKWoslacgKVxr6_0nu2yNq78qvJS_JmSt-o-sm0Poz1=s128-c0x00000000-cc-rp-mo',
@@ -60,9 +79,10 @@ const CompanyReviewsPage = () => {
         };
 
         const fetchReviews = () => {
-          const url = process.env.NODE_ENV === 'production'
-              ? 'https://www.orthoriverside.com/api/v1/pull_google_places_cache'
-              : 'https://www.orthoriverside.com/api/v1/pull_google_places_cache';
+          const url =
+              process.env.NODE_ENV === 'production'
+                  ? 'https://www.orthoriverside.com/api/v1/pull_google_places_cache'
+                  : 'https://www.orthoriverside.com/api/v1/pull_google_places_cache';
       
           const headers = {
               'Content-Type': 'application/json',
@@ -70,44 +90,48 @@ const CompanyReviewsPage = () => {
           };
       
           fetch(url, { headers })
-          .then((response) => {
-              if (response.ok) {
-                  return response.json();
-              } else {
-                  throw new Error('Failed to fetch reviews');
-              }
-          })
-          .then((data) => {
-              if (Array.isArray(data.reviews)) {
-                  if (data.csrf_token) {
-                      setCsrfToken(data.csrf_token);
+              .then((response) => {
+                  if (response.ok) {
+                      return response.json();
+                  } else {
+                      throw new Error('Failed to fetch reviews');
                   }
+              })
+              .then((data) => {
+                  if (Array.isArray(data.reviews)) {
+                      if (data.csrf_token) {
+                          setCsrfToken(data.csrf_token);
+                      }
       
-                  // Filter out reviews starting with "Absolutely Horrendous"
-                  const filteredReviews = data.reviews.filter(item => {
-                      return !item.text.startsWith("Absolutely horrendous") && 
-                             !defaultProfilePhotoUrls.includes(item.profile_photo_url);
-                  });
+                      // Filter out reviews starting with "Absolutely Horrendous"
+                      // and include only reviews containing one of the doctor's names
+                      const filteredReviews = data.reviews.filter(item => {
+                          return !item.text.startsWith("Absolutely horrendous") &&
+                              !defaultProfilePhotoUrls.includes(item.profile_photo_url) &&
+                              doctors.some(doctor => item.text.toLowerCase().includes(doctor.toLowerCase()));
+                      });
       
-                  // Shuffle the filteredReviews array
-                  const shuffledReviews = shuffleArray(filteredReviews);
+                      // Shuffle the filteredReviews array
+                      const shuffledReviews = shuffleArray(filteredReviews);
       
-                  // Take the first three reviews
-                  const randomReviews = shuffledReviews.slice(0, 3);
+                      // Take the first three reviews
+                      const randomReviews = shuffledReviews.slice(0, 3);
       
-                  saveToCache(data);
-                  setReviews(randomReviews);
+                      saveToCache(data);
+                      setReviews(randomReviews);
+                      setLoading(false);
+                  } else {
+                      throw new Error('Data.reviews is not an array');
+                  }
+              })
+              .catch((err) => {
+                  console.error(err);
+                  setError(err.message);
                   setLoading(false);
-              } else {
-                  throw new Error('Data.reviews is not an array');
-              }
-          })
-          .catch((err) => {
-              console.error(err);
-              setError(err.message);
-              setLoading(false);
-          });
+              });
       };
+      
+      
       
           
         
