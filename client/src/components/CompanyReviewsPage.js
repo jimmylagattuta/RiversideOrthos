@@ -103,12 +103,9 @@ const CompanyReviewsPage = () => {
                           setCsrfToken(data.csrf_token);
                       }
       
-                      // Filter out reviews starting with "Absolutely Horrendous"
-                      // and include only reviews containing one of the doctor's names
+                      // Filter reviews that include one of the doctor's names
                       const filteredReviews = data.reviews.filter(item => {
-                          return !item.text.startsWith("Absolutely horrendous") &&
-                              !defaultProfilePhotoUrls.includes(item.profile_photo_url) &&
-                              doctors.some(doctor => item.text.toLowerCase().includes(doctor.toLowerCase()));
+                          return doctors.some(doctor => item.text.toLowerCase().includes(doctor.toLowerCase()));
                       });
       
                       // Shuffle the filteredReviews array
@@ -130,7 +127,6 @@ const CompanyReviewsPage = () => {
                   setLoading(false);
               });
       };
-      
       
       
           
