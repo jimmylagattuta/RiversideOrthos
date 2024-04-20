@@ -85,7 +85,7 @@ const CompanyReviewsPage = () => {
       
                   // Filter out reviews starting with "Absolutely Horrendous"
                   const filteredReviews = data.reviews.filter(item => {
-                      return !item.text.startsWith("Absolutely Horrendous") && 
+                      return !item.text.startsWith("Absolutely horrendous") && 
                              !defaultProfilePhotoUrls.includes(item.profile_photo_url);
                   });
       
