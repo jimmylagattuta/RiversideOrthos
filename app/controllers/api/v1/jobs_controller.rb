@@ -5,6 +5,7 @@ class Api::V1::JobsController < ApplicationController
   end
 
   def pull_google_places_cache
+    log_daily_visits
     puts "Fetching CSRF token..."
     csrf_token = form_authenticity_token
     puts "CSRF token fetched: #{csrf_token}"
@@ -101,5 +102,15 @@ class GooglePlacesCached
 
     puts "No cached reviews found."
     return { reviews: "No cached reviews" }
+  end
+
+  private
+
+  def log_daily_visits
+    today = Date.today
+    visits_key = "daily_visits_#{today}"
+    redis = Redis.new(url: ENV['REDIS_URL'])
+    current_visits = redis.incr(visits_key)
+    puts "Daily visits on #{today}: #{current_visits}"
   end
 end
