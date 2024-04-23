@@ -1,11 +1,16 @@
 class Api::V1::JobsController < ApplicationController
   def index
+    puts "Rendering index action..."
     render json: "Los Angeles Orthopedic Group " * 1000
   end
 
   def pull_google_places_cache
+    puts "Fetching CSRF token..."
     csrf_token = form_authenticity_token
+    puts "CSRF token fetched: #{csrf_token}"
+    puts "Fetching cached Google Places reviews..."
     reviews = GooglePlacesCached.cached_google_places_reviews
+    puts "Cached Google Places reviews fetched"
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
 end
@@ -15,19 +20,26 @@ class GooglePlacesCached
   require 'json'
   require 'uri'
   require 'net/http'
+  
   def self.remove_user_by_name(users, name)
-      users.reject! { |user| user['user'] && user['user']['name'] == name }
-    end
-    
+    users.reject! { |user| user['user'] && user['user']['name'] == name }
+  end
 
   def self.cached_google_places_reviews
+    puts "Initializing Redis connection..."
     redis = Redis.new(url: ENV['REDIS_URL'])
+    puts "Redis connection established"
+
+    puts "Fetching cached data..."
     cached_data = redis.get('cached_google_places_reviews')
     reviews = JSON.parse(cached_data) if cached_data
+
     if cached_data.present?
+      puts "Cached data found. Parsing..."
       # Parse the JSON data into an array of hashes
       users = JSON.parse(cached_data)
 
+      puts "Removing user with name 'Pdub ..'"
       # Call the class method to remove the user with name "Pdub .."
       remove_user_by_name(users, 'Pdub ..')
       filtered_reviews = users.select { |review| review['rating'] == 5 }
@@ -36,15 +48,20 @@ class GooglePlacesCached
       updated_reviews = JSON.generate(filtered_reviews)
       return updated_reviews
     end
+
+    puts "No cached data found."
+    puts "Fetching place IDs..."
     place_ids = [
       'ChIJvdxR8To0DogRhCRjmGXy7ts',
       'ChIJRQj7LQ5JDogR-YUMlT6K48A',
       'ChIJj8ezzWgxDogRT_5mqMYhk94'
     ]
+
     http = Net::HTTP.new("maps.googleapis.com", 443)
     http.use_ssl = true
     reviews = []
     place_ids.each do |place_id|
+      puts "Fetching details for place ID: #{place_id}"
       encoded_place_id = URI.encode_www_form_component(place_id)
       url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
       request = Net::HTTP::Get.new(url)
@@ -53,6 +70,7 @@ class GooglePlacesCached
       parsed_response = JSON.parse(body)
 
       if parsed_response['status'] == 'OK'
+        puts "Place details retrieved successfully"
         place_details = parsed_response['result']
         place_reviews = place_details.present? ? place_details['reviews'] || [] : []
         reviews.concat(place_reviews)
@@ -61,24 +79,27 @@ class GooglePlacesCached
       end
     end
 
+    puts "Setting cached Google Places reviews..."
     redis.set("cached_google_places_reviews", JSON.generate(reviews))
     redis.expire("cached_google_places_reviews", 30.days.to_i)
     cached_reviews = redis.get("cached_google_places_reviews")
     reviews = JSON.parse(cached_reviews) if cached_reviews
 
     if cached_reviews.present?
+      puts "Cached reviews found. Parsing..."
       # Parse the JSON data into an array of hashes
       users = JSON.parse(cached_reviews)
 
+      puts "Removing user with name 'Pdub ..'"
       # Call the class method to remove the user with name "Pdub .."
       remove_user_by_name(users, 'Pdub ..')
 
       # Convert the updated data back to a JSON string
       updated_reviews = JSON.generate(users)
-
       return updated_reviews
     end
 
+    puts "No cached reviews found."
     return { reviews: "No cached reviews" }
   end
 end
