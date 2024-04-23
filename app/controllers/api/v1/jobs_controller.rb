@@ -14,6 +14,16 @@ class Api::V1::JobsController < ApplicationController
     puts "Cached Google Places reviews fetched"
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
+
+  private
+
+  def log_daily_visits
+    today = Date.today
+    visits_key = "daily_visits_#{today}"
+    redis = Redis.new(url: ENV['REDIS_URL'])
+    current_visits = redis.incr(visits_key)
+    puts "Daily visits on #{today}: #{current_visits}"
+  end
 end
 
 class GooglePlacesCached
@@ -104,13 +114,4 @@ class GooglePlacesCached
     return { reviews: "No cached reviews" }
   end
 
-  private
-
-  def log_daily_visits
-    today = Date.today
-    visits_key = "daily_visits_#{today}"
-    redis = Redis.new(url: ENV['REDIS_URL'])
-    current_visits = redis.incr(visits_key)
-    puts "Daily visits on #{today}: #{current_visits}"
-  end
 end
