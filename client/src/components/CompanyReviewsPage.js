@@ -66,84 +66,96 @@ const CompanyReviewsPage = () => {
     const { csrfToken, setCsrfToken } = useCsrfToken();
 
     useEffect(() => {
-        logDebug("Component mounted, initializing data fetch.");
-        const cacheKey = 'cached_yelp_reviews';
+      const cacheKey = 'cached_yelp_reviews';
 
-        const getCachedReviews = () => {
-            logDebug("Checking for cached reviews.");
-            const cachedData = localStorage.getItem(cacheKey);
-            if (cachedData) {
-                const { reviews, expiry } = JSON.parse(cachedData);
-                if (expiry > Date.now()) {
-                    logDebug("Cached reviews found and valid.");
-                    return JSON.parse(reviews);
-                } else {
-                    logDebug("Cached reviews expired, removing.");
-                    localStorage.removeItem(cacheKey);
-                }
+      const getCachedReviews = () => {
+          const cachedData = localStorage.getItem(cacheKey);
+          if (cachedData) {
+              const { reviews, expiry } = JSON.parse(cachedData);
+              if (expiry > Date.now()) {
+                  return JSON.parse(reviews);
+              } else {
+                  localStorage.removeItem(cacheKey); // Remove expired cache
+              }
+          }
+          return null;
+      };
+      const saveToCache = (data) => {
+          const expiry = Date.now() + 7 * 24 * 60 * 60 * 1000; // Cache for 7 days
+          const cacheData = JSON.stringify(data);
+          localStorage.setItem(cacheKey, cacheData);
+      };
+
+      const fetchReviews = () => {
+        const url = process.env.NODE_ENV === 'production'
+            ? 'https://www.orthoriverside.com/api/v1/pull_google_places_cache'
+            : 'https://www.orthoriverside.com/api/v1/pull_google_places_cache';
+    
+        const headers = {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': csrfToken,
+        };
+    
+        fetch(url, { headers })
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Failed to fetch reviews');
             }
-            return null;
-        };
-
-        const saveToCache = (data) => {
-            logDebug("Saving reviews to cache.");
-            const expiry = Date.now() + 7 * 24 * 60 * 60 * 1000; // Cache for 7 days
-            const cacheData = JSON.stringify(data);
-            localStorage.setItem(cacheKey, cacheData);
-        };
-
-        const fetchReviews = () => {
-            logDebug("Fetching reviews from the server.");
-            const url = process.env.NODE_ENV === 'production'
-                ? 'https://www.orthoriverside.com/api/v1/pull_google_places_cache'
-                : 'https://www.orthoriverside.com/api/v1/pull_google_places_cache';
-
-            const headers = {
-                'Content-Type': 'application/json',
-                'X-CSRF-Token': csrfToken,
-            };
-
-            fetch(url, { headers })
-            .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Failed to fetch reviews');
+        })
+        .then((data) => {
+            if (Array.isArray(data.reviews)) {
+                if (data.csrf_token) {
+                    setCsrfToken(data.csrf_token);
                 }
-            })
-            .then((data) => {
-                logDebug("Reviews fetched successfully, processing data.");
-                if (Array.isArray(data.reviews)) {
-                    if (data.csrf_token) {
-                        setCsrfToken(data.csrf_token);
-                    }
-
-                    const filteredReviews = data.reviews.filter(item => !item.text.startsWith("Absolutely horrendous"));
-                    const shuffledReviews = shuffleArray(filteredReviews);
-                    const randomReviews = shuffledReviews.slice(0, 3);
-
-                    saveToCache(data);
-                    setReviews(randomReviews);
-                    setLoading(false);
-                } else {
-                    throw new Error('Data.reviews is not an array');
-                }
-            })
-            .catch((err) => {
-                console.error(err);
-                setError(err.message);
+    
+                // Filter out reviews starting with "Absolutely Horrendous"
+                const filteredReviews = data.reviews.filter(item => {
+                    return !item.text.startsWith("Absolutely horrendous") && 
+                           !defaultProfilePhotoUrls.includes(item.profile_photo_url);
+                });
+    
+                // Shuffle the filteredReviews array
+                const shuffledReviews = shuffleArray(filteredReviews);
+    
+                // Take the first three reviews
+                const randomReviews = shuffledReviews.slice(0, 3);
+    
+                saveToCache(data);
+                setReviews(randomReviews);
                 setLoading(false);
-            });
-        };
-
-        const cachedReviews = getCachedReviews();
-        if (cachedReviews) {
-            setReviews(cachedReviews);
+            } else {
+                throw new Error('Data.reviews is not an array');
+            }
+        })
+        .catch((err) => {
+            console.error(err);
+            setError(err.message);
             setLoading(false);
-        } else {
-            fetchReviews();
-        }
-    }, []);
+        });
+      };
+    
+        
+      
+      // Function to shuffle an array using the Fisher-Yates algorithm
+      function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+          }
+          return array;
+      }
+      
+
+      const cachedReviews = getCachedReviews();
+      if (cachedReviews) {
+          setReviews(cachedReviews);
+          setLoading(false);
+      } else {
+          fetchReviews();
+      }
+  }, []);
 
     return (
       <div className='reviews-container'>
