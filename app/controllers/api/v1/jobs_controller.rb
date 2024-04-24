@@ -111,7 +111,7 @@ class GooglePlacesCached
       parsed_response = JSON.parse(body)
 
       if parsed_response['status'] == 'OK'
-        puts "Place details retrieved successfully"
+        # puts "Place details retrieved successfully"
         place_details = parsed_response['result']
         place_reviews = place_details.present? ? place_details['reviews'] || [] : []
         reviews.concat(place_reviews)

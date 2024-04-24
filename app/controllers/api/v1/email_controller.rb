@@ -20,7 +20,7 @@ def send_email_to_office(form_data)
   if form_data[:dob]
     if form_data[:agreeToTermsTexts]
       # texter wireup
-      puts "Texter"
+      # puts "Texter"
     end
     OfficeMailer.request_appointment_email(form_data, cc_emails).deliver_now
   else

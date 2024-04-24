@@ -27,21 +27,21 @@ class MonthlyJob
       body = response.read_body
       parsed_response = JSON.parse(body)
       if parsed_response['status'] == 'OK'
-        puts "Successfully fetched place details for place ID: #{place_id}"
-        puts "Parsed response:"
-        puts parsed_response.inspect
+        # puts "Successfully fetched place details for place ID: #{place_id}"
+        # puts "Parsed response:"
+        # puts parsed_response.inspect
         place_details = parsed_response['result']
-        puts "Place details:"
-        puts place_details.inspect
+        # puts "Place details:"
+        # puts place_details.inspect
         place_reviews = place_details.present? ? place_details['reviews'] || [] : []
-        puts "Place reviews:"
-        puts place_reviews.inspect
-        puts "Merging reviews..."
-        puts "Reviews before merging:"
-        puts reviews.inspect
+        # puts "Place reviews:"
+        # puts place_reviews.inspect
+        # puts "Merging reviews..."
+        # puts "Reviews before merging:"
+        # puts reviews.inspect
         reviews.concat(place_reviews)
-        puts "Reviews after merging:"
-        puts reviews.inspect
+        # puts "Reviews after merging:"
+        # puts reviews.inspect
       else
         puts "Failed to retrieve place details for place ID: #{place_id}"
       end
@@ -50,7 +50,7 @@ class MonthlyJob
     # Filter and process the reviews as needed
     filtered_reviews = []
     reviews.each do |review|
-      puts "Applying review filtering logic..."
+      # puts "Applying review filtering logic..."
       # You can apply filtering or processing logic here
       if review['rating'] == 5 && review['author_name'] != 'Pdub ..'
         filtered_reviews << review
@@ -63,18 +63,18 @@ class MonthlyJob
     redis = Redis.new(url: ENV['REDIS_URL'])
     
     begin
-      puts redis.ping  # Test the connection
+      # puts redis.ping  # Test the connection
     rescue => e
       puts "Failed to connect to Redis: #{e.message}"
     end
     
     
     if redis.exists('cached_google_places_reviews')
-      puts "Cached reviews found. Clearing previous cache..."
+      # puts "Cached reviews found. Clearing previous cache..."
       redis.del('cached_google_places_reviews')
-      puts "Previous cache cleared."
+      # puts "Previous cache cleared."
     end
-    puts "Caching filtered reviews..."
+    # puts "Caching filtered reviews..."
     
 
 
@@ -82,16 +82,16 @@ class MonthlyJob
     
     begin
       redis.set('cached_google_places_reviews', JSON.generate(filtered_reviews))
-      puts "cached_google_places_reviews successful." # Added logging statement
+      # puts "cached_google_places_reviews successful." # Added logging statement
     rescue => e
       puts "Error caching: #{e.message}" # Log the error message
       # Optionally, you can re-raise the exception to propagate it further
       # raise e
     end
-    puts "Filtered reviews cached successfully."
-    puts "Setting expiration for cache..."
+    # puts "Filtered reviews cached successfully."
+    # puts "Setting expiration for cache..."
     redis.expire('cached_google_places_reviews', 30.days.to_i)
-    puts "Cache expiration set successfully."
+    # puts "Cache expiration set successfully."
   rescue StandardError => e
     puts "Error in MonthlyJob: #{e.message}"
   end
