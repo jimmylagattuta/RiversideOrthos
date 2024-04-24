@@ -1,4 +1,7 @@
 class Api::V1::JobsController < ApplicationController
+  rescue_from StandardError, with: :handle_unexpected_error
+  rescue_from JSON::ParserError, with: :handle_json_parsing_error
+  
   def index
     puts "Rendering index action..."
     render json: "OAR " * 1000
@@ -40,6 +43,16 @@ class Api::V1::JobsController < ApplicationController
     puts "*" * 100
     puts "Daily visits on #{today}: #{current_visits}"
     puts "*" * 100
+  end
+  def handle_unexpected_error(error)
+    OfficeMailer.error_email("Unexpected Error", error.message).deliver_later
+    render json: { error: "An unexpected error occurred." }, status: :internal_server_error
+  end
+
+  def handle_json_parsing_error(error)
+    error_message = "Failed to parse JSON data: #{error.message}"
+    OfficeMailer.error_email("JSON Parsing Error", error_message).deliver_later
+    render json: { error: error_message }, status: :unprocessable_entity
   end
 end
 
