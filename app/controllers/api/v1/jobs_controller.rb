@@ -12,6 +12,14 @@ class Api::V1::JobsController < ApplicationController
     puts "Fetching cached Google Places reviews..."
     reviews = GooglePlacesCached.cached_google_places_reviews
     puts "Cached Google Places reviews fetched"
+    # Loop through and print the reviews object
+    puts "Final Reviews Object:"
+    reviews.each do |review|
+      puts "Name: #{review['author_name']}"
+      puts "Rating: #{review['rating']}"
+      puts "Text: #{review['text']}"
+      puts "-------------------------"
+    end
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
 
