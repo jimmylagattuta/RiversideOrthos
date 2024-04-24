@@ -1,30 +1,30 @@
 class Api::V1::JobsController < ApplicationController
   def index
     puts "Rendering index action..."
-    render json: "Los Angeles Orthopedic Group " * 1000
+    render json: "OAR " * 1000
   end
 
   def pull_google_places_cache
     log_daily_visits
-    puts "Fetching CSRF token..."
+    # puts "Fetching CSRF token..."
     csrf_token = form_authenticity_token
-    puts "CSRF token fetched: #{csrf_token}"
-    puts "Fetching cached Google Places reviews..."
+    # puts "CSRF token fetched: #{csrf_token}"
+    # puts "Fetching cached Google Places reviews..."
     
     # Parse the reviews string into an array of hashes
     reviews_json = GooglePlacesCached.cached_google_places_reviews
     reviews = JSON.parse(reviews_json)
     
-    puts "Cached Google Places reviews fetched"
+    # puts "Cached Google Places reviews fetched"
     if reviews.blank?
-      puts "No reviews found, sending alert email..."
+      # puts "No reviews found, sending alert email..."
       OfficeMailer.alert_no_reviews_email.deliver_later
     else
       reviews.each do |review|
-        puts "Name: #{review['author_name']}"
-        puts "Rating: #{review['rating']}"
-        puts "Text: #{review['text']}"
-        puts "-------------------------"
+        # puts "Name: #{review['author_name']}"
+        # puts "Rating: #{review['rating']}"
+        # puts "Text: #{review['text']}"
+        # puts "-------------------------"
       end
     end
     render json: { reviews: reviews, csrf_token: csrf_token }
@@ -52,20 +52,20 @@ class GooglePlacesCached
   end
 
   def self.cached_google_places_reviews
-    puts "Initializing Redis connection..."
+    # puts "Initializing Redis connection..."
     redis = Redis.new(url: ENV['REDIS_URL'])
-    puts "Redis connection established"
+    # puts "Redis connection established"
 
-    puts "Fetching cached data..."
+    # puts "Fetching cached data..."
     cached_data = redis.get('cached_google_places_reviews')
     reviews = JSON.parse(cached_data) if cached_data
 
     if cached_data.present?
-      puts "Cached data found. Parsing..."
+      # puts "Cached data found. Parsing..."
       # Parse the JSON data into an array of hashes
       users = JSON.parse(cached_data)
 
-      puts "Removing user with name 'Pdub ..'"
+      # puts "Removing user with name 'Pdub ..'"
       # Call the class method to remove the user with name "Pdub .."
       remove_user_by_name(users, 'Pdub ..')
       filtered_reviews = users.select { |review| review['rating'] == 5 }
@@ -75,8 +75,8 @@ class GooglePlacesCached
       return updated_reviews
     end
 
-    puts "No cached data found."
-    puts "Fetching place IDs..."
+    # puts "No cached data found."
+    # puts "Fetching place IDs..."
     place_ids = [
       'ChIJvdxR8To0DogRhCRjmGXy7ts',
       'ChIJRQj7LQ5JDogR-YUMlT6K48A',
@@ -87,7 +87,7 @@ class GooglePlacesCached
     http.use_ssl = true
     reviews = []
     place_ids.each do |place_id|
-      puts "Fetching details for place ID: #{place_id}"
+      puts "Fetching Google Places! Details for place ID: #{place_id}"
       encoded_place_id = URI.encode_www_form_component(place_id)
       url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{encoded_place_id}&key=#{ENV['REACT_APP_GOOGLE_PLACES_API_KEY']}")
       request = Net::HTTP::Get.new(url)
@@ -105,18 +105,18 @@ class GooglePlacesCached
       end
     end
 
-    puts "Setting cached Google Places reviews..."
+    # puts "Setting cached Google Places reviews..."
     redis.set("cached_google_places_reviews", JSON.generate(reviews))
     redis.expire("cached_google_places_reviews", 30.days.to_i)
     cached_reviews = redis.get("cached_google_places_reviews")
     reviews = JSON.parse(cached_reviews) if cached_reviews
 
     if cached_reviews.present?
-      puts "Cached reviews found. Parsing..."
+      # puts "Cached reviews found. Parsing..."
       # Parse the JSON data into an array of hashes
       users = JSON.parse(cached_reviews)
 
-      puts "Removing user with name 'Pdub ..'"
+      # puts "Removing user with name 'Pdub ..'"
       # Call the class method to remove the user with name "Pdub .."
       remove_user_by_name(users, 'Pdub ..')
 
