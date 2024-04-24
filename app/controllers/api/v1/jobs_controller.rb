@@ -10,8 +10,13 @@ class Api::V1::JobsController < ApplicationController
     csrf_token = form_authenticity_token
     puts "CSRF token fetched: #{csrf_token}"
     puts "Fetching cached Google Places reviews..."
-    reviews = GooglePlacesCached.cached_google_places_reviews
+    
+    # Parse the reviews string into an array of hashes
+    reviews_json = GooglePlacesCached.cached_google_places_reviews
+    reviews = JSON.parse(reviews_json)
+    
     puts "Cached Google Places reviews fetched"
+    
     # Loop through and print the reviews object
     puts "Final Reviews Object:"
     reviews.each do |review|
@@ -20,9 +25,10 @@ class Api::V1::JobsController < ApplicationController
       puts "Text: #{review['text']}"
       puts "-------------------------"
     end
+  
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
-
+  
   private
 
   def log_daily_visits
