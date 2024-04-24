@@ -37,7 +37,9 @@ class Api::V1::JobsController < ApplicationController
     visits_key = "daily_visits_#{today}"
     redis = Redis.new(url: ENV['REDIS_URL'])
     current_visits = redis.incr(visits_key)
+    puts "*" * 100
     puts "Daily visits on #{today}: #{current_visits}"
+    puts "*" * 100
   end
 end
 
