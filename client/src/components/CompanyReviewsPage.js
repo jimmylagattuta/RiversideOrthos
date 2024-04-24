@@ -146,11 +146,51 @@ const CompanyReviewsPage = () => {
     }, []);
 
     return (
-        <div className='reviews-container'>
-            {reviews.map((item, index) => (
-                // Render review content
-            ))}
-        </div>
+      <div className='reviews-container'>
+        {reviews.map((item, index) => {
+          const profilePhotoUrl = item.profile_photo_url || defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
+          // Check if the username is "CoCo DeLuxe" and replace the profile photo URL with the default if true
+          if (item.author_name === "CoCo DeLuxe") {
+            profilePhotoUrl = defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
+          }
+    
+          return (
+            <div key={index} className='single-review-container'>
+              <div className='review-top-info'>
+                <div
+                  className='user-icon'
+                  style={{
+                    backgroundImage: `url(${profilePhotoUrl})`,
+                  }}>
+                  {!item.profile_photo_url && (
+                    <i className='fas fa-user-circle'></i>
+                  )}
+                </div>
+                <div className='review-name-container'>
+                  <div className='user-name'>
+                    {item.author_name}{' '}
+                    <i className='fab fa-yelp'></i>
+                  </div>
+                </div>
+              </div>
+              <div className='review-info'>
+                <i
+                  className='fa fa-quote-left'
+                  aria-hidden='true'></i>
+                <i
+                  className='fa fa-quote-right'
+                  aria-hidden='true'></i>
+                <p className='review-paragraph'>{item.text}</p>
+              </div>
+              <div className='google-link'>
+                <a aria-label="Link to Google for Google API reviews for Orthopadic Associates of Riverside." href={item.author_url} target="_blank" rel="noopener noreferrer">
+                  <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     );
 };
 
