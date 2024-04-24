@@ -24,7 +24,7 @@ const CompanyReviewsPage = () => {
         'Jennifer Boyer',
         'OAR ',
         'OAR.',
-        'OAR.'
+        ' OAR.'
     ];
 
     const isDoctor = (name, doctors) => {

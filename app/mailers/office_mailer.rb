@@ -10,4 +10,8 @@ class OfficeMailer < ApplicationMailer
     @form_data = form_data # Make the form data accessible in the email view template
     mail(to: 'unitymskwebsites@gmail.com', cc: cc_emails, subject: 'OAR: New Request Appointment Form Submission')
   end
+
+  def alert_no_reviews_email
+    mail(to: 'jimmy.lagattuta@gmail.com', subject: 'Alert: No Reviews Found')
+  end
 end

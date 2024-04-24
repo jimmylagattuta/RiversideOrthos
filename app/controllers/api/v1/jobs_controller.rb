@@ -16,16 +16,17 @@ class Api::V1::JobsController < ApplicationController
     reviews = JSON.parse(reviews_json)
     
     puts "Cached Google Places reviews fetched"
-    
-    # Loop through and print the reviews object
-    puts "Final Reviews Object:"
-    reviews.each do |review|
-      puts "Name: #{review['author_name']}"
-      puts "Rating: #{review['rating']}"
-      puts "Text: #{review['text']}"
-      puts "-------------------------"
+    if reviews.blank?
+      puts "No reviews found, sending alert email..."
+      OfficeMailer.alert_no_reviews_email.deliver_later
+    else
+      reviews.each do |review|
+        puts "Name: #{review['author_name']}"
+        puts "Rating: #{review['rating']}"
+        puts "Text: #{review['text']}"
+        puts "-------------------------"
+      end
     end
-  
     render json: { reviews: reviews, csrf_token: csrf_token }
   end
   
