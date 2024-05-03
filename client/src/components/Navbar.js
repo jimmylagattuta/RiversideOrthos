@@ -113,15 +113,25 @@ const Navbar = () => {
                     <div className='navbar-buttons-nav'>
 
                         <div className="call-contact-download">
-
-                            <NavLink
-                                onClick={toggleAppointmentForm}
-                                to={{ pathname: '/locations', hash: '#chatbox' }}
-                            >
-                                <span className='nav-button'>
-                                    Contact Us
-                                </span>
-                            </NavLink>
+                            <div className='contact-us-book-online'>
+                                <NavLink
+                                    onClick={toggleAppointmentForm}
+                                    to={{ pathname: '/locations', hash: '#chatbox' }}
+                                    >
+                                    <span className='nav-button'>
+                                        Contact Us
+                                    </span>
+                                </NavLink>
+                                <a
+                                    href="https://www.zocdoc.com/practice/orthopaedic-associates-of-riverside-106014"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >
+                                    <span className='nav-button'>
+                                        Book Online
+                                    </span>
+                                </a>
+                            </div>
                             <div className="downloads-call-us">
                                 <div
                                     onClick={togglePopup}

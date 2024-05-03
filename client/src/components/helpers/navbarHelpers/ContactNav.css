@@ -1,8 +1,13 @@
 .downloads-call-us {
     display: flex;
     flex-direction: row;
-}
 
+}
+.contact-us-book-online {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .nav-phone-and-seperater {
     display: flex;
     flex-direction: row;
