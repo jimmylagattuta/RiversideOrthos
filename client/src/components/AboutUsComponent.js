@@ -4,7 +4,7 @@ import './helpers/AboutUsComponent.css'
 const AboutUsComponent = () => {
     const handleLearnMoreClick = () => {
         // Replace 'your-url-here' with the actual URL you want to open
-        window.open('your-url-here', '_blank');
+        window.open('/about-us', '_blank');
     };
 
     return (
