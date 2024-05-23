@@ -120,7 +120,7 @@
   @media (max-width: 1400px) {
     .nav-button {
       align-self: center;
-      background-color: rgb(143, 0, 72);
+      /* background-color: rgb(143, 0, 72); */
       z-index: 8;
     }
     .riverside-call-directions {
@@ -144,7 +144,7 @@
   @media (max-width: 1050px) {
     .nav-button {
       align-self: center;
-      background-color: rgb(143, 0, 72);
+      /* background-color: rgb(143, 0, 72); */
       z-index: 8;
     }
     .riverside-call-directions {
@@ -170,7 +170,7 @@
     .navbar-container {
       max-height: 160px;
     }
-    .nav-button {
+    .nav-button, .nav-button-white {
       padding: 0px 0px 0px 0px;
       margin: 5px 5px 0px 5px;
       display: flex;
@@ -180,7 +180,7 @@
       z-index: 8;
     }
     .nav-phone-and-seperater {
-      display: flex;
+      display: none;
       flex-direction: row;
       margin: 5px;
       z-index: 8;

@@ -136,11 +136,11 @@ const Navbar = () => {
                                 <div
                                     onClick={togglePopup}
                                     >
-                                    <span className='nav-button'>
+                                <span className='nav-button-white'>
                                         Download Forms
                                     </span>
                                 </div>
-                                <span className='nav-button'>
+                                <span className='nav-button-white'>
                                     <ContactNav />
                                 </span>
                             </div>    
