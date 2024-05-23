@@ -123,7 +123,7 @@ const Navbar = () => {
                                     </span>
                                 </NavLink>
                                 <a
-                                    href="https://www.zocdoc.com/practice/orthopaedic-associates-of-riverside-106014"
+                                    href="https://www.zocdoc.com/practice/orthopaedic-associates-of-riverside-106014?lock=true&isNewPatient=false&referrerType=widget"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >
