@@ -131,7 +131,7 @@ const Navbar = () => {
                                         Book Online
                                     </span>
                                 </a>
-                                <a 
+                                {/* <a 
                                     href='https://midlandortho.ema.md/ema/pay/onlinepayments#/pm/payfac/pay'
                                     target="_blank" 
                                     rel="noopener noreferrer"
@@ -139,7 +139,7 @@ const Navbar = () => {
                                     <span className='nav-button'>
                                         Pay Online
                                     </span>
-                                </a>
+                                </a> */}
                             </div>
                             <div className="downloads-call-us">
                                 <div
