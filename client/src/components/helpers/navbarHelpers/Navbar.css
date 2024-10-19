@@ -1,474 +1,431 @@
-/* Navbar CSS */
-
-/* Main header */
-.main-header {
-    /* Add your styles for the header */
-  }
-  
-  /* Header top section */
-  .header-top {
-    /* Add your styles for the top section */
-  }
+/* Navbar container wrapping both logo and hamburger in a row */
 .navbar-div {
-  background-color: rgb(143, 0, 72);
-}
-.navbar-container {
+  width: 100%;
+  background-color: rgb(143, 0, 72); /* Use violet theme */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 35px 35px 35px 35px;
-  max-height: 130px;
-}
-.navbar-container-logo {
+  justify-content: space-between; /* Logo to the left, hamburger to the right */
+  align-items: center;
   padding: 10px;
 }
-/* Mobile menu button */
-.mobile-menu-button-navbar {
-  display: none;
+
+/* Flexbox ensures logo on left, hamburger on right */
+.navbar-container {
+  display: flex;
   width: 100%;
-  justify-content: flex-end;
-  font-size: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; /* Ensure row layout */
+}
+
+/* Logo on the left */
+.navbar-logo {
+  width: 40px;
+  height: auto;
+}
+
+/* Hide the title initially */
+.navbar-div .logo-and-title h2 {
+  display: none;
+}
+
+/* Show the title when the mobile menu is open */
+.show-title {
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
   color: white;
+  margin-top: 10px;
+}
+
+/* Mobile title only shown when mobile menu is open */
+.mobile-title {
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+  margin-top: 0px;
+  width: 65%;
+  font-family:'Times New Roman', Times, serif;
+  background-color: rgb(143, 0, 72); /* Match the navbar background */
+  padding: 0px 0;
+  margin: 10px auto;
+}
+/* Common styles for buttons */
+.nav-button-new {
+  background-color: #f2f2f2;
+  padding: 0px 5px;
+  margin: 5px;
+  color: #333;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.5em;
+}
+
+.nav-button-new:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-button-white {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px;
+  color: #333;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+/* Buttons above the title in mobile menu */
+.navbar-buttons-above, .navbar-buttons-below {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.navbar-buttons-above {
+  margin-top: 10px;
+}
+
+
+/* Hamburger menu on the right */
+.mobile-menu-button-navbar {
   background: none;
   border: none;
-  padding: 0px 20px 0px 0px;
-  align-items: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-/* Navbar Logo */
-.logo-link-navbar {
-  width: 100%;
+.mobile-menu-button-navbar .fa {
   color: white;
-  display: flex;
-  flex-direction: row;
-  max-width: 720px;
-  min-width: 60px;
 }
-.logo-and-title {
-  display: flex;
-  flex-direction: row;
-}
-.navbar-logo {
-  width: 100%;
-  max-width: 230px;
-  min-width: 70px;
-  height: 100%;
-}
-.navbar-buttons-nav {
-  color: white;
-  font-size: 1rem;
+
+/* Mobile menu styles */
+.mobile-menu {
+  background-color: rgb(143, 0, 72);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
+  min-width: 100vw;
+  /* padding: 20px; */
   text-align: center;
-  /* to offset the .mobile-menu-button-navbar's padding-right: 10px */
-  margin-right: -10px;
-  /*--------------------------------------------------------------------------------------- */
 }
 
-.navbar-buttons-nav a {
-  text-decoration-line: none;
+.mobile-menu-item {
+  padding: 10px 0;
+  overflow: visible;
+}
+
+.mobile-menu-link {
   color: white;
-  font-size: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: -20px;
-  margin-bottom: 20px;
-}
-.nav-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 20px;
-  border-radius: 7px;
-
-  background-color: #222;
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Include box-shadow in the transition */
-  box-shadow: -0.5px 0.5px 0 0 rgba(192, 192, 192,1), -1px 1px 0 0 rgba(192, 192, 192,0.6), -1.5px 1.5px 0 0 rgba(192, 192, 192,0.4), -2px 2px 0 0 rgba(192, 192, 192,0.2), -4px 4px 0 0 rgba(192, 192, 192,0.4); /* Initial box shadow */
-}
-.nav-button-white {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 20px;
-  border-radius: 7px;
-
-  background-color: white;
-  color: black;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Include box-shadow in the transition */
-  box-shadow: -0.5px 0.5px 0 0 rgba(192, 192, 192,1), -1px 1px 0 0 rgba(192, 192, 192,0.6), -1.5px 1.5px 0 0 rgba(192, 192, 192,0.4), -2px 2px 0 0 rgba(192, 192, 192,0.2), -4px 4px 0 0 rgba(192, 192, 192,0.4); /* Initial box shadow */
-}
-.nav-button:hover {
-  transform: scale(1); /* Increase size on hover */
-  box-shadow: -2px 2px 0 0 rgba(192, 192, 192,1), -4px 4px 0 0 rgba(192, 192, 192,0.6); /* Adjusted box shadow on hover */
-  font-size: 16px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease; /* Include box-shadow in the transition */
-}
-
-.nav-button:active {
-  transform: scale(1.05); /* Increase size on hover */
-  transition: transform 0.05s ease, box-shadow 0.05s ease; /* Include box-shadow in the transition */
-  box-shadow: -2px 2px 0 0 rgba(192, 192, 192,1), -4px 4px 0 0 rgba(192, 192, 192,0.6), -6px 6px 0 0 rgba(192, 192, 192,0.4), -10px 10px rgba(192, 192, 192,0.2); /* Adjusted box shadow on hover */
-}
-
-
-
-.nav-link-nav {
-  display: block;
-  color: var(--white);
-  padding: 18px;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  font-family: sans-serif;
-  font-size: 1em;
-}
-.nav-link-nav:hover {
-  background-color: rgba(248, 247, 246, 0.3);
-}
-.nav-link-nav.active {
-  border-bottom: 2px solid rgb(143, 0, 72);
-}
-.nav-link-container:hover > .nav-link-nav {
-  background-color: var(--blue-dark);
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
+/* Submenu styling */
+.submenu {
+  position: static; /* Ensure it's positioned correctly within the parent */
+  z-index: 999; /* Bring the submenu above other elements */
+  display: block; /* Ensure submenu is visible */
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  /* Add your styles for smaller screens */
 }
 
-/* Add your theme color */
-:root {
-  --theme-color: rgb
+.submenu-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 15px;
+  z-index: 10;
 }
 
+/* Banner below the navbar */
+.banner {
+  display: block;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Make banner readable */
+  padding: 10px;
+  text-align: center;
+}
 
+.highlight-text {
+  color: darkred;
+}
 
-@media (max-width: 1000px) {
-  
-  .navbar-container {
-    padding: 5px 5px 5px 5px;
-  }
-  .mobile-menu-button-navbar {
-    display: flex;
-    text-align: center;
-    font-size: 4rem;
-    padding-right: 20px;
-    font-size: 4rem;
-  }
-  .mobile-menu-button-navbar .fa-bars:before {
-    animation: colorAnimation 3s infinite; /* Apply the color animation */
-  }
-  @keyframes colorAnimation {
-    0% {
-      color: white; /* Start color */
-    }
-    50% {
-      color: rgb(201, 199, 199); /* Intermediate color */
-    }
-    100% {
-      color: rgb(247, 243, 243); /* End color */
-    }
-  }
-  .logo-link-navbar h2 {
-    display: none;
-  }
-  .navbar-buttons-nav {
-    font-size: 1rem;
-    min-width: max-content;
+.link-blue {
+  color: blue;
+  text-decoration: underline; /* Optional for better link visibility */
+}
 
+.banner-desktop {
+  display: none;
+}
+
+/* Responsive for 240px screens */
+@media only screen and (max-width: 240px) {
+  .navbar-div {
+    padding: 5px;
   }
-  .navbar-buttons-nav a {
-    font-size: 1rem;
-    width: 100%;
-    margin: 0px;
-  }
+
   .navbar-logo {
-    height: 100%;
-    align-self: center;
+    width: 50px;
+    height: auto;
   }
-  .nav-button {
-    padding: 2px;
-    margin: 5px;
-    box-shadow: -0.25px 0.25px 0 0 rgba(192, 192, 192,1), -0.5px 0.5px 0 0 rgba(192, 192, 192,0.6), -1px 1px 0 0 rgba(192, 192, 192,0.4), -1.5px 1.5px 0 0 rgba(192, 192, 192,0.2); /* Initial box shadow */
+
+  .mobile-menu-button-navbar .fa {
+    font-size: 30px;
   }
-  .nav-button:hover {
-    transform: scale(1.1); /* Increase size on hover */
-    box-shadow: -1px 1px 0 0 rgba(192, 192, 192,1), -2px 2px 0 0 rgba(192, 192, 192,0.6), -4px 4px 0 0 rgba(192, 192, 192,0.4), -6px 6px 0 0 rgba(192, 192, 192,0.2); /* Adjusted box shadow on hover */
-  }
-  .submenu-two-column {
-    max-width: 100vw;
-    min-width: unset;
-    grid-gap: 0px 0px;
-    margin: 0px;
-  }
-  .submenu-two-column .sub-link {
-    width: 50vw;
-  }
-  .submenu {
-    width: 100vw;
-    padding: 0px;
-  }
-  .submenu-two-column .sub-link {
-    max-width: 50vw;
-    padding: 20px 0px 20px 0px;
-    font-size: 1.2rem;
-  }
-  .sub-link {
-    font-size: 1.2rem;
-    padding: 20px 0px 20px 0px;
-  }
-  .sub-link.mobile-nav-link {
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 20px 0px 20px 0px;
+
+  .banner {
+    padding: 5px; /* Adjust padding for smaller screens */
+    font-size: 0.5em;
   }
 }
-@media (max-width: 750px) {
+
+
+/* Responsive design for screens 350px and larger */
+@media only screen and (min-width: 350px) {
   .navbar-logo {
-    max-width: 125px;
-    padding-left: 5px;
+    width: 80px;
   }
-  .mobile-menu-button-navbar {
-    padding-right: 10px;
-    font-size: 3.5rem;
+  .mobile-menu-button-navbar .fa {
+    font-size: 40px;
   }
-  .navbar-buttons-nav {
-    min-width: max-content;
+  .mobile-menu {
+    height: 100vh;
   }
-  .submenu {
-    width: 100vw;
-    padding: 0px;
-  }
-  .submenu-two-column {
-    max-width: 100vw;
-    min-width: unset;
-    grid-gap: 0px 0px;
-  }
-  .submenu-list {
-    width: 100vw;
-    min-height: fit-content;
-
-  }
-  .submenu-two-column .sub-link {
-    max-width: 50vw;
-    padding: 20px 0px 20px 0px;
-    font-size: 1rem;
+  /* Adjust title size and spacing */
+  .mobile-title {
+      font-size: 1.8em; /* Slightly larger text for better readability */
+      padding: 10px 0; /* Add some padding for spacing */
   }
 
-  .sub-link {
-    font-size: 1rem;
-    padding: 20px 0px 20px 0px;
+  /* Adjust button sizes */
+  .nav-button-new {
+      padding: 5px 15px; /* Increase padding for better usability */
+      font-size: 0.8em; /* Slightly larger text */
   }
-  .sub-link.mobile-nav-link {
-    font-size: 1rem;
-    width: 100%;
-    padding: 20px 0px 20px 0px;
+
+  /* Adjust spacing for buttons above and below the title */
+  .navbar-buttons-above,
+  .navbar-buttons-below {
+      margin-bottom: 20px; /* Increase margin for better spacing */
+  }
+
+  /* Adjust main links (e.g., Providers, Services) */
+  .mobile-menu-link {
+      font-size: 1.1em; /* Increase link font size for better visibility */
+
+  }
+
+  .mobile-menu-item {
+    font-size: 1.1em; /* Increase link font size for better visibility */
+    padding: 20px 0 !important;
+}
+
+  /* Adjust submenu items */
+  .submenu-link {
+      font-size: 1em; /* Increase submenu font size */
   }
 }
-@media (max-width: 475px) {
+
+/* Responsive design for screens 550px and larger */
+@media only screen and (min-width: 550px) {
+
+  /* Adjust logo size */
   .navbar-logo {
-    max-width: 125px;
-    padding-left: 5px;
+      width: 100px;
   }
-  .mobile-menu-button-navbar {
-    padding-right: 10px;
-    font-size: 3.5rem;
+
+  /* Adjust hamburger icon size */
+  .mobile-menu-button-navbar .fa {
+      font-size: 45px;
   }
-  .navbar-buttons-nav {
-    min-width: max-content;
+
+  /* Adjust mobile menu height */
+  .mobile-menu {
+      height: 100vh; /* Keep height to ensure full viewport coverage */
   }
-  .submenu {
-    width: 100vw;
-    padding: 0px;
+
+  /* Adjust title size for larger screens */
+  .mobile-title {
+      font-size: 2em; /* Larger text for bigger screens */
+      padding: 15px 0; /* Increased padding for more spacing */
   }
-  .submenu-two-column {
-    max-width: 100vw;
-    min-width: unset;
-    grid-gap: 0px 0px;
+
+  /* Adjust button sizes */
+  .nav-button-new {
+      padding: 10px 20px; /* Larger padding for buttons */
+      font-size: 1em; /* Larger font size */
   }
-  .submenu-list {
-    width: 100vw;
-    min-height: fit-content;
+
+  /* Adjust spacing for buttons above and below the title */
+  .navbar-buttons-above,
+  .navbar-buttons-below {
+      margin-bottom: 25px; /* Increase margin for better spacing */
+  }
+
+  /* Adjust main links (e.g., Providers, Services) */
+  .mobile-menu-link {
+      font-size: 1.2em; /* Increase font size for better visibility */
 
   }
-  .submenu-two-column .sub-link {
-    max-width: 50vw;
-    padding: 20px 0px 20px 0px;
-    font-size: 1rem;
-  }
-  .sub-link {
-    font-size: 1rem;
-    padding: 20px 0px 20px 0px;
 
+  /* Adjust submenu items */
+  .submenu-link {
+      font-size: 1.1em; /* Increase submenu font size */
+      padding: 12px 0; /* Adjust padding for better usability */
   }
-  .sub-link.mobile-nav-link {
-    font-size: 1rem;
-    width: 100%;
-    padding: 20px 0px 20px 0px;
+
+  /* Adjust mobile menu items spacing */
+  .mobile-menu-item {
+      padding: 25px 0; /* Increased padding for larger screens */
+  }
+
+  /* Banner adjustments */
+  .banner {
+      padding: 15px;
+      font-size: 1em; /* Adjust font size for better readability */
+  }
+
+  /* Highlight text */
+  .highlight-text {
+      font-size: 1.2em; /* Larger font size for emphasis */
+  }
+
+  /* Link styling */
+  .link-blue {
+      font-size: 1.1em; /* Adjust link font size for better readability */
   }
 }
-@media (max-width: 415px) {
-  .nav-button {
-    font-size: unset;
-  }
-  .nav-button:hover {
-    font-size: 0.6rem;
-  }
-  .navbar-container {
-    padding: 0px 0px 0px 5px;
 
-  }
-  .mobile-menu-button-navbar {
+/* Responsive design for screens 850px and up */
+@media only screen and (min-width: 850px) {
+  .logo-and-company {
     display: flex;
-    font-size: 2rem;
-  }
-  .navbar-buttons-nav {
-    font-size: 0.5rem;
-    width: 150%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-around;
-  }
-  .navbar-buttons-nav a {
-    font-size: 0.6rem;
-    margin: 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-around;
-  }
-  .navbar-logo {
-    height: 100%;
-    align-self: center;
-    padding: 0px;
-    max-width: 80px;
-    min-width: 62px;
-    max-height: 40px;
-  }
-  .submenu {
     align-items: center;
-    padding: 0px;
   }
-  .submenu-list {
-      max-width:  100vw;
+
+  .company-name {
+      margin-left: 15px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      width: 50%;
+  }
+
+  .navbar-buttons-desktop {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 0px;
-      /* grid-template-columns: repeat(1, minmax(0, 1fr)); Initial three columns */
-    }
-  .submenu-two-column {
-    /* max-width: 100vw; */
-    display: grid;
-    min-width: unset;
+  }
+
+  .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px; /* Space between the two rows */
+  }
+
+  /* Desktop layout for the navbar */
+  .navbar-desktop-container {
+    display: flex;
+    justify-content: space-between; /* Logo on left, buttons on right */
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    grid-gap: 0px 0px; /* Adjust the gap between items */
-    padding: 0px;
-    margin: 0px;
-    grid-template-columns: repeat(0, minmax(0, 1fr)); /* Initial three columns */
+    padding: 20px;
+    background-color: rgb(143, 0, 72); /* Use violet theme */
   }
-  .sub-link {
-    font-size: 0.9rem;
-    position: relative; /* Required for positioning the pseudo-elements */
-    padding: 20px 0px 10px 0px;
-    margin: 0px 0px 0px 0px;
-    min-width: 100%;
-    border-bottom: 1px solid rgb(143, 0, 72);
-    overflow: hidden; /* Hide overflow to prevent content from overflowing */
-}
-.sub-link:hover {
-  background-position: 0 0;
-  font-size: 1rem;
-  color: white;
-}
-.sub-link::before,
-.sub-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(143, 0, 72, 0.7);
-    z-index: 1;
-}
-
-.sub-link::before {
-    bottom: -2px; /* Distance from the bottom */
-}
-
-.sub-link::after {
-    top: -2px; /* Distance from the top */
-}
-
-.sub-link:hover::before {
-    height: 2px; /* Increase the height on hover */
-}
-
-.sub-link:hover::after {
-    height: 2px; /* Increase the height on hover */
-}
-
-  .sub-link p {
+  .highlight-text-desktop {
+    color: darkred;
   }
-  .sub-link.mobile-nav-link {
-    min-width: 40%;
-    align-self: center;
-  }
-}
-
-
-.animate-charcter
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    /* rgb(185, 180, 180) 0%,
-    rgb(246, 241, 241) 27%,
-    rgb(185, 180, 180, 1) 57% */
-    white 0%,
-    rgb(201, 199, 199) 50%,
-    rgb(247, 243, 243) 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 3s linear infinite;
-
-  display: inline-block;
-
-      font-family: 'serif';
-      max-width: 400px;
-      margin: 25px 0px -25px 10px;
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-@media (max-width: 275px) {
+  
+  /* Logo on the left */
   .navbar-logo {
-    max-height: 30px;
+    width: 120px;
+  }
+
+  /* Banner in the middle */
+  .banner-desktop {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    display: block;
+  }
+
+  /* Buttons on the right */
+  .navbar-buttons-desktop {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+  }
+
+  .nav-button-new:hover {
+    background-color: #e0e0e0;
+  }
+
+  .nav-button-new {
+    margin-right: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+  /* Navbar links below the logo, banner, and buttons */
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(143, 0, 72);
+    padding: 15px 0;
+  }
+
+  /* Navbar link styles */
+  .navbar-item {
+    position: relative;
+  }
+
+  .navbar-link {
+    color: white;
+    font-size: 1.1em;
+    margin: 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Submenu dropdown styles */
+  .submenu {
+    position: absolute;
+    background-color: rgb(143, 0, 72);
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    width: 200px;
+    display: block;
+    padding: 10px;
+  }
+
+  .submenu-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  }
+
+  /* Hide hamburger button on larger screens */
+  .mobile-menu-button-navbar {
+    display: none;
+  }
+
+  /* Hide mobile layout elements */
+  .mobile-menu,
+  .mobile-title {
+    display: none;
   }
 }

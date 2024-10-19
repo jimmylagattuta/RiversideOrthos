@@ -462,35 +462,35 @@ h3.foresight-subheader {
         opacity: 70%;
     }
     #foresight-article {
-        width: 203px;
-        height: 205px;
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
         border-width: 0;
         padding: 0;
-        top: 40px;
-        left: 8px;
+        position: fixed; /* Fix it to the viewport */
+        top: 0; /* Align to the top of the screen */
+        left: 0; /* Align to the left of the screen */
+        color: white;
+        z-index: 20; /* Ensure it stays above other elements */
     }
-
+    
     #foresight-article::before, #foresight-article::after {
-        width: 200px;
-        height: 201px;
-        top: unset;
-        left: unset;
-        top: 14px;
-        left: 12px;
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        top: -9; /* Align to the top */
+        left: -14; /* Align to the left */
     }
+    
     #foresight-article::before {
         position: fixed;
-        left: 20px;
-        /* bottom: 0px; */
-        top: 94px;
-        border: inherit;
-        border-width: 0.5em 0 0 0.5em;
-        width: 206px;
-        height: 206px;
-        z-index: 10;
-        box-shadow: inset 0 0 0 2px var(--c);
+        top: -14; /* Full coverage from top */
+        left: -9; /* Full coverage from left */
+        width: 100vw; /* Full width */
+        height: 100vh; /* Full height */
+        z-index: 10; /* Ensure it's layered below the main article */
+        box-shadow: inset 0 0 0 2px var(--c); /* Keep shadow effect */
         mix-blend-mode: difference;
         pointer-events: none;
         content: "";
     }
+    
 }
