@@ -60,6 +60,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.5em;
+  text-decoration: none;
 }
 
 .nav-button-new:hover {
@@ -207,6 +208,7 @@
   .nav-button-new {
       padding: 5px 15px; /* Increase padding for better usability */
       font-size: 0.8em; /* Slightly larger text */
+      text-decoration: none;
   }
 
   /* Adjust spacing for buttons above and below the title */
@@ -260,7 +262,8 @@
   .nav-button-new {
       padding: 10px 20px; /* Larger padding for buttons */
       font-size: 1em; /* Larger font size */
-  }
+      text-decoration: none;
+    }
 
   /* Adjust spacing for buttons above and below the title */
   .navbar-buttons-above,
