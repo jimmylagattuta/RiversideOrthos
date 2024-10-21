@@ -166,7 +166,7 @@ const Navbar = () => {
                         access to schedule appointments, communicate with our staff, pay your
                         bill, and more. Please visit the <span className="highlight-text">Midland Orthopedics Associates/
                         Orthopedic Associates of Riverside</span> Patient Portal to learn more:{" "}
-                        <a href="https://midlandortho.ema.md/auth/realms/Modmed/protocol/openid-connect/auth?response_type=code&client_id=ema&redirect_uri=https%3A%2F%2Fmidlandortho.ema.md%2Fema%2Fsso%2Flogin&state=6b59e48f-a9c9-42f2-b437-24e7ece4f950&login=true&login_hint=UkVWSVNJT049NzE2ZjlkOWJhZjtGSVJNX0xPR089bnVsbDtET01BSU49bWlkbGFuZG9ydGhvLmVtYS5tZDtGSVJNX05BTUU9TWlkbGFuZCBPcnRob3BlZGljIEFzc29jaWF0ZXM7TUVESUNBTF9ET01BSU49bXVsdGk7T0ZGTElORV9BQ0NFU1M9RkFMU0U7R0RQUl9DT09LSUU9O09SSUdJTj0vZW1hL1BhdGllbnRMb2dpbi5hY3Rpb247TUFSS0VUSU5HX0JBTk5FUj1UUlVFO1ZFUlNJT049Ny43LjQuMTtGSVJNX0dMT0JBTF9JRD0xMTg4MzA7R0RQUj1UUlVFO01PQklMRT1GQUxTRQ%3D%3D&scope=openid" className="link-blue">
+                        <a href="https://midlandortho.ema.md" className="link-blue">
                             Patient Portal
                         </a>
                     </p>
