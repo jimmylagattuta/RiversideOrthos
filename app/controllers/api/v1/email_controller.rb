@@ -29,7 +29,7 @@ def send_email_to_office(form_data)
 
   true
 rescue StandardError => e
-  Rails.logger.error("Email sending error: #{e.message}")
+  Rails.logger.error("Email sending error OAR: #{e.message}")
   false
 end
 
