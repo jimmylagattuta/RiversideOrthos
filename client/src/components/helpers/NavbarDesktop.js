@@ -108,7 +108,7 @@ const NavbarDesktop = () => {
             <div className="banner-desktop">
                 <p>
                     On <span className="highlight-text-desktop">October 22nd, 2024 Midland Orthopedic Associates/Orthopaedic
-                    Associates of Riverside</span> will transition to a new Electronic Medical
+                    Associates of Riverside</span> has transitioned to a new Electronic Medical
                     Record (EMR) system in order to provide the best experience for our
                     patients. This new system, Modernizing Medicine, will allow 24/7
                     access to schedule appointments, communicate with our staff, pay your
