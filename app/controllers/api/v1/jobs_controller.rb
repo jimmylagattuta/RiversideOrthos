@@ -38,7 +38,10 @@ class Api::V1::JobsController < ApplicationController
   def log_daily_visits
     today = Date.today
     visits_key = "daily_visits_#{today}"
-    redis = Redis.new(url: ENV['REDIS_URL'])
+    redis = Redis.new(
+      url: ENV['REDIS_URL'],
+      ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE }  # Disable SSL verification
+    )
     current_visits = redis.incr(visits_key)
     puts "*" * 100
     puts "Daily visits on #{today}: #{current_visits}"
