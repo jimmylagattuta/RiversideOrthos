@@ -1044,8 +1044,8 @@ export const navMenu = [
         ],
     },
     { menu: 'Locations', link: '/locations' },
-    { menu: 'Careers', link: 'https://ats.rippling.com/orthopedic-associates-of-riverside/jobs' }
-
+    { menu: 'Careers', link: 'https://ats.rippling.com/orthopedic-associates-of-riverside/jobs' },
+    { menu: 'Schedule Appointment', link: 'https://self.schdl.com/patient/13806' }
 ];
 export const officesData = [
     {
