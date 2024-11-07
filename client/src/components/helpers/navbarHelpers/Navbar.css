@@ -109,7 +109,8 @@
   background-color: rgb(143, 0, 72);
   display: flex;
   flex-direction: column;
-  min-width: min-content;
+  min-width: 100vw;
+  min-height: max-content;
   /* padding: 20px; */
   text-align: center;
 }
@@ -196,7 +197,7 @@
     font-size: 40px;
   }
   .mobile-menu {
-    height: 100vh;
+    min-height: min-content;
   }
   /* Adjust title size and spacing */
   .mobile-title {
@@ -249,7 +250,7 @@
 
   /* Adjust mobile menu height */
   .mobile-menu {
-      height: 100vh; /* Keep height to ensure full viewport coverage */
+      min-height: min-content; /* Keep height to ensure full viewport coverage */
   }
 
   /* Adjust title size for larger screens */
