@@ -89,14 +89,14 @@ const NavbarDesktop = () => {
                             Book Online
                         </a>
                     </div>
-                    <div className="button-row" style={{ color: '#f34a02' }}>
+                    <div className="button-row">
                         <a
                             href="https://midlandortho.ema.md/ema/pay/onlinepayments#/pm/payfac/pay"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"
                             onClick={() => console.log("Pay Online clicked")}
-                            style={{ color: 'white' }}
+                            style={{ color: 'white', backgroundColor: '#f34a02' }}
                         >
                             Pay Online
                         </a>
