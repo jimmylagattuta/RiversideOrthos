@@ -89,17 +89,17 @@ const NavbarDesktop = () => {
                             Book Online
                         </a>
                     </div>
-                    <div className="button-row">
+                    <div className="button-row" style={{ color: '#f34a02' }}>
                         <a
                             href="https://midlandortho.ema.md/ema/pay/onlinepayments#/pm/payfac/pay"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"
                             onClick={() => console.log("Pay Online clicked")}
+                            style={{ color: 'white' }}
                         >
                             Pay Online
                         </a>
-                        <div className="nav-button-new" onClick={togglePopup}>Download Forms</div>
                     </div>
                 </div>
             </div>
