@@ -108,12 +108,10 @@ const Navbar = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"
+                            style={{ color: '#f34a02'}}
                         >
                             Pay Online
                         </a>
-                        <div onClick={togglePopup} className="nav-button-new">
-                            Download Forms
-                        </div>
                     </div>
 
                     {navMenu.map((menuItem, index) => (
