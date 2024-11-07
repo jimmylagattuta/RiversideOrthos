@@ -108,7 +108,7 @@ const Navbar = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"
-                            style={{ color: '#f34a02'}}
+                            style={{ color: 'white', backgroundColor: '#f34a02' }}
                         >
                             Pay Online
                         </a>
