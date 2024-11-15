@@ -91,7 +91,7 @@ const NavbarDesktop = () => {
                     </div>
                     <div className="button-row">
                         <a
-                            href="https://midlandortho.ema.md/ema/pay/onlinepayments#/pm/payfac/pay"
+                            href="https://self.schdl.com/patient/13806"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"
