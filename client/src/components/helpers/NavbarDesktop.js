@@ -80,7 +80,7 @@ const NavbarDesktop = () => {
                             Contact Us
                         </NavLink>
                         <a
-                            href="https://www.zocdoc.com/practice/orthopaedic-associates-of-riverside-106014"
+                            href="https://self.schdl.com/patient/13806"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"
@@ -91,7 +91,7 @@ const NavbarDesktop = () => {
                     </div>
                     <div className="button-row">
                         <a
-                            href="https://self.schdl.com/patient/13806"
+                            href="https://midlandortho.ema.md/ema/pay/onlinepayments#/pm/payfac/pay"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"

@@ -93,7 +93,7 @@ const Navbar = () => {
                             Contact Us
                         </NavLink>
                         <a
-                            href="https://www.zocdoc.com/practice/orthopaedic-associates-of-riverside-106014"
+                            href="https://self.schdl.com/patient/13806"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-button-new"
