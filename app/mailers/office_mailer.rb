@@ -12,12 +12,12 @@ class OfficeMailer < ApplicationMailer
   end
 
   def alert_no_reviews_email
-    mail(to: 'jimmy.lagattuta@gmail.com', subject: 'Alert: No Reviews Found')
+    mail(to: 'moaoarpages@gmail.com', subject: 'Alert: No Reviews Found')
   end
 
   def error_email(type, description)
     @type = type
     @description = description
-    mail(to: 'jimmy.lagattuta@gmail.com', subject: "#{type} - OAR: Error Notification", body: "#{type}: #{@description}")
+    mail(to: 'moaoarpages@gmail.com', subject: "#{type} - OAR: Error Notification", body: "#{type}: #{@description}")
   end
 end
